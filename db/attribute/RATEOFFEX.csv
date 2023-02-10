@@ -1,0 +1,5 @@
+Tdate,交易日期
+PCurrency,原币种
+ExCurrency,兑换币种
+PriceType,价格类型
+Price,兑换价格

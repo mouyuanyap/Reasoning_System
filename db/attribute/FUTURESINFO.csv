@@ -1,0 +1,12 @@
+exchange,市场代码
+isymbol,交易代码
+futuresinfo1,交易品种
+futuresinfo2,交易单位
+futuresinfo4,最小变动价位
+futuresinfo6,合约交割月份
+futuresinfo7,交易时间
+futuresinfo8,最后交易日
+futuresinfo16,期货品种类型
+futuresinfo21,合约标的
+currency,币种
+memo,备注

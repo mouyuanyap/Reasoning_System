@@ -1,0 +1,13 @@
+COMPANYCODE,公司代码
+INDUSTRYCODE,行业代码
+IANAME,行业名称
+IPROFILE7,指数编制方分类
+STATUS,是否使用
+STOPDATE,停用日期
+EXCHANGE,市场代码
+SYMBOL,指数代码
+INAME,指数名称
+IPROFILE1,编制方名称
+IPROFILE6,指数类别
+BPOINT,基准点数
+IPROFILE8,指数加权方式

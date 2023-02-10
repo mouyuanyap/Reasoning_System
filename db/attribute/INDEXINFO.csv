@@ -1,0 +1,10 @@
+COMPANYCODE,公司代码
+EXCHANGE,市场代码
+SYMBOL,指数代码
+INAME,指数名称
+IPROFILE6,指数类别
+IPROFILE7,指数编制方分类
+STATUS,是否使用
+STOPDATE,停用日期
+BPOINT,基准点数
+IPROFILE8,指数加权方式

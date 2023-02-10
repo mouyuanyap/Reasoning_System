@@ -1,0 +1,10 @@
+TDATE,交易日期
+EXCHANGE,市场代码
+SYMBOL,合约代码
+SNAME,合约名称
+SETTLE,结算价
+CHG,涨跌
+PCHG,涨跌幅
+VOTURNOVER,成交量
+VATURNOVER,成交金额
+OI,持仓量

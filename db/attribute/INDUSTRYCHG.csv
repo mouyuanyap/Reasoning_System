@@ -1,0 +1,7 @@
+PUBLISHDATE,变动日期
+INDUSTRYCODE(industrychg8),行业代码
+IANAME(industrychg4),行业名称
+INDUSTRYCHG2,变动次数
+IPROFILE7,指数编制方分类
+STATUS,是否使用
+STOPDATE,停用日期

@@ -1,0 +1,12 @@
+companycode,公司代码
+ReportDate,报表日期
+Product,产品
+ReportUnit,单位
+Currency,币种
+RDPDT1,本期主营业务收入
+RDPDT2,占主营业务收入比例
+RDPDT9,前期主营业务收入
+RDPDT3,本期主营业务成本
+RDPDT4,占主营业务成本比例
+RDPDT11,前期主营业务成本
+RDPDT7,本期毛利率

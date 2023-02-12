@@ -1,5 +1,5 @@
 from datetime import datetime
-from db.connection import conn
+# from db.connection import conn
 from db.attribute import col
 
 class FinancialRatio:

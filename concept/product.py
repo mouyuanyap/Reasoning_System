@@ -1,4 +1,4 @@
-from db.connection import conn
+# from db.connection import conn
 from db.attribute import col
 from datetime import datetime
 

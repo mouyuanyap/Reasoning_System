@@ -1,9 +1,11 @@
 from ctypes import DEFAULT_MODE
-from db.connection import conn,conn_jy
+# from db.connection import conn,conn_jy
 from db.attribute import col,col2
 from datetime import datetime
 from concept import index,product,industry,financialratio,person
 import os,codecs,csv
+
+dataPath = "./data/"
 
 class Company:
     def __init__(self,ITPROFILE,sec = None):
@@ -15,7 +17,12 @@ class Company:
             self.secuCode = sec[1]
         self.info = {}
         for i,x in enumerate(ITPROFILE):
-            self.info[col['ITPROFILECol'][i]] = x
+            try:
+                self.info[col['ITPROFILECol'][i]] = x
+
+            except:
+                pass
+        print(self.info)
         self.industry = {'申万':'', '中信标普GICS':''}
         self.index = {'申万':'', '中信标普GICS':''}
         self.financialRatio = None
@@ -38,6 +45,7 @@ class Company:
         self.AssetsNetDiffValue = {}
 
     def getAssetsValue_jy(self,date):
+        #只有每年的0630和1231有数据
         date_string = ""
         if date.month < 10:
             m = '0' + str(date.month)
@@ -49,18 +57,23 @@ class Company:
         else:
             d = str(date.day)
         date_string = str(date.year) + str(m) +str(d)
-        sql = """select enddate,companycode,openingnetvalue,endingnetvalue from lc_otherassets where companycode in (
-        select companycode from secumain where secucode = '{}'
-        ) and assetcategory = '13303' and itemcode ='32767' and enddate <= to_date('{}','YYYYMMDD') order by enddate desc
-        """.format(self.secuCode, date_string)
-        # print(sql)
-        cur = conn_jy.cursor()
-        for row in cur.execute(sql):
-            try:
-                self.AssetsNetDiffValue[row[0]] = row[3]-row[2]
-            except:
-                continue
-            break
+
+        file = codecs.open(os.path.join(dataPath + 'company/', 'assetValue.csv'), encoding = 'utf-8')
+        rows = csv.reader(file)
+        # print(self.secuCode)
+        for num,row in enumerate(rows):
+            if num >0:
+                # print(row[2], self.secuCode)
+                # print(date, datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'))
+                if row[2] == self.secuCode and date == datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'):
+                    
+                    try:
+                        self.AssetsNetDiffValue[datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S')] = float(row[4])-float(row[3])
+                    except:
+                        continue
+                    break
+        
+        # print(self.AssetsNetDiffValue)
         
         return self.AssetsNetDiffValue
 
@@ -76,16 +89,21 @@ class Company:
         else:
             d = str(date.day)
         date_string = str(date.year) + str(m) +str(d)
-        sql= """select enddate,infopubldate,companycode,totalshares from lc_sharestru
-                    where companycode in(
-                    select companycode from secumain where secucode = '{}'
-                )and enddate <= to_date('{}','YYYYMMDD') order by enddate desc
-        """.format(self.secuCode, date_string)
-        cur = conn_jy.cursor()
-        for row in cur.execute(sql):
-            self.TotalShares[row[0]] = row[3]
-            break
-        
+        # sql= """select enddate,infopubldate,companycode,totalshares from lc_sharestru
+        #             where companycode in(
+        #             select companycode from secumain where secucode = '{}'
+        #         )and enddate <= to_date('{}','YYYYMMDD') order by enddate desc
+        # """.format(self.secuCode, date_string)
+        # cur = conn_jy.cursor()
+        file = codecs.open(os.path.join(dataPath + 'company/', 'totalShares.csv'), encoding = 'utf-8')
+        rows = csv.reader(file)
+        for num,row in enumerate(rows):
+            if num >0:
+                if row[3] == self.secuCode and datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == date:
+                    
+                    self.TotalShares[datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S')] = float(row[4])
+                    break
+        print(self.TotalShares)
         return self.TotalShares
 
     def getNetProfit_jy(self,date):
@@ -100,33 +118,43 @@ class Company:
         else:
             d = str(date.day)
         date_string = str(date.year) + str(m) +str(d)
-        sql = """
-        select enddate,infopubldate,companycode,netprofit from LC_IncomeStatementAll where companycode in(
-                '{}' 
-            )and enddate <= to_date('{}','YYYYMMDD')and ifmerged=1 and bulletintype=20 and ifadjusted in (1,2) order by enddate desc
-        """.format(self.companycode,date_string)
-        cur = conn_jy.cursor()
-        for row in cur.execute(sql):
-            self.NetProfit[row[0]] = row[3]
-            break
-        
+        # sql = """
+        # select enddate,infopubldate,companycode,netprofit from LC_IncomeStatementAll where companycode in(
+        #         '{}' 
+        #     )and enddate <= to_date('{}','YYYYMMDD')and ifmerged=1 and bulletintype=20 and ifadjusted in (1,2) order by enddate desc
+        # """.format(self.companycode,date_string)
+        # cur = conn_jy.cursor()
+        # for row in cur.execute(sql):
+        #     self.NetProfit[row[0]] = row[3]
+        #     break
+        file = codecs.open(os.path.join(dataPath + 'company/', 'childCompanyNetProfit.csv'), encoding = 'utf-8')
+        rows = csv.reader(file)
+        for num,row in enumerate(rows):
+            if num >0:
+                if row[2] == self.companycode and datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == date:
+                    
+                    self.TotalShares[datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S')] = float(row[3])
+                    break
+        print(self.TotalShares)
         return self.NetProfit
         
 
     def getChildCompany_jy(self):
-        cur = conn_jy.cursor()
+        # cur = conn_jy.cursor()
 
-        sql = """select companycode,chiname from lc_instiarchive where companycode in(
-                    select distinct companycode from lc_mshareholder where gdid IN(
-                        select companycode from secumain where secucode = '{}'
-                ) and mshpercentage > 0.5 
-            )
-        """.format(self.secuCode)
-        
-        for row in cur.execute(sql):
-            # print(row[0])
-            c = Company([row[0],row[1]])
-            self.childCompany_code.append(c)
+        # sql = """select companycode,chiname from lc_instiarchive where companycode in(
+        #             select distinct companycode from lc_mshareholder where gdid IN(
+        #                 select companycode from secumain where secucode = '{}'
+        #         ) and mshpercentage > 0.5 
+        #     )
+        # """.format(self.secuCode)
+        file = codecs.open(os.path.join(dataPath + 'company/', 'childCompany.csv'), encoding = 'utf-8')
+        rows = csv.reader(file)
+        for row in rows:
+            if row[0] == self.secuCode:
+                # print(row)
+                c = Company([row[1],row[2]])
+                self.childCompany_code.append(c)
         return self.childCompany_code
 
     def getCompanyShareHold(self,date,name,detail):
@@ -970,7 +998,7 @@ order by stopdate desc"""):
 
 
     def returnCompany(self,companycode,companyname,securitycode):
-        cur = conn.cursor()
+        # cur = conn.cursor()
         print("getting Company")
         #print(self.companycode)
         #print(self.companyname)
@@ -980,7 +1008,7 @@ order by stopdate desc"""):
             sql = "SELECT COMPANYCODE, COMPANYNAME, ITPROFILE1, ITPROFILE2,ITPROFILE3,ITPROFILE4,ITPROFILE46,ITPROFILE5,ITPROFILE44,ITPROFILE6,ITPROFILE7,ITPROFILE8,ITPROFILE9,ITPROFILE14,ITPROFILE18,ITPROFILE19,ITPROFILE21,ITPROFILE48,ITPROFILE50,ITPROFILE22,ITPROFILE32,ITPROFILE33,ITPROFILE40,ITPROFILE41,ITPROFILE42 FROM ITPROFILE " + \
             "WHERE COMPANYNAME in (%s)" % (",".join(bind_names))
             #print(sql)
-            print(companyname)
+            #print(companyname)
             cur.execute(sql, companyname)
             #cur.execute("SELECT * FROM ITProfile WHERE COMPANYCODE = :companycode", [self.companycode])
             rows = cur.fetchall()
@@ -1019,13 +1047,16 @@ order by stopdate desc"""):
             #self.getSecurityCode()
         
         elif(len(companycode) == 0 and len(companyname) == 0 and len(securitycode) !=0):
-            bind_names = [":" + str(i + 1) for i in range(len(securitycode))]
-            #print (bind_names)
-            sql = "SELECT DISTINCT EXCHANGE,SYMBOL,COMPANYCODE FROM SECURITYCODE WHERE SYMBOL IN (%s) " % (",".join(bind_names)) + "AND EXCHANGE LIKE 'CNSES%'"
-            cur.execute(sql, securitycode)
-            rows = cur.fetchall()
-            cur.close()
+            # bind_names = [":" + str(i + 1) for i in range(len(securitycode))]
+            # #print (bind_names)
+            # sql = "SELECT DISTINCT EXCHANGE,SYMBOL,COMPANYCODE FROM SECURITYCODE WHERE SYMBOL IN (%s) " % (",".join(bind_names)) + "AND EXCHANGE LIKE 'CNSES%'"
+            # cur.execute(sql, securitycode)
+            # rows = cur.fetchall()
+            # cur.close()
             sec_code = {}
+            file = codecs.open(os.path.join(dataPath + 'company/','code.csv'), encoding = 'utf-8')
+            rows = csv.reader(file)
+    
             for row in rows:
                 #print(row[2])
                 if row[2] not in self.companycode:
@@ -1033,22 +1064,39 @@ order by stopdate desc"""):
                     sec_code[row[2]] = (row[0],row[1])
             if len(self.companycode) > len(securitycode):
                 print('error')
+            cc = []
+            for cRoot, cDirs, cFiles in os.walk(dataPath + 'company/',topdown=True):
+                # print(cDirs)
+                for cD in cDirs:
+                    # print(cD)
+                    file = codecs.open(os.path.join(os.path.join(dataPath + 'company/', cD) ,'companyInfo.csv'), encoding = 'utf-8')
+                    rows = csv.reader(file)
+                    for n,row in enumerate(rows):
+                        # print(row)
+                        if n == 1:
+                            cc.append(row)
+                            break
+                break
+            # cur = conn.cursor()
+            # print(cc)
             
-            cur = conn.cursor()
-
-            bind_names = [":" + str(i + 1) for i in range(len(self.companycode))]
-            #print(len(companycode))
-            sql = "SELECT COMPANYCODE, COMPANYNAME, ITPROFILE1, ITPROFILE2,ITPROFILE3,ITPROFILE4,ITPROFILE46,ITPROFILE5,ITPROFILE44,ITPROFILE6,ITPROFILE7,ITPROFILE8,ITPROFILE9,ITPROFILE14,ITPROFILE18,ITPROFILE19,ITPROFILE21,ITPROFILE48,ITPROFILE50,ITPROFILE22,ITPROFILE32,ITPROFILE33,ITPROFILE40,ITPROFILE41,ITPROFILE42 FROM ITPROFILE " + \
-            "WHERE COMPANYCODE in (%s)" % (",".join(bind_names))
-            cur.execute(sql, self.companycode)
-            #cur.execute("SELECT * FROM ITProfile WHERE COMPANYCODE = :companycode", [self.companycode])
-            rows = cur.fetchall()
-            cur.close()
+            # bind_names = [":" + str(i + 1) for i in range(len(self.companycode))]
+            # #print(len(companycode))
+            # sql = "SELECT COMPANYCODE, COMPANYNAME, ITPROFILE1, ITPROFILE2,ITPROFILE3,ITPROFILE4,ITPROFILE46,ITPROFILE5,ITPROFILE44,ITPROFILE6,ITPROFILE7,ITPROFILE8,ITPROFILE9,ITPROFILE14,ITPROFILE18,ITPROFILE19,ITPROFILE21,ITPROFILE48,ITPROFILE50,ITPROFILE22,ITPROFILE32,ITPROFILE33,ITPROFILE40,ITPROFILE41,ITPROFILE42 FROM ITPROFILE " + \
+            # "WHERE COMPANYCODE in (%s)" % (",".join(bind_names))
+            # cur.execute(sql, self.companycode)
+            # #cur.execute("SELECT * FROM ITProfile WHERE COMPANYCODE = :companycode", [self.companycode])
+            # rows = cur.fetchall()
+            # cur.close()
             companies = []
             #print(rows)
-            for row in rows:
+
+
+            
+            for row in cc:
                 if row[0] not in self.companycode:
                     self.companycode.append(row[0])
+                # print(row,sec_code[row[0]])
                 companies.append(Company(row, sec = sec_code[row[0]]))
 
             #self.getSecurityCode()

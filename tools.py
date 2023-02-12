@@ -30,7 +30,7 @@ class Results:
             exchange = key[4:]
             secCode = c1.securitycode[key]
         scode = secCode + exchange
-        
+        print(classes)
         if rtype == '收入':
             for i in range(3):
                 if len(self.resultsIncome[i][-1][classes[i]]) == 0 or self.resultsIncome[i][-1][classes[i]][-1][0] != scode + '_' + c1.name :

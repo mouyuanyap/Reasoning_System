@@ -1,7 +1,9 @@
-import csv,codecs
-from datetime import datetime
-from db.connection import conn,conn_jy
+import csv,codecs,os
+from datetime import datetime,timedelta
+# from db.connection import conn,conn_jy
 from scipy import stats
+
+dataPath = "./data/"
 
 class Energy:
     def __init__(self,name,country):
@@ -319,48 +321,86 @@ class Energy:
     def getEnergy(self, Date = None, detail = None):
 
         if Date not in self.date:
-            print('getting energy')
+            print('getting energy {}'.format(detail))
             # if self.name != '天然气':
 
-            if Date == None:
-                return ()
-            cur = conn_jy.cursor()
-            # Date = Date.value
-            date_string = ""
-            if Date.month < 10:
-                m = '0' + str(Date.month)
-            else:
-                m = str(Date.month)
+            # if Date == None:
+            #     return ()
+            # cur = conn_jy.cursor()
+            # # Date = Date.value
+            # date_string = ""
+            # if Date.month < 10:
+            #     m = '0' + str(Date.month)
+            # else:
+            #     m = str(Date.month)
             
-            if Date.day < 10:
-                d = '0' + str(Date.day)
-            else:
-                d = str(Date.day)
-            date_string = str(Date.year) + str(m) +str(d)
+            # if Date.day < 10:
+            #     d = '0' + str(Date.day)
+            # else:
+            #     d = str(Date.day)
+            # date_string = str(Date.year) + str(m) +str(d)
             # print(date_string)
             for key in self.details[self.country][self.name]:
                 code = self.details[self.country][self.name][key]
-                # print(key,code)
-                sql = """select ENDDATE,DATAVALUE from C_IN_IndicatorDataV 
-                where INDICATORCODE in ('{}') AND enddate <= to_date('{}','YYYYMMDD') 
-                ORDER BY ENDDATE DESC
-                """.format(code,date_string)
-                for row in cur.execute(sql):
-                    result = (row[0],row[1])
-                    break
-                if key[-3:] == '期货价':
-                    self.futurePrice[Date] = result[1]
-                elif key[-3:] == '现货价' or key[-3:] == '市场价' or key[-3:] == '出厂价':
-                    self.marketPrice[Date] = result[1]
-                elif key == '产量':
-                    self.production[Date] = result[1]
-                elif key == '期末库存':
-                    self.stock[Date] = result[1]
-                elif key == '进口量':
-                    self.imporT[Date] = result[1]
-                elif key == '出口量':
-                    self.export[Date] = result[1]
-            self.date.append(Date)
+                print(key,code)
+                print(Date)
+                result = None
+                # sql = """select ENDDATE,DATAVALUE from C_IN_IndicatorDataV 
+                # where INDICATORCODE in ('{}') AND enddate <= to_date('{}','YYYYMMDD') 
+                # ORDER BY ENDDATE DESC
+                # """.format(code,date_string)
+                file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
+                rows = csv.reader(file)
+                for num,row in enumerate(rows):
+                    if num > 0 :
+                        # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
+                        # print( row[1], code)
+                        try:
+                            if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date and row[1] == code:
+                                result = (row[0],float(row[2]))
+                                print(result)
+                                break
+                        except:
+                            file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
+                            rows = csv.reader(file)
+                            for num,row in enumerate(rows):
+                                if num > 0 :
+                                    # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
+                                    # print( row[1], code)
+                                    try:
+                                        if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date - timedelta(days=2) and row[1] == code:
+                                            result = (row[0],float(row[2]))
+                                            print(result)
+                                            break
+                                    except:
+                                        file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
+                                        rows = csv.reader(file)
+                                        for num,row in enumerate(rows):
+                                            if num > 0 :
+                                                # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
+                                                # print( row[1], code)
+                                                try:
+                                                    if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date - timedelta(days=1) and row[1] == code:
+                                                        result = (row[0],float(row[2]))
+                                                        print(result)
+                                                        break
+                                                except:
+                                                    print('Error: No Data!')
+                if result != None:
+                    if key[-3:] == '期货价':
+                        self.futurePrice[Date] = result[1]
+                    elif key[-3:] == '现货价' or key[-3:] == '市场价' or key[-3:] == '出厂价':
+                        self.marketPrice[Date] = result[1]
+                    elif key == '产量':
+                        self.production[Date] = result[1]
+                    elif key == '期末库存':
+                        self.stock[Date] = result[1]
+                    elif key == '进口量':
+                        self.imporT[Date] = result[1]
+                    elif key == '出口量':
+                        self.export[Date] = result[1]
+                    self.date.append(Date)
+        
         if detail == 'production':
             try:
                 return self.production[Date]

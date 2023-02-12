@@ -1,10 +1,10 @@
 from concept import company,financialratio,futures,index,product,industry,person
 from datetime import datetime,timedelta
-from db.connection import conn,conn_jy
-import codecs,csv,string
+# from db.connection import conn,conn_jy
+import codecs,csv,string,os
 
-getFromDB = True
-
+getFromDB = False
+dataPath = "./data/"
 #读取行业产业链中所有涉及的公司, 保存在securitycode变量
 file = codecs.open('./db/行业产业链/company_attribute.csv', encoding = 'utf-8')
 companies = csv.reader(file)
@@ -288,7 +288,7 @@ def getFatherSonProduct_batch(productName):
 
 # 从聚源数据库获取指数交易数据，由于是后期临时添加，因此没有在数据库建模concept文件内获取数据
 def getIndexTradingData(secCode,end):
-    cur = conn_jy.cursor()
+    # cur = conn_jy.cursor()
     end = end.value
     secCode = secCode.value
     # print(end,secCode)
@@ -304,9 +304,39 @@ def getIndexTradingData(secCode,end):
         ) and tradingday >= to_date('{}','YYYY/MM/DD') and tradingday <= to_date('{}','YYYY/MM/DD')""".format(secCode,start_date_string,end_date_string)
     # print(sql)
     result = None
-    for row in cur.execute(sql):
-        result = (row[0],row[1],row[2])
-        break
+    file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
+    rows = csv.reader(file)
+    
+    for row in rows:
+        # print(row)
+        try:
+            if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end:
+                result = (row[0],row[2],row[3])
+                break
+        except:
+            file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
+            rows = csv.reader(file)
+            
+            for row in rows:
+                
+                try:
+                    if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end - timedelta(days=2):
+                        result = (row[0],row[2],row[3])
+                        break
+                except:
+                    file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
+                    rows = csv.reader(file)
+                    
+                    for row in rows:
+                        
+                        try:
+                            if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end - timedelta(days=1):
+                                result = (row[0],row[2],row[3])
+                                break
+                        except:
+                            print("Error: No Data!")
+                            pass
+
     return result
 
 
@@ -316,7 +346,7 @@ def getIndexTradingData(secCode,end):
 # 如果要从数据库读取公司相关数据，getFromDB = True; 如果要从本地缓存读取，getFromBD = False
 # 本地缓存路径为：db/Data
 # allCompany = getAllCompanyObject(getFromDB=False)
-allCompany = getAllCompanyObject(getFromDB=True)
+allCompany = getAllCompanyObject(getFromDB=False)
 
 # 获取所有公司的业务
 allC = {}

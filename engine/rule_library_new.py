@@ -3,7 +3,7 @@ from typing import Match
 from concept import company,financialratio,futures,index,product,industry,person,event
 from datetime import datetime
 import time
-from db.connection import conn
+# from db.connection import conn
 import codecs,csv
 from engine.concept import *
 from engine.operator import *
@@ -1275,455 +1275,455 @@ class reasoning_System(KnowledgeEngine):
                             # 首先通过获取某个区间的时间序列的线性回归结果
                             # 根据斜率判断 变化趋势
                             # 由于最初的规则是比较两个时间点的数据，因此在这里两个时间点的RHS为相同的数据（时间序列，数据，斜率）
-                            try:
-                                slope, date, value = Term(operator=GetProductionTimeSeries,
-                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetProduction,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetProduction,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                # print(slope, date, value)
-                            except Exception as e:
-                                # print(e)
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetProduction,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetProduction,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                            try:
-                                slope, date, value = Term(operator=GetStockTimeSeries,
-                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                # print(slope, date, value)
-                            except Exception as e:
-                                # print(e)
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                            
-                            try:
-                                slope, date, value = Term(operator=GetStockTimeSeries,
-                                                            variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[usa, j,Date_Begin, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[usa, j,Date_End, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(Exist(CountryObject = usa, ItemName = j,ProductName = p,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                                # print(slope, date, value)
-                            except Exception as e:
-                                # print(e)
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[usa, j,Date_Begin, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[usa, j,Date_End, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-
-                            try:
-                                slope, date, value = Term(operator=GetExportTimeSeries,
-                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                # print(slope, date, value)
-                            except Exception as e:
-                                # print(e)
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                            
-                            try:
-                                slope, date, value = Term(operator=GetExportTimeSeries,
-                                                            variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[usa, j,Date_Begin, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[usa, j,Date_End, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                # print(slope, date, value)
-                            except Exception as e:
-                                # print(e)
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[usa, j,Date_Begin, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[usa, j,Date_End, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-
-                            try:
-                                slope, date, value = Term(operator=GetImportTimeSeries,
-                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetImport,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetImport,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                # print(slope, date, value)
-                            except Exception as e:
-                                # print(e)
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetImport,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetImport,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                            try:
-                                slope, date, value = Term(operator=GetMarketPriceTimeSeries,
-                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetMarketPrice,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetMarketPrice,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  (tuple(date),tuple(value),slope)
-                                            )
-                                    )
-                                # print(slope, date, value)
-                            except Exception as e:
-                                # print(e)
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetMarketPrice,
-                                                                variables=[country, j,Date_Begin, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetMarketPrice,
-                                                                variables=[country, j,Date_End, prod]),
-                                            RHS=  ('none','none')
-                                            )
-                                    )
-
-                            # 只是对两个时间点的值进行比较
-                            #########################  
                             # try:
+                            #     slope, date, value = Term(operator=GetProductionTimeSeries,
+                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
                             #     self.declare(
-                                    # Assertion(LHS=Term(operator=GetProduction,
-                            #                                 variables=[country, j,Date_Begin, prod]),
-                            #             RHS = Term(operator=GetProduction,
-                            #                                 variables=[country, j,Date_Begin, prod]).GetRHS().value)
-                            #     )
-                            # except:
+                            #             Assertion(LHS=Term(operator=GetProduction,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetProduction,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     # print(slope, date, value)
+                            # except Exception as e:
+                            #     # print(e)
                             #     self.declare(
                             #             Assertion(LHS=Term(operator=GetProduction,
                             #                                     variables=[country, j,Date_Begin, prod]),
                             #                 RHS=  ('none','none')
                             #                 )
                             #         )
-                            # try:
-                                
                             #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetImport,
-                            #                                 variables=[country, j,Date_Begin,prod]),
-                            #             RHS= Term(operator=GetImport,
-                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value)
-                            #     )
-                                
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetImport,
-                            #                                     variables=[country, j,Date_Begin,prod]),
-                            #                 RHS= ('none','none')
+                            #             Assertion(LHS=Term(operator=GetProduction,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  ('none','none')
                             #                 )
                             #         )
                             # try:
+                            #     slope, date, value = Term(operator=GetStockTimeSeries,
+                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
                                 
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetExport,
-                            #                                 variables=[country, j,Date_Begin,prod]),
-                            #             RHS= Term(operator=GetExport,
-                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value )
-                            #     )
-                                
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[country, j,Date_Begin,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )
-                            # try:
-                                
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetExport,
-                            #                                 variables=[usa, j,Date_Begin,prod]),
-                            #             RHS= Term(operator=GetExport,
-                            #                                 variables=[usa, j,Date_Begin,prod]).GetRHS().value )
-                            #     )
-                                
-                                
-                            # except:
-                            #     pass
-                            
-                            # try:
-                                
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetExport,
-                            #                                 variables=[usa, j,Date_End,prod]),
-                            #             RHS= Term(operator=GetExport,
-                            #                                 variables=[usa, j,Date_End,prod]).GetRHS().value  )
-                            #     )
-                                                   
-                            
-                            # except:
-                            #     pass
-
-                            # try:
-                                
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetStock,
-                            #                                 variables=[country, j,Date_Begin,prod]),
-                            #             RHS=  Term(operator=GetStock,
-                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value)
-                            #     )
-                                
-                            # except:
                             #     self.declare(
                             #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[country, j,Date_Begin,prod]),
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     # print(slope, date, value)
+                            # except Exception as e:
+                            #     # print(e)
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            
+                            # try:
+                            #     slope, date, value = Term(operator=GetStockTimeSeries,
+                            #                                 variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[usa, j,Date_Begin, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[usa, j,Date_End, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     self.declare(Exist(CountryObject = usa, ItemName = j,ProductName = p,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                            #     # print(slope, date, value)
+                            # except Exception as e:
+                            #     # print(e)
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[usa, j,Date_Begin, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[usa, j,Date_End, prod]),
                             #                 RHS=  ('none','none')
                             #                 )
                             #         )
 
                             # try:
+                            #     slope, date, value = Term(operator=GetExportTimeSeries,
+                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
                                 
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetStock,
-                            #                                 variables=[usa, j,Date_Begin,prod]),
-                            #             RHS= Term(operator=GetStock,
-                            #                                 variables=[usa, j,Date_Begin,prod]).GetRHS().value )
-                            #     )
-                                
-                                
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[usa, j,Date_Begin,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )
-                            # try:
-                                                    
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                 variables=[country, j,Date_Begin,prod]),
-                            #             RHS= Term(operator=GetMarketPrice,
-                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value )
-                            #     )
-                                
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                     variables=[country, j,Date_Begin,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )          
-                            # try:
-                                
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetProduction,
-                            #                                 variables=[country, j,Date_End,prod]),
-                            #             RHS= Term(operator=GetProduction,
-                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value)
-                            #     )
-
-                                
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetProduction,
-                            #                                     variables=[country, j,Date_End,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )
-                            # try:
-                                
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetImport,
-                            #                                 variables=[country, j,Date_End,prod]),
-                            #             RHS= Term(operator=GetImport,
-                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value )
-                            #     )
-                                
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetImport,
-                            #                                     variables=[country, j,Date_End,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )
-                            # try:
-                                
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetExport,
-                            #                                 variables=[country, j,Date_End,prod]),
-                            #             RHS= Term(operator=GetExport,
-                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value  )
-                            #     )
-                                
-                            
-                            # except:
                             #     self.declare(
                             #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[country, j,Date_End,prod]),
-                            #                 RHS= ('none','none')
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
                             #                 )
                             #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     # print(slope, date, value)
+                            # except Exception as e:
+                            #     # print(e)
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            
+                            # try:
+                            #     slope, date, value = Term(operator=GetExportTimeSeries,
+                            #                                 variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[usa, j,Date_Begin, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[usa, j,Date_End, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     # print(slope, date, value)
+                            # except Exception as e:
+                            #     # print(e)
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[usa, j,Date_Begin, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[usa, j,Date_End, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+
+                            # try:
+                            #     slope, date, value = Term(operator=GetImportTimeSeries,
+                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetImport,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetImport,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     # print(slope, date, value)
+                            # except Exception as e:
+                            #     # print(e)
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetImport,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetImport,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            # try:
+                            #     slope, date, value = Term(operator=GetMarketPriceTimeSeries,
+                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  (tuple(date),tuple(value),slope)
+                            #                 )
+                            #         )
+                            #     # print(slope, date, value)
+                            # except Exception as e:
+                            #     # print(e)
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                     variables=[country, j,Date_End, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+
+                            # 只是对两个时间点的值进行比较
+                            #########################  
+                            try:
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetProduction,
+                                                            variables=[country, j,Date_Begin, prod]),
+                                        RHS = Term(operator=GetProduction,
+                                                            variables=[country, j,Date_Begin, prod]).GetRHS().value)
+                                )
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetProduction,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetImport,
+                                                            variables=[country, j,Date_Begin,prod]),
+                                        RHS= Term(operator=GetImport,
+                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value)
+                                )
+                                
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country, j,Date_Begin,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetExport,
+                                                            variables=[country, j,Date_Begin,prod]),
+                                        RHS= Term(operator=GetExport,
+                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value )
+                                )
+                                
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[country, j,Date_Begin,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetExport,
+                                                            variables=[usa, j,Date_Begin,prod]),
+                                        RHS= Term(operator=GetExport,
+                                                            variables=[usa, j,Date_Begin,prod]).GetRHS().value )
+                                )
+                                
+                                
+                            except:
+                                pass
+                            
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetExport,
+                                                            variables=[usa, j,Date_End,prod]),
+                                        RHS= Term(operator=GetExport,
+                                                            variables=[usa, j,Date_End,prod]).GetRHS().value  )
+                                )
+                                                   
+                            
+                            except:
+                                pass
+
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetStock,
+                                                            variables=[country, j,Date_Begin,prod]),
+                                        RHS=  Term(operator=GetStock,
+                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value)
+                                )
+                                
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[country, j,Date_Begin,prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetStock,
+                                                            variables=[usa, j,Date_Begin,prod]),
+                                        RHS= Term(operator=GetStock,
+                                                            variables=[usa, j,Date_Begin,prod]).GetRHS().value )
+                                )
+                                
+                                
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[usa, j,Date_Begin,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
+                            try:
+                                                    
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetMarketPrice,
+                                                            variables=[country, j,Date_Begin,prod]),
+                                        RHS= Term(operator=GetMarketPrice,
+                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value )
+                                )
+                                
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country, j,Date_Begin,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )          
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetProduction,
+                                                            variables=[country, j,Date_End,prod]),
+                                        RHS= Term(operator=GetProduction,
+                                                            variables=[country, j,Date_End,prod]).GetRHS().value)
+                                )
+
+                                
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetProduction,
+                                                                variables=[country, j,Date_End,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetImport,
+                                                            variables=[country, j,Date_End,prod]),
+                                        RHS= Term(operator=GetImport,
+                                                            variables=[country, j,Date_End,prod]).GetRHS().value )
+                                )
+                                
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country, j,Date_End,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
+                            try:
+                                
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetExport,
+                                                            variables=[country, j,Date_End,prod]),
+                                        RHS= Term(operator=GetExport,
+                                                            variables=[country, j,Date_End,prod]).GetRHS().value  )
+                                )
+                                
+                            
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[country, j,Date_End,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
                             
                             
 
-                            # try:
+                            try:
                                 
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetStock,
-                            #                                 variables=[country, j,Date_End,prod]),
-                            #             RHS= Term(operator=GetStock,
-                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value )
-                            #     )
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetStock,
+                                                            variables=[country, j,Date_End,prod]),
+                                        RHS= Term(operator=GetStock,
+                                                            variables=[country, j,Date_End,prod]).GetRHS().value )
+                                )
                                 
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[country, j,Date_End,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )
-                            # try:
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[country, j,Date_End,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
+                            try:
                                 
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetStock,
-                            #                                 variables=[usa, j,Date_End,prod]),
-                            #             RHS= Term(operator=GetStock,
-                            #                                 variables=[usa, j,Date_End,prod]).GetRHS().value )
-                            #     )
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetStock,
+                                                            variables=[usa, j,Date_End,prod]),
+                                        RHS= Term(operator=GetStock,
+                                                            variables=[usa, j,Date_End,prod]).GetRHS().value )
+                                )
                                 
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[usa, j,Date_End,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )
-                            # try:
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[usa, j,Date_End,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
+                            try:
                                 
-                            #     self.declare(
-                            #         Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                 variables=[country, j,Date_End,prod]),
-                            #             RHS= Term(operator=GetMarketPrice,
-                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value )
-                            #     )
+                                self.declare(
+                                    Assertion(LHS=Term(operator=GetMarketPrice,
+                                                            variables=[country, j,Date_End,prod]),
+                                        RHS= Term(operator=GetMarketPrice,
+                                                            variables=[country, j,Date_End,prod]).GetRHS().value )
+                                )
                                 
                                 
-                            # except:
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                     variables=[country, j,Date_End,prod]),
-                            #                 RHS= ('none','none')
-                            #                 )
-                            #         )
+                            except:
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country, j,Date_End,prod]),
+                                            RHS= ('none','none')
+                                            )
+                                    )
                             #########################
                             return True
                         else:
@@ -2080,7 +2080,7 @@ class reasoning_System(KnowledgeEngine):
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
                                             variables=[company1, ('历史价格',), curNodeNum]),
                             RHS='none'))
-        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] > 0) or priceEnd[2] > 0:
+        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] > 0) or (priceEnd == priceBegin and priceEnd[2] > 0):
             if ItemName == '原油':
                 fileForOutput.write("\n\n<规则75,76>----------\n 布伦特【{}】的市场价上升\n".format(ItemName))
                 left = "\n\n<规则75,76>----------\n 布伦特【{}】的市场价上升\n".format(ItemName)
@@ -2123,7 +2123,7 @@ class reasoning_System(KnowledgeEngine):
             fileForOutput.write("价格趋势: ({} -> {})\n".format("plain",Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('历史价格',),curNodeNum]),
                             RHS=getTendency[index]).RHS.value))
-        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] < 0) or priceEnd[2] < 0:
+        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] < 0) or (priceEnd == priceBegin and priceEnd[2] < 0):
             if ItemName == '原油':
                 fileForOutput.write("\n\n<规则75,76>----------\n 布伦特【{}】的市场价下跌".format(ItemName))
                 left = "\n\n<规则75,76>----------\n 布伦特【{}】的市场价下跌".format(ItemName)
@@ -2198,7 +2198,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryImport1, CountryObject, itemImport1,ItemName,endDate,Date_End,curItem: True if countryImport1==CountryObject and itemImport1==ItemName and curItem == ItemName and Date_End == endDate else False),
           TEST(lambda countryImport2, CountryObject, itemImport2,ItemName,beginDate,Date_Begin, curItem: True if countryImport2==CountryObject and itemImport2==ItemName and curItem == ItemName and Date_Begin == beginDate else False),
           TEST(lambda p1,p2,curProd, curItem: True if p1==p2 and p1[1] == curProd and p1[0] == curItem else False),
-          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] > 0) if importEnd!=importBegin else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] > 0 ),        
+          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] > 0) if (importEnd!=importBegin and (importEnd[1] != 'none' and importBegin[1] != 'none')) else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2280,7 +2280,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryImport1, CountryObject, itemImport1,ItemName,endDate,Date_End,curItem: True if countryImport1==CountryObject and itemImport1==ItemName and curItem == ItemName and Date_End == endDate else False),
           TEST(lambda countryImport2, CountryObject, itemImport2,ItemName,beginDate,Date_Begin, curItem: True if countryImport2==CountryObject and itemImport2==ItemName and curItem==ItemName and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] < 0) if importEnd!=importBegin else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] < 0 ),        
+          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] < 0) if (importEnd!=importBegin and (importEnd[1] != 'none' and importBegin[1] != 'none')) else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2358,7 +2358,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryExport1, CountryObject, itemExport1,ItemName,endDate,Date_End, curItem: True if countryExport1==CountryObject and itemExport1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryExport2, CountryObject, itemExport2,ItemName,beginDate,Date_Begin, curItem: True if countryExport2==CountryObject and itemExport2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] > 0) if exportEnd!=exportBegin else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] > 0 ),        
+          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] > 0) if exportEnd!=exportBegin and (exportEnd[1] != 'none' and exportBegin[1] != 'none') else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2439,7 +2439,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryExport1, CountryObject, itemExport1,ItemName,endDate,Date_End, curItem: True if countryExport1==CountryObject and itemExport1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryExport2, CountryObject, itemExport2,ItemName,beginDate,Date_Begin, curItem: True if countryExport2==CountryObject and itemExport2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName,curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] < 0) if exportEnd!=exportBegin else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] < 0 ),        
+          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] < 0) if exportEnd!=exportBegin and (exportEnd[1] != 'none' and exportBegin[1] != 'none') else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2523,7 +2523,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryExport2, CountryObject, itemExport2,ItemName,beginDate,Date_Begin, curItem: True if countryExport2!=CountryObject and itemExport2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda countryExport2, countryExport1:  countryExport2==countryExport1 ),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda exportBegin,exportEnd: (exportEnd[1] - exportBegin[1] > 0 or exportEnd[1] - exportBegin[1] <= 0) if exportEnd!=exportBegin else (exportEnd[1] == 'none' or exportBegin[1] == 'none')  or exportEnd[2]> 0 or exportEnd[2] <=0),        
+          TEST(lambda exportBegin,exportEnd: (exportEnd[1] - exportBegin[1] > 0 or exportEnd[1] - exportBegin[1] <= 0) if exportEnd!=exportBegin and (exportEnd[1] != 'none' or exportBegin[1] != 'none') else (exportEnd[1] == 'none' or exportBegin[1] == 'none')  or exportEnd[2]> 0 or exportEnd[2] <=0),        
         
           salience=0.5)  
     def rule5_15(self, company1, CountryObject, ItemName,Date_Begin,Date_End,exportBegin,exportEnd,EE,EB,countryExport1):
@@ -2615,7 +2615,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryProduction1, CountryObject, itemProduction1,ItemName,endDate,Date_End,curItem: True if countryProduction1==CountryObject and itemProduction1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryProduction2, CountryObject, itemProduction2,ItemName,beginDate,Date_Begin, curItem: True if countryProduction2==CountryObject and itemProduction2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] < 0) if productionEnd!=productionBegin else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] < 0 ),        
+          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] < 0) if productionEnd!=productionBegin and (productionEnd[1] != 'none' and productionBegin[1] != 'none') else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2699,7 +2699,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryProduction1, CountryObject, itemProduction1,ItemName,endDate,Date_End,curItem: True if countryProduction1==CountryObject and itemProduction1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryProduction2, CountryObject, itemProduction2,ItemName,beginDate,Date_Begin, curItem: True if countryProduction2==CountryObject and itemProduction2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] > 0) if productionEnd!=productionBegin else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] > 0 ),        
+          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] > 0) if productionEnd!=productionBegin and (productionEnd[1] != 'none' and productionBegin[1] != 'none') else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2785,7 +2785,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryStockChange1, CountryObject, itemStockChange1,ItemName,endDate,Date_End,beginDate,Date_Begin, curItem: True if countryStockChange1==CountryObject and itemStockChange1==ItemName and ItemName == curItem and Date_End == endDate and Date_Begin == beginDate else False),
           TEST(lambda countryStockChange2, CountryObject, itemStockChange2,ItemName, curItem: True if countryStockChange2==CountryObject and itemStockChange2==ItemName and ItemName == curItem else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] < 0) if StockChangeEnd!=StockChangeBegin else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] < 0 ),        
+          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] < 0) if StockChangeEnd!=StockChangeBegin and (StockChangeEnd[1] != 'none' and StockChangeBegin[1] != 'none') else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=PredictPrice,
         #         LHS__variables__0__value=MATCH.item1,
         #        RHS__value=MATCH.predPrice),     
@@ -2884,7 +2884,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryStockChange1, CountryObject, itemStockChange1,ItemName,endDate,Date_End,beginDate,Date_Begin, curItem: True if countryStockChange1==CountryObject and itemStockChange1==ItemName and ItemName == curItem and Date_End == endDate and Date_Begin == beginDate else False),
           TEST(lambda countryStockChange2, CountryObject, itemStockChange2,ItemName, curItem: True if countryStockChange2==CountryObject and itemStockChange2==ItemName and ItemName == curItem else False),
           TEST(lambda p1,p2, ProductName,curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] > 0) if StockChangeEnd!=StockChangeBegin else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] > 0 ),        
+          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] > 0) if StockChangeEnd!=StockChangeBegin and (StockChangeEnd[1] != 'none' and StockChangeBegin[1] != 'none') else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=PredictPrice,
         #         LHS__variables__0__value=MATCH.item1,
         #        RHS__value=MATCH.predPrice),     
@@ -6341,6 +6341,8 @@ class reasoning_System(KnowledgeEngine):
             curNodeNum +=1
             ColorCount +=1
             net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        self.retract(SharesDataBegin)
+        self.retract(SharesDataEnd)
 
     @Rule(AS.e << Exist(CompanyObject = MATCH.CompanyObject,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.ReserveDataBegin << Assertion(LHS__operator=GetCompanyReserve,

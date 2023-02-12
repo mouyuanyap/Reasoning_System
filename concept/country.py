@@ -1,6 +1,6 @@
 import csv,os,codecs
 from concept.energy import Energy
-from db.connection import conn,conn_jy
+# from db.connection import conn,conn_jy
 
 class Country:
     def __init__(self, detail):

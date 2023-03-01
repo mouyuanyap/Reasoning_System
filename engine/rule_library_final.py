@@ -3608,7 +3608,7 @@ class reasoning_System(KnowledgeEngine):
           salience=0.9)
     def inner_rule13_14_b(self, curBusiness,curItem,curProd, company1,a):
         
-        fileForOutput.write("\n<内规则13,14>----------\n公司业务【{}】的产品与期货商品无法关联， 的EPS --> {}\n".format(curBusiness, 'none'))
+        fileForOutput.write("\n<内规则13,14>----------\n公司业务【{}】的产品与期货商品无法关联 或者 无数据来源， 的EPS --> {}\n".format(curBusiness, 'none'))
         fileForOutput.write('-> 预测：该公司 【{}】 的PE --> ({} -> {})\n'.format(company1.name,'plain', 'none'))
         
         self.declare(Assertion(LHS=Term(operator=PredictPE,

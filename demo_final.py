@@ -247,7 +247,7 @@ def runDatabase(d1, d2,c1 = None):
     return engine.rule_library_final.result[-1]
     
 
-def runManualInput( detail, trend ,item = None, business = None, index = None, country = None , d1 = datetime.now(), d2 = datetime.now() + timedelta(days=2)):
+def runManualInput( detail, trend , companyInput = None, item = None, business = None, index = None, country = None , d1 = datetime.now(), d2 = datetime.now() + timedelta(days=2)):
     beginDate = d1
     endDate = d2
     #当输入item为公司产品或上下游产品，可用的 detail = '价格','进口','出口', '产量' , '库存' 
@@ -275,7 +275,7 @@ def runManualInput( detail, trend ,item = None, business = None, index = None, c
         scode = secCode + exchange
         
         #c1 = ['601857SH', '601898SH']
-        c1 = None
+        c1 = [companyInput]
         if c1!= None:
             if scode not in c1:
                 # 初始化公司的业务与产品列表
@@ -316,16 +316,16 @@ def runManualInput( detail, trend ,item = None, business = None, index = None, c
 
 
 if __name__ == "__main__":
-    t = input("输入新闻")
-    runEventExtract(text = t)
+    # t = input("输入新闻")
+    # runEventExtract(text = t)
     # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 12, 31, 0, 0))
-    # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 12, 31, 0, 0),'601857SH')
+    # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'600997SH')
     # runDatabase(datetime(2020, 3, 27, 0, 0),datetime(2020, 8, 29, 0, 0),'601898SH')
     # runManualInput(detail= '行业指数', trend = 'up', index='申万石油石化指数')
     # runManualInput(detail= '出口', trend = 'down', item='原油',country = "United States")
     # runManualInput(detail= '产量', trend = 'down', item='原油')
     # runManualInput(detail= '需求', trend = 'down', item='原油')
-    # runManualInput(detail= '供给', trend = 'down', item='原油')
+    runManualInput(detail= '供给', trend = 'down',companyInput='600759SH', item='原油')
     # runManualInput(detail= '收入', trend = 'up', business='炼油与化工')
     # runManualInput(detail= '销售', trend = 'up', item='汽油')
 

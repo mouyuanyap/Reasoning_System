@@ -888,7 +888,7 @@ order by stopdate desc"""):
     IPROFILE JOIN IINDEX_COMP ON IPROFILE.SYMBOL = IINDEX_COMP.SYMBOL 
     JOIN CINDUSTRY ON IINDEX_COMP.INDUSTRYCODE = CINDUSTRY.STYLECODE
     WHERE IPROFILE.IPROFILE1 = '"""+ styleName[ind]  +"""' AND IPROFILE.IPROFILE6 = '行业指数' AND
-    CINDUSTRY.STYLE IN ('"""+ style[ind][0] +"""') AND cindustry.companycode in (%s)""" % (",".join(bind_names))
+    CINDUSTRY.STYLE IN ('"""+ style[ind][1] +"""') AND cindustry.companycode in (%s)""" % (",".join(bind_names))
             #print(sql)
             for row in cur.execute(sql, self.companycode):
                 keys = {}

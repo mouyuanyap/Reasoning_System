@@ -108,7 +108,8 @@ where industrychg3 like :1 and companycode = :2 order by publishdate desc""", [s
             indType = indType + '指数'
             for i in self.industryInfo[ind]:
                 a = int(i['是否使用'])
-                if i['指数编制方分类'] == indType and a == -1:
+                # if i['指数编制方分类'] == indType and a == -1:
+                if i['指数编制方分类'] == indType and a == 0:
                     industry.append(i)
             return industry
         elif indType == '中信标普GICS':

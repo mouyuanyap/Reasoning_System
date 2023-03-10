@@ -106,6 +106,7 @@ class reasoning_System(KnowledgeEngine):
     def rule997(self, Date_Begin,Date_End,company1,e1,e2,manualInput):
         global mode
         mode = 'manual'
+        
 
         # 获取公司所入选的行业指数
         indexCode = Term(operator= IndexCode,
@@ -128,8 +129,71 @@ class reasoning_System(KnowledgeEngine):
         elif manualInput.trend == 'down':
             startValue = 1
             endValue = 0
+        # if manualInput.detail == '公司净利润':
+        #     self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
+        #                            variables=[company1,('手动',)]), 
+        #                            RHS = manualInput.trend))
+        if manualInput.detail == '公司股票数':
+            self.declare(
+                Assertion(LHS=Term(operator=GetCompanyTotalShares,
+                                    variables=[company1, Date_Begin]),
+                        RHS=(Date_Begin,startValue))
+        
+            )
+            self.declare(
+                        Assertion(LHS=Term(operator=GetCompanyTotalShares,
+                                            variables=[company1, Date_End]),
+                                RHS=(Date_End,endValue))
+            )
+        if manualInput.detail == '公司储量':
+            self.declare(
+                        Assertion(LHS=Term(operator=GetCompanyReserve,
+                                            variables=[company1, Date_Begin]),
+                                RHS=(Date_Begin,startValue))
+        
+                
+            )
+            self.declare(
+                        Assertion(LHS=Term(operator=GetCompanyReserve,
+                                            variables=[company1, Date_End]),
+                                RHS=(Date_End,endValue))
+                )
+        if manualInput.detail == '美元指数':
+            dollarFuture = Term(operator=GetFuture,
+                                            variables=['美元指数', 'DX',Date_Begin, Date_End]).GetRHS()
+            try:
+                newEnd = Date_End
+                self.declare(
+                        Assertion(LHS=Term(operator=GetFutureQuote,
+                                            variables=[dollarFuture, newEnd, '结算价']),
+                                RHS=endValue)
+                                )
+            except:
+                self.declare(
+                        Assertion(LHS=Term(operator=GetFutureQuote,
+                                            variables=[dollarFuture, newEnd, '结算价']),
+                                RHS=None)
+                                )
+                
+
+            try:
+                newBegin = Date_Begin
+                self.declare(
+                        Assertion(LHS=Term(operator=GetFutureQuote,
+                                            variables=[dollarFuture, newBegin, '结算价']),
+                                RHS=startValue)
+                                )
+            except:
+                self.declare(
+                        Assertion(LHS=Term(operator=GetFutureQuote,
+                                            variables=[dollarFuture, newBegin, '结算价']),
+                                RHS=None)
+                                )
+                
+            self.declare(Exist(Future = dollarFuture, Date_Begin = newBegin, Date_End = newEnd ))
 
         # 当手动输入的是某个行业指数，declare指数交易数据的Fact
+        
         if manualInput.index == indexName:
             self.declare(
             Assertion(
@@ -150,7 +214,7 @@ class reasoning_System(KnowledgeEngine):
                 CompanyObject = company1,
                 IndexObj = indexName
                 ,  Date_Begin = Date_Begin ,Date_End = Date_End))
-
+        
 
         # 用于触发非产品相关的推理链条
         self.declare(
@@ -335,7 +399,7 @@ class reasoning_System(KnowledgeEngine):
                             RHS=manualInput.trend))
                         
                     #当手动输入的产品或者业务 属于公司的产品或业务
-                    if manualInput.item == prod or manualInput.business == business:
+                    if manualInput.item == prod or manualInput.business == business or (country.hasEnergyData(prod) and prod == '原油' and manualInput.detail == '美元指数'):
                         self.declare(Exist(CountryObject = country, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                         # if prod == '原油':
                         #     self.declare(Exist(CountryObject = usa, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -371,7 +435,7 @@ class reasoning_System(KnowledgeEngine):
                     
                     for j in fp:
                         #当手动输入的产品 是上游产品
-                        if manualInput.item == j:
+                        if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
                             self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                             allProduct.append(prod)
                             allBusiness.append(business)
@@ -404,7 +468,7 @@ class reasoning_System(KnowledgeEngine):
                         if j in father_fatherProd.keys():
                             for fprod in father_fatherProd[j]:
                                 #当手动输入的产品 是上游产品的上游产品
-                                if manualInput.item == fprod:
+                                if manualInput.item == fprod or (country.hasEnergyData(fprod) and fprod == '原油'  and manualInput.detail == '美元指数'):
                                     self.declare(Exist(CountryObject = country, ItemName = fprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                     allProduct.append(prod)
                                     allBusiness.append(business)
@@ -437,7 +501,7 @@ class reasoning_System(KnowledgeEngine):
                                 if fprod in father_fatherProd.keys() and len(father_fatherProd[fprod]) > 0:
                                     for ffprod in father_fatherProd[fprod]:
                                         #当手动输入的产品 是上游产品的上游产品的上游产品
-                                        if manualInput.item == ffprod:
+                                        if manualInput.item == ffprod or (country.hasEnergyData(ffprod) and ffprod == '原油'  and manualInput.detail == '美元指数') :
                                             self.declare(Exist(CountryObject = country, ItemName = ffprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                             allProduct.append(prod)
                                             allBusiness.append(business)
@@ -468,7 +532,7 @@ class reasoning_System(KnowledgeEngine):
                                             )
                     for j in sp:
                         #当手动输入的产品 是下游产品
-                        if manualInput.item == j:
+                        if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
                             self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                             allProduct.append(prod)
                             allBusiness.append(business)
@@ -499,7 +563,7 @@ class reasoning_System(KnowledgeEngine):
                         if j in son_sonProd.keys():
                             for sprod in son_sonProd[j]:
                                 #当手动输入的产品 是下游产品 的 下游产品
-                                if manualInput.item == sprod:
+                                if manualInput.item == sprod or (country.hasEnergyData(sprod) and sprod == "原油"  and manualInput.detail == '美元指数'):
                                     self.declare(Exist(CountryObject = country, ItemName = sprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                     allProduct.append(prod)
                                     allBusiness.append(business)
@@ -530,7 +594,7 @@ class reasoning_System(KnowledgeEngine):
                                 if sprod in son_sonProd.keys() and len(son_sonProd[sprod]) > 0:
                                     for ssprod in son_sonProd[sprod]:
                                         #当手动输入的产品 是下游产品 的 下游产品的 下游产品
-                                        if manualInput.item == ssprod:
+                                        if manualInput.item == ssprod or (country.hasEnergyData(ssprod) and ssprod == "原油"  and manualInput.detail == '美元指数'):
                                             self.declare(Exist(CountryObject = country, ItemName = ssprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                             
                                             allProduct.append(prod)
@@ -597,23 +661,49 @@ class reasoning_System(KnowledgeEngine):
         mode = 'Event'
         print(eventText)
 
-        fileForOutput.write('\n 事件文本：')
-        fileForOutput.write(str(eventText))
-        fileForOutput.write('\n 事件名称：')
-        fileForOutput.write(str(eventDetail['事件名称']))
-        fileForOutput.write('\n 事件类型:')
-        fileForOutput.write(str(eventDetail['事件类型']))
-        fileForOutput.write('\n 事件国家, 事件地区:')
-        fileForOutput.write(str(eventDetail['事件国家']) + ', ' + str(eventDetail['事件地区']))
-        fileForOutput.write('\n 产品：')
-        fileForOutput.write(str(eventDetail['产品']))
-        fileForOutput.write('\n 行业：')
-        fileForOutput.write(str(eventDetail['行业']))
-        fileForOutput.write('\n 公司：')
-        fileForOutput.write(str(eventDetail['公司']))
+        try:
+            fileForOutput.write('\n 事件文本：')
+            fileForOutput.write(str(eventText))
+        except:
+            pass
+        
+        try:
+            fileForOutput.write('\n 事件名称：')
+            fileForOutput.write(str(eventDetail['事件名称']))
+        except:
+            pass
+
+        try:
+            fileForOutput.write('\n 事件类型:')
+            fileForOutput.write(str(eventDetail['事件类型']))
+        except:
+            pass
+        
+        try:
+            fileForOutput.write('\n 事件国家, 事件地区:')
+            fileForOutput.write(str(eventDetail['事件国家']) + ', ' + str(eventDetail['事件地区']))
+        except:
+            pass
+
+        try:
+            fileForOutput.write('\n 产品：')
+            fileForOutput.write(str(eventDetail['产品']))
+        except:
+            pass
+
+        try:
+            fileForOutput.write('\n 行业：')
+            fileForOutput.write(str(eventDetail['行业']))
+        except:
+            pass
+        try:
+            fileForOutput.write('\n 公司：')
+            fileForOutput.write(str(eventDetail['公司']))
+        except:
+            pass
         fileForOutput.write('\n\n')
 
-        if len(eventDetail['产品']) == 0 and eventDetail['事件名称'] not in ["军事冲突",'业绩']:
+        if len(eventDetail['产品']) == 0 and eventDetail['事件名称'] not in ["军事冲突",'业绩','资本开支','传染性疾病','运河阻塞','财政压力']:
             print('事件无抽取产品')
             fileForOutput.write('事件无抽取产品\n')
             return 0 
@@ -635,6 +725,10 @@ class reasoning_System(KnowledgeEngine):
         #获取公司所属国家
         Country1 = Term(operator=CompanyInfo,
                                         variables=[Company1, '国家']).GetRHS().value
+
+        self.declare(
+            Exist(CompanyObject = Company1,Date_Begin = Date_Begin, Date_End = Date_End),
+        )
 
         countryName = Term(operator=GetCountryNameFromAbb,
                                         variables=[Country1]).GetRHS().value
@@ -707,6 +801,7 @@ class reasoning_System(KnowledgeEngine):
                     ##############
                     # 检验事件国家是否为公司所属国家的进口国家
                     def checkImport(eventLocation, importCountry):
+                        
                         for i in eventLocation:
                             if i in importCountry:
                                 return True
@@ -734,12 +829,27 @@ class reasoning_System(KnowledgeEngine):
                             if i in firstClass or i in secondClass or i in thirdClass:
                                 return True
                         return False
-                    
-                                        
-                    eventCompany = eventDetail['公司']
-                    eventCountry = eventDetail['事件国家']
-                    eventIndustry = eventDetail['行业']
-                    eventItem = eventDetail['产品']
+                    print(eventDetail)
+                    try:        
+                        eventCompany = eventDetail['公司']
+                    except:
+                        eventCompany = ""
+                    try:
+                        if eventDetail['事件国家'] != '':
+                            eventCountry = eventDetail['事件国家']
+                        else:
+                            eventCountry = eventDetail['制裁国']
+                            eventDetail['事件国家'] = eventDetail['制裁国']
+                    except:
+                        pass
+                    try:
+                        eventIndustry = eventDetail['行业']
+                    except:
+                        eventIndustry = ""
+                    try:
+                        eventItem = eventDetail['产品']
+                    except:
+                        eventItem = ""
                     # fileForOutput.write(str(prod)+ ',' + str(eventItem))
                     # fileForOutput.write('\n')
                     # fileForOutput.write(str(Country.chineseName) + ' ' + str(eventCountry))
@@ -747,6 +857,7 @@ class reasoning_System(KnowledgeEngine):
                     # print(Term(operator=GetItemImportCountry, variables=[Country.name,prod]).GetRHS().value)
 
                     # 当产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                    print(Country.chineseName,eventCountry)
                     if prod in eventItem and (Country.chineseName in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,prod]).GetRHS().value)) :
                         print(prod,fp)
                         self.declare(Exist(CountryObject = Country, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -3296,9 +3407,9 @@ class reasoning_System(KnowledgeEngine):
             self.declare(Assertion(LHS=Term(operator=PredictSales,
                                             variables=[item1,label]),
                             RHS=getTendency[int(index)]))
-            # self.declare(Assertion(LHS=Term(operator=PredictIncome,
-            #                             variables=[business1,label]),
-            #             RHS='plain'))
+            self.declare(Assertion(LHS=Term(operator=PredictIncome,
+                                        variables=[business1,label]),
+                        RHS='plain'))
             fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',getTendency[int(index)]))
             if mode != 'manual':
                 self.retract(f1)
@@ -3618,34 +3729,48 @@ class reasoning_System(KnowledgeEngine):
         result[-1].addResult(company1,'利润', (curBusiness,curProd,curItem),'none')
                     
 
-    @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
+    @Rule(OR(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
+          AS.e2 << Exist(manualInput = MATCH.manualInput)),
         # TEST(lambda index: index!='none'),
         salience=0.31)
-    def rule_end(self,index,a,curBusiness, curProd, curItem):
-        if index == -1:
-            self.retract(a)
-        else:
-            
-            fileForOutput.write('\n业务【{}】推理结束\n'.format(curBusiness))
-            print('\n业务【{}】推理结束\n'.format(curBusiness))
-            
-            # 迭代至下一个新的业务/产品 推理链条
-            index = index + 1
-            # while index<len(allItem) and allItem[index] == 'nil':
-            #     index = index + 1
-            
-            self.retract(a)
-            fileForOutput.write('\n //////// \n')
-            try:
-                fileForOutput.write('\n业务【{}】推理开始\n'.format(allBusiness[index]))
-                print('\n业务【{}】推理开始\n'.format(allBusiness[index]))
-                print(allProduct[index],allBusiness[index],allItem[index])
-                self.declare(CurrentProduct(index = index, curProd = allProduct[index], curBusiness = allBusiness[index], curItem = allItem[index]))
-            except:
-                if mode == 'database':
-                    fileForOutput.write('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
-                    print('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
-            
+    def rule_end(self,index=None,a = None,curBusiness = None, curProd = None, curItem = None, manualInput = None):
+        try:
+            if index == -1:
+                self.retract(a)
+            else:
+                
+                fileForOutput.write('\n业务【{}】推理结束\n'.format(curBusiness))
+                print('\n业务【{}】推理结束\n'.format(curBusiness))
+                
+                # 迭代至下一个新的业务/产品 推理链条
+                index = index + 1
+                # while index<len(allItem) and allItem[index] == 'nil':
+                #     index = index + 1
+                
+                self.retract(a)
+                fileForOutput.write('\n //////// \n')
+                try:
+                    fileForOutput.write('\n业务【{}】推理开始\n'.format(allBusiness[index]))
+                    print('\n业务【{}】推理开始\n'.format(allBusiness[index]))
+                    print(allProduct[index],allBusiness[index],allItem[index])
+                    self.declare(CurrentProduct(index = index, curProd = allProduct[index], curBusiness = allBusiness[index], curItem = allItem[index]))
+                except:
+                    if mode == 'database':
+                        fileForOutput.write('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
+                        print('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
+        except:
+            if manualInput!= None:
+                if manualInput.trend == 'up':
+                    startValue = 0
+                    endValue = 1
+                elif manualInput.trend == 'down':
+                    startValue = 1
+                    endValue = 0
+                if manualInput.detail == '公司净利润':
+                    self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
+                                        variables=[Company1,('手动',)]), 
+                                        RHS = manualInput.trend))
+                
             # if mode == 'database':
             #     event_path = "event\event_test.json"
             #     el = event.EventList(event_path)
@@ -3678,7 +3803,7 @@ class reasoning_System(KnowledgeEngine):
             AS.fProd << Assertion(LHS__operator=ProductIsCommodity_inner,
                                 LHS__variables__0__value=MATCH.item1,
                                 RHS__value=MATCH.item2)),
-          TEST(lambda country1, CountryObject,ProductName, curProd,item1,item2,ItemName, curItem: True if CountryObject == country1 and ProductName == curProd and curProd == item2 and ItemName == item1 and ItemName == curItem else False),
+          TEST(lambda country1, CountryObject,ProductName, curProd,item1,item2,ItemName, curItem: True if ProductName == curProd and curProd == item2 and ItemName == item1 and ItemName == curItem else False),
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event1,
                         RHS_value=MATCH.eventtype),   
@@ -4548,7 +4673,7 @@ class reasoning_System(KnowledgeEngine):
             # 当上游产品的成本增加 或者 某个业务的成本增加    
             if eventTrend in positiveTrend and ((ItemName in eventItem) or (curProd in eventItem and checkCompany(eventCompany,Company1))):
             
-                fileForOutput.write('\n事件抽取：{}\n<规则67>----------\n{}\n{}的成本增加 \n\n'.format(eventtype['事件名称'],event2,business1))
+                fileForOutput.write('\n事件抽取：{}\n<规则67>----------\n{}\n{}的成本({})增加 \n\n'.format(eventtype['事件名称'],event2,business1,eventItem))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=PredictCost,
@@ -4561,7 +4686,7 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write('-> 预测：对应业务 【{}】 的业务成本 --> ({} -> {})\n'.format(business1,'plain',getTendency[index]))
             # 当上游产品的成本增加 或者 某个业务的成本减少
             elif eventTrend in negativeTrend and ((ItemName in eventItem) or (curProd in eventItem and checkCompany(eventCompany,Company1))):
-                fileForOutput.write('\n事件抽取：{}\n<规则68>----------\n{}\n{}的成本减少 \n\n'.format(eventtype['事件名称'],event2,business1))
+                fileForOutput.write('\n事件抽取：{}\n<规则68>----------\n{}\n{}的成本({})减少 \n\n'.format(eventtype['事件名称'],event2,business1,eventItem))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=PredictCost,
@@ -4701,7 +4826,7 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "自然灾害" and eventtype['产品'] in ['原油', '天然气'] else False), 
+          TEST(lambda eventtype: True if eventtype['事件名称'] == "自然灾害" else False), 
         
           salience=0.41)  
     def rule28_46(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd, fSon = None):
@@ -4845,9 +4970,11 @@ class reasoning_System(KnowledgeEngine):
         if eventTrend in negativeTrend:
             startValue = 0
             endValue = 1
+            production = "增加"
         elif eventTrend in positiveTrend:
             startValue = 1
             endValue = 0
+            production = "减少"
         else:
             startValue = None
             endValue = None
@@ -4855,7 +4982,7 @@ class reasoning_System(KnowledgeEngine):
         if ItemName == '原油' and chineseCountryName in eventCountry:
         
             fileForOutput.write('\n事件抽取：{}\n<规则23>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{}国家的{}产量{} \n\n'.format(eventCountry,ItemName,eventTrend))
+            fileForOutput.write('--> 预测：{}国家的{}产量{} \n\n'.format(eventCountry,ItemName,production))
             self.declare(
                     Assertion(LHS=Term(operator=GetProduction,
                                             variables=[CountryObject, ItemName,Date_Begin, (ItemName,curProd)]),
@@ -5034,7 +5161,7 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "消费政策" and eventtype['产品'] == '原油' else False), 
+          TEST(lambda eventtype: True if eventtype['事件名称'] == "消费政策" and '原油' in eventtype['产品'] else False), 
         
           salience=0.41)  
     def rule39_40(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
@@ -5086,15 +5213,16 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "运输成本" and eventtype['产品'] == '原油' else False), 
+          TEST(lambda eventtype: True if eventtype['事件名称'] == "运输成本" else False), 
         
           salience=0.41)  
     def rule44(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
+        # print(eventtype)
         eventCountry = eventtype['事件国家']
         eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
+        #eventArea = eventtype['事件地区']
         eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
+        #eventCompany = eventtype['公司']
         positiveTrend = ['增加']
         negativeTrend = ['减少']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
@@ -5109,7 +5237,7 @@ class reasoning_System(KnowledgeEngine):
 
         if ItemName in eventItem and chineseCountryName in eventCountry:
         
-            fileForOutput.write('\n事件抽取：{}\n<规则44>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
+            fileForOutput.write('\n事件抽取：{}\n<规则44>----------\n{}\n{}因{} {} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称'],eventTrend))
             fileForOutput.write('--> 预测：{} 国家的 {} 价格 {} \n\n'.format(eventCountry,ItemName,eventTrend))
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, (eventtype['事件名称'],)]),
@@ -5122,18 +5250,18 @@ class reasoning_System(KnowledgeEngine):
             self.retract(EventType)
     
     @Rule(
-          AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
-          AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
-          OR(AS.fSon << Assertion(LHS__operator=GetSonProduct_inner,
-                                LHS__variables__0__value=MATCH.item1,
-                                RHS__value=MATCH.item2),
-            AS.fFather << Assertion(LHS__operator=GetFatherProduct_inner,
-                                LHS__variables__0__value=MATCH.item1,
-                                RHS__value=MATCH.item2),
-            AS.fProd << Assertion(LHS__operator=ProductIsCommodity_inner,
-                                LHS__variables__0__value=MATCH.item1,
-                                RHS__value=MATCH.item2)),
-          TEST(lambda ProductName, curProd,item1,item2,ItemName, curItem: True if ProductName == curProd and curProd == item2 and ItemName == item1 and ItemName == curItem else False),
+        #   AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
+        #   AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
+        #   OR(AS.fSon << Assertion(LHS__operator=GetSonProduct_inner,
+        #                         LHS__variables__0__value=MATCH.item1,
+        #                         RHS__value=MATCH.item2),
+        #     AS.fFather << Assertion(LHS__operator=GetFatherProduct_inner,
+        #                         LHS__variables__0__value=MATCH.item1,
+        #                         RHS__value=MATCH.item2),
+        #     AS.fProd << Assertion(LHS__operator=ProductIsCommodity_inner,
+        #                         LHS__variables__0__value=MATCH.item1,
+        #                         RHS__value=MATCH.item2)),
+        #   TEST(lambda ProductName, curProd,item1,item2,ItemName, curItem: True if ProductName == curProd and curProd == item2 and ItemName == item1 and ItemName == curItem else False),
           
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
@@ -5141,7 +5269,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda eventtype: True if eventtype['事件名称'] == "资本开支" else False), 
         
           salience=0.41)  
-    def rule45(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
+    def rule45(self,EventType, event2, eventtype):
         eventCountry = eventtype['事件国家']
         eventTrend = eventtype['事件类型']
         eventArea = eventtype['事件地区']
@@ -5149,13 +5277,14 @@ class reasoning_System(KnowledgeEngine):
         eventCompany = eventtype['公司']
         positiveTrend = ['增加']
         negativeTrend = ['减少']
-        chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
+        #chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         def checkCompany(eventCompany, companyObj):
+            
             csn = companyObj.info['机构简称']
             for key in companyObj.securitycode:
                 exchange = key[4:]
                 secCode = companyObj.securitycode[key]
-            for c in eventCompany:
+            for c in [eventCompany]:
                 if csn in c or companyObj.name in c or secCode in c:
                     return True
             return False
@@ -5172,7 +5301,7 @@ class reasoning_System(KnowledgeEngine):
         if checkCompany(eventCompany, Company1):
         
             fileForOutput.write('\n事件抽取：{}\n<规则45>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCompany,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 公司的 {} 资本开支 {} \n\n'.format(eventCompany,ItemName,eventTrend))
+            fileForOutput.write('--> 预测：{} 公司的 资本开支 {} \n\n'.format(eventCompany,eventTrend))
             self.declare(Assertion(LHS=Term(operator=PredictCompanyCAPEX,
                                                 variables=[Company1,(eventtype['事件名称'],)]),
                             RHS=getTendency[index]))
@@ -5203,6 +5332,7 @@ class reasoning_System(KnowledgeEngine):
         
           salience=0.41)  
     def rule47_48(self, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fFather = None):
+        fileForOutput.write('rule47_48')
         eventCountry = eventtype['事件国家']
         eventTrend = eventtype['事件类型']
         eventArea = eventtype['事件地区']
@@ -5252,7 +5382,7 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "释放战略原油储备" and eventtype['产品'] == '原油' else False), 
+          TEST(lambda eventtype: True if eventtype['事件名称'] == "释放战略原油储备" and  '原油' in eventtype['产品'] else False), 
         
           salience=0.41)  
     def rule49(self,item1, EventType, event2, CountryObject, ItemName, eventtype,fSon = None):
@@ -5294,7 +5424,7 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "能源短缺" and eventtype['产品'] == '原油' else False), 
+          TEST(lambda eventtype: True if eventtype['事件名称'] == "能源短缺" and  '原油' in eventtype['产品'] else False), 
         
           salience=0.41)  
     def rule50(self, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fFather = None):
@@ -5421,11 +5551,11 @@ class reasoning_System(KnowledgeEngine):
         detail = {}
         detail['事件名称'] = '运输成本'
         detail['事件类型'] = '增加'
-        detail['事件国家'] = [chineseCountryName]            
-        detail['产品'] = [ItemName]
+        detail['事件国家'] = chineseCountryName       
+        detail['产品'] = ItemName
         
         self.declare(
-            Assertion(LHS_operator=GetEventType,LHS_value= str(detail['事件名称']) + str(detail['事件类型']) + str(event2) , RHS_value=detail)
+            Assertion(LHS_operator=GetEventType,LHS_value= str(detail['事件名称']) + '_' + str(detail['事件类型']) + '_' +str(event2) , RHS_value=detail)
         )
     
 ###################################################
@@ -5584,7 +5714,7 @@ class reasoning_System(KnowledgeEngine):
                         LHS__variables__1__value=MATCH.label,
                         RHS__value = MATCH.capex),    
           TEST(lambda c1,CompanyObject: True if c1 == CompanyObject else False), 
-          salience=0.2)  
+          salience=0.9)  
     def inner_rule23(self, c1,label,capex,PredictCapex):
         if capex == 'none':
             self.declare(
@@ -5613,7 +5743,7 @@ class reasoning_System(KnowledgeEngine):
                         LHS__variables__1__value=MATCH.label,
                         RHS__value = MATCH.workingtime),    
           TEST(lambda c1,CompanyObject: True if c1 == CompanyObject else False), 
-          salience=0.2)  
+          salience=0.9)  
     def inner_rule24(self, c1,label,workingtime,PredictWorkTime):
         fileForOutput.write("\n<内规则24>----------\n由{}公司的业务作业量-> {}\n".format(label,workingtime))
         index = getTendency.index(workingtime)

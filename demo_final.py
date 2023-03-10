@@ -247,7 +247,7 @@ def runDatabase(d1, d2,c1 = None):
     return engine.rule_library_final.result[-1]
     
 
-def runManualInput( detail, trend , companyInput = None, item = None, business = None, index = None, country = None , d1 = datetime.now(), d2 = datetime.now() + timedelta(days=2)):
+def runManualInput( detail = None, trend = None, companyInput = None, event = None, item = None, business = None, index = None, country = None , usdindex = None, d1 = datetime.now(), d2 = datetime.now() + timedelta(days=2)):
     beginDate = d1
     endDate = d2
     #当输入item为公司产品或上下游产品，可用的 detail = '价格','进口','出口', '产量' , '库存' 
@@ -276,7 +276,7 @@ def runManualInput( detail, trend , companyInput = None, item = None, business =
         
         #c1 = ['601857SH', '601898SH']
         c1 = [companyInput]
-        if c1!= None:
+        if c1[0] != None:
             if scode not in c1:
                 # 初始化公司的业务与产品列表
                 engine.rule_library_final.allProduct = []
@@ -291,9 +291,61 @@ def runManualInput( detail, trend , companyInput = None, item = None, business =
         
         # 在result字典添加公司的行业分类
         engine.rule_library_final.result[-1].addIndustry(engine.rule_library_final.Company1)
+        if event == None:
+            eng.reset(Company1 = engine.rule_library_final.Company1 ,Date_Begin = beginDate, Date_End = endDate, manualInput= m)
+            eng.run()
+        else:
+            detail = {}
+            try:
+                detail['事件名称'] = event['事件名称']
+            except:
+                detail['事件名称'] = ''
+            try:
+                detail['事件类型'] = event['事件类型']
+            except:
+                detail['事件类型'] = ''
+            try:
+                detail['事件地区'] = event['事件地区']
+            except:
+                detail['事件地区'] = ''
+            try:
+                detail['事件国家'] = event['事件国家']
+            except:
+                detail['事件国家'] = ''
+            try:
+                detail['产品'] = event['产品']
+            except:
+                detail['产品'] = ''
+            try:
+                detail['被制裁国'] = event['被制裁国']
+            except:
+                detail['被制裁国'] = ''
+            try:
+                detail['制裁国'] = event['制裁国']
+            except:
+                detail['制裁国'] = ''
+            try:
+                detail['行业'] = event['行业']
+            except:
+                detail['行业'] = ''
+            try:
+                detail['公司'] = event['公司']
+            except:
+                detail['公司'] = ''
+            
+            # declare 该事件的抽取结果
+            pprint(detail)
+            eventsingle_type = Assertion(LHS_operator=GetEventType,LHS_value="手动输入事件类型", RHS_value=detail)
+            eng.reset(Event1 = eventsingle_type, Company1 = engine.rule_library_final.Company1)            
+            #engine.declare(eventsingle_type)
+            
+            #假设事件的影响（结束时间）发生在一个月后
+            eng.declare(
+                engine.rule_library_final.DateFact(Date_Begin = beginDate,
+                        Date_End = endDate)
+            )
 
-        eng.reset(Company1 = engine.rule_library_final.Company1 ,Date_Begin = beginDate, Date_End = endDate, manualInput= m)
-        eng.run()
+            eng.run()
         engine.rule_library_final.result[-1].addResult(engine.rule_library_final.Company1,'结束')
         engine.rule_library_final.allProduct = []
         engine.rule_library_final.allBusiness = []
@@ -319,7 +371,7 @@ if __name__ == "__main__":
     # t = input("输入新闻")
     # runEventExtract(text = t)
     # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 12, 31, 0, 0))
-    runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'601857SH')
+    # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'601969SH')
     # runDatabase(datetime(2020, 3, 27, 0, 0),datetime(2020, 8, 29, 0, 0),'601898SH')
     # runManualInput(detail= '行业指数', trend = 'up', index='申万石油石化指数')
     # runManualInput(detail= '出口', trend = 'down', item='原油',country = "United States")
@@ -329,6 +381,40 @@ if __name__ == "__main__":
     # runManualInput(detail= '收入', trend = 'up', business='炼油与化工')
     # runManualInput(detail= '销售', trend = 'up', item='汽油')
 
+    # runManualInput(detail= '美元指数', trend = 'up')
+    # runManualInput(detail= '公司净利润',companyInput='601857SH', trend = 'up')
+    # runManualInput(detail= '公司股票数',companyInput='601857SH', trend = 'up')
+    # runManualInput(detail= '公司储量',companyInput='601857SH', trend = 'up')
 
+
+#以下是手动事件触发 参数不是 detail，是event
+###################################
+    # eventInput = {'事件名称': "释放战略原油储备", '产品': ['原油'], "事件国家": ["中国"]}
+    #eventInput = {'事件名称': "运河阻塞", '产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "传染性疾病", '产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "能源短缺", '产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "工厂开工率",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "资本开支",'事件类型': '增加' ,'公司': '中国石油天然气股份有限公司'}
+    # eventInput = {'事件名称': "运输成本",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "消费政策",'事件类型': '促进' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "出口政策",'事件类型': '促进' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "进口政策",'事件类型': '抑制' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "财政压力",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "生产政策",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "自然灾害",'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "库存",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    #eventInput = {'事件名称': "成本",'事件类型': '增加' ,'产品': ['原油'],'公司': '中国石油天然气股份有限公司',"事件国家": ["中国"]}
+    # eventInput = {'事件名称': "业绩",'事件类型': '增加' ,'产品': ['汽油'],'公司': '中国石油天然气股份有限公司',"事件国家": ["中国"]}
+    # eventInput = {'事件名称': "需求",'事件类型': '增加' ,'产品': ['汽油'],"事件国家": ["中国"]}
+    # eventInput = {'事件名称': "供应",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "进口",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "出口",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "产量",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+    # eventInput = {'事件名称': "军事冲突", '产品': ['原油'], "事件国家": ["俄罗斯联邦"]}
+    # eventInput = {'事件名称': "制裁", '产品': ['原油'], "被制裁国": ["俄罗斯联邦"],"制裁国": [["中国"]]}
+    eventInput = {'事件名称': "经济",'事件类型': '上行' ,'产品': ['原油'], "事件国家": ["中国"]}
+    
+    # runManualInput(event=eventInput,companyInput='601969SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
+    runManualInput(event=eventInput,companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
 
 """update the demo file after enter the button"""

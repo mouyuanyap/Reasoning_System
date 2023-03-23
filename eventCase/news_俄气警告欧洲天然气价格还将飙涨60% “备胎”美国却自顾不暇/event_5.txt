@@ -1,0 +1,201 @@
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：美国库存下降 　　欧洲一筹莫展，大洋彼岸的美国也出现新的问题。
+ 事件名称：库存
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist(['欧洲',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:0.45682787895202637

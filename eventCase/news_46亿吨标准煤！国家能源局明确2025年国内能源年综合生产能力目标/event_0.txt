@@ -1,0 +1,201 @@
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：46亿吨标准煤！国家能源局明确2025年国内能源年综合生产能力目标
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:0.4749908447265625

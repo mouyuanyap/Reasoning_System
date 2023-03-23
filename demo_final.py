@@ -15,16 +15,17 @@ from tools import Results,ManualInput
 
 def runEventExtract(text = None):
     if text == None:
-        from eventExtraction.run import batch_run
-        basefile = 'eventExtraction\\data\\testForEngine\\'
-        newsTextFile = basefile + 'fin_news'
-        extractionResultFile = basefile + 'extraction_output'
+        # from eventExtraction.run import batch_run
+        extractionResultFile = "./eventExtraction/data/test_fin_data/output/"
+        # basefile = 'eventExtraction\\data\\testForEngine\\'
+        # newsTextFile = basefile + 'fin_news'
+        # extractionResultFile = basefile + 'extraction_output'
         # extractionResultFile = basefile + 'temp'
-        try:
-            os.mkdir(extractionResultFile)
-        except:
-            pass
-        batch_run(newsTextFile,extractionResultFile)
+        # try:
+        #     os.mkdir(extractionResultFile)
+        # except:
+        #     pass
+        # batch_run(newsTextFile,extractionResultFile)
     else:
         from eventExtraction.run import taibao_event_extract
         extract_result = {}
@@ -47,6 +48,7 @@ def runEventExtract(text = None):
                 el = event.EventList(eventjson_path = event_path)
                 newsList.append(el)
                 eventFileNameList.append(filename)
+                
     else:
         el = event.EventList(eventExtractResult = extract_result)
         newsList.append(el)
@@ -212,6 +214,7 @@ def runDatabase(d1, d2,c1 = None):
         engine.rule_library_final.Company1 = allCompany.getCompanyBySecurityCode(scode)
         engine.rule_library_final.result[-1].addIndustry(engine.rule_library_final.Company1)
         
+        print(engine.rule_library_final.Company1.getEPS_jy(beginDate))
         eng.reset(Company1 = engine.rule_library_final.Company1 ,Date_Begin = beginDate, Date_End = endDate)
         
 
@@ -370,15 +373,17 @@ def runManualInput( detail = None, trend = None, companyInput = None, event = No
 if __name__ == "__main__":
     # t = input("输入新闻")
     # runEventExtract(text = t)
+    # runEventExtract()
     # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 12, 31, 0, 0))
-    # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'601969SH')
+    runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'605086SH')
     # runDatabase(datetime(2020, 3, 27, 0, 0),datetime(2020, 8, 29, 0, 0),'601898SH')
     # runManualInput(detail= '行业指数', trend = 'up', index='申万石油石化指数')
     # runManualInput(detail= '出口', trend = 'down', item='原油',country = "United States")
     # runManualInput(detail= '产量', trend = 'down', item='原油')
-    # runManualInput(detail= '需求', trend = 'down', item='原油')
+    # runManualInput(detail= '库存', trend = 'down', item='汽油')
+    # runManualInput(detail= '需求', trend = 'down', item='原油', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
     # runManualInput(detail= '供给', trend = 'down',companyInput='600759SH', item='原油')
-    # runManualInput(detail= '收入', trend = 'up', business='炼油与化工')
+    # runManualInput(detail= '利润', trend = 'up', business='炼油与化工', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
     # runManualInput(detail= '销售', trend = 'up', item='汽油')
 
     # runManualInput(detail= '美元指数', trend = 'up')
@@ -388,33 +393,33 @@ if __name__ == "__main__":
 
 
 #以下是手动事件触发 参数不是 detail，是event
-###################################
-    # eventInput = {'事件名称': "释放战略原油储备", '产品': ['原油'], "事件国家": ["中国"]}
-    #eventInput = {'事件名称': "运河阻塞", '产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "传染性疾病", '产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "能源短缺", '产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "工厂开工率",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "资本开支",'事件类型': '增加' ,'公司': '中国石油天然气股份有限公司'}
-    # eventInput = {'事件名称': "运输成本",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "消费政策",'事件类型': '促进' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "出口政策",'事件类型': '促进' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "进口政策",'事件类型': '抑制' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "财政压力",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "生产政策",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "自然灾害",'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "库存",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    #eventInput = {'事件名称': "成本",'事件类型': '增加' ,'产品': ['原油'],'公司': '中国石油天然气股份有限公司',"事件国家": ["中国"]}
-    # eventInput = {'事件名称': "业绩",'事件类型': '增加' ,'产品': ['汽油'],'公司': '中国石油天然气股份有限公司',"事件国家": ["中国"]}
-    # eventInput = {'事件名称': "需求",'事件类型': '增加' ,'产品': ['汽油'],"事件国家": ["中国"]}
-    # eventInput = {'事件名称': "供应",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "进口",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "出口",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "产量",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
-    # eventInput = {'事件名称': "军事冲突", '产品': ['原油'], "事件国家": ["俄罗斯联邦"]}
-    # eventInput = {'事件名称': "制裁", '产品': ['原油'], "被制裁国": ["俄罗斯联邦"],"制裁国": [["中国"]]}
-    eventInput = {'事件名称': "经济",'事件类型': '上行' ,'产品': ['原油'], "事件国家": ["中国"]}
+# ###################################
+#     eventInput = {'事件名称': "释放战略原油储备", '产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "运河阻塞", '产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "传染性疾病", '产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "能源短缺", '产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "工厂开工率",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "资本开支",'事件类型': '增加' ,'公司': '中国石油天然气股份有限公司'}
+#     eventInput = {'事件名称': "运输成本",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "消费政策",'事件类型': '促进' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "出口政策",'事件类型': '促进' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "进口政策",'事件类型': '抑制' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "财政压力",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "生产政策",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "自然灾害",'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "库存",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "成本",'事件类型': '增加' ,'产品': ['原油'],'公司': '中国石油天然气股份有限公司',"事件国家": ["中国"]}
+#     eventInput = {'事件名称': "业绩",'事件类型': '增加' ,'产品': ['汽油'],'公司': '中国石油天然气股份有限公司',"事件国家": ["中国"]}
+#     eventInput = {'事件名称': "需求",'事件类型': '增加' ,'产品': ['汽油'],"事件国家": ["中国"]}
+#     eventInput = {'事件名称': "供应",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "进口",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "出口",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "产量",'事件类型': '增加' ,'产品': ['原油'], "事件国家": ["中国"]}
+#     eventInput = {'事件名称': "军事冲突", '产品': ['原油'], "事件国家": ["俄罗斯联邦"]}
+#     eventInput = {'事件名称': "制裁", '产品': ['原油'], "被制裁国": ["俄罗斯联邦"],"制裁国": ["中国"]}
+#     eventInput = {'事件名称': "经济",'事件类型': '上行' ,'产品': ['原油'], "事件国家": ["中国"]}
     
-    # runManualInput(event=eventInput,companyInput='601969SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
-    runManualInput(event=eventInput,companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
+#     runManualInput(event=eventInput,companyInput='601969SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
+    # runManualInput(event=eventInput,companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
 
 """update the demo file after enter the button"""

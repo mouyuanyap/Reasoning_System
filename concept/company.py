@@ -43,6 +43,7 @@ class Company:
         self.NetProfit = {}
         self.TotalShares = {}
         self.AssetsNetDiffValue = {}
+        self.EPS = {}
 
     def getAssetsValue_jy(self,date):
         #只有每年的0630和1231有数据
@@ -137,7 +138,35 @@ class Company:
                     break
         print(self.TotalShares)
         return self.NetProfit
+    
+    def getEPS_jy(self,date):
+        date_string = ""
         
+        for key in self.securitycode:
+            secCode = self.securitycode[key]
+        print(secCode)
+        if date.month < 10:
+            m = '0' + str(date.month)
+        else:
+            m = str(date.month)
+        
+        if date.day < 10:
+            d = '0' + str(date.day)
+        else:
+            d = str(date.day)
+        date_string = str(date.year) + str(m) + str(d)
+
+        file = codecs.open(os.path.join(dataPath + 'company/', 'eps.csv'), encoding = 'utf-8')
+        rows = csv.reader(file)
+        for num,row in enumerate(rows):
+            if num >0:
+                if row[2] == secCode and datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == date:
+                    
+                    self.EPS[datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S')] = float(row[3])
+                    break
+
+        return self.EPS
+
 
     def getChildCompany_jy(self):
         # cur = conn_jy.cursor()
@@ -1065,11 +1094,11 @@ order by stopdate desc"""):
             if len(self.companycode) > len(securitycode):
                 print('error')
             cc = []
-            for cRoot, cDirs, cFiles in os.walk(dataPath + 'company/',topdown=True):
+            for cRoot, cDirs, cFiles in os.walk('./db/Data/company/',topdown=True):
                 # print(cDirs)
                 for cD in cDirs:
                     # print(cD)
-                    file = codecs.open(os.path.join(os.path.join(dataPath + 'company/', cD) ,'companyInfo.csv'), encoding = 'utf-8')
+                    file = codecs.open(os.path.join(os.path.join('./db/Data/company/', cD) ,'companyInfo.csv'), encoding = 'utf-8')
                     rows = csv.reader(file)
                     for n,row in enumerate(rows):
                         # print(row)

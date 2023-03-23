@@ -1,0 +1,201 @@
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：今冬保暖保供工作 火电的机会也是难点
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:0.4724292755126953

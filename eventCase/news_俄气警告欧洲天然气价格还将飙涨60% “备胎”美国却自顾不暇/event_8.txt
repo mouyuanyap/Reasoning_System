@@ -1,0 +1,201 @@
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：日产量从峰值987亿立方英尺下降了10亿立方英尺。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['日',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:0.4842367172241211

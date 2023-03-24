@@ -1,0 +1,1301 @@
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国内油价迎下半年第二次上调！加满一箱油多花7.5元左右 接下来油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['国内',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:3.162288188934326

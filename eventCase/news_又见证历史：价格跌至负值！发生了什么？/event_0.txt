@@ -1,0 +1,1301 @@
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：又见证历史：价格跌至负值！发生了什么？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '美国']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:3.015617609024048

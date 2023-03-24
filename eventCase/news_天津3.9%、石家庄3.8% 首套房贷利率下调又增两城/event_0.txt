@@ -1,0 +1,1301 @@
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：天津3.9%、石家庄3.8% 首套房贷利率下调又增两城
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist(['石家庄', '天津'])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:2.956913709640503

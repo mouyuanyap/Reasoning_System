@@ -69,11 +69,34 @@ def runEventExtract(text = None):
             pass
 
         for i in range(el.GetNumber()):
+
             startTime = time.time()
             def removeBadChar(inputString):
                 for c in '\/:*?"<>|':
                     inputString = inputString.replace(c,'') 
                 return inputString
+            eventsingle = el.events[i]
+            try:
+                startYear = eventsingle.info['time'].year
+                startMonth = eventsingle.info['time'].month
+                startDay = eventsingle.info['time'].day
+            except:
+                startYear = datetime.today().year
+                startMonth = datetime.today().month
+                startDay = datetime.today().day
+            if startMonth + 1 >12:
+                endYear = startYear + 1
+                endMonth = 1
+            else:
+                endYear = startYear
+                endMonth = startMonth + 1
+            if startDay >28:
+                endDay = 28
+            else:
+                endDay = startDay
+            print(datetime(startYear, startMonth, startDay, 0, 0))
+            # if startMonth > 9:
+            #     continue
 
             engine.rule_library_final.fileForOutput = codecs.open('./eventCase/news_{}/event_{}.txt'.format(eventFileName,i),'w', 'utf-8')
             
@@ -88,7 +111,7 @@ def runEventExtract(text = None):
                     secCode = comp.securitycode[key]
                 scode = secCode + exchange
                 if scode not in []:
-
+                    
                     #获取该公司的数据库建模的实例变量
                     engine.rule_library_final.Company1 = allCompany.getCompanyBySecurityCode(scode)
 
@@ -114,24 +137,6 @@ def runEventExtract(text = None):
                     eng.reset(Event1 = eventsingle_type, Company1 = engine.rule_library_final.Company1)            
                     #engine.declare(eventsingle_type)
 
-                    try:
-                        startYear = eventsingle.info['time'].year
-                        startMonth = eventsingle.info['time'].month
-                        startDay = eventsingle.info['time'].day
-                    except:
-                        startYear = datetime.today().year
-                        startMonth = datetime.today().month
-                        startDay = datetime.today().day
-                    if startMonth + 1 >12:
-                        endYear = startYear + 1
-                        endMonth = 1
-                    else:
-                        endYear = startYear
-                        endMonth = startMonth + 1
-                    if startDay >28:
-                        endDay = 28
-                    else:
-                        endDay = startDay
                     
                     #假设事件的影响（结束时间）发生在一个月后
                     eng.declare(
@@ -157,32 +162,37 @@ def runEventExtract(text = None):
 
 
     # 统计并展示各事件对行业及公司的影响
-    for num,news_Result in enumerate(engine.rule_library_final.result):
-        subNewsCount = len(news_Result.resultsCost[0])
-        for j in range(subNewsCount):
-            print(num)
-            print(j)
-            print(newsList)
-            print(len(newsList))
-            print(len(newsList[num].events))
-            e = newsList[num].events[j]
-            print('')
-            print((e.text,e.type,e.trend,e.country,e.area, e.industry,e.company,e.item,e.date_time))
-            for i in range(3):
-                print('\n\n申万{}级行业分类: '.format(i+1))
+    # for num,news_Result in enumerate(engine.rule_library_final.result):
+    #     subNewsCount = len(news_Result.resultsCost[0])
+    #     for j in range(subNewsCount):
+    #         print(num)
+    #         print(j)
+    #         print(newsList)
+    #         print(len(newsList))
+    #         print(len(newsList[num].events))
+    #         e = newsList[num].events[j]
+    #         print('')
+    #         print((e.text,e.type,e.trend,e.country,e.area, e.industry,e.company,e.item,e.date_time))
+    #         for i in range(3):
+    #             print('\n\n申万{}级行业分类: '.format(i+1))
                 
-                print('结果：成本')
-                pprint(news_Result.resultsCost[i][j])
+    #             print('结果：成本')
+    #             pprint(news_Result.resultsCost[i][j])
                 
-                print('\n结果：收入')
-                pprint(news_Result.resultsIncome[i][j])
+    #             print('\n结果：收入')
+    #             pprint(news_Result.resultsIncome[i][j])
                 
-                print('\n结果：利润')
-                pprint(news_Result.resultsProfit[i][j])     
-    e = time.time()
-    print(str(e-s))
+    #             print('\n结果：利润')
+    #             pprint(news_Result.resultsProfit[i][j])     
+    # e = time.time()
+    # print(str(e-s))
 
-    return engine.rule_library_final.result[0], newsList
+    
+    # pprint(engine.rule_library_final.result[1].resultsProfit[0][2])
+
+    # pprint(newsList[1].eventInfo['time'])
+    # pprint(newsList[1].events[2].text)
+    return engine.rule_library_final.result, newsList
 
 def runDatabase(d1, d2,c1 = None):
 
@@ -250,7 +260,7 @@ def runDatabase(d1, d2,c1 = None):
     return engine.rule_library_final.result[-1]
     
 
-def runManualInput( detail = None, trend = None, companyInput = None, event = None, item = None, business = None, index = None, country = None , usdindex = None, d1 = datetime.now(), d2 = datetime.now() + timedelta(days=2)):
+def runManualInput( manInput = [], companyInput = None, event = None, d1 = datetime.now(), d2 = datetime.now() + timedelta(days=2)):
     beginDate = d1
     endDate = d2
     #当输入item为公司产品或上下游产品，可用的 detail = '价格','进口','出口', '产量' , '库存' 
@@ -263,7 +273,8 @@ def runManualInput( detail = None, trend = None, companyInput = None, event = No
     #初始化结果result类
     engine.rule_library_final.result.append(Results())
     engine.rule_library_final.result[-1].addEvents()
-    m = ManualInput(detail, trend, item , business, index, country)
+    # m = ManualInput(detail, str(trend) + str(degree), item , business, index, country)
+    m = manInput
 
     # 遍历数据库建模的 公司实体；关于公司的数据已经从数据库获取并保存在该实体，可被推理引擎调用
     for number, comp in enumerate(allCompany.companyList[0:]):
@@ -295,7 +306,7 @@ def runManualInput( detail = None, trend = None, companyInput = None, event = No
         # 在result字典添加公司的行业分类
         engine.rule_library_final.result[-1].addIndustry(engine.rule_library_final.Company1)
         if event == None:
-            eng.reset(Company1 = engine.rule_library_final.Company1 ,Date_Begin = beginDate, Date_End = endDate, manualInput= m)
+            eng.reset(Company1 = engine.rule_library_final.Company1 ,Date_Begin = beginDate, Date_End = endDate, manualInputs= m)
             eng.run()
         else:
             detail = {}
@@ -375,21 +386,22 @@ if __name__ == "__main__":
     # runEventExtract(text = t)
     # runEventExtract()
     # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 12, 31, 0, 0))
-    runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'605086SH')
-    # runDatabase(datetime(2020, 3, 27, 0, 0),datetime(2020, 8, 29, 0, 0),'601898SH')
-    # runManualInput(detail= '行业指数', trend = 'up', index='申万石油石化指数')
-    # runManualInput(detail= '出口', trend = 'down', item='原油',country = "United States")
-    # runManualInput(detail= '产量', trend = 'down', item='原油')
-    # runManualInput(detail= '库存', trend = 'down', item='汽油')
-    # runManualInput(detail= '需求', trend = 'down', item='原油', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
-    # runManualInput(detail= '供给', trend = 'down',companyInput='600759SH', item='原油')
-    # runManualInput(detail= '利润', trend = 'up', business='炼油与化工', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
-    # runManualInput(detail= '销售', trend = 'up', item='汽油')
-
-    # runManualInput(detail= '美元指数', trend = 'up')
-    # runManualInput(detail= '公司净利润',companyInput='601857SH', trend = 'up')
-    # runManualInput(detail= '公司股票数',companyInput='601857SH', trend = 'up')
-    # runManualInput(detail= '公司储量',companyInput='601857SH', trend = 'up')
+    # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'601857SH')
+    runDatabase(datetime(2020, 3, 27, 0, 0),datetime(2020, 8, 29, 0, 0),'601898SH')
+    m1 = ManualInput(detail= '行业指数', trend = 'up', degree='++++' , index='申万石油石化指数')
+    m2 = ManualInput(detail= '供给', trend = 'down', degree= "--", item='聚乙烯')
+    m3 = ManualInput(detail= '需求', trend = 'down', degree= "--", item='汽油')
+    m4 = ManualInput(detail= '价格', trend = 'down', degree= "--", item='汽油')
+    m5 = ManualInput(detail= '销售', trend = 'up', degree= "+", item='汽油')
+    m6 = ManualInput(detail= '成本', trend = 'up',degree= "++", business='炼油与化工')
+    m7 = ManualInput(detail= '收入', trend = 'down',degree= "--", business='炼油与化工')
+    m8 = ManualInput(detail= '利润', trend = 'up',degree= "++++", business='炼油与化工')
+    m9 = ManualInput(detail= '库存', trend = 'down', degree= "--", item='原油')
+    m10 = ManualInput(detail= '出口', trend = 'down', degree= "--", item='原油')
+    m11 = ManualInput(detail= '美元指数', trend = 'up',degree= "++++")
+    m12 = ManualInput(detail= '公司股票数', trend = 'up', degree = '++')
+    m13 = ManualInput(detail= '公司储量', trend = 'up', degree = '++')
+    # runManualInput(manInput=[m4,m5,m10],companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
 
 
 #以下是手动事件触发 参数不是 detail，是event

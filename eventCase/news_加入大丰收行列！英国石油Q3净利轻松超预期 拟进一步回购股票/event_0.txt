@@ -198,4 +198,1104 @@
  公司：frozenlist(['英国石油',])
 
 事件无抽取产品
-Execution time:0.4574425220489502
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+
+ 事件文本：加入大丰收行列！英国石油Q3净利轻松超预期 拟进一步回购股票
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['英国石油',])
+
+事件无抽取产品
+Execution time:3.1141068935394287

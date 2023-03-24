@@ -1,0 +1,1301 @@
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：同期，德国进口商品总额达7296亿欧元，同比增长26.5%。
+ 事件名称：进口
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:2.940157413482666

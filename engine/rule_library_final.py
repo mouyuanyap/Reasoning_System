@@ -52,10 +52,10 @@ mode = None
 
 class reasoning_System(KnowledgeEngine):
     @DefFacts()
-    def SetDefault(self,Date_Begin = None, Date_End = None,Company1 = '', Event1 = None, manualInput = None):
+    def SetDefault(self,Date_Begin = None, Date_End = None,Company1 = '', Event1 = None, manualInputs = None):
         
         #从数据库获取的推理模式
-        if Company1 != '' and Event1 == None and manualInput == None:
+        if Company1 != '' and Event1 == None and manualInputs == None:
             # Declare 以下的 Fact, 以触发规则999
             yield Assertion(LHS=Term(operator=GetFuture,
                                             variables=['美元指数', 'DX',Date_Begin, Date_End]),
@@ -75,18 +75,18 @@ class reasoning_System(KnowledgeEngine):
             yield DateFact(Date_Begin = Date_Begin, Date_End = Date_End)
 
         #事件抽取的推理模式
-        elif Event1 != None and Company1!='' and manualInput == None:
+        elif Event1 != None and Company1!='' and manualInputs == None:
             # Declare 以下的 Fact, 以触发规则998
             yield DateFact(Date_Begin = Date_Begin, Date_End = Date_End)
             yield Exist(Company1 = Company1)
             yield Event1
         
         #手动触发规则节点的的推理模式
-        elif Event1 == None and Company1!='' and manualInput != None:
+        elif Event1 == None and Company1!='' and manualInputs != None:
             # Declare 以下的 Fact, 以触发规则997
             yield DateFact(Date_Begin = Date_Begin, Date_End = Date_End)
             yield Exist(Company1 = Company1)
-            yield Exist(manualInput = manualInput)
+            yield Exist(manualInputs = manualInputs)
             yield Assertion(LHS=Term(operator=GetBusiness,
                                             variables=[Company1]),
                             RHS=Term(operator=GetBusiness,
@@ -100,533 +100,545 @@ class reasoning_System(KnowledgeEngine):
 
     #手动触发规则节点的的推理模式        
     @Rule(AS.e1 << Exist(Company1 = MATCH.company1),
-          AS.e2 << Exist(manualInput = MATCH.manualInput),
+          AS.e2 << Exist(manualInputs = MATCH.manualInputs),
           AS.DateFact << DateFact(Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           salience=1)
-    def rule997(self, Date_Begin,Date_End,company1,e1,e2,manualInput):
+    def rule997(self, Date_Begin,Date_End,company1,e1,e2,manualInputs):
         global mode
         mode = 'manual'
-        
+        print('hello')
+        for manualInput in manualInputs:
+            # 获取公司所入选的行业指数
+            indexCode = Term(operator= IndexCode,
+                            variables = [Term(operator=GetIndustryRelatedIndex,
+                                variables=[ Term(operator=GetIndustryName,
+                                    variables=['申万一级行业',company1]).GetRHS().value]
+                                            ).GetRHS().value]
+                                ).GetRHS().value
+            indexName = Term(operator= IndexName,
+                            variables = [Term(operator=GetIndustryRelatedIndex,
+                                variables=[ Term(operator=GetIndustryName,
+                                    variables=['申万一级行业',company1]).GetRHS().value]
+                                            ).GetRHS().value]
+                                ).GetRHS().value
+            
+            # 在从数据库获取的模式中，declareCommodity 函数内的 GetProduction等函数会获取起始和结束时间的真实数据, 在手动触发的模式以1和0代替
+            if 'up' in manualInput.trend:
 
-        # 获取公司所入选的行业指数
-        indexCode = Term(operator= IndexCode,
-                        variables = [Term(operator=GetIndustryRelatedIndex,
-                            variables=[ Term(operator=GetIndustryName,
-                                variables=['申万一级行业',company1]).GetRHS().value]
-                                        ).GetRHS().value]
-                            ).GetRHS().value
-        indexName = Term(operator= IndexName,
-                        variables = [Term(operator=GetIndustryRelatedIndex,
-                            variables=[ Term(operator=GetIndustryName,
-                                variables=['申万一级行业',company1]).GetRHS().value]
-                                        ).GetRHS().value]
-                            ).GetRHS().value
-        
-        # 在从数据库获取的模式中，declareCommodity 函数内的 GetProduction等函数会获取起始和结束时间的真实数据, 在手动触发的模式以1和0代替
-        if manualInput.trend == 'up':
-            startValue = 0
-            endValue = 1
-        elif manualInput.trend == 'down':
-            startValue = 1
-            endValue = 0
-        # if manualInput.detail == '公司净利润':
-        #     self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
-        #                            variables=[company1,('手动',)]), 
-        #                            RHS = manualInput.trend))
-        if manualInput.detail == '公司股票数':
-            self.declare(
-                Assertion(LHS=Term(operator=GetCompanyTotalShares,
-                                    variables=[company1, Date_Begin]),
-                        RHS=(Date_Begin,startValue))
-        
-            )
-            self.declare(
-                        Assertion(LHS=Term(operator=GetCompanyTotalShares,
-                                            variables=[company1, Date_End]),
-                                RHS=(Date_End,endValue))
-            )
-        if manualInput.detail == '公司储量':
-            self.declare(
-                        Assertion(LHS=Term(operator=GetCompanyReserve,
-                                            variables=[company1, Date_Begin]),
-                                RHS=(Date_Begin,startValue))
-        
-                
-            )
-            self.declare(
-                        Assertion(LHS=Term(operator=GetCompanyReserve,
-                                            variables=[company1, Date_End]),
-                                RHS=(Date_End,endValue))
+                startValue = 0
+                endValue = 1 + 1*manualInput.trend.count("+")
+            elif 'down' in manualInput.trend:
+                startValue = 1 + 1*manualInput.trend.count("-")
+                endValue = 0
+            # if manualInput.detail == '公司净利润':
+            #     self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
+            #                            variables=[company1,('手动',)]), 
+            #                            RHS = manualInput.trend))
+            if manualInput.detail == '公司股票数':
+                self.declare(
+                    Assertion(LHS=Term(operator=GetCompanyTotalShares,
+                                        variables=[company1, Date_Begin]),
+                            RHS=(Date_Begin,startValue))
+            
                 )
-        if manualInput.detail == '美元指数':
-            dollarFuture = Term(operator=GetFuture,
-                                            variables=['美元指数', 'DX',Date_Begin, Date_End]).GetRHS()
-            try:
-                newEnd = Date_End
                 self.declare(
-                        Assertion(LHS=Term(operator=GetFutureQuote,
-                                            variables=[dollarFuture, newEnd, '结算价']),
-                                RHS=endValue)
-                                )
-            except:
+                            Assertion(LHS=Term(operator=GetCompanyTotalShares,
+                                                variables=[company1, Date_End]),
+                                    RHS=(Date_End,endValue))
+                )
+            if manualInput.detail == '公司储量':
                 self.declare(
-                        Assertion(LHS=Term(operator=GetFutureQuote,
-                                            variables=[dollarFuture, newEnd, '结算价']),
-                                RHS=None)
-                                )
-                
+                            Assertion(LHS=Term(operator=GetCompanyReserve,
+                                                variables=[company1, Date_Begin]),
+                                    RHS=(Date_Begin,startValue))
+            
+                    
+                )
+                self.declare(
+                            Assertion(LHS=Term(operator=GetCompanyReserve,
+                                                variables=[company1, Date_End]),
+                                    RHS=(Date_End,endValue))
+                    )
+            if manualInput.detail == '美元指数':
+                dollarFuture = Term(operator=GetFuture,
+                                                variables=['美元指数', 'DX',Date_Begin, Date_End]).GetRHS()
+                try:
+                    newEnd = Date_End
+                    self.declare(
+                            Assertion(LHS=Term(operator=GetFutureQuote,
+                                                variables=[dollarFuture, newEnd, '结算价']),
+                                    RHS=endValue)
+                                    )
+                except:
+                    self.declare(
+                            Assertion(LHS=Term(operator=GetFutureQuote,
+                                                variables=[dollarFuture, newEnd, '结算价']),
+                                    RHS=None)
+                                    )
+                    
 
-            try:
-                newBegin = Date_Begin
-                self.declare(
-                        Assertion(LHS=Term(operator=GetFutureQuote,
-                                            variables=[dollarFuture, newBegin, '结算价']),
-                                RHS=startValue)
-                                )
-            except:
-                self.declare(
-                        Assertion(LHS=Term(operator=GetFutureQuote,
-                                            variables=[dollarFuture, newBegin, '结算价']),
-                                RHS=None)
-                                )
-                
-            self.declare(Exist(Future = dollarFuture, Date_Begin = newBegin, Date_End = newEnd ))
+                try:
+                    newBegin = Date_Begin
+                    self.declare(
+                            Assertion(LHS=Term(operator=GetFutureQuote,
+                                                variables=[dollarFuture, newBegin, '结算价']),
+                                    RHS=startValue)
+                                    )
+                except:
+                    self.declare(
+                            Assertion(LHS=Term(operator=GetFutureQuote,
+                                                variables=[dollarFuture, newBegin, '结算价']),
+                                    RHS=None)
+                                    )
+                    
+                self.declare(Exist(Future = dollarFuture, Date_Begin = newBegin, Date_End = newEnd ))
 
-        # 当手动输入的是某个行业指数，declare指数交易数据的Fact
-        
-        if manualInput.index == indexName:
-            self.declare(
-            Assertion(
-                LHS = Term(operator = GetIndexTradeData,
-                    variables = [indexCode, Date_Begin]),
-                RHS = startValue
-            )
-            )
-
-            self.declare(
+            # 当手动输入的是某个行业指数，declare指数交易数据的Fact
+            
+            if manualInput.index == indexName:
+                self.declare(
                 Assertion(
                     LHS = Term(operator = GetIndexTradeData,
-                        variables = [indexCode, Date_End]),
-                    RHS = endValue
+                        variables = [indexCode, Date_Begin]),
+                    RHS = startValue
                 )
                 )
-            self.declare(Exist(
-                CompanyObject = company1,
-                IndexObj = indexName
-                ,  Date_Begin = Date_Begin ,Date_End = Date_End))
-        
 
-        # 用于触发非产品相关的推理链条
-        self.declare(
-            Exist(CompanyObject = company1,Date_Begin = Date_Begin, Date_End = Date_End),
-        )
-        
-        #初始化公司所属国家country
-        country1 =Term(operator=CompanyInfo,
-                                            variables=[company1, '国家']).GetRHS().value
-        countryName = Term(operator=GetCountryNameFromAbb,
-                                        variables=[country1]).GetRHS().value
-        if countryName != None:
-            country = allCountry.returnCountrybyFullName(countryName)
-
-        
-        fileForOutput.write('\n----------\n {} 的公司业务 和 涉及的商品 包括: '.format(company1.name))
-        
-        ##############
-        #获取该公司各业务的产品
-        allB = {}
-        business1 = Term(operator=GetBusiness,
-                                            variables=[company1]).GetRHS().value
-        for b in business1:   
-            businessProduct = Term(operator=GetBusinessProductBatch,variables=[company1,b]).GetRHS().value
-            # print(businessProduct)
-            allB[b] = businessProduct
-        ##############
-        print(allB)
-
-        ##############
-        #获取公司上下游产品
-        temp = Term(operator=GetFatherSonProductBatch,variables=[allB, company1]).GetRHS().value
-        fatherProd = temp[0]
-        sonProd = temp[1]
-        father_fatherProd = temp[2]
-        son_sonProd = temp[3]
-        ##############
-
-        #遍历该公司的所有业务
-        for bnum, business in enumerate(business1):
-            # businessProduct = Term(operator=GetBusinessProduct,variables=[company1,business]).GetRHS().value
-            fileForOutput.write("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
-            print("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
+                self.declare(
+                    Assertion(
+                        LHS = Term(operator = GetIndexTradeData,
+                            variables = [indexCode, Date_End]),
+                        RHS = endValue
+                    )
+                    )
+                self.declare(Exist(
+                    CompanyObject = company1,
+                    IndexObj = indexName
+                    ,  Date_Begin = Date_Begin ,Date_End = Date_End))
             
-            
-            if allB[business] != []:
-                # 遍历该业务的所有产品
-                for prod in allB[business]:
 
-                    fp = fatherProd[prod]
-                    sp = sonProd[prod]
-                    fileForOutput.write("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                    fileForOutput.write("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
-                    for f in father_fatherProd:
-                        if len(father_fatherProd[f]) > 0 and f in fp:
-                            fileForOutput.write("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
-                            print("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
-                            for ff in father_fatherProd[f]:
-                                if ff in father_fatherProd.keys() and len(father_fatherProd[ff]) > 0:
-                                    fileForOutput.write("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
-                                    print("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
-                    for s in son_sonProd:
-                        if len(son_sonProd[s]) > 0 and s in sp:
-                            fileForOutput.write("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
-                            print("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
-                            for ss in son_sonProd[s]:
-                                if ss in son_sonProd.keys() and len(son_sonProd[ss]) > 0:
-                                    fileForOutput.write("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
-                                    print("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
-                    print("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                    print("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
-                    
-                    
-                    ##############
-                    # Declare 化期货相关数据的函数：产量，进口，出口，库存，市场价  的Fact
-                    def declareCommodity(j,prod = None,business = None):
-                        if prod == None:
-                            p = j 
-                            prod = (j,j)
-                            
-                        else:
-                            p = prod
-                            prod = (j,prod)   
+            # 用于触发非产品相关的推理链条
+            self.declare(
+                Exist(CompanyObject = company1,Date_Begin = Date_Begin, Date_End = Date_End),
+            )
+            
+            #初始化公司所属国家country
+            country1 =Term(operator=CompanyInfo,
+                                                variables=[company1, '国家']).GetRHS().value
+            countryName = Term(operator=GetCountryNameFromAbb,
+                                            variables=[country1]).GetRHS().value
+            if countryName != None:
+                country = allCountry.returnCountrybyFullName(countryName)
+
+            
+            fileForOutput.write('\n----------\n {} 的公司业务 和 涉及的商品 包括: '.format(company1.name))
+            
+            ##############
+            #获取该公司各业务的产品
+            allB = {}
+            business1 = Term(operator=GetBusiness,
+                                                variables=[company1]).GetRHS().value
+            for b in business1:   
+                businessProduct = Term(operator=GetBusinessProductBatch,variables=[company1,b]).GetRHS().value
+                # print(businessProduct)
+                allB[b] = businessProduct
+            ##############
+            print(allB)
+
+            ##############
+            #获取公司上下游产品
+            temp = Term(operator=GetFatherSonProductBatch,variables=[allB, company1]).GetRHS().value
+            fatherProd = temp[0]
+            sonProd = temp[1]
+            father_fatherProd = temp[2]
+            son_sonProd = temp[3]
+            ##############
+
+            #遍历该公司的所有业务
+            for bnum, business in enumerate(business1):
+                # businessProduct = Term(operator=GetBusinessProduct,variables=[company1,business]).GetRHS().value
+                fileForOutput.write("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
+                print("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
+                
+                
+                if allB[business] != []:
+                    # 遍历该业务的所有产品
+                    for prod in allB[business]:
+
+                        fp = fatherProd[prod]
+                        sp = sonProd[prod]
+                        fileForOutput.write("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
+                        fileForOutput.write("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
+                        for f in father_fatherProd:
+                            if len(father_fatherProd[f]) > 0 and f in fp:
+                                fileForOutput.write("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
+                                print("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
+                                for ff in father_fatherProd[f]:
+                                    if ff in father_fatherProd.keys() and len(father_fatherProd[ff]) > 0:
+                                        fileForOutput.write("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                                        print("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                        for s in son_sonProd:
+                            if len(son_sonProd[s]) > 0 and s in sp:
+                                fileForOutput.write("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
+                                print("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
+                                for ss in son_sonProd[s]:
+                                    if ss in son_sonProd.keys() and len(son_sonProd[ss]) > 0:
+                                        fileForOutput.write("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
+                                        print("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
+                        print("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
+                        print("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
                         
-                        #如果手动输入的国家与公司所属国家不同，采用手动输入的国家
-                        if manualInput.country != None and manualInput.country != country.name:
-                            country0 = allCountry.returnCountrybyFullName(manualInput.country)
-                        else:
-                            country0 = country
-                        # print(country0)
-                        if business == manualInput.business:
-                            if manualInput.detail == '收入':
-                                self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                                    variables=[business,()]),
-                                    RHS=manualInput.trend))
-                            
-                            if manualInput.detail == '成本':
-                                self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                                    variables=[business,()]),
-                                    RHS='plain'))
-                                self.declare(Assertion(LHS=Term(operator=PredictCost,
-                                                    variables=[business,()]),
-                                    RHS=manualInput.trend))
-                            if manualInput.detail == '利润':
+                        
+                        ##############
+                        # Declare 化期货相关数据的函数：产量，进口，出口，库存，市场价  的Fact
+                        def declareCommodity(j,prod = None,business = None):
+                            if prod == None:
+                                p = j 
+                                prod = (j,j)
                                 
-                                self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
-                                                    variables=[business,()]),
-                                    RHS=manualInput.trend))
+                            else:
+                                p = prod
+                                prod = (j,prod)   
                             
-                        if manualInput.detail == '销售' and business!=None:
-                                print(business,p)
-                                self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                                    variables=[business,()]),
-                                    RHS='plain'))
-                                self.declare(Assertion(LHS=Term(operator=PredictSales,
-                                                    variables=[p,()]),
-                                    RHS=manualInput.trend))
+                            #如果手动输入的国家与公司所属国家不同，采用手动输入的国家
+                            if manualInput.country != None and manualInput.country != country.name:
+                                country0 = allCountry.returnCountrybyFullName(manualInput.country)
+                            else:
+                                country0 = country
+                            # print(country0)
+                            if business == manualInput.business:
+                                if manualInput.detail == '收入':
+                                    self.declare(Assertion(LHS=Term(operator=PredictIncome,
+                                                        variables=[business,()]),
+                                        RHS=manualInput.trend))
+                                
+                                if manualInput.detail == '成本':
+                                    t = False
+                                    for mm in manualInputs:
+                                        if mm.detail == '收入':
+                                            t = True
+                                    if not t:
+                                        self.declare(Assertion(LHS=Term(operator=PredictIncome,
+                                                            variables=[business,()]),
+                                            RHS='plain'))
+                                    self.declare(Assertion(LHS=Term(operator=PredictCost,
+                                                        variables=[business,()]),
+                                        RHS=manualInput.trend))
+                                if manualInput.detail == '利润':
+                                    
+                                    self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
+                                                        variables=[business,()]),
+                                        RHS=manualInput.trend))
+                                
+                            if manualInput.detail == '销售' and business!=None:
+                                    print(business,p)
+                                    t = False
+                                    for mm in manualInputs:
+                                        if mm.detail == '价格':
+                                            t = True
+                                    if not t:
+                                        self.declare(Assertion(LHS=Term(operator=PredictIncome,
+                                                            variables=[business,()]),
+                                            RHS='plain'))
+                                    self.declare(Assertion(LHS=Term(operator=PredictSales,
+                                                        variables=[p,()]),
+                                        RHS=manualInput.trend))
 
-                        if manualInput.detail == '产量':
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetProduction,
-                                                            variables=[country0, j,Date_Begin, prod]),
-                                        RHS = (Date_Begin,startValue))
-                                )
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetProduction,
-                                                            variables=[country0, j,Date_End, prod]),
-                                        RHS = (Date_End,endValue))
-                                )
-                        elif manualInput.detail == '进口':
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetImport,
-                                                            variables=[country0, j,Date_Begin, prod]),
-                                        RHS = (Date_Begin,startValue))
-                                )
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetImport,
-                                                            variables=[country0, j,Date_End, prod]),
-                                        RHS = (Date_End,endValue))
-                                )
-                        elif manualInput.detail == '出口':
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetExport,
-                                                            variables=[country0, j,Date_Begin, prod]),
-                                        RHS = (Date_Begin,startValue))
-                                )
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetExport,
-                                                            variables=[country0, j,Date_End, prod]),
-                                        RHS = (Date_End,endValue))
-                                )
-                        elif manualInput.detail == '库存':
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetStock,
-                                                            variables=[country0, j,Date_Begin, prod]),
-                                        RHS = (Date_Begin,startValue))
-                                )
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetStock,
-                                                            variables=[country0, j,Date_End, prod]),
-                                        RHS = (Date_End,endValue))
-                                )
-                        elif manualInput.detail == '价格':
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetMarketPrice,
-                                                            variables=[country0, j,Date_Begin, prod]),
-                                        RHS = (Date_Begin,startValue))
-                                )
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetMarketPrice,
-                                                            variables=[country0, j,Date_End, prod]),
-                                        RHS = (Date_End,endValue))
-                                )
-                        elif manualInput.detail == '供给':
+                            if manualInput.detail == '产量':
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetProduction,
+                                                                variables=[country0, j,Date_Begin, prod]),
+                                            RHS = (Date_Begin,startValue))
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetProduction,
+                                                                variables=[country0, j,Date_End, prod]),
+                                            RHS = (Date_End,endValue))
+                                    )
+                            elif manualInput.detail == '进口':
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country0, j,Date_Begin, prod]),
+                                            RHS = (Date_Begin,startValue))
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country0, j,Date_End, prod]),
+                                            RHS = (Date_End,endValue))
+                                    )
+                            elif manualInput.detail == '出口':
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[country0, j,Date_Begin, prod]),
+                                            RHS = (Date_Begin,startValue))
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[country0, j,Date_End, prod]),
+                                            RHS = (Date_End,endValue))
+                                    )
+                            elif manualInput.detail == '库存':
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[country0, j,Date_Begin, prod]),
+                                            RHS = (Date_Begin,startValue))
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[country0, j,Date_End, prod]),
+                                            RHS = (Date_End,endValue))
+                                    )
+                            elif manualInput.detail == '价格':
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country0, j,Date_Begin, prod]),
+                                            RHS = (Date_Begin,startValue))
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country0, j,Date_End, prod]),
+                                            RHS = (Date_End,endValue))
+                                    )
+                            elif manualInput.detail == '供给':
+                                
+                                self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[country0, j, ()]),
+                                RHS=manualInput.trend))
+                            elif manualInput.detail == '需求':
+                                self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
+                                                variables=[country0, j, (str(manualInput.item) + '需求' + str(manualInput.trend), )]),
+                                RHS=manualInput.trend))
                             
-                            self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[country0, j, ()]),
-                            RHS=manualInput.trend))
-                        elif manualInput.detail == '需求':
-                            self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[country0, j, (str(manualInput.item) + '需求' + str(manualInput.trend), )]),
-                            RHS=manualInput.trend))
-                        
-                    #当手动输入的产品或者业务 属于公司的产品或业务
-                    if manualInput.item == prod or manualInput.business == business or (country.hasEnergyData(prod) and prod == '原油' and manualInput.detail == '美元指数'):
-                        self.declare(Exist(CountryObject = country, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                        # if prod == '原油':
-                        #     self.declare(Exist(CountryObject = usa, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                        allProduct.append(prod)
-                        allBusiness.append(business)
-                        allItem.append(prod)
-                        # print(country,prod,Date_Begin,Date_End)
-                        declareCommodity(prod, business=business)
-                        
-                        self.declare(
-                                    Assertion(LHS=Term(operator=ProductIsCommodity,
+                        #当手动输入的产品或者业务 属于公司的产品或业务
+                        if manualInput.item == prod or manualInput.business == business or (country.hasEnergyData(prod) and prod == '原油' and manualInput.detail == '美元指数'):
+                            self.declare(Exist(CountryObject = country, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                            # if prod == '原油':
+                            #     self.declare(Exist(CountryObject = usa, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                            allProduct.append(prod)
+                            allBusiness.append(business)
+                            allItem.append(prod)
+                            # print(country,prod,Date_Begin,Date_End)
+                            declareCommodity(prod, business=business)
+                            
+                            self.declare(
+                                        Assertion(LHS=Term(operator=ProductIsCommodity,
+                                                                variables=[prod]),
+                                            RHS= prod)
+                                        )
+                            self.declare(
+                                    Assertion(LHS=Term(operator=ProductIsCommodity_inner,
                                                             variables=[prod]),
                                         RHS= prod)
                                     )
-                        self.declare(
-                                Assertion(LHS=Term(operator=ProductIsCommodity_inner,
-                                                        variables=[prod]),
+                            self.declare(
+                                Assertion(LHS=Term(operator=GetBusinessProduct,
+                                                        variables=[business,prod]),
                                     RHS= prod)
                                 )
-                        self.declare(
-                            Assertion(LHS=Term(operator=GetBusinessProduct,
+                            self.declare(
+                            Assertion(LHS=Term(operator=GetBusinessProduct_inner,
                                                     variables=[business,prod]),
                                 RHS= prod)
                             )
-                        self.declare(
-                        Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                                variables=[business,prod]),
-                            RHS= prod)
-                        )
-                        # 当手动输入的是业务，只需要declare一次以上的Fact，不需要业务的每个产品都进行推理
-                        if manualInput.business == business:
-                            break
-                    
-                    for j in fp:
-                        #当手动输入的产品 是上游产品
-                        if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
-                            self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                            allProduct.append(prod)
-                            allBusiness.append(business)
-                            allItem.append(j)
-                            declareCommodity(j,prod)
-                            # print(country,j,prod,Date_Begin,Date_End)
-                            
+                            # 当手动输入的是业务，只需要declare一次以上的Fact，不需要业务的每个产品都进行推理
+                            if manualInput.business == business:
+                                break
+                        
+                        for j in fp:
+                            #当手动输入的产品 是上游产品
+                            if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
+                                self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                                allProduct.append(prod)
+                                allBusiness.append(business)
+                                allItem.append(j)
+                                declareCommodity(j,prod)
+                                # print(country,j,prod,Date_Begin,Date_End)
+                                
 
-                            # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetSonProduct,
-                                                            variables=[j]),
-                                        RHS= prod)
-                                    )
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetSonProduct_inner,
-                                                            variables=[j]),
-                                        RHS= prod)
-                                    )
-                            self.declare(
-                            Assertion(LHS=Term(operator=GetBusinessProduct,
-                                                    variables=[business,j]),
-                                RHS= prod)
-                            )
-                            self.declare(
-                            Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                                    variables=[business,j]),
-                                RHS= prod)
-                            )
-                        if j in father_fatherProd.keys():
-                            for fprod in father_fatherProd[j]:
-                                #当手动输入的产品 是上游产品的上游产品
-                                if manualInput.item == fprod or (country.hasEnergyData(fprod) and fprod == '原油'  and manualInput.detail == '美元指数'):
-                                    self.declare(Exist(CountryObject = country, ItemName = fprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                                    allProduct.append(prod)
-                                    allBusiness.append(business)
-                                    allItem.append(fprod)
-                                    # print(country,j,prod,Date_Begin,Date_End)
-                                    declareCommodity(fprod,prod)
-                                    
+                                # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetSonProduct,
+                                                                variables=[j]),
+                                            RHS= prod)
+                                        )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetSonProduct_inner,
+                                                                variables=[j]),
+                                            RHS= prod)
+                                        )
+                                self.declare(
+                                Assertion(LHS=Term(operator=GetBusinessProduct,
+                                                        variables=[business,j]),
+                                    RHS= prod)
+                                )
+                                self.declare(
+                                Assertion(LHS=Term(operator=GetBusinessProduct_inner,
+                                                        variables=[business,j]),
+                                    RHS= prod)
+                                )
+                            if j in father_fatherProd.keys():
+                                for fprod in father_fatherProd[j]:
+                                    #当手动输入的产品 是上游产品的上游产品
+                                    if manualInput.item == fprod or (country.hasEnergyData(fprod) and fprod == '原油'  and manualInput.detail == '美元指数'):
+                                        self.declare(Exist(CountryObject = country, ItemName = fprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                                        allProduct.append(prod)
+                                        allBusiness.append(business)
+                                        allItem.append(fprod)
+                                        # print(country,j,prod,Date_Begin,Date_End)
+                                        declareCommodity(fprod,prod)
+                                        
 
-                                    # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
-                                    self.declare(
-                                            Assertion(LHS=Term(operator=GetSonProduct,
-                                                                    variables=[fprod]),
-                                                RHS= prod)
-                                            )
-                                    self.declare(
-                                            Assertion(LHS=Term(operator=GetSonProduct_inner,
-                                                                    variables=[fprod]),
-                                                RHS= prod)
-                                            )
-                                    self.declare(
-                                    Assertion(LHS=Term(operator=GetBusinessProduct,
-                                                            variables=[business,fprod]),
-                                        RHS= prod)
-                                    )
-                                    self.declare(
-                                    Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                                            variables=[business,fprod]),
-                                        RHS= prod)
-                                    )
-                                if fprod in father_fatherProd.keys() and len(father_fatherProd[fprod]) > 0:
-                                    for ffprod in father_fatherProd[fprod]:
-                                        #当手动输入的产品 是上游产品的上游产品的上游产品
-                                        if manualInput.item == ffprod or (country.hasEnergyData(ffprod) and ffprod == '原油'  and manualInput.detail == '美元指数') :
-                                            self.declare(Exist(CountryObject = country, ItemName = ffprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                                            allProduct.append(prod)
-                                            allBusiness.append(business)
-                                            allItem.append(ffprod)
-                                            # print(country,j,prod,Date_Begin,Date_End)
-                                            declareCommodity(ffprod,prod)
+                                        # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                        self.declare(
+                                                Assertion(LHS=Term(operator=GetSonProduct,
+                                                                        variables=[fprod]),
+                                                    RHS= prod)
+                                                )
+                                        self.declare(
+                                                Assertion(LHS=Term(operator=GetSonProduct_inner,
+                                                                        variables=[fprod]),
+                                                    RHS= prod)
+                                                )
+                                        self.declare(
+                                        Assertion(LHS=Term(operator=GetBusinessProduct,
+                                                                variables=[business,fprod]),
+                                            RHS= prod)
+                                        )
+                                        self.declare(
+                                        Assertion(LHS=Term(operator=GetBusinessProduct_inner,
+                                                                variables=[business,fprod]),
+                                            RHS= prod)
+                                        )
+                                    if fprod in father_fatherProd.keys() and len(father_fatherProd[fprod]) > 0:
+                                        for ffprod in father_fatherProd[fprod]:
+                                            #当手动输入的产品 是上游产品的上游产品的上游产品
+                                            if manualInput.item == ffprod or (country.hasEnergyData(ffprod) and ffprod == '原油'  and manualInput.detail == '美元指数') :
+                                                self.declare(Exist(CountryObject = country, ItemName = ffprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                                                allProduct.append(prod)
+                                                allBusiness.append(business)
+                                                allItem.append(ffprod)
+                                                # print(country,j,prod,Date_Begin,Date_End)
+                                                declareCommodity(ffprod,prod)
 
-                                            # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
-                                            self.declare(
-                                                    Assertion(LHS=Term(operator=GetSonProduct,
-                                                                            variables=[ffprod]),
-                                                        RHS= prod)
-                                                    )
-                                            self.declare(
-                                                    Assertion(LHS=Term(operator=GetSonProduct_inner,
-                                                                            variables=[ffprod]),
-                                                        RHS= prod)
-                                                    )
-                                            self.declare(
-                                            Assertion(LHS=Term(operator=GetBusinessProduct,
-                                                                    variables=[business,ffprod]),
-                                                RHS= prod)
-                                            )
-                                            self.declare(
-                                            Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                                                    variables=[business,ffprod]),
-                                                RHS= prod)
-                                            )
-                    for j in sp:
-                        #当手动输入的产品 是下游产品
-                        if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
-                            self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                            allProduct.append(prod)
-                            allBusiness.append(business)
-                            allItem.append(j)
-                            # print(country,j,prod,Date_Begin,Date_End)
-                            declareCommodity(j,prod)
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetFatherProduct,
-                                                            variables=[j]),
-                                        RHS= prod)
-                                    )
-                            self.declare(
-                                    Assertion(LHS=Term(operator=GetFatherProduct_inner,
-                                                            variables=[j]),
-                                        RHS= prod)
-                                    )
-                            self.declare(
-                            Assertion(LHS=Term(operator=GetBusinessProduct,
-                                                    variables=[business,j]),
-                                RHS= prod)
-                            )
-                            self.declare(
-                            Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                                    variables=[business,j]),
-                                RHS= prod)
-                            )
+                                                # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                                self.declare(
+                                                        Assertion(LHS=Term(operator=GetSonProduct,
+                                                                                variables=[ffprod]),
+                                                            RHS= prod)
+                                                        )
+                                                self.declare(
+                                                        Assertion(LHS=Term(operator=GetSonProduct_inner,
+                                                                                variables=[ffprod]),
+                                                            RHS= prod)
+                                                        )
+                                                self.declare(
+                                                Assertion(LHS=Term(operator=GetBusinessProduct,
+                                                                        variables=[business,ffprod]),
+                                                    RHS= prod)
+                                                )
+                                                self.declare(
+                                                Assertion(LHS=Term(operator=GetBusinessProduct_inner,
+                                                                        variables=[business,ffprod]),
+                                                    RHS= prod)
+                                                )
+                        for j in sp:
+                            #当手动输入的产品 是下游产品
+                            if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
+                                self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                                allProduct.append(prod)
+                                allBusiness.append(business)
+                                allItem.append(j)
+                                # print(country,j,prod,Date_Begin,Date_End)
+                                declareCommodity(j,prod)
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetFatherProduct,
+                                                                variables=[j]),
+                                            RHS= prod)
+                                        )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetFatherProduct_inner,
+                                                                variables=[j]),
+                                            RHS= prod)
+                                        )
+                                self.declare(
+                                Assertion(LHS=Term(operator=GetBusinessProduct,
+                                                        variables=[business,j]),
+                                    RHS= prod)
+                                )
+                                self.declare(
+                                Assertion(LHS=Term(operator=GetBusinessProduct_inner,
+                                                        variables=[business,j]),
+                                    RHS= prod)
+                                )
 
-                        if j in son_sonProd.keys():
-                            for sprod in son_sonProd[j]:
-                                #当手动输入的产品 是下游产品 的 下游产品
-                                if manualInput.item == sprod or (country.hasEnergyData(sprod) and sprod == "原油"  and manualInput.detail == '美元指数'):
-                                    self.declare(Exist(CountryObject = country, ItemName = sprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                                    allProduct.append(prod)
-                                    allBusiness.append(business)
-                                    allItem.append(sprod)
-                                    # print(country,j,prod,Date_Begin,Date_End)
-                                    # print(sprod,prod)
-                                    declareCommodity(sprod,prod)
-                                    self.declare(
-                                            Assertion(LHS=Term(operator=GetFatherProduct,
-                                                                    variables=[sprod]),
-                                                RHS= prod)
-                                            )
-                                    self.declare(
-                                            Assertion(LHS=Term(operator=GetFatherProduct_inner,
-                                                                    variables=[sprod]),
-                                                RHS= prod)
-                                            )
-                                    self.declare(
-                                    Assertion(LHS=Term(operator=GetBusinessProduct,
-                                                            variables=[business,sprod]),
-                                        RHS= prod)
-                                    )
-                                    self.declare(
-                                    Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                                            variables=[business,sprod]),
-                                        RHS= prod)
-                                    )
-                                if sprod in son_sonProd.keys() and len(son_sonProd[sprod]) > 0:
-                                    for ssprod in son_sonProd[sprod]:
-                                        #当手动输入的产品 是下游产品 的 下游产品的 下游产品
-                                        if manualInput.item == ssprod or (country.hasEnergyData(ssprod) and ssprod == "原油"  and manualInput.detail == '美元指数'):
-                                            self.declare(Exist(CountryObject = country, ItemName = ssprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                                            
-                                            allProduct.append(prod)
-                                            allBusiness.append(business)
-                                            allItem.append(ssprod)
-                                            # print(country,j,prod,Date_Begin,Date_End)
-                                            declareCommodity(ssprod,prod)
-                                            self.declare(
-                                                    Assertion(LHS=Term(operator=GetFatherProduct,
-                                                                            variables=[ssprod]),
-                                                        RHS= prod)
-                                                    )
-                                            self.declare(
-                                                    Assertion(LHS=Term(operator=GetFatherProduct_inner,
-                                                                            variables=[ssprod]),
-                                                        RHS= prod)
-                                                    )
-                                            self.declare(
-                                            Assertion(LHS=Term(operator=GetBusinessProduct,
-                                                                    variables=[business,ssprod]),
-                                                RHS= prod)
-                                            )
-                                            self.declare(
-                                            Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                                                    variables=[business,ssprod]),
-                                                RHS= prod)
-                                            )
-            #当该业务的所有产品都无法与有数据的能源商品关联                                            
-            if len(allBusiness) == 0 or allBusiness[-1] != business:
-                allProduct.append('nil')
-                allBusiness.append(business)
-                allItem.append('nil')
+                            if j in son_sonProd.keys():
+                                for sprod in son_sonProd[j]:
+                                    #当手动输入的产品 是下游产品 的 下游产品
+                                    if manualInput.item == sprod or (country.hasEnergyData(sprod) and sprod == "原油"  and manualInput.detail == '美元指数'):
+                                        self.declare(Exist(CountryObject = country, ItemName = sprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                                        allProduct.append(prod)
+                                        allBusiness.append(business)
+                                        allItem.append(sprod)
+                                        # print(country,j,prod,Date_Begin,Date_End)
+                                        # print(sprod,prod)
+                                        declareCommodity(sprod,prod)
+                                        self.declare(
+                                                Assertion(LHS=Term(operator=GetFatherProduct,
+                                                                        variables=[sprod]),
+                                                    RHS= prod)
+                                                )
+                                        self.declare(
+                                                Assertion(LHS=Term(operator=GetFatherProduct_inner,
+                                                                        variables=[sprod]),
+                                                    RHS= prod)
+                                                )
+                                        self.declare(
+                                        Assertion(LHS=Term(operator=GetBusinessProduct,
+                                                                variables=[business,sprod]),
+                                            RHS= prod)
+                                        )
+                                        self.declare(
+                                        Assertion(LHS=Term(operator=GetBusinessProduct_inner,
+                                                                variables=[business,sprod]),
+                                            RHS= prod)
+                                        )
+                                    if sprod in son_sonProd.keys() and len(son_sonProd[sprod]) > 0:
+                                        for ssprod in son_sonProd[sprod]:
+                                            #当手动输入的产品 是下游产品 的 下游产品的 下游产品
+                                            if manualInput.item == ssprod or (country.hasEnergyData(ssprod) and ssprod == "原油"  and manualInput.detail == '美元指数'):
+                                                self.declare(Exist(CountryObject = country, ItemName = ssprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                                                
+                                                allProduct.append(prod)
+                                                allBusiness.append(business)
+                                                allItem.append(ssprod)
+                                                # print(country,j,prod,Date_Begin,Date_End)
+                                                declareCommodity(ssprod,prod)
+                                                self.declare(
+                                                        Assertion(LHS=Term(operator=GetFatherProduct,
+                                                                                variables=[ssprod]),
+                                                            RHS= prod)
+                                                        )
+                                                self.declare(
+                                                        Assertion(LHS=Term(operator=GetFatherProduct_inner,
+                                                                                variables=[ssprod]),
+                                                            RHS= prod)
+                                                        )
+                                                self.declare(
+                                                Assertion(LHS=Term(operator=GetBusinessProduct,
+                                                                        variables=[business,ssprod]),
+                                                    RHS= prod)
+                                                )
+                                                self.declare(
+                                                Assertion(LHS=Term(operator=GetBusinessProduct_inner,
+                                                                        variables=[business,ssprod]),
+                                                    RHS= prod)
+                                                )
+                #当该业务的所有产品都无法与有数据的能源商品关联                                            
+                if len(allBusiness) == 0 or allBusiness[-1] != business:
+                    if business not in allBusiness:
+                        allProduct.append('nil')
+                        allBusiness.append(business)
+                        allItem.append('nil')
 
         print('\n')
         print(allProduct)    
@@ -1166,12 +1178,14 @@ class reasoning_System(KnowledgeEngine):
                             RHS=Term(operator=GetFutureQuote,
                                         variables=[dollarFuture, newEnd, '结算价']).GetRHS().value)
                             )
+            noFdata1 = False
         except:
             self.declare(
                     Assertion(LHS=Term(operator=GetFutureQuote,
                                         variables=[dollarFuture, newEnd, '结算价']),
                             RHS=None)
                             )
+            noFdata1 = True
             
 
         try:
@@ -1182,14 +1196,17 @@ class reasoning_System(KnowledgeEngine):
                             RHS=Term(operator=GetFutureQuote,
                                         variables=[dollarFuture, newBegin, '结算价']).GetRHS().value)
                             )
+            noFdata2 = False
         except:
             self.declare(
                     Assertion(LHS=Term(operator=GetFutureQuote,
                                         variables=[dollarFuture, newBegin, '结算价']),
                             RHS=None)
                             )
-            
-        self.declare(Exist(Future = dollarFuture, Date_Begin = newBegin, Date_End = newEnd ))
+            noFdata2 = True
+        
+        if not noFdata1 and not noFdata2:
+            self.declare(Exist(Future = dollarFuture, Date_Begin = newBegin, Date_End = newEnd ))
         ##############
         
         ##############
@@ -2179,7 +2196,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryPrice1, CountryObject, itemPrice1,ItemName,endDate,Date_End, curItem: True if countryPrice1==CountryObject and itemPrice1==ItemName and curItem == ItemName and Date_End == endDate else False),
           TEST(lambda countryPrice2, CountryObject, itemPrice2,ItemName,beginDate,Date_Begin, curItem: True if countryPrice2==CountryObject and itemPrice2==ItemName and curItem == ItemName and Date_Begin == beginDate else False),
           TEST(lambda p1,p2,curProd, curItem: True if p1==p2 and p1[1] == curProd and p1[0] == curItem else False),
-          salience=0.48)  
+          salience=0.98)  
     def rule75_76(self,company1, CountryObject, ItemName,Date_Begin,Date_End,priceBegin,priceEnd,ME,MB):
         print(priceEnd)
         print(priceBegin)
@@ -2202,8 +2219,15 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\n".format(priceBegin[0],priceBegin[1],
                                 priceEnd[0],priceEnd[1]))
             # index = getTendency.index(supplyTend)
-            index = 2 
-            index = index + 1 
+            if mode == "manual":
+                if priceEnd[1] > priceBegin[1]:
+                    value = "up" + (priceEnd[1] -1)*"+"
+                elif priceEnd[1] < priceBegin[1]:
+                    value = "down" + (priceBegin[1] -1)*"-"
+            else:
+                index = 2 
+                index = index + 1 
+                value = getTendency[index]
             # if index > 4: 
             #     index = 4
             # if index < 0:
@@ -2215,15 +2239,15 @@ class reasoning_System(KnowledgeEngine):
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('历史价格',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
                                             variables=[ItemName, ('历史价格',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("价格趋势: ({} -> {})\n".format("plain",Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('历史价格',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] < 0) or (priceEnd == priceBegin and priceEnd[2] < 0):
             if ItemName == '原油':
                 fileForOutput.write("\n\n<规则75,76>----------\n 布伦特【{}】的市场价下跌".format(ItemName))
@@ -2237,8 +2261,15 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\n".format(priceBegin[0],priceBegin[1],
                                 priceEnd[0],priceEnd[1]))
             # index = getTendency.index(supplyTend)
-            index = 2 
-            index = index - 1 
+            if mode == "manual":
+                if priceEnd[1] > priceBegin[1]:
+                    value = "up" + (priceEnd[1] -1)*"+"
+                elif priceEnd[1] < priceBegin[1]:
+                    value = "down" + (priceBegin[1] -1)*"-"
+            else:
+                index = 2 
+                index = index + 1 
+                value = getTendency[index]
             # if index > 4: 
             #     index = 4
             # if index < 0:
@@ -2250,15 +2281,15 @@ class reasoning_System(KnowledgeEngine):
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('历史价格',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
                                             variables=[ItemName, ('历史价格',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("价格趋势: ({} -> {})\n".format("plain",Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('历史价格',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(ME)
         self.retract(MB)
 
@@ -2311,8 +2342,15 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\n".format(importBegin[0],importBegin[1],
                                 importEnd[0],importEnd[1]))
             # index = getTendency.index(supplyTend)
-            index = 2 
-            index = index + 1 
+            if mode == "manual":
+                if importEnd[1] > importBegin[1]:
+                    value = "up" + (importEnd[1] -1)*"+"
+                elif importEnd[1] < importBegin[1]:
+                    value = "down" + (importBegin[1] -1)*"-"
+            else:
+                index = 2 
+                index = index + 1 
+                value = getTendency[index]
             # if index > 4: 
             #     index = 4
             # if index < 0:
@@ -2324,12 +2362,12 @@ class reasoning_System(KnowledgeEngine):
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('进口',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format("plain",Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('进口',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(IE)
         self.retract(IB)
     #     #print(self.facts)
@@ -2383,8 +2421,15 @@ class reasoning_System(KnowledgeEngine):
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
 
             # index = getTendency.index(supplyTend)
-            index = 2
-            index = index - 1 
+            if mode == "manual":
+                if importEnd[1] > importBegin[1]:
+                    value = "up" + (importEnd[1] -1)*"+"
+                elif importEnd[1] < importBegin[1]:
+                    value = "down" + (importBegin[1] -1)*"-"
+            else:
+                index = 2 
+                index = index + 1 
+                value = getTendency[index]
             # if index > 4: 
             #     index = 4
             # if index < 0:
@@ -2393,12 +2438,12 @@ class reasoning_System(KnowledgeEngine):
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('进口',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('进口',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(IE)
         self.retract(IB)
         
@@ -2448,8 +2493,15 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                 exportEnd[0],exportEnd[1]))
             # index = getTendency.index(supplyTend)
-            index = 2 
-            index = index - 1 
+            if mode == "manual":
+                if exportEnd[1] > exportBegin[1]:
+                    value = "down" + (exportEnd[1] -1)*"-"
+                elif exportEnd[1] < exportBegin[1]:
+                    value = "up" + (exportBegin[1] -1)*"+"
+            else:
+                index = 2 
+                index = index - 1 
+                value = getTendency[index]
             # if index > 4: 
             #     index = 4
             # if index < 0:
@@ -2461,12 +2513,12 @@ class reasoning_System(KnowledgeEngine):
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('出口',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format("plain",Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('出口',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(EE)
         self.retract(EB)
     #     #print(self.facts)
@@ -2520,8 +2572,15 @@ class reasoning_System(KnowledgeEngine):
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
 
             # index = getTendency.index(supplyTend)
-            index = 2
-            index = index + 1 
+            if mode == "manual":
+                if exportEnd[1] > exportBegin[1]:
+                    value = "down" + (exportEnd[1] -1)*"-"
+                elif exportEnd[1] < exportBegin[1]:
+                    value = "up" + (exportBegin[1] -1)*"+"
+            else:
+                index = 2 
+                index = index - 1 
+                value = getTendency[index]
             # if index > 4: 
             #     index = 4
             # if index < 0:
@@ -2530,12 +2589,12 @@ class reasoning_System(KnowledgeEngine):
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('出口',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('出口',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(EE)
         self.retract(EB)
 
@@ -2580,21 +2639,44 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                     exportEnd[0],exportEnd[1]))
                 # index = getTendency.index(supplyTend)
-                index = 2 
-                index = index + 1 
+                # index = 2 
+                # index = index + 1 
+                if mode == "manual":
+                    if exportEnd[1] > exportBegin[1]:
+                        value = "up" + (exportEnd[1] -1)*"+"
+                    elif exportEnd[1] < exportBegin[1]:
+                        value = "down" + (exportBegin[1] -1)*"-"
+                else:
+                    index = 2 
+                    index = index + 1 
+                    value = getTendency[index]
 
             elif (exportEnd!=exportBegin and exportEnd[1] - exportBegin[1] < 0) or exportEnd[2] < 0:
                 fileForOutput.write("\n\n<规则5_15>----------\n【{}】【{}】的出口量减少".format(countryExport1.chineseName, ItemName))
                 fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                     exportEnd[0],exportEnd[1]))
                 # index = getTendency.index(supplyTend)
-                index = 2 
-                index = index - 1 
+                # index = 2 
+                # index = index - 1 
+                if mode == "manual":
+                    if exportEnd[1] > exportBegin[1]:
+                        value = "down" + (exportEnd[1] -1)*"-"
+                    elif exportEnd[1] < exportBegin[1]:
+                        value = "up" + (exportBegin[1] -1)*"+"
+                else:
+                    index = 2 
+                    index = index - 1 
+                    value = getTendency[index]
             else:
                 fileForOutput.write("\n\n<规则5_15>----------\n【{}】【{}】的出口量无变化".format(countryExport1.chineseName, ItemName))
                 
                 # index = getTendency.index(supplyTend)
-                index = 2 
+                # index = 2 
+                if mode == "manual":
+                    value = "plain"
+                else:
+                    index = 2 
+                    value = getTendency[index]
                 
             fileForOutput.write("{} 是 {} 的 {} 进口国".format(countryExport1.chineseName,CountryObject.chineseName, ItemName))
             
@@ -2604,17 +2686,17 @@ class reasoning_System(KnowledgeEngine):
             #     index = 0
             fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势 --> {}\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName,getTendency[index]))
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName,value))
             # print('-> 预测：供给增加\n')
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('进口',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format("plain",Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('进口',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(EE)
         self.retract(EB)
     
@@ -2667,9 +2749,16 @@ class reasoning_System(KnowledgeEngine):
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             # index = getTendency.index(supplyTend)
-            index = 2 
-            index = index - 1 
-            # if index > 4: 
+            if mode == "manual":
+                if productionEnd[1] > productionBegin[1]:
+                    value = "up" + (productionEnd[1] -1)*"+"
+                elif productionEnd[1] < productionBegin[1]:
+                    value = "down" + (productionBegin[1] -1)*"-"
+            else:
+                index = 2 
+                index = index - 1 
+                value = getTendency[index]
+        # if index > 4: 
             #     index = 4
             # if index < 0:
             #     index = 0
@@ -2677,12 +2766,12 @@ class reasoning_System(KnowledgeEngine):
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('产量',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # fileForOutput.write(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('产量',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(PE)
         self.retract(PB)
         
@@ -2739,8 +2828,15 @@ class reasoning_System(KnowledgeEngine):
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
 
             # index = getTendency.index(supplyTend)
-            index = 2
-            index = index + 1 
+            if mode == "manual":
+                if productionEnd[1] > productionBegin[1]:
+                    value = "up" + (productionEnd[1] -1)*"+"
+                elif productionEnd[1] < productionBegin[1]:
+                    value = "down" + (productionBegin[1] -1)*"-"
+            else:
+                index = 2 
+                index = index + 1 
+                value = getTendency[index]
             # if index > 4: 
             #     index = 4
             # if index < 0:
@@ -2749,12 +2845,12 @@ class reasoning_System(KnowledgeEngine):
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('产量',)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # fileForOutput.write(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
                                             variables=[CountryObject, ItemName, ('产量',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
         self.retract(PE)
         self.retract(PB)
         
@@ -2798,8 +2894,15 @@ class reasoning_System(KnowledgeEngine):
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
                             RHS='none'))
         else:
-            index = 2
-            index = index + 1
+            if mode == "manual":
+                if StockChangeEnd[1] > StockChangeBegin[1]:
+                    value = "down" + (StockChangeEnd[1] -1)*"-"
+                elif StockChangeEnd[1] < StockChangeBegin[1]:
+                    value = "up" + (StockChangeBegin[1] -1)*"+"
+            else:
+                index = 2 
+                index = index + 1 
+                value = getTendency[index]
             fileForOutput.write("\n\n<规则11>----------\n【{}】【{}】的库存减少".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
@@ -2815,7 +2918,7 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write('-> 预测：国际{}的价格上涨\n'.format(ItemName))
                 fileForOutput.write("-> 预测：国际{}的价格 --> ({} -> {})".format(ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('美国库存',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
             else:
                 fileForOutput.write('-> 预测：{}国内{}的价格上涨\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
@@ -2826,7 +2929,7 @@ class reasoning_System(KnowledgeEngine):
                                             variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
 
                 
             
@@ -2834,12 +2937,12 @@ class reasoning_System(KnowledgeEngine):
                                             variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
                                             variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
         
         
         self.retract(SE)
@@ -2883,8 +2986,15 @@ class reasoning_System(KnowledgeEngine):
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
                             RHS='none'))
         else:
-            index = 2
-            index = index - 1 
+            if mode == "manual":
+                if StockChangeEnd[1] > StockChangeBegin[1]:
+                    value = "down" + (StockChangeEnd[1] -1)*"-"
+                elif StockChangeEnd[1] < StockChangeBegin[1]:
+                    value = "up" + (StockChangeBegin[1] -1)*"+"
+            else:
+                index = 2 
+                index = index - 1 
+                value = getTendency[index]
             fileForOutput.write("\n\n<规则20>----------\n【{}】【{}】的库存增加".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
@@ -2901,7 +3011,7 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write('-> 预测：国际{}的价格下降\n'.format(ItemName))
                 fileForOutput.write("-> 预测：国际{}的价格 --> ({} -> {})\n".format(ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('美国库存',)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
             else:
                 fileForOutput.write('-> 预测：{}国内{}的价格下降\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
@@ -2912,18 +3022,18 @@ class reasoning_System(KnowledgeEngine):
                                             variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
-                            RHS=getTendency[index]).RHS.value))
+                            RHS=value).RHS.value))
 
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
                                             variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
-                            RHS=getTendency[index]))
+                            RHS=value))
         
         self.retract(SE)
         self.retract(SB)
@@ -2959,8 +3069,15 @@ class reasoning_System(KnowledgeEngine):
         fileForOutput.write("从{}的{}， 上涨至 {}的{}\n -----------------\n".format(Date_Begin,dollarFutureBegin ,Date_End,dollarFutureEnd))
         fileForOutput.write('-> 预测：国际{}的价格下降\n'.format(ItemName))
         # index = getTendency.index(predPrice)
-        index = 2
-        index = index - 1 
+        if mode == "manual":
+            if dollarFutureEnd > dollarFutureBegin:
+                value = "down" + (dollarFutureEnd -1)*"-"
+            elif dollarFutureEnd < dollarFutureBegin:
+                value = "up" + (dollarFutureBegin -1)*"+"
+        else:
+            index = 2 
+            index = index - 1 
+            value = getTendency[index]
         # if index > 4: 
         #     index = 4
         # if index < 0:
@@ -2971,15 +3088,15 @@ class reasoning_System(KnowledgeEngine):
         #     print('Fact not Found')
         self.declare(Assertion(LHS=Term(operator=PredictPrice,
                                            variables=[ItemName, ('美元指数',)]),
-                        RHS=getTendency[index]))
+                        RHS=value))
         self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
                                            variables=[ItemName, ('美元指数',)]),
-                        RHS=getTendency[index]))
+                        RHS=value))
         # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
         # print(f1.RHS.value)
         fileForOutput.write("-> 预测：国际【{}】的价格 --> ({} -> {})\n".format(ItemName,'plain' ,Assertion(LHS=Term(operator=PredictPrice,
                                            variables=[ItemName, ('美元指数',)]),
-                        RHS=getTendency[index]).RHS.value))
+                        RHS=value).RHS.value))
         # self.retract(DE)
         # self.retract(DB)
     #     #print(self.facts)
@@ -3014,8 +3131,15 @@ class reasoning_System(KnowledgeEngine):
         fileForOutput.write("从{}的{}， 下降至 {}的{}\n -----------------\n".format(Date_Begin,dollarFutureBegin ,Date_End,dollarFutureEnd))
         fileForOutput.write('-> 预测：国际【{}】的价格上涨\n'.format(ItemName))
         # index = getTendency.index(predPrice)
-        index = 2
-        index = index + 1 
+        if mode == "manual":
+            if dollarFutureEnd > dollarFutureBegin:
+                value = "down" + (dollarFutureEnd -1)*"-"
+            elif dollarFutureEnd < dollarFutureBegin:
+                value = "up" + (dollarFutureBegin -1)*"+"
+        else:
+            index = 2 
+            index = index + 1 
+            value = getTendency[index]
         # if index > 4: 
         #     index = 4
         # if index < 0:
@@ -3026,16 +3150,16 @@ class reasoning_System(KnowledgeEngine):
         #     print('Fact not Found')
         self.declare(Assertion(LHS=Term(operator=PredictPrice,
                                            variables=[ItemName, ('美元指数',)]),
-                        RHS=getTendency[index]))
+                        RHS=value))
         self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
                                            variables=[ItemName, ('美元指数',)]),
-                        RHS=getTendency[index]))
+                        RHS=value))
         
         # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
         # print(f1.RHS.value)
         fileForOutput.write("-> 预测：国际{}的价格 --> ({} -> {})\n".format(ItemName,'plain' ,Assertion(LHS=Term(operator=PredictPrice,
                                            variables=[ItemName, ('美元指数',)]),
-                        RHS=getTendency[index]).RHS.value))
+                        RHS=value).RHS.value))
         # self.retract(DE)
         # self.retract(DB)
         # for i in range(len(self.facts)):
@@ -3069,19 +3193,24 @@ class reasoning_System(KnowledgeEngine):
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName,supplyTend))
         
-        index = getTendency.index(supplyTend)
-        newIndex = None
-        if index == 2:
-            newIndex = 2
-        elif index == 0:
-            newIndex = 4
-        elif index == 1:
-            newIndex = 3
-        elif index == 3:
-            newIndex = 1
-        elif index == 4:
-            newIndex = 0
-
+        # index = getTendency.index(supplyTend)
+        # newIndex = None
+        # if index == 2:
+        #     newIndex = 2
+        # elif index == 0:
+        #     newIndex = 4
+        # elif index == 1:
+        #     newIndex = 3
+        # elif index == 3:
+        #     newIndex = 1
+        # elif index == 4:
+        #     newIndex = 0
+        if "up" in supplyTend:
+            value = "down" + "-"*supplyTend.count('+')
+        elif "down" in supplyTend:
+            value = "up" + "+"*supplyTend.count('-')
+        else:
+            value = "plain"
         label = label + ('供给趋势变化',)
         if mode != 'manual':
             self.retract(f1)
@@ -3097,10 +3226,10 @@ class reasoning_System(KnowledgeEngine):
         if country2 == CountryObject:
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
                                             variables=[ItemName,label]),
-                            RHS=getTendency[newIndex]))
+                            RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
                                             variables=[ItemName,label]),
-                            RHS=getTendency[newIndex]))
+                            RHS=value))
         
         fileForOutput.write("-> 预测：【{}】在【{}】国内的价格 --> ({} -> {})\n".format(ItemName ,Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
@@ -3108,7 +3237,7 @@ class reasoning_System(KnowledgeEngine):
                                                                 'plain' ,
                                             Assertion(LHS=Term(operator=PredictPrice,
                                            variables=[ItemName, label]),
-                        RHS=getTendency[newIndex]).RHS.value))                        
+                        RHS=value).RHS.value))                        
         # print(self.facts)
 
     @Rule(
@@ -3148,13 +3277,13 @@ class reasoning_System(KnowledgeEngine):
         self.retract(f1)
             #self.retract(f2)
             # self.retract(f3)
-        index1 = getTendency.index(predictPrice)
+        # index1 = getTendency.index(predictPrice)
             
-        fileForOutput.write('-> 预测：对应业务收入 【{}】 --> ({} -> {})\n'.format(business1,"plain",getTendency[index1]))
+        fileForOutput.write('-> 预测：对应业务收入 【{}】 --> ({} -> {})\n'.format(business1,"plain",predictPrice))
         label = label + ('对应产品价格变化',)
         self.declare(Assertion(LHS=Term(operator=PredictIncome,
                                         variables=[business1,label]),
-                        RHS=getTendency[index1]))
+                        RHS=predictPrice))
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -3177,18 +3306,25 @@ class reasoning_System(KnowledgeEngine):
         if fSon != None:
             #######need to modify to new rule
             fileForOutput.write("\n<规则71,72>----------\n由{}预测: 上游产品--【{}】 的价格 --> {}\n-----------------\n".format(label,item1,predPrice))
-            index = getTendency.index(predPrice)
-            newIndex = None
-            if index == 2:
-                newIndex = 2
-            elif index == 0:
-                newIndex = 4
-            elif index == 1:
-                newIndex = 3
-            elif index == 3:
-                newIndex = 1
-            elif index == 4:
-                newIndex = 0
+            print(predPrice)
+            # index = getTendency.index(predPrice)
+            # newIndex = None
+            # if index == 2:
+            #     newIndex = 2
+            # elif index == 0:
+            #     newIndex = 4
+            # elif index == 1:
+            #     newIndex = 3
+            # elif index == 3:
+            #     newIndex = 1
+            # elif index == 4:
+            #     newIndex = 0
+            if "up" in predPrice:
+                value = "down" + "-"*predPrice.count('+')
+            elif "down" in predPrice:
+                value = "up" + "+"*predPrice.count('-')
+            else:
+                value = "plain"
             
             label = label + ('上游产品价格变动',)
             fileForOutput.write('-> 预测：下游产品 【{}】 的价格 --> ({} -> {})\n'.format(item2,'plain',predPrice))
@@ -3202,11 +3338,11 @@ class reasoning_System(KnowledgeEngine):
             
             fileForOutput.write("\n<规则73,74>----------\n由{}预测: 上游产品--【{}】 的价格 --> {}\n-----------------\n".format(label,item1,predPrice))
             label = label + ('上游产品价格变动',)
-            fileForOutput.write('-> 预测：下游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',getTendency[newIndex]))
+            fileForOutput.write('-> 预测：下游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',value))
             self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
                                             variables=[CountryObject,item2,label]),
-                            RHS=getTendency[newIndex]))
+                            RHS=value))
     
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -3229,14 +3365,14 @@ class reasoning_System(KnowledgeEngine):
         # f1.GetRHS().value
         if fFather != None:
             fileForOutput.write("\n<规则9,18>----------\n由{}预测: 下游产品--【{}】 的价格 --> {}\n-----------------\n".format(label,item1,predPrice))
-            index = getTendency.index(predPrice)
+            # index = getTendency.index(predPrice)
             
             label = label + ('下游产品价格变动',)
-            fileForOutput.write('-> 预测：上游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',getTendency[index]))
+            fileForOutput.write('-> 预测：上游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',predPrice))
             self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
                                             variables=[CountryObject,item2,label]),
-                            RHS=getTendency[index]))
+                            RHS=predPrice))
     
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -3258,10 +3394,10 @@ class reasoning_System(KnowledgeEngine):
         # f1.GetRHS().value
         if fFather != None:
             fileForOutput.write("\n<规则25,29>----------\n由{}预测: 下游产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            index = getTendency.index(demandTend)
+            # index = getTendency.index(demandTend)
             
             label = label + ('下游产品价格变动',)
-            fileForOutput.write('-> 预测：上游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',getTendency[index]))
+            fileForOutput.write('-> 预测：上游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',demandTend))
             if mode != 'manual':
                 self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
@@ -3292,7 +3428,7 @@ class reasoning_System(KnowledgeEngine):
         if fSon != None:
             
             fileForOutput.write("\n<规则4,14>----------\n由{}预测: 上游产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            index = getTendency.index(demandTend)
+            # index = getTendency.index(demandTend)
             
             label = label + ('上游产品需求趋势变动',)
             fileForOutput.write('-> 预测：上游产品 【{}】 的价格 --> ({} -> {})\n'.format(item1,'plain',demandTend))
@@ -3311,7 +3447,7 @@ class reasoning_System(KnowledgeEngine):
         elif fProd != None:
             
             fileForOutput.write("\n<规则4,14>----------\n由{}预测: 公司产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            index = getTendency.index(demandTend)
+            # index = getTendency.index(demandTend)
             
             label = label + ('公司产品需求趋势变动',)
             fileForOutput.write('-> 预测：公司产品 【{}】 的价格 --> ({} -> {})\n'.format(item1,'plain',demandTend))
@@ -3347,14 +3483,14 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda item1,itemF,itemS, productItem, curItem,curProd,commodityItem: True if commodityItem==curItem and item1==itemS and productItem == itemS and itemF == curItem and itemS == curProd else False),       
           salience=0.95) 
     def rule4_14and10_19(self, item1,demandTend,label,f1,itemF,business1,fSon = None, fFather = None, fProd = None):
-        index = 2
-        index2 = 2
-        if demandTend == 'up':
-            index +=1
-            index2-=1
-        elif demandTend == 'down':
-            index -=1
-            index2 +=1     
+        # index = 2
+        # index2 = 2
+        # if demandTend == 'up':
+        #     index +=1
+        #     index2-=1
+        # elif demandTend == 'down':
+        #     index -=1
+        #     index2 +=1     
         # f1.GetRHS().value
         if fSon != None:
                    
@@ -3363,17 +3499,17 @@ class reasoning_System(KnowledgeEngine):
             label = label + ('需求趋势变化',)
             self.declare(Assertion(LHS=Term(operator=PredictSales,
                                             variables=[item1,label]),
-                            RHS=getTendency[int(index)]))
+                            RHS=demandTend))
             # self.declare(Assertion(LHS=Term(operator=PredictIncome,
             #                             variables=[business1,label]),
             #             RHS='plain'))
-            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',getTendency[int(index)]))
-            if mode != 'manual':
-                self.retract(f1)
+            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            # if mode != 'manual':
+            #     self.retract(f1)
         elif fFather != None:
 
             fileForOutput.write("\n<规则4,14>----------\n由{}预测: 公司产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            index = getTendency.index(demandTend)
+            # index = getTendency.index(demandTend)
             
             label = label + ('公司产品需求趋势变动',)
             fileForOutput.write('-> 预测：公司产品 【{}】 的价格 --> ({} -> {})\n'.format(item1,'plain',demandTend))
@@ -3389,30 +3525,31 @@ class reasoning_System(KnowledgeEngine):
             fileForOutput.write("\n<规则10,19>----------\n由{}预测: 【{}】的需求趋势 --> {}\n-----------------\n".format(label, item1,demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictSales,
                                             variables=[item1,label]),
-                            RHS=getTendency[int(index)]))
-            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',getTendency[int(index)]))
-            if mode != 'manual':
-                self.retract(f1)
+                            RHS=demandTend))
+            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            # if mode != 'manual':
+            #     self.retract(f1)
         elif fProd!= None:
-            if demandTend == 'up':
-                index = 2
-                index +=1
+            # if demandTend == 'up':
+            #     index = 2
+            #     index +=1
                 
-            elif demandTend == 'down':
-                index = 2
-                index -=1
+            # elif demandTend == 'down':
+            #     index = 2
+            #     index -=1
 
             
             fileForOutput.write("\n<规则10,19>----------\n由{}预测: 【{}】的需求趋势 --> {}\n-----------------\n".format(label, item1,demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictSales,
                                             variables=[item1,label]),
-                            RHS=getTendency[int(index)]))
+                            RHS=demandTend))
+            
             self.declare(Assertion(LHS=Term(operator=PredictIncome,
                                         variables=[business1,label]),
                         RHS='plain'))
-            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',getTendency[int(index)]))
-            if mode != 'manual':
-                self.retract(f1)
+            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            # if mode != 'manual':
+        self.retract(f1)
 
     # 从该处开始是新加入的
     @Rule(
@@ -3446,20 +3583,48 @@ class reasoning_System(KnowledgeEngine):
           salience=0.93)
     def inner_rule25_26(self, business1, predIncome,label,label2,f1,f2,item1,predSales):
         fileForOutput.write("\n<内规则25,26>----------\n由{}产品【{}】的销量 --> {}\n".format(label2,item1,predSales))
-        index = getTendency.index(predIncome)
-        index2 = getTendency.index(predSales)
+        # index = getTendency.index(predIncome)
+        # index2 = getTendency.index(predSales)
+
+        if "up" in predIncome and "up" in predSales:
+            value = "up" + "+" * predIncome.count("+") + "+" * predSales.count("+") + "+"
+        elif "down" in predIncome and "down" in predSales:
+            value = "down" + "-" * predIncome.count("-") + "-" * predSales.count("-") + "-"
+        else:
+            if "up" in predIncome and "down" in predSales:
+                if predIncome.count("+") == predSales.count("-"):
+                    value = "plain" 
+                elif predIncome.count("+") > predSales.count("-"):
+                    value = "up" + (predIncome.count("+") - 1)* '+'
+                elif predIncome.count("+") < predSales.count("-"):
+                    value = "down" + (predSales.count("-") - 1)* '-'
+
+            elif "down" in predIncome and "up" in predSales:
+                if predIncome.count("-") == predSales.count("+"):
+                    value = "plain" 
+                elif predIncome.count("-") > predSales.count("+"):
+                    value = "down" + (predIncome.count("-") - 1)* '-'
+                elif predIncome.count("-") < predSales.count("+"):
+                    value = "up" + (predSales.count("+") - 1)* '+'
+            else:
+                if "plain" in predIncome and "plain" not in predSales: 
+                    value = predSales
+                elif "plain" not in predIncome and "plain"  in predSales: 
+                    value = predIncome
+                else:
+                    value = "plain"
         # import math
         # if (newIndex+index2)/2 < 2:
         #     index = math.floor((newIndex+index2)/2 )
         # else:
         #     index = math.ceil((newIndex+index2)/2 )
-        index = (index+index2) - 2
-        if index > 4: 
-            index = 4
-        if index < 0:
-            index = 0
+        # index = (index+index2) - 2
+        # if index > 4: 
+        #     index = 4
+        # if index < 0:
+        #     index = 0
         
-        fileForOutput.write('-----------------\n-> 预测：对应业务 【{}】 的业务收入 --> ({} -> {})\n'.format(business1,predIncome, getTendency[index]))
+        fileForOutput.write('-----------------\n-> 预测：对应业务 【{}】 的业务收入 --> ({} -> {})\n'.format(business1,predIncome, value))
         # print(business1)
         
         self.retract(f1)
@@ -3467,7 +3632,7 @@ class reasoning_System(KnowledgeEngine):
         label = label + ('产品销量',)
         self.declare(Assertion(LHS=Term(operator=PredictIncome,
                                            variables=[business1,label]),
-                        RHS=getTendency[index]))
+                        RHS=value))
 
     @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.f1 << Assertion(LHS__operator=PredictIncome,
@@ -3527,7 +3692,7 @@ class reasoning_System(KnowledgeEngine):
             fileForOutput.write("\n<内规则1,2>----------\n由{}业务 【{}】 对应的商品【{}】的原料【{}】价格 --> {}\n".format(label,business1,item2,item1, predPrice))
             
             #print(predNetProfit)
-            index1 = getTendency.index(predPrice)
+            # index1 = getTendency.index(predPrice)
             fileForOutput.write('-> 预测：对应业务 【{}】 的业务成本 --> ({} -> {})\n'.format(business1,'plain',predPrice))
             # self.retract(f1)
             self.retract(f3)
@@ -3555,20 +3720,53 @@ class reasoning_System(KnowledgeEngine):
           salience=0.9)
     def inner_rule3_4(self, business1,curBusiness,curProd,curItem, predCost,label,predNetProfit,f1,f2):
         fileForOutput.write("\n<内规则3,4>----------\n由{}业务 【{}】 的业务成本 --> {}\n".format(label,business1, predCost))
-        index = getTendency.index(predCost)
-        newIndex = None
-        if index == 2:
-            newIndex = 2
-        elif index == 0:
-            newIndex = 4
-        elif index == 1:
-            newIndex = 3
-        elif index == 3:
-            newIndex = 1
-        elif index == 4:
-            newIndex = 0
-        index2 = getTendency.index(predNetProfit)
+        # index = getTendency.index(predCost)
+        # newIndex = None
+        # if index == 2:
+        #     newIndex = 2
+        # elif index == 0:
+        #     newIndex = 4
+        # elif index == 1:
+        #     newIndex = 3
+        # elif index == 3:
+        #     newIndex = 1
+        # elif index == 4:
+        #     newIndex = 0
+        if "up" in predCost:
+            value = "down" + "-"*predCost.count('+')
+        elif "down" in predCost:
+            value = "up" + "+"*predCost.count('-')
+        else:
+            value = "plain"
+        # index2 = getTendency.index(predNetProfit)
+        print(value,predNetProfit)
+        if "up" in value and "up" in predNetProfit:
+            value2 = "up" + "+" * value.count("+") + "+" * predNetProfit.count("+") + "+"
+        elif "down" in value and "down" in predNetProfit:
+            value2 = "down" + "-" * value.count("-") + "-" * predNetProfit.count("-") + "-"
+        else:
+            if "up" in value and "down" in predNetProfit:
+                if value.count("+") == predNetProfit.count("-"):
+                    value2 = "plain" 
+                elif value.count("+") > predNetProfit.count("-"):
+                    value2 = "up" + (value.count("+") - 1)* '+'
+                elif value.count("+") < predNetProfit.count("-"):
+                    value2 = "down" + (predNetProfit.count("-") - 1)* '-'
 
+            elif "down" in value and "up" in predNetProfit:
+                if value.count("-") == predNetProfit.count("+"):
+                    value2 = "plain" 
+                elif value.count("-") > predNetProfit.count("+"):
+                    value2 = "down" + (value.count("-") - 1)* '-'
+                elif value.count("-") < predNetProfit.count("+"):
+                    value2 = "up" + (predNetProfit.count("+") - 1)* '+'
+            else:
+                if "plain" in value and "plain" not in predNetProfit: 
+                    value2 = predNetProfit
+                elif "plain" not in value and "plain"  in predNetProfit: 
+                    value2 = value
+                else:
+                    value2 = "plain"
         
         result[-1].addResult(Company1,'成本', (curBusiness,curProd,curItem),predCost)
             
@@ -3577,21 +3775,21 @@ class reasoning_System(KnowledgeEngine):
         #     index = math.floor((newIndex+index2)/2 )
         # else:
         #     index = math.ceil((newIndex+index2)/2 )
-        index = (newIndex+index2) - 2
-        if index > 4: 
-            index = 4
-        if index < 0:
-            index = 0
+        # index = (newIndex+index2) - 2
+        # if index > 4: 
+        #     index = 4
+        # if index < 0:
+        #     index = 0
         
         label = label + ('业务成本变动',)
         self.retract(f1)
         self.retract(f2)
-        getTendency[index]
-        fileForOutput.write("\n业务利润 --> {}\n".format(getTendency[newIndex]))
+        
+        fileForOutput.write("\n业务利润 --> {}\n".format(value2))
         self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
                                            variables=[business1,label]),
-                        RHS=getTendency[index]))
-        fileForOutput.write('-> 预测：对应业务 【{}】 的业务利润 --> ({} -> {})\n'.format(business1,predNetProfit, getTendency[index]))
+                        RHS=value2))
+        fileForOutput.write('-> 预测：对应业务 【{}】 的业务利润 --> ({} -> {})\n'.format(business1,predNetProfit, value2))
 
     @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.f1 << Assertion(LHS__operator=PredictNetProfit,
@@ -3676,24 +3874,30 @@ class reasoning_System(KnowledgeEngine):
             fileForOutput.write("\n<内规则13,14>----------\n由{}公司【{}】 的EPS --> {}\n".format(label, company1.name,predEPS))
             self.retract(f1)
         else:
-            index = getTendency.index(predEPS)
-            newIndex = None
-            if index == 2:
-                newIndex = 2
-            elif index == 0:
-                newIndex = 4
-            elif index == 1:
-                newIndex = 3
-            elif index == 3:
-                newIndex = 1
-            elif index == 4:
-                newIndex = 0
+            # index = getTendency.index(predEPS)
+            # newIndex = None
+            # if index == 2:
+            #     newIndex = 2
+            # elif index == 0:
+            #     newIndex = 4
+            # elif index == 1:
+            #     newIndex = 3
+            # elif index == 3:
+            #     newIndex = 1
+            # elif index == 4:
+            #     newIndex = 0
+            if "up" in predEPS:
+                value = "down" + "-"*predEPS.count('+')
+            elif "down" in predEPS:
+                value = "up" + "+"*predEPS.count('-')
+            else:
+                value = "plain"
             fileForOutput.write("\n<内规则13,14>----------\n由{}公司【{}】 的EPS --> {}\n".format(label, company1.name, predEPS))
-            fileForOutput.write('-> 预测：该公司 【{}】 的PE --> ({} -> {})\n'.format(company1.name,'plain', getTendency[newIndex]))
+            fileForOutput.write('-> 预测：该公司 【{}】 的PE --> ({} -> {})\n'.format(company1.name,'plain', value))
             self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=PredictPE,
                                                 variables=[company1, label]),
-                            RHS=getTendency[newIndex]))
+                            RHS=value))
         # print(mode)
             if curBusiness == 'none':
                 curBusiness = label[0]
@@ -3730,10 +3934,10 @@ class reasoning_System(KnowledgeEngine):
                     
 
     @Rule(OR(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
-          AS.e2 << Exist(manualInput = MATCH.manualInput)),
+          AS.e2 << Exist(manualInputs = MATCH.manualInputs)),
         # TEST(lambda index: index!='none'),
         salience=0.31)
-    def rule_end(self,index=None,a = None,curBusiness = None, curProd = None, curItem = None, manualInput = None):
+    def rule_end(self,index=None,a = None,curBusiness = None, curProd = None, curItem = None, manualInputs = None):
         try:
             if index == -1:
                 self.retract(a)
@@ -3759,17 +3963,18 @@ class reasoning_System(KnowledgeEngine):
                         fileForOutput.write('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
                         print('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
         except:
-            if manualInput!= None:
-                if manualInput.trend == 'up':
-                    startValue = 0
-                    endValue = 1
-                elif manualInput.trend == 'down':
-                    startValue = 1
-                    endValue = 0
-                if manualInput.detail == '公司净利润':
-                    self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
-                                        variables=[Company1,('手动',)]), 
-                                        RHS = manualInput.trend))
+            for manualInput in manualInputs:
+                if manualInput!= None:
+                    if 'up' in manualInput.trend:
+                        startValue = 0
+                        endValue = 1
+                    elif 'down' in manualInput.trend:
+                        startValue = 1
+                        endValue = 0
+                    if manualInput.detail == '公司净利润':
+                        self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
+                                            variables=[Company1,('手动',)]), 
+                                            RHS = manualInput.trend))
                 
             # if mode == 'database':
             #     event_path = "event\event_test.json"
@@ -5581,19 +5786,35 @@ class reasoning_System(KnowledgeEngine):
             )
         
         if float(endData) - float(beginData) > 0 :
+            if mode == "manual":
+                if endData > beginData:
+                    value = "up" + (endData -1)*"+"
+                elif endData < beginData:
+                    value = "down" + (beginData -1)*"-"
+            else:
+                value = 'up'
+            
             fileForOutput.write('\n\n<规则30,32>----------\n【{}】的行业指数上升'.format(IndexObj))
             fileForOutput.write('从{}的{} 上升至{}的{}'.format(beginDate, beginData, endDate,endData))
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
                                            variables=[CompanyObject, ('行业指数',)]),
-                        RHS='up'))
-            fileForOutput.write('\n-> 预测公司的净利润 --> up\n')
+                        RHS=value))
+            fileForOutput.write('\n-> 预测公司的净利润 --> {}\n'.format(value))
         else:
+            if mode == "manual":
+                if endData > beginData:
+                    value = "up" + (endData -1)*"+"
+                elif endData < beginData:
+                    value = "down" + (beginData -1)*"-"
+            else:
+                value = 'down'
+            
             fileForOutput.write('\n\n<规则30,32>----------\n【{}】的行业指数下降'.format(IndexObj))
             fileForOutput.write('从{}的{} 下降至{}的{}'.format(beginDate, beginData, endDate,endData))
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
                                            variables=[CompanyObject, ('行业指数',)]),
-                        RHS='down'))
-            fileForOutput.write('\n-> 预测公司的净利润 --> down\n')
+                        RHS=value))
+            fileForOutput.write('\n-> 预测公司的净利润 --> {}\n'.format(value))
         
         # self.declare(
         #     CurrentProduct(index = 'none', curProd = 'none', curBusiness = 'none')
@@ -5627,16 +5848,32 @@ class reasoning_System(KnowledgeEngine):
                 fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
             elif float(endData[1]) - float(beginData[1]) > 0:
                 fileForOutput.write("\n\n<内规则15,16>----------\n公司的总股本增加:\n 期初截止日期={}, 期初总股本={}; 期末截止日期={}, 期末总股本={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                if mode == "manual":
+                    if endData[1] > beginData[1]:
+                        value = "down" + (endData[1] -1)*"-"
+                    elif endData[1] < beginData[1]:
+                        value = "up" + (beginData[1] -1)*"+"
+                else:
+                    value = 'down'
+                
                 self.declare(Assertion(LHS=Term(operator=PredictEPS,
                                                 variables=[c1,('总股本',)]),
-                            RHS='down'))
-                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', 'down'))
+                            RHS=value))
+                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', value))
             elif float(endData[1]) - float(beginData[1]) < 0:
                 fileForOutput.write("\n\n<内规则15,16>----------\n公司的总股本减少:\n 期初截止日期={}, 期初总股本={}; 期末截止日期={}, 期末总股本={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                if mode == "manual":
+                    if endData[1] > beginData[1]:
+                        value = "down" + (endData[1] -1)*"-"
+                    elif endData[1] < beginData[1]:
+                        value = "up" + (beginData[1] -1)*"+"
+                else:
+                    value = 'up'
+                
                 self.declare(Assertion(LHS=Term(operator=PredictEPS,
                                                 variables=[c1,('总股本',)]),
-                            RHS='up'))
-                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', 'up'))
+                            RHS=value))
+                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', value))
             elif float(endData[1]) - float(beginData[1]) == 0:
                 fileForOutput.write("\n\n<内规则15,16>----------\n公司的总股本不变:\n 期初截止日期={}, 期初总股本={}; 期末截止日期={}, 期末总股本={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
                 self.declare(Assertion(LHS=Term(operator=PredictEPS,
@@ -5726,15 +5963,15 @@ class reasoning_System(KnowledgeEngine):
                                 RHS='none'))
         else:
             fileForOutput.write("\n\n<内规则23>----------\n由{}公司的资本开支 -> {}\n".format(label,capex))
-            index = getTendency.index(capex)
+            # index = getTendency.index(capex)
             
             label = list(label)
             label.append('资本开支')
             label = tuple(label)
             self.declare(Assertion(LHS=Term(operator=PredictWorkingTime,
                                                     variables=[c1,label]),
-                                RHS=getTendency[index]))
-            fileForOutput.write('-> 预测：该公司 【{}】 的业务作业量 --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index]))
+                                RHS=capex))
+            fileForOutput.write('-> 预测：该公司 【{}】 的业务作业量 --> ({} -> {})\n'.format(c1.name,'plain', capex))
         self.retract(PredictCapex)
 
     @Rule(AS.e << Exist(CompanyObject = MATCH.CompanyObject,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),

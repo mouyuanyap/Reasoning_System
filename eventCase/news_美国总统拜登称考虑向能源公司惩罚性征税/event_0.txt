@@ -1,0 +1,1301 @@
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+
+ 事件文本：美国总统拜登称考虑向能源公司惩罚性征税
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['能源公司',])
+
+事件无抽取产品
+Execution time:3.2879903316497803

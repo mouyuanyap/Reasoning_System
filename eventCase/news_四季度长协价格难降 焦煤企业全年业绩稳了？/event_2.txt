@@ -1,0 +1,1301 @@
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+
+ 事件文本：市场供需方面，随着下游钢铁需求小幅回暖，钢厂产能回升。
+ 事件名称：产量
+ 事件类型:恢复
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['钢铁',])
+ 公司：frozenlist(['Mysteel',])
+
+事件无抽取产品
+Execution time:3.3795723915100098

@@ -1,0 +1,1301 @@
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：国际油价大涨！沙特意欲主导大幅减产 欧佩克+终要与欧美撕破脸？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['沙特',]), frozenlist(['国际',])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:3.17575740814209

@@ -156,7 +156,7 @@ class Company:
             d = str(date.day)
         date_string = str(date.year) + str(m) + str(d)
 
-        file = codecs.open(os.path.join(dataPath + 'company/', 'eps.csv'), encoding = 'utf-8')
+        file = codecs.open(os.path.join(dataPath + 'company/', 'eps_ttm.csv'), encoding = 'utf-8')
         rows = csv.reader(file)
         for num,row in enumerate(rows):
             if num >0:
@@ -1086,18 +1086,20 @@ order by stopdate desc"""):
             file = codecs.open(os.path.join(dataPath + 'company/','code.csv'), encoding = 'utf-8')
             rows = csv.reader(file)
     
-            for row in rows:
+            for i,row in enumerate(rows):
                 #print(row[2])
                 if row[2] not in self.companycode:
                     self.companycode.append(row[2])
                     sec_code[row[2]] = (row[0],row[1])
+
             if len(self.companycode) > len(securitycode):
                 print('error')
             cc = []
             for cRoot, cDirs, cFiles in os.walk('./db/Data/company/',topdown=True):
                 # print(cDirs)
-                for cD in cDirs:
+                for i, cD in enumerate(cDirs):
                     # print(cD)
+                    
                     file = codecs.open(os.path.join(os.path.join('./db/Data/company/', cD) ,'companyInfo.csv'), encoding = 'utf-8')
                     rows = csv.reader(file)
                     for n,row in enumerate(rows):

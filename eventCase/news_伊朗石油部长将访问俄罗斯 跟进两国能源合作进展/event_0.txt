@@ -198,4 +198,1104 @@
  公司：frozenlist([])
 
 事件无抽取产品
-Execution time:0.4792463779449463
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：伊朗石油部长将访问俄罗斯 跟进两国能源合作进展
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:2.9881980419158936

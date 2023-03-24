@@ -198,4 +198,1104 @@
  公司：frozenlist([])
 
 事件无抽取产品
-Execution time:0.45266103744506836
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：而为抑制油价继续攀升，在过去的几个月中，美国政府多次敦促石油输出国组织(OPEC)及其盟友组成的OPEC+增加产量。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['美国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:3.005908250808716

@@ -1,0 +1,1301 @@
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：VCI的数据显示，上半年，德国化学品产量同比下降了3%。
+ 事件名称：产量
+ 事件类型:减少
+ 事件国家, 事件地区:frozenlist(['德国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist(['化学品',])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:2.954690933227539

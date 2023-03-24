@@ -1,0 +1,1301 @@
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：欧佩克减产背后深层考虑：欧美石油限价计划正触碰红线
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['美',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:2.9452905654907227

@@ -198,4 +198,1104 @@
  公司：frozenlist(['中石油',])
 
 事件无抽取产品
-Execution time:0.49426794052124023
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+
+ 事件文本：中石油前三季度营业收入2.46万亿元 净利润增6成
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['中国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['中石油',])
+
+事件无抽取产品
+Execution time:3.0254557132720947

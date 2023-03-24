@@ -198,4 +198,1104 @@
  公司：frozenlist([])
 
 事件无抽取产品
-Execution time:0.45363736152648926
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：海外净产量同比上升13.5%，达49.9百万桶油当量，产量贡献主要来自圭亚那Liza油田二期项目和巴西Buzios项目。
+ 事件名称：产量
+ 事件类型:增加
+ 事件国家, 事件地区:frozenlist(['巴西', '圭亚那']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:2.981675386428833

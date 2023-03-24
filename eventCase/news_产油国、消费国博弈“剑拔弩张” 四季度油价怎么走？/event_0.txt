@@ -198,4 +198,1104 @@
  公司：frozenlist(['欧佩克',])
 
 事件无抽取产品
-Execution time:0.4668862819671631
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+
+ 事件文本：产油国、消费国博弈“剑拔弩张” 四季度油价怎么走？
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['俄罗斯', '俄罗斯']), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['欧佩克',])
+
+事件无抽取产品
+Execution time:3.0543441772460938

@@ -128,6 +128,7 @@ file.close()
 code = [i[1] for i in securitycode[0:]]
 
 def getAllCompanyObject(getFromDB = getFromDB,code = code, c_customer_supplier = c_customer_supplier,c_business=c_business):
+    
     allCompany = company.Companies(fromDB = getFromDB,SECURITYCODE=code, supplier_customer = c_customer_supplier, business_product=c_business)
     return allCompany
 
@@ -347,7 +348,7 @@ def getIndexTradingData(secCode,end):
 # 本地缓存路径为：db/Data
 # allCompany = getAllCompanyObject(getFromDB=False)
 allCompany = getAllCompanyObject(getFromDB=False)
-
+# print(allCompany.companyList)
 # 获取所有公司的业务
 allC = {}
 for number, comp in enumerate(allCompany.companyList[0:]):

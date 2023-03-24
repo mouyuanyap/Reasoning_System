@@ -1,0 +1,1301 @@
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+
+ 事件文本：高煤价助推业绩高增 兖矿能源预计前三季度盈利271亿
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['兖矿能源',])
+
+事件无抽取产品
+Execution time:3.04900860786438

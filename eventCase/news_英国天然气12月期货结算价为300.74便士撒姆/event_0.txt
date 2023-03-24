@@ -1,0 +1,1301 @@
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+
+ 事件文本：英国天然气12月期货结算价为300.74便士/撒姆
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist(['英国',]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist([])
+
+事件无抽取产品
+Execution time:2.981818675994873

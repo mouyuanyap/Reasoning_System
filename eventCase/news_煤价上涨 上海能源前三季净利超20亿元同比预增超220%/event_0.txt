@@ -1,0 +1,1301 @@
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+
+ 事件文本：煤价上涨 上海能源前三季净利超20亿元同比预增超220%
+ 事件名称：标题
+ 事件类型:
+ 事件国家, 事件地区:frozenlist([]), frozenlist([])
+ 产品：frozenlist([])
+ 行业：frozenlist([])
+ 公司：frozenlist(['上海能源',])
+
+事件无抽取产品
+Execution time:2.9927730560302734

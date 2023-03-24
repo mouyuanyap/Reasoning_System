@@ -4,13 +4,13 @@ from engine.base_classes import *
 from experta import *
 
 class ManualInput:
-    def __init__(self, detail , trend, item = None , business = None, index = None, country = None):
+    def __init__(self, detail , trend, degree = "", item = None , business = None, index = None, country = None):
         self.item = item
         self.business = business
         self.index = index
         self.country = country
         self.detail = detail
-        self.trend = trend
+        self.trend = trend + degree
 
 class Results:
     def __init__(self):

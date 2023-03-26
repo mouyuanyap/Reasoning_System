@@ -387,7 +387,7 @@ if __name__ == "__main__":
     # runEventExtract()
     # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 12, 31, 0, 0))
     # runDatabase(datetime(2019, 6, 30, 0, 0),datetime(2019, 9, 30, 0, 0),'601857SH')
-    runDatabase(datetime(2020, 3, 27, 0, 0),datetime(2020, 8, 29, 0, 0),'601898SH')
+    # runDatabase(datetime(2020, 3, 27, 0, 0),datetime(2020, 8, 29, 0, 0),'601898SH')
     m1 = ManualInput(detail= '行业指数', trend = 'up', degree='++++' , index='申万石油石化指数')
     m2 = ManualInput(detail= '供给', trend = 'down', degree= "--", item='聚乙烯')
     m3 = ManualInput(detail= '需求', trend = 'down', degree= "--", item='汽油')
@@ -401,7 +401,7 @@ if __name__ == "__main__":
     m11 = ManualInput(detail= '美元指数', trend = 'up',degree= "++++")
     m12 = ManualInput(detail= '公司股票数', trend = 'up', degree = '++')
     m13 = ManualInput(detail= '公司储量', trend = 'up', degree = '++')
-    # runManualInput(manInput=[m4,m5,m10],companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
+    runManualInput(manInput=[m4,m5,m6,m7,m11,m12,m13],companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
 
 
 #以下是手动事件触发 参数不是 detail，是event

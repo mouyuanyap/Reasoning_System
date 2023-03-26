@@ -5983,7 +5983,7 @@ class reasoning_System(KnowledgeEngine):
           salience=0.9)  
     def inner_rule24(self, c1,label,workingtime,PredictWorkTime):
         fileForOutput.write("\n<内规则24>----------\n由{}公司的业务作业量-> {}\n".format(label,workingtime))
-        index = getTendency.index(workingtime)
+        # index = getTendency.index(workingtime)
         label = list(label)
         label.append('业务作业量')
         label = tuple(label)
@@ -5994,12 +5994,12 @@ class reasoning_System(KnowledgeEngine):
         
         self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
                                                 variables=[c1,label]),
-                            RHS=getTendency[index]))
-        fileForOutput.write('-> 预测：该公司 【{}】 的业务收入 --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index]))
+                            RHS=workingtime))
+        fileForOutput.write('-> 预测：该公司 【{}】 的业务收入 --> ({} -> {})\n'.format(c1.name,'plain', workingtime))
 
-        fileForOutput.write("\n<内规则5_6>----------\n由{}公司的业务收入 -> {}\n".format(label,getTendency[index]))
+        fileForOutput.write("\n<内规则5_6>----------\n由{}公司的业务收入 -> {}\n".format(label,workingtime))
 
-        fileForOutput.write('-> 预测：该公司 【{}】 的净利润 --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index]))
+        fileForOutput.write('-> 预测：该公司 【{}】 的净利润 --> ({} -> {})\n'.format(c1.name,'plain', workingtime))
         self.retract(PredictWorkTime)
     
     @Rule(AS.e << Exist(CompanyObject = MATCH.CompanyObject,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),

@@ -3779,7 +3779,7 @@ class reasoning_System(KnowledgeEngine):
         elif fFather != None:
             left = "\n<规则4,14>----------\n由{}预测: 公司产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend)
             fileForOutput.write("\n<规则4,14>----------\n由{}预测: 公司产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            index = getTendency.index(demandTend)
+            #index = getTendency.index(demandTend)
             
             label = label + ('公司产品需求趋势变动',)
             right = '-> 预测：公司产品 【{}】 的价格 --> ({} -> {})\n'.format(item1,'plain',demandTend)
@@ -3805,9 +3805,9 @@ class reasoning_System(KnowledgeEngine):
             fileForOutput.write("\n<规则10,19>----------\n由{}预测: 【{}】的需求趋势 --> {}\n-----------------\n".format(label, item1,demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictSales,
                                             variables=[item1,label,curNodeNum]),
-                            RHS=getTendency[int(index)]))
-            right = '-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',getTendency[int(index)])
-            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',getTendency[int(index)]))
+                            RHS=demandTend))
+            right = '-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend)
+            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
             
             curNodeNum +=1
             net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
@@ -3827,9 +3827,9 @@ class reasoning_System(KnowledgeEngine):
             self.declare(Assertion(LHS=Term(operator=PredictSales,
                                             variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
-            # self.declare(Assertion(LHS=Term(operator=PredictIncome,
-            #                             variables=[business1,label]),
-            #             RHS='plain'))
+            self.declare(Assertion(LHS=Term(operator=PredictIncome,
+                                        variables=[business1,label]),
+                        RHS='plain'))
             right = '-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend)
             fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
             preNodeNum = [nodeNum1]

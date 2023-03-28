@@ -3,7 +3,7 @@ from typing import Match
 from concept import company,financialratio,futures,index,product,industry,person,event
 from datetime import datetime
 import time
-# from db.connection import conn
+from db.connection import conn
 import codecs,csv
 from engine.concept import *
 from engine.operator import *
@@ -13,28 +13,43 @@ from db.getData import *
 from util.countryInit import *
 from datetime import date, datetime, timedelta
 
-#聚源数据库存在相关期货数据的商品，公司产品需要与以下列表关联才能进行供需相关的推理
-# commodity = ['原油','燃料油','液化石油气','天然气','动力煤','焦煤','主焦煤','1/3焦精煤','焦精煤','肥精煤','贫瘦煤','喷吹煤','炼焦煤','电解铝','氧化铝','铝锭','铁矿石','铁精粉','球团矿','电解铜','铜精矿','白砂糖','聚乙烯','聚丙烯','丙烯']
+from pyvis.network import Network
+from pyvisNodes import writeHtml, addEdge
+import numpy as np
+import json
 
-#初始化国家对象实例，输入为/util/CountryList.csv 中的各国英文名字；
+#��Դ���ݿ��������ڻ����ݵ���Ʒ����˾��Ʒ��Ҫ�������б��������ܽ��й�����ص�����
+# commodity = ['ԭ��','ȼ����','Һ��ʯ����','��Ȼ��','����ú','��ú','����ú','1/3����ú','����ú','�ʾ�ú','ƶ��ú','�紵ú','����ú','�����','������','����','����ʯ','������','���ſ�','���ͭ','ͭ����','��ɰ��','����ϩ','�۱�ϩ','��ϩ']
+
+#��ʼ�����Ҷ���ʵ��������Ϊ/util/CountryList.csv �еĸ���Ӣ�����֣�
 # china = allCountry.returnCountry('China')
-# 在这里初始化美国的
+# �������ʼ��������
 # usa = allCountry.returnCountrybyFullName('United States')
 
-#程度列表
+#�̶��б�
 getTendency = ('down-','down','plain','up','up+')
 
-#初始化公司所有业务，产品，涉及的期货商品列表，开始不同公司的推理前需要初始化
+#��ʼ����˾����ҵ�񣬲�Ʒ���漰���ڻ���Ʒ�б�����ʼ��ͬ��˾������ǰ��Ҫ��ʼ��
 allProduct = []
 allBusiness = []
 allItem = []
-
 result = []
 
 fileForOutput = None
-
 Company1 = None
 
+global result_cal, dictBusi, result_tmp, BusinessBegin, BeginFlag
+result_tmp = np.array([0,0,0])
+result_cal = np.array([[0,0,0]])
+dictBusi = {}
+BusinessBegin = True
+BeginFlag = True
+
+global net, ColorCount, curNodeNum
+curNodeNum = 1
+ColorCount = 1
+net = Network(directed=True)
+net.add_node(0, label="��ʼ�ڵ�")
 
 class CurrentProduct(Fact):
     pass
@@ -53,14 +68,15 @@ mode = None
 class reasoning_System(KnowledgeEngine):
     @DefFacts()
     def SetDefault(self,Date_Begin = None, Date_End = None,Company1 = '', Event1 = None, manualInputs = None):
-        
-        #从数据库获取的推理模式
+        global CurCompany
+        CurCompany = Company1
+        #�����ݿ��ȡ������ģʽ
         if Company1 != '' and Event1 == None and manualInputs == None:
-            # Declare 以下的 Fact, 以触发规则999
+            # Declare ���µ� Fact, �Դ�������999
             yield Assertion(LHS=Term(operator=GetFuture,
-                                            variables=['美元指数', 'DX',Date_Begin, Date_End]),
+                                            variables=['��Ԫָ��', 'DX',Date_Begin, Date_End]),
                             RHS=Term(operator=GetFuture,
-                                            variables=['美元指数', 'DX',Date_Begin, Date_End]).GetRHS()
+                                            variables=['��Ԫָ��', 'DX',Date_Begin, Date_End]).GetRHS()
                             )
             yield Assertion(LHS=Term(operator=GetBusiness,
                                             variables=[Company1]),
@@ -68,37 +84,37 @@ class reasoning_System(KnowledgeEngine):
                                             variables=[Company1]).GetRHS().value
                             )
             yield Assertion(LHS=Term(operator=CompanyInfo,
-                                            variables=[Company1, '国家']),
+                                            variables=[Company1, '����']),
                             RHS=Term(operator=CompanyInfo,
-                                            variables=[Company1, '国家']).GetRHS().value
+                                            variables=[Company1, '����']).GetRHS().value
                             )
             yield DateFact(Date_Begin = Date_Begin, Date_End = Date_End)
 
-        #事件抽取的推理模式
+        #�¼���ȡ������ģʽ
         elif Event1 != None and Company1!='' and manualInputs == None:
-            # Declare 以下的 Fact, 以触发规则998
+            # Declare ���µ� Fact, �Դ�������998
             yield DateFact(Date_Begin = Date_Begin, Date_End = Date_End)
             yield Exist(Company1 = Company1)
             yield Event1
         
-        #手动触发规则节点的的推理模式
+        #�ֶ���������ڵ�ĵ�����ģʽ
         elif Event1 == None and Company1!='' and manualInputs != None:
-            # Declare 以下的 Fact, 以触发规则997
+            # Declare ���µ� Fact, �Դ�������997
             yield DateFact(Date_Begin = Date_Begin, Date_End = Date_End)
             yield Exist(Company1 = Company1)
-            yield Exist(manualInputs = manualInputs)
+            yield Exist(manualInput = manualInputs)
             yield Assertion(LHS=Term(operator=GetBusiness,
                                             variables=[Company1]),
                             RHS=Term(operator=GetBusiness,
                                             variables=[Company1]).GetRHS().value
                             )
             yield Assertion(LHS=Term(operator=CompanyInfo,
-                                            variables=[Company1, '国家']),
+                                            variables=[Company1, '����']),
                             RHS=Term(operator=CompanyInfo,
-                                            variables=[Company1, '国家']).GetRHS().value
+                                            variables=[Company1, '����']).GetRHS().value
                             )
 
-    #手动触发规则节点的的推理模式        
+    #�ֶ���������ڵ�ĵ�����ģʽ        
     @Rule(AS.e1 << Exist(Company1 = MATCH.company1),
           AS.e2 << Exist(manualInputs = MATCH.manualInputs),
           AS.DateFact << DateFact(Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -106,23 +122,23 @@ class reasoning_System(KnowledgeEngine):
     def rule997(self, Date_Begin,Date_End,company1,e1,e2,manualInputs):
         global mode
         mode = 'manual'
-        print('hello')
+
         for manualInput in manualInputs:
-            # 获取公司所入选的行业指数
+            # ��ȡ��˾����ѡ����ҵָ��
             indexCode = Term(operator= IndexCode,
                             variables = [Term(operator=GetIndustryRelatedIndex,
                                 variables=[ Term(operator=GetIndustryName,
-                                    variables=['申万一级行业',company1]).GetRHS().value]
+                                    variables=['����һ����ҵ',company1]).GetRHS().value]
                                             ).GetRHS().value]
                                 ).GetRHS().value
             indexName = Term(operator= IndexName,
                             variables = [Term(operator=GetIndustryRelatedIndex,
                                 variables=[ Term(operator=GetIndustryName,
-                                    variables=['申万一级行业',company1]).GetRHS().value]
+                                    variables=['����һ����ҵ',company1]).GetRHS().value]
                                             ).GetRHS().value]
                                 ).GetRHS().value
             
-            # 在从数据库获取的模式中，declareCommodity 函数内的 GetProduction等函数会获取起始和结束时间的真实数据, 在手动触发的模式以1和0代替
+            # �ڴ����ݿ��ȡ��ģʽ�У�declareCommodity �����ڵ� GetProduction�Ⱥ������ȡ��ʼ�ͽ���ʱ�����ʵ����, ���ֶ�������ģʽ��1��0����
             if 'up' in manualInput.trend:
 
                 startValue = 0
@@ -130,71 +146,68 @@ class reasoning_System(KnowledgeEngine):
             elif 'down' in manualInput.trend:
                 startValue = 1 + 1*manualInput.trend.count("-")
                 endValue = 0
-            # if manualInput.detail == '公司净利润':
-            #     self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
-            #                            variables=[company1,('手动',)]), 
-            #                            RHS = manualInput.trend))
-            if manualInput.detail == '公司股票数':
+
+            
+            if manualInput.detail == '��˾��Ʊ��':
                 self.declare(
                     Assertion(LHS=Term(operator=GetCompanyTotalShares,
                                         variables=[company1, Date_Begin]),
                             RHS=(Date_Begin,startValue))
-            
+
                 )
                 self.declare(
                             Assertion(LHS=Term(operator=GetCompanyTotalShares,
                                                 variables=[company1, Date_End]),
                                     RHS=(Date_End,endValue))
                 )
-            if manualInput.detail == '公司储量':
+            if manualInput.detail == '��˾����':
                 self.declare(
                             Assertion(LHS=Term(operator=GetCompanyReserve,
                                                 variables=[company1, Date_Begin]),
                                     RHS=(Date_Begin,startValue))
-            
-                    
+
+
                 )
                 self.declare(
                             Assertion(LHS=Term(operator=GetCompanyReserve,
                                                 variables=[company1, Date_End]),
                                     RHS=(Date_End,endValue))
                     )
-            if manualInput.detail == '美元指数':
+            if manualInput.detail == '��Ԫָ��':
                 dollarFuture = Term(operator=GetFuture,
-                                                variables=['美元指数', 'DX',Date_Begin, Date_End]).GetRHS()
+                                                variables=['��Ԫָ��', 'DX',Date_Begin, Date_End]).GetRHS()
                 try:
                     newEnd = Date_End
                     self.declare(
                             Assertion(LHS=Term(operator=GetFutureQuote,
-                                                variables=[dollarFuture, newEnd, '结算价']),
+                                                variables=[dollarFuture, newEnd, '�����']),
                                     RHS=endValue)
                                     )
                 except:
                     self.declare(
                             Assertion(LHS=Term(operator=GetFutureQuote,
-                                                variables=[dollarFuture, newEnd, '结算价']),
+                                                variables=[dollarFuture, newEnd, '�����']),
                                     RHS=None)
                                     )
-                    
+
 
                 try:
                     newBegin = Date_Begin
                     self.declare(
                             Assertion(LHS=Term(operator=GetFutureQuote,
-                                                variables=[dollarFuture, newBegin, '结算价']),
+                                                variables=[dollarFuture, newBegin, '�����']),
                                     RHS=startValue)
                                     )
                 except:
                     self.declare(
                             Assertion(LHS=Term(operator=GetFutureQuote,
-                                                variables=[dollarFuture, newBegin, '结算价']),
+                                                variables=[dollarFuture, newBegin, '�����']),
                                     RHS=None)
                                     )
-                    
+
                 self.declare(Exist(Future = dollarFuture, Date_Begin = newBegin, Date_End = newEnd ))
 
-            # 当手动输入的是某个行业指数，declare指数交易数据的Fact
-            
+            # ���ֶ��������ĳ����ҵָ����declareָ���������ݵ�Fact
             if manualInput.index == indexName:
                 self.declare(
                 Assertion(
@@ -215,26 +228,26 @@ class reasoning_System(KnowledgeEngine):
                     CompanyObject = company1,
                     IndexObj = indexName
                     ,  Date_Begin = Date_Begin ,Date_End = Date_End))
-            
 
-            # 用于触发非产品相关的推理链条
+
+            # ���ڴ����ǲ�Ʒ��ص���������
             self.declare(
                 Exist(CompanyObject = company1,Date_Begin = Date_Begin, Date_End = Date_End),
             )
             
-            #初始化公司所属国家country
+            #��ʼ����˾��������country
             country1 =Term(operator=CompanyInfo,
-                                                variables=[company1, '国家']).GetRHS().value
+                                                variables=[company1, '����']).GetRHS().value
             countryName = Term(operator=GetCountryNameFromAbb,
                                             variables=[country1]).GetRHS().value
             if countryName != None:
                 country = allCountry.returnCountrybyFullName(countryName)
 
             
-            fileForOutput.write('\n----------\n {} 的公司业务 和 涉及的商品 包括: '.format(company1.name))
+            fileForOutput.write('\n----------\n {} �Ĺ�˾ҵ�� �� �漰����Ʒ ����: '.format(company1.name))
             
             ##############
-            #获取该公司各业务的产品
+            #��ȡ�ù�˾��ҵ��Ĳ�Ʒ
             allB = {}
             business1 = Term(operator=GetBusiness,
                                                 variables=[company1]).GetRHS().value
@@ -246,7 +259,7 @@ class reasoning_System(KnowledgeEngine):
             print(allB)
 
             ##############
-            #获取公司上下游产品
+            #��ȡ��˾�����β�Ʒ
             temp = Term(operator=GetFatherSonProductBatch,variables=[allB, company1]).GetRHS().value
             fatherProd = temp[0]
             sonProd = temp[1]
@@ -254,43 +267,43 @@ class reasoning_System(KnowledgeEngine):
             son_sonProd = temp[3]
             ##############
 
-            #遍历该公司的所有业务
+            #�����ù�˾������ҵ��
             for bnum, business in enumerate(business1):
                 # businessProduct = Term(operator=GetBusinessProduct,variables=[company1,business]).GetRHS().value
-                fileForOutput.write("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
-                print("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
+                fileForOutput.write("\nҵ��->��Ʒ, {}: {}".format(business, tuple(allB[business])))
+                print("\nҵ��->��Ʒ, {}: {}".format(business, tuple(allB[business])))
                 
                 
                 if allB[business] != []:
-                    # 遍历该业务的所有产品
+                    # ������ҵ������в�Ʒ
                     for prod in allB[business]:
 
                         fp = fatherProd[prod]
                         sp = sonProd[prod]
-                        fileForOutput.write("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                        fileForOutput.write("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
+                        fileForOutput.write("\n��Ʒ��{}���ĸ���Ʒ: {}".format(prod, tuple(fp)))
+                        fileForOutput.write("\n��Ʒ��{}�����Ӳ�Ʒ: {}\n".format(prod, tuple(sp)))
                         for f in father_fatherProd:
                             if len(father_fatherProd[f]) > 0 and f in fp:
-                                fileForOutput.write("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
-                                print("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
+                                fileForOutput.write("\n����Ʒ��{}���ĸ���Ʒ: {}".format(f, tuple(father_fatherProd[f])))
+                                print("\n����Ʒ��{}���ĸ���Ʒ: {}".format(f, tuple(father_fatherProd[f])))
                                 for ff in father_fatherProd[f]:
                                     if ff in father_fatherProd.keys() and len(father_fatherProd[ff]) > 0:
-                                        fileForOutput.write("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
-                                        print("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                                        fileForOutput.write("\n������Ʒ��{}���ĸ���Ʒ: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                                        print("\n������Ʒ��{}���ĸ���Ʒ: {}\n".format(ff, tuple(father_fatherProd[ff])))
                         for s in son_sonProd:
                             if len(son_sonProd[s]) > 0 and s in sp:
-                                fileForOutput.write("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
-                                print("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
+                                fileForOutput.write("\n�Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(s, tuple(son_sonProd[s])))
+                                print("\n�Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(s, tuple(son_sonProd[s])))
                                 for ss in son_sonProd[s]:
                                     if ss in son_sonProd.keys() and len(son_sonProd[ss]) > 0:
-                                        fileForOutput.write("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
-                                        print("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
-                        print("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                        print("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
+                                        fileForOutput.write("\n���Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(ss, tuple(son_sonProd[ss])))
+                                        print("\n���Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(ss, tuple(son_sonProd[ss])))
+                        print("\n��Ʒ��{}���ĸ���Ʒ: {}".format(prod, tuple(fp)))
+                        print("\n��Ʒ��{}�����Ӳ�Ʒ: {}\n".format(prod, tuple(sp)))
                         
                         
                         ##############
-                        # Declare 化期货相关数据的函数：产量，进口，出口，库存，市场价  的Fact
+                        # Declare ���ڻ�������ݵĺ��������������ڣ����ڣ���棬�г���  ��Fact
                         def declareCommodity(j,prod = None,business = None):
                             if prod == None:
                                 p = j 
@@ -300,19 +313,19 @@ class reasoning_System(KnowledgeEngine):
                                 p = prod
                                 prod = (j,prod)   
                             
-                            #如果手动输入的国家与公司所属国家不同，采用手动输入的国家
+                            #����ֶ�����Ĺ����빫˾�������Ҳ�ͬ�������ֶ�����Ĺ���
                             if manualInput.country != None and manualInput.country != country.name:
                                 country0 = allCountry.returnCountrybyFullName(manualInput.country)
                             else:
                                 country0 = country
                             # print(country0)
                             if business == manualInput.business:
-                                if manualInput.detail == '收入':
+                                if manualInput.detail == '����':
                                     self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                                        variables=[business,()]),
+                                                        variables=[business,(),0]),
                                         RHS=manualInput.trend))
                                 
-                                if manualInput.detail == '成本':
+                                if manualInput.detail == '�ɱ�':
                                     t = False
                                     for mm in manualInputs:
                                         if mm.detail == '收入':
@@ -324,13 +337,13 @@ class reasoning_System(KnowledgeEngine):
                                     self.declare(Assertion(LHS=Term(operator=PredictCost,
                                                         variables=[business,()]),
                                         RHS=manualInput.trend))
-                                if manualInput.detail == '利润':
+                                if manualInput.detail == '����':
                                     
                                     self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
-                                                        variables=[business,()]),
+                                                        variables=[business,(),0]),
                                         RHS=manualInput.trend))
                                 
-                            if manualInput.detail == '销售' and business!=None:
+                            if manualInput.detail == '����' and business!=None:
                                     print(business,p)
                                     t = False
                                     for mm in manualInputs:
@@ -344,7 +357,7 @@ class reasoning_System(KnowledgeEngine):
                                                         variables=[p,()]),
                                         RHS=manualInput.trend))
 
-                            if manualInput.detail == '产量':
+                            if manualInput.detail == '����':
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetProduction,
                                                                 variables=[country0, j,Date_Begin, prod]),
@@ -355,7 +368,7 @@ class reasoning_System(KnowledgeEngine):
                                                                 variables=[country0, j,Date_End, prod]),
                                             RHS = (Date_End,endValue))
                                     )
-                            elif manualInput.detail == '进口':
+                            elif manualInput.detail == '����':
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetImport,
                                                                 variables=[country0, j,Date_Begin, prod]),
@@ -366,7 +379,7 @@ class reasoning_System(KnowledgeEngine):
                                                                 variables=[country0, j,Date_End, prod]),
                                             RHS = (Date_End,endValue))
                                     )
-                            elif manualInput.detail == '出口':
+                            elif manualInput.detail == '����':
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetExport,
                                                                 variables=[country0, j,Date_Begin, prod]),
@@ -377,7 +390,7 @@ class reasoning_System(KnowledgeEngine):
                                                                 variables=[country0, j,Date_End, prod]),
                                             RHS = (Date_End,endValue))
                                     )
-                            elif manualInput.detail == '库存':
+                            elif manualInput.detail == '���':
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetStock,
                                                                 variables=[country0, j,Date_Begin, prod]),
@@ -388,7 +401,7 @@ class reasoning_System(KnowledgeEngine):
                                                                 variables=[country0, j,Date_End, prod]),
                                             RHS = (Date_End,endValue))
                                     )
-                            elif manualInput.detail == '价格':
+                            elif manualInput.detail == '�۸�':
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetMarketPrice,
                                                                 variables=[country0, j,Date_Begin, prod]),
@@ -399,20 +412,20 @@ class reasoning_System(KnowledgeEngine):
                                                                 variables=[country0, j,Date_End, prod]),
                                             RHS = (Date_End,endValue))
                                     )
-                            elif manualInput.detail == '供给':
+                            elif manualInput.detail == '����':
                                 
                                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[country0, j, ()]),
+                                                variables=[country0, j, (),0]),
                                 RHS=manualInput.trend))
-                            elif manualInput.detail == '需求':
+                            elif manualInput.detail == '����':
                                 self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                                variables=[country0, j, (str(manualInput.item) + '需求' + str(manualInput.trend), )]),
+                                                variables=[country0, j, (str(manualInput.item) + '����' + str(manualInput.trend), ),0]),
                                 RHS=manualInput.trend))
                             
-                        #当手动输入的产品或者业务 属于公司的产品或业务
-                        if manualInput.item == prod or manualInput.business == business or (country.hasEnergyData(prod) and prod == '原油' and manualInput.detail == '美元指数'):
+                        #���ֶ�����Ĳ�Ʒ����ҵ�� ���ڹ�˾�Ĳ�Ʒ��ҵ��
+                        if manualInput.item == prod or manualInput.business == business or (country.hasEnergyData(prod) and prod == 'ԭ��' and manualInput.detail == '��Ԫָ��'):
                             self.declare(Exist(CountryObject = country, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                            # if prod == '原油':
+                            # if prod == 'ԭ��':
                             #     self.declare(Exist(CountryObject = usa, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                             allProduct.append(prod)
                             allBusiness.append(business)
@@ -440,13 +453,13 @@ class reasoning_System(KnowledgeEngine):
                                                     variables=[business,prod]),
                                 RHS= prod)
                             )
-                            # 当手动输入的是业务，只需要declare一次以上的Fact，不需要业务的每个产品都进行推理
+                            # ���ֶ��������ҵ��ֻ��Ҫdeclareһ�����ϵ�Fact������Ҫҵ���ÿ����Ʒ����������
                             if manualInput.business == business:
                                 break
                         
                         for j in fp:
-                            #当手动输入的产品 是上游产品
-                            if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
+                            #���ֶ�����Ĳ�Ʒ �����β�Ʒ
+                            if manualInput.item == j or (country.hasEnergyData(j) and j == 'ԭ��'  and manualInput.detail == '��Ԫָ��'):
                                 self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                 allProduct.append(prod)
                                 allBusiness.append(business)
@@ -455,7 +468,7 @@ class reasoning_System(KnowledgeEngine):
                                 # print(country,j,prod,Date_Begin,Date_End)
                                 
 
-                                # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                # ����Ϊ �������ݵ���Դ��Ʒ ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ ͬ������
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetSonProduct,
                                                                 variables=[j]),
@@ -478,8 +491,8 @@ class reasoning_System(KnowledgeEngine):
                                 )
                             if j in father_fatherProd.keys():
                                 for fprod in father_fatherProd[j]:
-                                    #当手动输入的产品 是上游产品的上游产品
-                                    if manualInput.item == fprod or (country.hasEnergyData(fprod) and fprod == '原油'  and manualInput.detail == '美元指数'):
+                                    #���ֶ�����Ĳ�Ʒ �����β�Ʒ�����β�Ʒ
+                                    if manualInput.item == fprod or (country.hasEnergyData(fprod) and fprod == 'ԭ��'  and manualInput.detail == '��Ԫָ��'):
                                         self.declare(Exist(CountryObject = country, ItemName = fprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                         allProduct.append(prod)
                                         allBusiness.append(business)
@@ -488,7 +501,7 @@ class reasoning_System(KnowledgeEngine):
                                         declareCommodity(fprod,prod)
                                         
 
-                                        # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                        # ����Ϊ �������ݵ���Դ��Ʒ ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ ͬ������
                                         self.declare(
                                                 Assertion(LHS=Term(operator=GetSonProduct,
                                                                         variables=[fprod]),
@@ -511,8 +524,8 @@ class reasoning_System(KnowledgeEngine):
                                         )
                                     if fprod in father_fatherProd.keys() and len(father_fatherProd[fprod]) > 0:
                                         for ffprod in father_fatherProd[fprod]:
-                                            #当手动输入的产品 是上游产品的上游产品的上游产品
-                                            if manualInput.item == ffprod or (country.hasEnergyData(ffprod) and ffprod == '原油'  and manualInput.detail == '美元指数') :
+                                            #���ֶ�����Ĳ�Ʒ �����β�Ʒ�����β�Ʒ�����β�Ʒ
+                                            if manualInput.item == ffprod:
                                                 self.declare(Exist(CountryObject = country, ItemName = ffprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                                 allProduct.append(prod)
                                                 allBusiness.append(business)
@@ -520,7 +533,7 @@ class reasoning_System(KnowledgeEngine):
                                                 # print(country,j,prod,Date_Begin,Date_End)
                                                 declareCommodity(ffprod,prod)
 
-                                                # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                                # ����Ϊ �������ݵ���Դ��Ʒ ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ ͬ������
                                                 self.declare(
                                                         Assertion(LHS=Term(operator=GetSonProduct,
                                                                                 variables=[ffprod]),
@@ -542,8 +555,8 @@ class reasoning_System(KnowledgeEngine):
                                                     RHS= prod)
                                                 )
                         for j in sp:
-                            #当手动输入的产品 是下游产品
-                            if manualInput.item == j or (country.hasEnergyData(j) and j == '原油'  and manualInput.detail == '美元指数'):
+                            #���ֶ�����Ĳ�Ʒ �����β�Ʒ
+                            if manualInput.item == j or (country.hasEnergyData(j) and j == 'ԭ��'  and manualInput.detail == '��Ԫָ��'):
                                 self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                 allProduct.append(prod)
                                 allBusiness.append(business)
@@ -573,8 +586,8 @@ class reasoning_System(KnowledgeEngine):
 
                             if j in son_sonProd.keys():
                                 for sprod in son_sonProd[j]:
-                                    #当手动输入的产品 是下游产品 的 下游产品
-                                    if manualInput.item == sprod or (country.hasEnergyData(sprod) and sprod == "原油"  and manualInput.detail == '美元指数'):
+                                    #���ֶ�����Ĳ�Ʒ �����β�Ʒ �� ���β�Ʒ
+                                    if manualInput.item == sprod or (country.hasEnergyData(sprod) and sprod == "ԭ��"  and manualInput.detail == '��Ԫָ��'):
                                         self.declare(Exist(CountryObject = country, ItemName = sprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                         allProduct.append(prod)
                                         allBusiness.append(business)
@@ -604,8 +617,8 @@ class reasoning_System(KnowledgeEngine):
                                         )
                                     if sprod in son_sonProd.keys() and len(son_sonProd[sprod]) > 0:
                                         for ssprod in son_sonProd[sprod]:
-                                            #当手动输入的产品 是下游产品 的 下游产品的 下游产品
-                                            if manualInput.item == ssprod or (country.hasEnergyData(ssprod) and ssprod == "原油"  and manualInput.detail == '美元指数'):
+                                            #���ֶ�����Ĳ�Ʒ �����β�Ʒ �� ���β�Ʒ�� ���β�Ʒ
+                                            if manualInput.item == ssprod or (country.hasEnergyData(ssprod) and ssprod == "ԭ��"  and manualInput.detail == '��Ԫָ��'):
                                                 self.declare(Exist(CountryObject = country, ItemName = ssprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                                 
                                                 allProduct.append(prod)
@@ -633,12 +646,11 @@ class reasoning_System(KnowledgeEngine):
                                                                         variables=[business,ssprod]),
                                                     RHS= prod)
                                                 )
-                #当该业务的所有产品都无法与有数据的能源商品关联                                            
+                #����ҵ������в�Ʒ���޷��������ݵ���Դ��Ʒ����                                            
                 if len(allBusiness) == 0 or allBusiness[-1] != business:
-                    if business not in allBusiness:
-                        allProduct.append('nil')
-                        allBusiness.append(business)
-                        allItem.append('nil')
+                    allProduct.append('nil')
+                    allBusiness.append(business)
+                    allItem.append('nil')
 
         print('\n')
         print(allProduct)    
@@ -649,11 +661,11 @@ class reasoning_System(KnowledgeEngine):
         
         fileForOutput.write('\n-----------------\n')
         try:
-            print('\n业务【{}】推理开始\n'.format(allBusiness[0]))
-            fileForOutput.write('\n业务【{}】推理开始\n'.format(allBusiness[0]))
+            print('\nҵ��{}��������ʼ\n'.format(allBusiness[0]))
+            fileForOutput.write('\nҵ��{}��������ʼ\n'.format(allBusiness[0]))
 
-            # 初始化CurrentProduct的fact，即初始化某一个业务/产品的推理链条
-            # 当某个产品的推理链条结束，将在rule_end迭代至下一个业务/产品
+            # ��ʼ��CurrentProduct��fact������ʼ��ĳһ��ҵ��/��Ʒ����������
+            # ��ĳ����Ʒ��������������������rule_end��������һ��ҵ��/��Ʒ
             self.declare(CurrentProduct(index = 0, curProd = allProduct[0], curBusiness = allBusiness[0],curItem = allItem[0]))
         except:
             pass
@@ -674,50 +686,50 @@ class reasoning_System(KnowledgeEngine):
         print(eventText)
 
         try:
-            fileForOutput.write('\n 事件文本：')
+            fileForOutput.write('\n �¼��ı���')
             fileForOutput.write(str(eventText))
         except:
             pass
-        
+
         try:
-            fileForOutput.write('\n 事件名称：')
-            fileForOutput.write(str(eventDetail['事件名称']))
+            fileForOutput.write('\n �¼����ƣ�')
+            fileForOutput.write(str(eventDetail['�¼�����']))
         except:
             pass
 
         try:
-            fileForOutput.write('\n 事件类型:')
-            fileForOutput.write(str(eventDetail['事件类型']))
-        except:
-            pass
-        
-        try:
-            fileForOutput.write('\n 事件国家, 事件地区:')
-            fileForOutput.write(str(eventDetail['事件国家']) + ', ' + str(eventDetail['事件地区']))
+            fileForOutput.write('\n �¼�����:')
+            fileForOutput.write(str(eventDetail['�¼�����']))
         except:
             pass
 
         try:
-            fileForOutput.write('\n 产品：')
-            fileForOutput.write(str(eventDetail['产品']))
+            fileForOutput.write('\n �¼�����, �¼�����:')
+            fileForOutput.write(str(eventDetail['�¼�����']) + ', ' + str(eventDetail['�¼�����']))
         except:
             pass
 
         try:
-            fileForOutput.write('\n 行业：')
-            fileForOutput.write(str(eventDetail['行业']))
+            fileForOutput.write('\n ��Ʒ��')
+            fileForOutput.write(str(eventDetail['��Ʒ']))
+        except:
+            pass
+
+        try:
+            fileForOutput.write('\n ��ҵ��')
+            fileForOutput.write(str(eventDetail['��ҵ']))
         except:
             pass
         try:
-            fileForOutput.write('\n 公司：')
-            fileForOutput.write(str(eventDetail['公司']))
+            fileForOutput.write('\n ��˾��')
+            fileForOutput.write(str(eventDetail['��˾']))
         except:
             pass
         fileForOutput.write('\n\n')
 
-        if len(eventDetail['产品']) == 0 and eventDetail['事件名称'] not in ["军事冲突",'业绩','资本开支','传染性疾病','运河阻塞','财政压力']:
-            print('事件无抽取产品')
-            fileForOutput.write('事件无抽取产品\n')
+        if len(eventDetail['��Ʒ']) == 0 and eventDetail['�¼�����'] not in ["���³�ͻ",'ҵ��','�ʱ���֧','��Ⱦ�Լ���','�˺�����','����ѹ��']:
+            print('�¼��޳�ȡ��Ʒ')
+            fileForOutput.write('�¼��޳�ȡ��Ʒ\n')
             return 0 
     
         self.declare(
@@ -729,15 +741,15 @@ class reasoning_System(KnowledgeEngine):
         )
         self.declare(
             Assertion(LHS=Term(operator=CompanyInfo,
-                                        variables=[Company1, '国家']),
+                                        variables=[Company1, '����']),
                         RHS=Term(operator=CompanyInfo,
-                                        variables=[Company1, '国家']).GetRHS().value
+                                        variables=[Company1, '����']).GetRHS().value
                         )
         )
-        #获取公司所属国家
+        #��ȡ��˾��������
         Country1 = Term(operator=CompanyInfo,
-                                        variables=[Company1, '国家']).GetRHS().value
-
+                                        variables=[Company1, '����']).GetRHS().value
+        
         self.declare(
             Exist(CompanyObject = Company1,Date_Begin = Date_Begin, Date_End = Date_End),
         )
@@ -747,16 +759,16 @@ class reasoning_System(KnowledgeEngine):
         if countryName != None:
             Country = allCountry.returnCountrybyFullName(countryName)
 
-        #获取公司的业务
+        #��ȡ��˾��ҵ��
         business1 = Term(operator=GetBusiness,
                             variables=[Company1]).GetRHS().value
         
-        fileForOutput.write('\n<规则998>----------\n {} 所属的国家是：{} \n-----------------'.format(Company1.name,  Term(operator=GetCountryFromEnglishToChinese,
+        fileForOutput.write('\n<����998>----------\n {} �����Ĺ����ǣ�{} \n-----------------'.format(Company1.name,  Term(operator=GetCountryFromEnglishToChinese,
                                         variables=[Country.name]).GetRHS().value))
-        fileForOutput.write('\n----------\n {} 的公司业务 和 涉及的商品 包括: '.format(Company1.name))
+        fileForOutput.write('\n----------\n {} �Ĺ�˾ҵ�� �� �漰����Ʒ ����: '.format(Company1.name))
 
         ##############
-        #获取该公司各业务的产品
+        #��ȡ�ù�˾��ҵ��Ĳ�Ʒ
         allB = {}
         for b in business1:  
             # print(bp[Company1])
@@ -767,7 +779,7 @@ class reasoning_System(KnowledgeEngine):
         # print(allB)
 
         ##############
-        #获取公司上下游产品
+        #��ȡ��˾�����β�Ʒ
         temp = Term(operator=GetFatherSonProductBatch,variables=[allB, Company1]).GetRHS().value
         fatherProd = temp[0]
         sonProd = temp[1]
@@ -775,52 +787,51 @@ class reasoning_System(KnowledgeEngine):
         son_sonProd = temp[3]
         ##############
         
-        # 遍历公司所有业务
+        # ������˾����ҵ��
         for bnum, business in enumerate(business1):
             # businessProduct = Term(operator=GetBusinessProduct,variables=[company1,business]).GetRHS().value
-            fileForOutput.write("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
-            print("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
+            fileForOutput.write("\nҵ��->��Ʒ, {}: {}".format(business, tuple(allB[business])))
+            print("\nҵ��->��Ʒ, {}: {}".format(business, tuple(allB[business])))
             
             if allB[business] != []:
-                # 遍历该业务的所有产品
+                # ������ҵ������в�Ʒ
                 for prod in allB[business]:
                     fp = fatherProd[prod]
                     sp = sonProd[prod]
 
                     ##############
-                    # 输出上下游产品的关系
-                    fileForOutput.write("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                    fileForOutput.write("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
+                    # ��������β�Ʒ�Ĺ�ϵ
+                    fileForOutput.write("\n��Ʒ��{}���ĸ���Ʒ: {}".format(prod, tuple(fp)))
+                    fileForOutput.write("\n��Ʒ��{}�����Ӳ�Ʒ: {}\n".format(prod, tuple(sp)))
                     
                     for f in father_fatherProd:
                         if len(father_fatherProd[f]) > 0 and f in fp:
-                            fileForOutput.write("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
-                            print("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
+                            fileForOutput.write("\n����Ʒ��{}���ĸ���Ʒ: {}".format(f, tuple(father_fatherProd[f])))
+                            print("\n����Ʒ��{}���ĸ���Ʒ: {}".format(f, tuple(father_fatherProd[f])))
                             for ff in father_fatherProd[f]:
                                 if ff in father_fatherProd.keys() and len(father_fatherProd[ff]) > 0:
-                                    fileForOutput.write("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
-                                    print("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                                    fileForOutput.write("\n������Ʒ��{}���ĸ���Ʒ: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                                    print("\n������Ʒ��{}���ĸ���Ʒ: {}\n".format(ff, tuple(father_fatherProd[ff])))
                     for s in son_sonProd:
                         if len(son_sonProd[s]) > 0 and s in sp:
-                            fileForOutput.write("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
-                            print("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
+                            fileForOutput.write("\n�Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(s, tuple(son_sonProd[s])))
+                            print("\n�Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(s, tuple(son_sonProd[s])))
                             for ss in son_sonProd[s]:
                                 if ss in son_sonProd.keys() and len(son_sonProd[ss]) > 0:
-                                    fileForOutput.write("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
-                                    print("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
-                    print("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                    print("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
+                                    fileForOutput.write("\n���Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(ss, tuple(son_sonProd[ss])))
+                                    print("\n���Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(ss, tuple(son_sonProd[ss])))
+                    print("\n��Ʒ��{}���ĸ���Ʒ: {}".format(prod, tuple(fp)))
+                    print("\n��Ʒ��{}�����Ӳ�Ʒ: {}\n".format(prod, tuple(sp)))
                     ##############
-                    # 检验事件国家是否为公司所属国家的进口国家
+                    # �����¼������Ƿ�Ϊ��˾�������ҵĽ��ڹ���
                     def checkImport(eventLocation, importCountry):
-                        
                         for i in eventLocation:
                             if i in importCountry:
                                 return True
                         return False
-                    # 检验事件的公司是否为该公司
+                    # �����¼��Ĺ�˾�Ƿ�Ϊ�ù�˾
                     def checkCompany(eventCompany, companyObj):
-                        csn = companyObj.info['机构简称']
+                        csn = companyObj.info['�������']
                         for key in companyObj.securitycode:
                             exchange = key[4:]
                             secCode = companyObj.securitycode[key]
@@ -829,37 +840,39 @@ class reasoning_System(KnowledgeEngine):
                                 return True
                         return False
 
-                    # 检验事件的行业是否为公司所属行业
+                    # �����¼�����ҵ�Ƿ�Ϊ��˾������ҵ
                     def checkIndustry(eventIndustry):
                         firstClass = Term(operator=GetIndustryName,
-                                    variables=['申万一级行业',Company1]).GetRHS().value[0]['行业名称']
+                                    variables=['����һ����ҵ',Company1]).GetRHS().value[0]['��ҵ����']
                         secondClass = Term(operator=GetIndustryName,
-                                            variables=['申万二级行业',Company1]).GetRHS().value[0]['行业名称']
+                                            variables=['���������ҵ',Company1]).GetRHS().value[0]['��ҵ����']
                         thirdClass = Term(operator=GetIndustryName,
-                                    variables=['申万三级行业',Company1]).GetRHS().value[0]['行业名称']
+                                    variables=['����������ҵ',Company1]).GetRHS().value[0]['��ҵ����']
                         for i in eventIndustry:
                             if i in firstClass or i in secondClass or i in thirdClass:
                                 return True
                         return False
+                    
+                                        
                     print(eventDetail)
                     try:        
-                        eventCompany = eventDetail['公司']
+                        eventCompany = eventDetail['��˾']
                     except:
                         eventCompany = ""
                     try:
-                        if eventDetail['事件国家'] != '':
-                            eventCountry = eventDetail['事件国家']
+                        if eventDetail['�¼�����'] != '':
+                            eventCountry = eventDetail['�¼�����']
                         else:
-                            eventCountry = eventDetail['制裁国']
-                            eventDetail['事件国家'] = eventDetail['制裁国']
+                            eventCountry = eventDetail['�Ʋù�']
+                            eventDetail['�¼�����'] = eventDetail['�Ʋù�']
                     except:
                         pass
                     try:
-                        eventIndustry = eventDetail['行业']
+                        eventIndustry = eventDetail['��ҵ']
                     except:
                         eventIndustry = ""
                     try:
-                        eventItem = eventDetail['产品']
+                        eventItem = eventDetail['��Ʒ']
                     except:
                         eventItem = ""
                     # fileForOutput.write(str(prod)+ ',' + str(eventItem))
@@ -868,12 +881,12 @@ class reasoning_System(KnowledgeEngine):
                     # fileForOutput.write('\n')
                     # print(Term(operator=GetItemImportCountry, variables=[Country.name,prod]).GetRHS().value)
 
-                    # 当产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                    # ����ƷΪ�¼��Ĳ�Ʒ and (�¼��Ĺ���Ϊ��˾�����Ĺ��� ���� �¼��Ĺ��� Ϊ��˾�������ҵĲ�Ʒ���ڹ���
                     print(Country.chineseName,eventCountry)
                     if prod in eventItem and (Country.chineseName in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,prod]).GetRHS().value)) :
                         print(prod,fp)
                         self.declare(Exist(CountryObject = Country, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                        # if prod == '原油':
+                        # if prod == 'ԭ��':
                         #     self.declare(Exist(CountryObject = usa, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                         allProduct.append(prod)
                         allBusiness.append(business)
@@ -909,14 +922,14 @@ class reasoning_System(KnowledgeEngine):
                         
                         if j in father_fatherProd.keys():
                             for fprod in father_fatherProd[j]:
-                                # 当上游产品的上游产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                                # �����β�Ʒ�����β�ƷΪ�¼��Ĳ�Ʒ and (�¼��Ĺ���Ϊ��˾�����Ĺ��� ���� �¼��Ĺ��� Ϊ��˾�������ҵĲ�Ʒ���ڹ���
                                 if fprod in eventItem and (Country.chineseName in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,fprod]).GetRHS().value)) :
                                     self.declare(Exist(CountryObject = Country, ItemName = fprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                     allProduct.append(prod)
                                     allBusiness.append(business)
                                     allItem.append(fprod)
                                     # print(country,j,prod,Date_Begin,Date_End)
-                                    # 定义为 期货商品的子产品为 公司的产品，与公司产品的上游产品为能源商品同等意义
+                                    # ����Ϊ �ڻ���Ʒ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ��Դ��Ʒͬ������
                                     self.declare(
                                             Assertion(LHS=Term(operator=GetSonProduct,
                                                                     variables=[fprod]),
@@ -939,14 +952,14 @@ class reasoning_System(KnowledgeEngine):
                                     ) 
                                 if fprod in father_fatherProd.keys() and len(father_fatherProd[fprod]) > 0:
                                     for ffprod in father_fatherProd[fprod]:
-                                        # 当上游产品的上游产品的上游产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                                        # �����β�Ʒ�����β�Ʒ�����β�ƷΪ�¼��Ĳ�Ʒ and (�¼��Ĺ���Ϊ��˾�����Ĺ��� ���� �¼��Ĺ��� Ϊ��˾�������ҵĲ�Ʒ���ڹ���
                                         if ffprod in eventItem and (Country.chineseName in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,ffprod]).GetRHS().value)) :
                                             self.declare(Exist(CountryObject = Country, ItemName = ffprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                             allProduct.append(prod)
                                             allBusiness.append(business)
                                             allItem.append(ffprod)
                                             # print(country,j,prod,Date_Begin,Date_End)
-                                            # 定义为 期货商品的子产品为 公司的产品，与公司产品的上游产品为期货商品同等意义
+                                            # ����Ϊ �ڻ���Ʒ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�ڻ���Ʒͬ������
                                             self.declare(
                                                     Assertion(LHS=Term(operator=GetSonProduct,
                                                                             variables=[ffprod]),
@@ -968,7 +981,7 @@ class reasoning_System(KnowledgeEngine):
                                                 RHS= prod)
                                             ) 
 
-                        # 当上游产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                        # �����β�ƷΪ�¼��Ĳ�Ʒ and (�¼��Ĺ���Ϊ��˾�����Ĺ��� ���� �¼��Ĺ��� Ϊ��˾�������ҵĲ�Ʒ���ڹ���
                         if j in eventItem and (Country.chineseName  in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,j]).GetRHS().value)) :
 
                             self.declare(Exist(CountryObject = Country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -976,7 +989,7 @@ class reasoning_System(KnowledgeEngine):
                             allBusiness.append(business)
                             allItem.append(j)
                             # print(country,j,prod,Date_Begin,Date_End)
-                            # 定义为 期货商品的子产品为 公司的产品，与公司产品的上游产品为期货商品同等意义
+                            # ����Ϊ �ڻ���Ʒ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�ڻ���Ʒͬ������
                             self.declare(
                                     Assertion(LHS=Term(operator=GetSonProduct,
                                                             variables=[j]),
@@ -1004,7 +1017,7 @@ class reasoning_System(KnowledgeEngine):
                     for j in sp:
                         if j in son_sonProd.keys():
                             for sprod in son_sonProd[j]:
-                                # 当下游产品的下游产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                                # �����β�Ʒ�����β�ƷΪ�¼��Ĳ�Ʒ and (�¼��Ĺ���Ϊ��˾�����Ĺ��� ���� �¼��Ĺ��� Ϊ��˾�������ҵĲ�Ʒ���ڹ���
                                 if sprod in eventItem and (Country.chineseName  in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,sprod]).GetRHS().value)) :
                                     self.declare(Exist(CountryObject = Country, ItemName = sprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                     allProduct.append(prod)
@@ -1034,7 +1047,7 @@ class reasoning_System(KnowledgeEngine):
                                     )
                                 if sprod in son_sonProd.keys() and len(son_sonProd[sprod]) > 0:
                                     for ssprod in son_sonProd[sprod]:
-                                        # 当下游产品的下游产品的下游产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                                        # �����β�Ʒ�����β�Ʒ�����β�ƷΪ�¼��Ĳ�Ʒ and (�¼��Ĺ���Ϊ��˾�����Ĺ��� ���� �¼��Ĺ��� Ϊ��˾�������ҵĲ�Ʒ���ڹ���
                                         if ssprod in eventItem and (Country.chineseName  in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,ssprod]).GetRHS().value)) :
                                             self.declare(Exist(CountryObject = Country, ItemName = ssprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                                             allProduct.append(prod)
@@ -1063,7 +1076,7 @@ class reasoning_System(KnowledgeEngine):
                                                 RHS= prod)
                                             )
                                 
-                        # 当下游产品为事件的产品 and (事件的国家为公司所属的国家 或者 事件的国家 为公司所属国家的产品进口国）
+                        # �����β�ƷΪ�¼��Ĳ�Ʒ and (�¼��Ĺ���Ϊ��˾�����Ĺ��� ���� �¼��Ĺ��� Ϊ��˾�������ҵĲ�Ʒ���ڹ���
                         if j in eventItem and (Country.chineseName in eventCountry or checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[Country.name,j]).GetRHS().value)) :
                             self.declare(Exist(CountryObject = Country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                             allProduct.append(prod)
@@ -1093,20 +1106,20 @@ class reasoning_System(KnowledgeEngine):
                             )
                     ##############
             ##############
-            # 当公司的产品以及其上下游产品皆无法与期货商品对应
+            # ����˾�Ĳ�Ʒ�Լ��������β�Ʒ���޷����ڻ���Ʒ��Ӧ
             if len(allBusiness) == 0 or allBusiness[-1] != business:
                 allProduct.append('nil')
                 allBusiness.append(business)
                 allItem.append('nil')
             ##############
         
-        # 当事件的公司或者行业与该公司相符，declare的fact是为了触发与产品无关的推理链条
+        # ���¼��Ĺ�˾������ҵ��ù�˾�����declare��fact��Ϊ�˴������Ʒ�޹ص���������
         if checkCompany(eventCompany,Company1) or checkIndustry(eventIndustry):
-            self.declare(Exist(CountryObject = Country, ItemName = 'none' ,ProductName = 'none',BusinessName = '公司/行业相关（与产品无关）', Date_Begin = Date_Begin,Date_End = Date_End))
-            # if prod == '原油':
+            self.declare(Exist(CountryObject = Country, ItemName = 'none' ,ProductName = 'none',BusinessName = '��˾/��ҵ��أ����Ʒ�޹أ�', Date_Begin = Date_Begin,Date_End = Date_End))
+            # if prod == 'ԭ��':
             #     self.declare(Exist(CountryObject = usa, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
             allProduct.append('none')
-            allBusiness.append('公司/行业相关（与产品无关）')
+            allBusiness.append('��˾/��ҵ��أ����Ʒ�޹أ�')
             allItem.append('none')
             # print(country,prod,Date_Begin,Date_End)
             
@@ -1122,12 +1135,12 @@ class reasoning_System(KnowledgeEngine):
                     )
             self.declare(
                 Assertion(LHS=Term(operator=GetBusinessProduct,
-                                        variables=['公司/行业相关（与产品无关）','none']),
+                                        variables=['��˾/��ҵ��أ����Ʒ�޹أ�','none']),
                     RHS= 'none')
                 )
             self.declare(
             Assertion(LHS=Term(operator=GetBusinessProduct_inner,
-                                    variables=['公司/行业相关（与产品无关）','none']),
+                                    variables=['��˾/��ҵ��أ����Ʒ�޹أ�','none']),
                 RHS= 'none')
             )
 
@@ -1143,11 +1156,11 @@ class reasoning_System(KnowledgeEngine):
         try:
             # while i<len(allItem) and allItem[i] == 'nil':
             #     i +=1
-            print('\n业务【{}】推理开始\n'.format(allBusiness[i]))
-            fileForOutput.write('\n业务【{}】推理开始\n'.format(allBusiness[i]))
+            print('\nҵ��{}��������ʼ\n'.format(allBusiness[i]))
+            fileForOutput.write('\nҵ��{}��������ʼ\n'.format(allBusiness[i]))
 
-            # 初始化CurrentProduct的fact，即初始化某一个业务/产品的推理链条
-            # 当某个产品的推理链条结束，将在rule_end迭代至下一个业务/产品
+            # ��ʼ��CurrentProduct��fact������ʼ��ĳһ��ҵ��/��Ʒ����������
+            # ��ĳ����Ʒ��������������������rule_end��������һ��ҵ��/��Ʒ
             self.declare(CurrentProduct(index = i, curProd = allProduct[i], curBusiness = allBusiness[i],curItem = allItem[i]))
         except:
             pass
@@ -1162,66 +1175,65 @@ class reasoning_System(KnowledgeEngine):
           AS.Dollar << Assertion(LHS__operator=GetFuture,
                                     RHS__value=MATCH.dollarFuture),
           AS.DateFact << DateFact(Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
-          TEST(lambda countryInfo: True if countryInfo == '国家' else False),
-          salience=1) #规则1
+          TEST(lambda countryInfo: True if countryInfo == '����' else False),
+          salience=1) #����1
     def rule999(self, Dollar,businessFact, company1,business1,country1,CountryFact,dollarFuture,Date_Begin,Date_End):
         global mode
         mode = 'database'
         
         ##############
-        #初始化美元指数期货的价格
+        #��ʼ����Ԫָ���ڻ��ļ۸�
         try:
             newEnd = Date_End
             self.declare(
                     Assertion(LHS=Term(operator=GetFutureQuote,
-                                        variables=[dollarFuture, newEnd, '结算价']),
+                                        variables=[dollarFuture, newEnd, '�����']),
                             RHS=Term(operator=GetFutureQuote,
-                                        variables=[dollarFuture, newEnd, '结算价']).GetRHS().value)
+                                        variables=[dollarFuture, newEnd, '�����']).GetRHS().value)
                             )
             noFdata1 = False
         except:
             self.declare(
                     Assertion(LHS=Term(operator=GetFutureQuote,
-                                        variables=[dollarFuture, newEnd, '结算价']),
+                                        variables=[dollarFuture, newEnd, '�����']),
                             RHS=None)
                             )
             noFdata1 = True
-            
 
         try:
             newBegin = Date_Begin
             self.declare(
                     Assertion(LHS=Term(operator=GetFutureQuote,
-                                        variables=[dollarFuture, newBegin, '结算价']),
+                                        variables=[dollarFuture, newBegin, '�����']),
                             RHS=Term(operator=GetFutureQuote,
-                                        variables=[dollarFuture, newBegin, '结算价']).GetRHS().value)
+                                        variables=[dollarFuture, newBegin, '�����']).GetRHS().value)
                             )
             noFdata2 = False
         except:
             self.declare(
                     Assertion(LHS=Term(operator=GetFutureQuote,
-                                        variables=[dollarFuture, newBegin, '结算价']),
+                                        variables=[dollarFuture, newBegin, '�����']),
                             RHS=None)
                             )
             noFdata2 = True
-        
+            
         if not noFdata1 and not noFdata2:
             self.declare(Exist(Future = dollarFuture, Date_Begin = newBegin, Date_End = newEnd ))
         ##############
         
         ##############
-        #初始化公司入选的行业指数
+        #��ʼ����˾��ѡ����ҵָ��
 
         indexCode = Term(operator= IndexCode,
                         variables = [Term(operator=GetIndustryRelatedIndex,
                             variables=[ Term(operator=GetIndustryName,
-                                variables=['申万一级行业',company1]).GetRHS().value]
+                                variables=['����һ����ҵ',company1]).GetRHS().value]
                                         ).GetRHS().value]
                             ).GetRHS().value
         indexName = Term(operator= IndexName,
                         variables = [Term(operator=GetIndustryRelatedIndex,
                             variables=[ Term(operator=GetIndustryName,
-                                variables=['申万一级行业',company1]).GetRHS().value]
+                                variables=['����һ����ҵ',company1]).GetRHS().value]
                                         ).GetRHS().value]
                             ).GetRHS().value
 
@@ -1250,7 +1262,7 @@ class reasoning_System(KnowledgeEngine):
         ##############
 
         ##############
-        #初始化公司总股本数据
+        #��ʼ����˾�ܹɱ�����
         
         try:
             self.declare(
@@ -1281,7 +1293,7 @@ class reasoning_System(KnowledgeEngine):
         ##############
 
         ##############
-        #初始化公司储量数据
+        #��ʼ����˾��������
         try:
             self.declare(
                         Assertion(LHS=Term(operator=GetCompanyReserve,
@@ -1311,7 +1323,7 @@ class reasoning_System(KnowledgeEngine):
         ##############
         
         ##############
-        #初始化公司子公司数据
+        #��ʼ����˾�ӹ�˾����
         self.declare(
                     Assertion(LHS=Term(operator=GetChildCompany,
                                         variables=[company1]),
@@ -1322,7 +1334,7 @@ class reasoning_System(KnowledgeEngine):
         ##############
 
         ##############
-        #获取前一个月月末日期的函数：因为部分月度数据的数据日期为月末
+        #��ȡǰһ������ĩ���ڵĺ�������Ϊ�����¶����ݵ���������Ϊ��ĩ
         def lastDayofMonth(Date):
             nexthMonth = Date.replace(day=28) + timedelta(days=4)
             lastDay = nexthMonth - timedelta(days = nexthMonth.day)
@@ -1339,27 +1351,27 @@ class reasoning_System(KnowledgeEngine):
             Date_End = firstDayBegin - timedelta(days=1)
         ##############
 
-        # 用于触发非产品相关的推理链条
+        # ���ڴ����ǲ�Ʒ��ص���������
         self.declare(
             Exist(CompanyObject = company1,Date_Begin = Date_Begin, Date_End = Date_End),
         )
 
-        #初始化公司所属国家country，以及所涉及的其他国家
+        #��ʼ����˾��������country���Լ����漰����������
         countryName = Term(operator=GetCountryNameFromAbb,
                                         variables=[country1]).GetRHS().value
         if countryName != None:
             country = allCountry.returnCountrybyFullName(countryName)
-        #美国被手动定义的原因是美元指数以及美国库存会影响国际油价
+        #�������ֶ������ԭ������Ԫָ���Լ���������Ӱ������ͼ�
         usa = allCountry.returnCountrybyFullName('United States')
                 
 
-        fileForOutput.write('\n<规则999>----------\n {} 所属的国家是：{} \n-----------------'.format(company1.name, country.name))
-        fileForOutput.write('\n----------\n {} 的公司业务 和 涉及的商品 包括: '.format(company1.name))
+        fileForOutput.write('\n<����999>----------\n {} �����Ĺ����ǣ�{} \n-----------------'.format(company1.name, country.name))
+        fileForOutput.write('\n----------\n {} �Ĺ�˾ҵ�� �� �漰����Ʒ ����: '.format(company1.name))
         # fileForOutput.write(business1)
         k = 0
         
         ##############
-        #获取该公司各业务的产品
+        #��ȡ�ù�˾��ҵ��Ĳ�Ʒ
         allB = {}
         for b in business1:   
             businessProduct = Term(operator=GetBusinessProductBatch,variables=[company1,b]).GetRHS().value
@@ -1369,7 +1381,7 @@ class reasoning_System(KnowledgeEngine):
         print(allB)
 
         ##############
-        #获取公司上下游产品
+        #��ȡ��˾�����β�Ʒ
         temp = Term(operator=GetFatherSonProductBatch,variables=[allB, company1]).GetRHS().value
         fatherProd = temp[0]
         sonProd = temp[1]
@@ -1380,17 +1392,17 @@ class reasoning_System(KnowledgeEngine):
         
         for bnum, business in enumerate(business1):
             # businessProduct = Term(operator=GetBusinessProduct,variables=[company1,business]).GetRHS().value
-            fileForOutput.write("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
-            print("\n业务->产品, {}: {}".format(business, tuple(allB[business])))
+            fileForOutput.write("\nҵ��->��Ʒ, {}: {}".format(business, tuple(allB[business])))
+            print("\nҵ��->��Ʒ, {}: {}".format(business, tuple(allB[business])))
 
             if allB[business] != []:
                 for prod in allB[business]:
                     # print(a)
 
                     ##############
-                    # Declare 能源产品相关数据：产量，进口，出口，库存，市场价  的Fact
+                    # Declare ��Դ��Ʒ������ݣ����������ڣ����ڣ���棬�г���  ��Fact
                     def declareCommodity(j,prod = None):
-                        # 检验公司所属国家是否存在该产品的相关数据
+                        # ���鹫˾���������Ƿ���ڸò�Ʒ���������
                         hasData = country.hasEnergyData(j)
                         p = prod
                         if prod == None:
@@ -1399,459 +1411,459 @@ class reasoning_System(KnowledgeEngine):
                             prod = (j,prod)               
                         # print(Date_Begin,Date_End)
                         if hasData:       
-                            # 分别获取产品的出口，进口，产量，市场价，库存等数据
-                            # 首先通过获取某个区间的时间序列的线性回归结果
-                            # 根据斜率判断 变化趋势
-                            # 由于最初的规则是比较两个时间点的数据，因此在这里两个时间点的RHS为相同的数据（时间序列，数据，斜率）
-                            # try:
-                            #     slope, date, value = Term(operator=GetProductionTimeSeries,
-                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetProduction,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetProduction,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     # print(slope, date, value)
-                            # except Exception as e:
-                            #     # print(e)
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetProduction,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetProduction,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            # try:
-                            #     slope, date, value = Term(operator=GetStockTimeSeries,
-                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     # print(slope, date, value)
-                            # except Exception as e:
-                            #     # print(e)
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            
-                            # try:
-                            #     slope, date, value = Term(operator=GetStockTimeSeries,
-                            #                                 variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[usa, j,Date_Begin, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[usa, j,Date_End, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(Exist(CountryObject = usa, ItemName = j,ProductName = p,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                            #     # print(slope, date, value)
-                            # except Exception as e:
-                            #     # print(e)
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[usa, j,Date_Begin, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetStock,
-                            #                                     variables=[usa, j,Date_End, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-
-                            # try:
-                            #     slope, date, value = Term(operator=GetExportTimeSeries,
-                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     # print(slope, date, value)
-                            # except Exception as e:
-                            #     # print(e)
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            
-                            # try:
-                            #     slope, date, value = Term(operator=GetExportTimeSeries,
-                            #                                 variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[usa, j,Date_Begin, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[usa, j,Date_End, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     # print(slope, date, value)
-                            # except Exception as e:
-                            #     # print(e)
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[usa, j,Date_Begin, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetExport,
-                            #                                     variables=[usa, j,Date_End, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-
-                            # try:
-                            #     slope, date, value = Term(operator=GetImportTimeSeries,
-                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetImport,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetImport,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     # print(slope, date, value)
-                            # except Exception as e:
-                            #     # print(e)
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetImport,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetImport,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            # try:
-                            #     slope, date, value = Term(operator=GetMarketPriceTimeSeries,
-                            #                                 variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
-                                
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  (tuple(date),tuple(value),slope)
-                            #                 )
-                            #         )
-                            #     # print(slope, date, value)
-                            # except Exception as e:
-                            #     # print(e)
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                     variables=[country, j,Date_Begin, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-                            #     self.declare(
-                            #             Assertion(LHS=Term(operator=GetMarketPrice,
-                            #                                     variables=[country, j,Date_End, prod]),
-                            #                 RHS=  ('none','none')
-                            #                 )
-                            #         )
-
-                            # 只是对两个时间点的值进行比较
-                            #########################  
+                            # �ֱ��ȡ��Ʒ�ĳ��ڣ����ڣ��������г��ۣ���������
+                            # ����ͨ����ȡĳ�������ʱ�����е����Իع���
+                            # ����б���ж� �仯����
+                            # ��������Ĺ����ǱȽ�����ʱ�������ݣ��������������ʱ����RHSΪ��ͬ�����ݣ�ʱ�����У����ݣ�б�ʣ�
                             try:
+                                slope, date, value = Term(operator=GetProductionTimeSeries,
+                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
                                 self.declare(
-                                    Assertion(LHS=Term(operator=GetProduction,
-                                                            variables=[country, j,Date_Begin, prod]),
-                                        RHS = Term(operator=GetProduction,
-                                                            variables=[country, j,Date_Begin, prod]).GetRHS().value)
-                                )
-                            except:
+                                        Assertion(LHS=Term(operator=GetProduction,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetProduction,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                # print(slope, date, value)
+                            except Exception as e:
+                                # print(e)
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetProduction,
                                                                 variables=[country, j,Date_Begin, prod]),
                                             RHS=  ('none','none')
                                             )
                                     )
-                            try:
-                                
                                 self.declare(
-                                    Assertion(LHS=Term(operator=GetImport,
-                                                            variables=[country, j,Date_Begin,prod]),
-                                        RHS= Term(operator=GetImport,
-                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value)
-                                )
-                                
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetImport,
-                                                                variables=[country, j,Date_Begin,prod]),
-                                            RHS= ('none','none')
+                                        Assertion(LHS=Term(operator=GetProduction,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  ('none','none')
                                             )
                                     )
                             try:
+                                slope, date, value = Term(operator=GetStockTimeSeries,
+                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
                                 
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetExport,
-                                                            variables=[country, j,Date_Begin,prod]),
-                                        RHS= Term(operator=GetExport,
-                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value )
-                                )
-                                
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[country, j,Date_Begin,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )
-                            try:
-                                
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetExport,
-                                                            variables=[usa, j,Date_Begin,prod]),
-                                        RHS= Term(operator=GetExport,
-                                                            variables=[usa, j,Date_Begin,prod]).GetRHS().value )
-                                )
-                                
-                                
-                            except:
-                                pass
-                            
-                            try:
-                                
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetExport,
-                                                            variables=[usa, j,Date_End,prod]),
-                                        RHS= Term(operator=GetExport,
-                                                            variables=[usa, j,Date_End,prod]).GetRHS().value  )
-                                )
-                                                   
-                            
-                            except:
-                                pass
-
-                            try:
-                                
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetStock,
-                                                            variables=[country, j,Date_Begin,prod]),
-                                        RHS=  Term(operator=GetStock,
-                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value)
-                                )
-                                
-                            except:
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[country, j,Date_Begin,prod]),
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                # print(slope, date, value)
+                            except Exception as e:
+                                # print(e)
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                            
+                            try:
+                                slope, date, value = Term(operator=GetStockTimeSeries,
+                                                            variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[usa, j,Date_Begin, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[usa, j,Date_End, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                self.declare(Exist(CountryObject = usa, ItemName = j,ProductName = p,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
+                                # print(slope, date, value)
+                            except Exception as e:
+                                # print(e)
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[usa, j,Date_Begin, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetStock,
+                                                                variables=[usa, j,Date_End, prod]),
                                             RHS=  ('none','none')
                                             )
                                     )
 
                             try:
+                                slope, date, value = Term(operator=GetExportTimeSeries,
+                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
                                 
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetStock,
-                                                            variables=[usa, j,Date_Begin,prod]),
-                                        RHS= Term(operator=GetStock,
-                                                            variables=[usa, j,Date_Begin,prod]).GetRHS().value )
-                                )
-                                
-                                
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[usa, j,Date_Begin,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )
-                            try:
-                                                    
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetMarketPrice,
-                                                            variables=[country, j,Date_Begin,prod]),
-                                        RHS= Term(operator=GetMarketPrice,
-                                                            variables=[country, j,Date_Begin,prod]).GetRHS().value )
-                                )
-                                
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetMarketPrice,
-                                                                variables=[country, j,Date_Begin,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )          
-                            try:
-                                
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetProduction,
-                                                            variables=[country, j,Date_End,prod]),
-                                        RHS= Term(operator=GetProduction,
-                                                            variables=[country, j,Date_End,prod]).GetRHS().value)
-                                )
-
-                                
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetProduction,
-                                                                variables=[country, j,Date_End,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )
-                            try:
-                                
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetImport,
-                                                            variables=[country, j,Date_End,prod]),
-                                        RHS= Term(operator=GetImport,
-                                                            variables=[country, j,Date_End,prod]).GetRHS().value )
-                                )
-                                
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetImport,
-                                                                variables=[country, j,Date_End,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )
-                            try:
-                                
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetExport,
-                                                            variables=[country, j,Date_End,prod]),
-                                        RHS= Term(operator=GetExport,
-                                                            variables=[country, j,Date_End,prod]).GetRHS().value  )
-                                )
-                                
-                            
-                            except:
                                 self.declare(
                                         Assertion(LHS=Term(operator=GetExport,
-                                                                variables=[country, j,Date_End,prod]),
-                                            RHS= ('none','none')
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
                                             )
                                     )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                # print(slope, date, value)
+                            except Exception as e:
+                                # print(e)
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                            
+                            try:
+                                slope, date, value = Term(operator=GetExportTimeSeries,
+                                                            variables=[usa, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[usa, j,Date_Begin, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[usa, j,Date_End, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                # print(slope, date, value)
+                            except Exception as e:
+                                # print(e)
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[usa, j,Date_Begin, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetExport,
+                                                                variables=[usa, j,Date_End, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+
+                            try:
+                                slope, date, value = Term(operator=GetImportTimeSeries,
+                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                # print(slope, date, value)
+                            except Exception as e:
+                                # print(e)
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetImport,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                            try:
+                                slope, date, value = Term(operator=GetMarketPriceTimeSeries,
+                                                            variables=[country, j,Date_Begin, Date_End, prod]).GetRHS().value
+                                
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  (tuple(date),tuple(value),slope)
+                                            )
+                                    )
+                                # print(slope, date, value)
+                            except Exception as e:
+                                # print(e)
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country, j,Date_Begin, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+                                self.declare(
+                                        Assertion(LHS=Term(operator=GetMarketPrice,
+                                                                variables=[country, j,Date_End, prod]),
+                                            RHS=  ('none','none')
+                                            )
+                                    )
+
+                            # ֻ�Ƕ�����ʱ����ֵ���бȽ�
+                            #########################  
+                            # try:
+                            #     self.declare(
+                                    # Assertion(LHS=Term(operator=GetProduction,
+                            #                                 variables=[country, j,Date_Begin, prod]),
+                            #             RHS = Term(operator=GetProduction,
+                            #                                 variables=[country, j,Date_Begin, prod]).GetRHS().value)
+                            #     )
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetProduction,
+                            #                                     variables=[country, j,Date_Begin, prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetImport,
+                            #                                 variables=[country, j,Date_Begin,prod]),
+                            #             RHS= Term(operator=GetImport,
+                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value)
+                            #     )
+                                
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetImport,
+                            #                                     variables=[country, j,Date_Begin,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetExport,
+                            #                                 variables=[country, j,Date_Begin,prod]),
+                            #             RHS= Term(operator=GetExport,
+                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value )
+                            #     )
+                                
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[country, j,Date_Begin,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetExport,
+                            #                                 variables=[usa, j,Date_Begin,prod]),
+                            #             RHS= Term(operator=GetExport,
+                            #                                 variables=[usa, j,Date_Begin,prod]).GetRHS().value )
+                            #     )
+                                
+                                
+                            # except:
+                            #     pass
+                            
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetExport,
+                            #                                 variables=[usa, j,Date_End,prod]),
+                            #             RHS= Term(operator=GetExport,
+                            #                                 variables=[usa, j,Date_End,prod]).GetRHS().value  )
+                            #     )
+                                                   
+                            
+                            # except:
+                            #     pass
+
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetStock,
+                            #                                 variables=[country, j,Date_Begin,prod]),
+                            #             RHS=  Term(operator=GetStock,
+                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value)
+                            #     )
+                                
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[country, j,Date_Begin,prod]),
+                            #                 RHS=  ('none','none')
+                            #                 )
+                            #         )
+
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetStock,
+                            #                                 variables=[usa, j,Date_Begin,prod]),
+                            #             RHS= Term(operator=GetStock,
+                            #                                 variables=[usa, j,Date_Begin,prod]).GetRHS().value )
+                            #     )
+                                
+                                
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[usa, j,Date_Begin,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
+                            # try:
+                                                    
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                 variables=[country, j,Date_Begin,prod]),
+                            #             RHS= Term(operator=GetMarketPrice,
+                            #                                 variables=[country, j,Date_Begin,prod]).GetRHS().value )
+                            #     )
+                                
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                     variables=[country, j,Date_Begin,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )          
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetProduction,
+                            #                                 variables=[country, j,Date_End,prod]),
+                            #             RHS= Term(operator=GetProduction,
+                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value)
+                            #     )
+
+                                
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetProduction,
+                            #                                     variables=[country, j,Date_End,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetImport,
+                            #                                 variables=[country, j,Date_End,prod]),
+                            #             RHS= Term(operator=GetImport,
+                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value )
+                            #     )
+                                
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetImport,
+                            #                                     variables=[country, j,Date_End,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
+                            # try:
+                                
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetExport,
+                            #                                 variables=[country, j,Date_End,prod]),
+                            #             RHS= Term(operator=GetExport,
+                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value  )
+                            #     )
+                                
+                            
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetExport,
+                            #                                     variables=[country, j,Date_End,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
                             
                             
 
-                            try:
+                            # try:
                                 
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetStock,
-                                                            variables=[country, j,Date_End,prod]),
-                                        RHS= Term(operator=GetStock,
-                                                            variables=[country, j,Date_End,prod]).GetRHS().value )
-                                )
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetStock,
+                            #                                 variables=[country, j,Date_End,prod]),
+                            #             RHS= Term(operator=GetStock,
+                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value )
+                            #     )
                                 
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[country, j,Date_End,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )
-                            try:
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[country, j,Date_End,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
+                            # try:
                                 
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetStock,
-                                                            variables=[usa, j,Date_End,prod]),
-                                        RHS= Term(operator=GetStock,
-                                                            variables=[usa, j,Date_End,prod]).GetRHS().value )
-                                )
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetStock,
+                            #                                 variables=[usa, j,Date_End,prod]),
+                            #             RHS= Term(operator=GetStock,
+                            #                                 variables=[usa, j,Date_End,prod]).GetRHS().value )
+                            #     )
                                 
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetStock,
-                                                                variables=[usa, j,Date_End,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )
-                            try:
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetStock,
+                            #                                     variables=[usa, j,Date_End,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
+                            # try:
                                 
-                                self.declare(
-                                    Assertion(LHS=Term(operator=GetMarketPrice,
-                                                            variables=[country, j,Date_End,prod]),
-                                        RHS= Term(operator=GetMarketPrice,
-                                                            variables=[country, j,Date_End,prod]).GetRHS().value )
-                                )
+                            #     self.declare(
+                            #         Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                 variables=[country, j,Date_End,prod]),
+                            #             RHS= Term(operator=GetMarketPrice,
+                            #                                 variables=[country, j,Date_End,prod]).GetRHS().value )
+                            #     )
                                 
                                 
-                            except:
-                                self.declare(
-                                        Assertion(LHS=Term(operator=GetMarketPrice,
-                                                                variables=[country, j,Date_End,prod]),
-                                            RHS= ('none','none')
-                                            )
-                                    )
+                            # except:
+                            #     self.declare(
+                            #             Assertion(LHS=Term(operator=GetMarketPrice,
+                            #                                     variables=[country, j,Date_End,prod]),
+                            #                 RHS= ('none','none')
+                            #                 )
+                            #         )
                             #########################
                             return True
                         else:
@@ -1863,42 +1875,42 @@ class reasoning_System(KnowledgeEngine):
                     sp = sonProd[prod]
 
                     ##############
-                    # 输出上下游产品的关系
-                    fileForOutput.write("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                    fileForOutput.write("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
+                    # ��������β�Ʒ�Ĺ�ϵ
+                    fileForOutput.write("\n��Ʒ��{}���ĸ���Ʒ: {}".format(prod, tuple(fp)))
+                    fileForOutput.write("\n��Ʒ��{}�����Ӳ�Ʒ: {}\n".format(prod, tuple(sp)))
                     # print(father_fatherProd)
                     # print(son_sonProd)
                     for f in father_fatherProd:
                         if len(father_fatherProd[f]) > 0 and f in fp:
-                            fileForOutput.write("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
-                            print("\n父产品【{}】的父产品: {}".format(f, tuple(father_fatherProd[f])))
+                            fileForOutput.write("\n����Ʒ��{}���ĸ���Ʒ: {}".format(f, tuple(father_fatherProd[f])))
+                            print("\n����Ʒ��{}���ĸ���Ʒ: {}".format(f, tuple(father_fatherProd[f])))
 
                             for ff in father_fatherProd[f]:
                                 if ff in father_fatherProd.keys() and len(father_fatherProd[ff]) > 0:
-                                    fileForOutput.write("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
-                                    print("\n父父产品【{}】的父产品: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                                    fileForOutput.write("\n������Ʒ��{}���ĸ���Ʒ: {}\n".format(ff, tuple(father_fatherProd[ff])))
+                                    print("\n������Ʒ��{}���ĸ���Ʒ: {}\n".format(ff, tuple(father_fatherProd[ff])))
 
                     for s in son_sonProd:
                         if len(son_sonProd[s]) > 0 and s in sp:
-                            fileForOutput.write("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
-                            print("\n子产品【{}】的子产品: {}\n".format(s, tuple(son_sonProd[s])))
+                            fileForOutput.write("\n�Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(s, tuple(son_sonProd[s])))
+                            print("\n�Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(s, tuple(son_sonProd[s])))
 
                             for ss in son_sonProd[s]:
                                 if ss in son_sonProd.keys() and len(son_sonProd[ss]) > 0:
-                                    fileForOutput.write("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
-                                    print("\n子子产品【{}】的子产品: {}\n".format(ss, tuple(son_sonProd[ss])))
+                                    fileForOutput.write("\n���Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(ss, tuple(son_sonProd[ss])))
+                                    print("\n���Ӳ�Ʒ��{}�����Ӳ�Ʒ: {}\n".format(ss, tuple(son_sonProd[ss])))
 
-                    print("\n产品【{}】的父产品: {}".format(prod, tuple(fp)))
-                    print("\n产品【{}】的子产品: {}\n".format(prod, tuple(sp)))
+                    print("\n��Ʒ��{}���ĸ���Ʒ: {}".format(prod, tuple(fp)))
+                    print("\n��Ʒ��{}�����Ӳ�Ʒ: {}\n".format(prod, tuple(sp)))
                     ##############
                     
                     ##############
-                    # 当产品本身属于存在数据的能源商品，
+                    # ����Ʒ�������ڴ������ݵ���Դ��Ʒ��
 
                     if declareCommodity(prod):
                         print(prod,fp)
                         self.declare(Exist(CountryObject = country, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
-                        # if prod == '原油':
+                        # if prod == 'ԭ��':
                         #     self.declare(Exist(CountryObject = usa, ItemName = prod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                         allProduct.append(prod)
                         allBusiness.append(business)
@@ -1931,10 +1943,10 @@ class reasoning_System(KnowledgeEngine):
                     ##############
                     
                     for j in fp:
-                        # if j == '原油':
+                        # if j == 'ԭ��':
                         #     self.declare(Exist(CountryObject = usa, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                         
-                        # 当产品的上游产品为存在数据的能源商品，
+                        # ����Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ��
                         if declareCommodity(j,prod):
 
                             self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -1944,7 +1956,7 @@ class reasoning_System(KnowledgeEngine):
                             # print(country,j,prod,Date_Begin,Date_End)
                             
 
-                            # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                            # ����Ϊ �������ݵ���Դ��Ʒ ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ ͬ������
                             self.declare(
                                     Assertion(LHS=Term(operator=GetSonProduct,
                                                             variables=[j]),
@@ -1967,7 +1979,7 @@ class reasoning_System(KnowledgeEngine):
                             )
                         
                         if j in father_fatherProd.keys():
-                            # 当产品的上游产品的上游产品为存在数据的能源商品，
+                            # ����Ʒ�����β�Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ��
                             for fprod in father_fatherProd[j]:
                                 if declareCommodity(fprod,prod):
 
@@ -1978,7 +1990,7 @@ class reasoning_System(KnowledgeEngine):
                                     # print(country,j,prod,Date_Begin,Date_End)
                                     
 
-                                    # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                    # ����Ϊ �������ݵ���Դ��Ʒ ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ ͬ������
                                     self.declare(
                                             Assertion(LHS=Term(operator=GetSonProduct,
                                                                     variables=[fprod]),
@@ -2001,7 +2013,7 @@ class reasoning_System(KnowledgeEngine):
                                     )
                                 if fprod in father_fatherProd.keys() and len(father_fatherProd[fprod]) > 0:
                                     for ffprod in father_fatherProd[fprod]:
-                                        # 当产品的上游产品的上游产品的上游产品为存在数据的能源商品，
+                                        # ����Ʒ�����β�Ʒ�����β�Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ��
                                         if declareCommodity(ffprod,prod):
 
                                             self.declare(Exist(CountryObject = country, ItemName = ffprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -2011,7 +2023,7 @@ class reasoning_System(KnowledgeEngine):
                                             # print(country,j,prod,Date_Begin,Date_End)
                                             
 
-                                            # 定义为 存在数据的能源商品 的子产品为 公司的产品，与公司产品的上游产品为存在数据的能源商品 同等意义
+                                            # ����Ϊ �������ݵ���Դ��Ʒ ���Ӳ�ƷΪ ��˾�Ĳ�Ʒ���빫˾��Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ ͬ������
                                             self.declare(
                                                     Assertion(LHS=Term(operator=GetSonProduct,
                                                                             variables=[ffprod]),
@@ -2036,10 +2048,10 @@ class reasoning_System(KnowledgeEngine):
                     ##############
                       
                     for j in sp:
-                        # if j == '原油':
+                        # if j == 'ԭ��':
                         #     self.declare(Exist(CountryObject = usa, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
                         
-                        # 当产品的下游产品为存在数据的能源商品，
+                        # ����Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ��
                         if declareCommodity(j,prod):
 
                             self.declare(Exist(CountryObject = country, ItemName = j,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -2070,7 +2082,7 @@ class reasoning_System(KnowledgeEngine):
                             )
                         if j in son_sonProd.keys():
                             for sprod in son_sonProd[j]:
-                                # 当产品的下游产品的下游产品为存在数据的能源商品，
+                                # ����Ʒ�����β�Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ��
                                 if declareCommodity(sprod,prod):
 
                                     self.declare(Exist(CountryObject = country, ItemName = sprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -2101,7 +2113,7 @@ class reasoning_System(KnowledgeEngine):
                                     )
                                 if sprod in son_sonProd.keys() and len(son_sonProd[sprod]) > 0:
                                     for ssprod in son_sonProd[sprod]:
-                                        # 当产品的下游产品的下游产品的下游产品为存在数据的能源商品，
+                                        # ����Ʒ�����β�Ʒ�����β�Ʒ�����β�ƷΪ�������ݵ���Դ��Ʒ��
                                         if declareCommodity(ssprod,prod):
 
                                             self.declare(Exist(CountryObject = country, ItemName = ssprod,ProductName = prod,BusinessName = business, Date_Begin = Date_Begin,Date_End = Date_End))
@@ -2133,7 +2145,7 @@ class reasoning_System(KnowledgeEngine):
                     ##############
                         
             ##############
-            # 当公司的产品以及其上下游产品皆无法与存在数据的能源商品对应
+            # ����˾�Ĳ�Ʒ�Լ��������β�Ʒ���޷���������ݵ���Դ��Ʒ��Ӧ
             if len(allBusiness) == 0 or allBusiness[-1] != business:
                 allProduct.append('nil')
                 allBusiness.append(business)
@@ -2165,11 +2177,11 @@ class reasoning_System(KnowledgeEngine):
         
         fileForOutput.write('\n-----------------\n')
         try:
-            print('\n业务【{}】推理开始\n'.format(allBusiness[0]))
-            fileForOutput.write('\n业务【{}】推理开始\n'.format(allBusiness[0]))
+            print('\nҵ��{}��������ʼ\n'.format(allBusiness[0]))
+            fileForOutput.write('\nҵ��{}��������ʼ\n'.format(allBusiness[0]))
 
-            # 初始化CurrentProduct的fact，即初始化某一个业务/产品的推理链条
-            # 当某个产品的推理链条结束，将在rule_end迭代至下一个业务/产品
+            # ��ʼ��CurrentProduct��fact������ʼ��ĳһ��ҵ��/��Ʒ����������
+            # ��ĳ����Ʒ��������������������rule_end��������һ��ҵ��/��Ʒ
             self.declare(CurrentProduct(index = 0, curProd = allProduct[0], curBusiness = allBusiness[0],curItem = allItem[0]))
         except:
             pass
@@ -2198,25 +2210,32 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda p1,p2,curProd, curItem: True if p1==p2 and p1[1] == curProd and p1[0] == curItem else False),
           salience=0.98)  
     def rule75_76(self,company1, CountryObject, ItemName,Date_Begin,Date_End,priceBegin,priceEnd,ME,MB):
-        print(priceEnd)
-        print(priceBegin)
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        
         if priceEnd[1] == 'none' or priceBegin[1] == 'none':
-            fileForOutput.write("\n\n<规则75,76>----------\n 无市场价格数据\n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('历史价格',)]),
+            fileForOutput.write("\n\n<����75,76>----------\n ���г��۸�����\n")
+            left = "\n\n<����75,76>----------\n ���г��۸�����\n"
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('��ʷ�۸�',), curNodeNum]),
                             RHS='none'))
-        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] > 0) or (priceEnd == priceBegin and priceEnd[2] > 0):
-            if ItemName == '原油':
-                fileForOutput.write("\n\n<规则75,76>----------\n 布伦特【{}】的市场价上升\n".format(ItemName))
+        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] > 0) or priceEnd[2] > 0:
+            if ItemName == 'ԭ��':
+                fileForOutput.write("\n\n<����75,76>----------\n �����ء�{}�����г�������\n".format(ItemName))
+                left = "\n\n<����75,76>----------\n �����ء�{}�����г�������\n".format(ItemName)
             else:
                 
-                fileForOutput.write("\n\n<规则75,76>----------\n【{}】【{}】的市场价上升\n".format(Term(operator=GetCountryFromEnglishToChinese,
+                fileForOutput.write("\n\n<����75,76>----------\n��{}����{}�����г�������\n".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName))
+                left = "\n\n<����75,76>----------\n��{}����{}�����г�������\n".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName)        
             if priceEnd == priceBegin:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(priceBegin[0],priceBegin[1],priceBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(priceBegin[0],priceBegin[1],priceBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\n".format(priceBegin[0],priceBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\n".format(priceBegin[0],priceBegin[1],
                                 priceEnd[0],priceEnd[1]))
             # index = getTendency.index(supplyTend)
             if mode == "manual":
@@ -2232,33 +2251,40 @@ class reasoning_System(KnowledgeEngine):
             #     index = 4
             # if index < 0:
             #     index = 0
-            fileForOutput.write('-> 预测：【{}】国内【{}】的价格趋势上升\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���ļ۸���������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���ļ۸���������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
-            # print('-> 预测：供给增加\n')
+            # print('-> Ԥ�⣺��������\n')
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('历史价格',)]),
+                                            variables=[ItemName, ('��ʷ�۸�',), curNodeNum]),
                             RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[ItemName, ('历史价格',)]),
+                                            variables=[ItemName, ('��ʷ�۸�',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
-            fileForOutput.write("价格趋势: ({} -> {})\n".format("plain",Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('历史价格',)]),
+            fileForOutput.write("�۸�����: ({} -> {})\n".format("plain",Assertion(LHS=Term(operator=PredictPrice,
+                                            variables=[ItemName, ('��ʷ�۸�',),curNodeNum]),
                             RHS=value).RHS.value))
-        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] < 0) or (priceEnd == priceBegin and priceEnd[2] < 0):
-            if ItemName == '原油':
-                fileForOutput.write("\n\n<规则75,76>----------\n 布伦特【{}】的市场价下跌".format(ItemName))
+        elif (priceEnd != priceBegin and priceEnd[1] - priceBegin[1] < 0) or priceEnd[2] < 0:
+            if ItemName == 'ԭ��':
+                fileForOutput.write("\n\n<����75,76>----------\n �����ء�{}�����г����µ�".format(ItemName))
+                left = "\n\n<����75,76>----------\n �����ء�{}�����г����µ�".format(ItemName)
             else:
-                fileForOutput.write("\n\n<规则75,76>----------\n【{}】【{}】的市场价下跌".format(Term(operator=GetCountryFromEnglishToChinese,
+                fileForOutput.write("\n\n<����75,76>----------\n��{}����{}�����г����µ�".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName))
+                left = "\n\n<����75,76>----------\n��{}����{}�����г����µ�".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName)
             if priceEnd == priceBegin:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(priceBegin[0],priceBegin[1],priceBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(priceBegin[0],priceBegin[1],priceBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\n".format(priceBegin[0],priceBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\n".format(priceBegin[0],priceBegin[1],
                                 priceEnd[0],priceEnd[1]))
             # index = getTendency.index(supplyTend)
             if mode == "manual":
@@ -2269,33 +2295,41 @@ class reasoning_System(KnowledgeEngine):
             else:
                 index = 2 
                 index = index - 1 
-                value = getTendency[index]
+                value = getTendency[index] 
             # if index > 4: 
             #     index = 4
             # if index < 0:
             #     index = 0
-            fileForOutput.write('-> 预测：【{}】国内【{}】的价格趋势下跌\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���ļ۸������µ�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���ļ۸������µ�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
-            # print('-> 预测：供给增加\n')
+            # print('-> Ԥ�⣺��������\n')
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('历史价格',)]),
+                                            variables=[ItemName, ('��ʷ�۸�',),curNodeNum]),
                             RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[ItemName, ('历史价格',)]),
+                                            variables=[ItemName, ('��ʷ�۸�',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
-            fileForOutput.write("价格趋势: ({} -> {})\n".format("plain",Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('历史价格',)]),
+            fileForOutput.write("�۸�����: ({} -> {})\n".format("plain",Assertion(LHS=Term(operator=PredictPrice,
+                                            variables=[ItemName, ('��ʷ�۸�',),curNodeNum]),
                             RHS=value).RHS.value))
         self.retract(ME)
         self.retract(MB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
 
-#对于以下所有进口，出口，产量，库存相关的规则，
-# GetImport等的RHS如果是同样的值，代表declare的时候是采用time series得到该区间的斜率 或 无数据 ‘none'，以GetImport 为例，RHS[2] 为斜率
-# 如果RHS不是同样的值，代表declare的时候是获取两个时间点的值进行比较 ，以GetImport 为例，RHS[1] 为数据值
+
+#�����������н��ڣ����ڣ������������صĹ���
+# GetImport�ȵ�RHS�����ͬ����ֵ������declare��ʱ���ǲ���time series�õ��������б�� �� ������ ��none'����GetImport Ϊ����RHS[2] Ϊб��
+# ���RHS����ͬ����ֵ������declare��ʱ���ǻ�ȡ����ʱ����ֵ���бȽ� ����GetImport Ϊ����RHS[1] Ϊ����ֵ
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -2318,7 +2352,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryImport1, CountryObject, itemImport1,ItemName,endDate,Date_End,curItem: True if countryImport1==CountryObject and itemImport1==ItemName and curItem == ItemName and Date_End == endDate else False),
           TEST(lambda countryImport2, CountryObject, itemImport2,ItemName,beginDate,Date_Begin, curItem: True if countryImport2==CountryObject and itemImport2==ItemName and curItem == ItemName and Date_Begin == beginDate else False),
           TEST(lambda p1,p2,curProd, curItem: True if p1==p2 and p1[1] == curProd and p1[0] == curItem else False),
-          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] > 0) if (importEnd!=importBegin and (importEnd[1] != 'none' and importBegin[1] != 'none')) else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] > 0 ),        
+          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] > 0) if importEnd!=importBegin else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2326,20 +2360,26 @@ class reasoning_System(KnowledgeEngine):
         #  TEST(lambda country1, CountryObject, item1,ItemName: True if country1==CountryObject and item1==ItemName else False),     
           salience=0.5)  
     def rule16(self,company1, CountryObject, ItemName,Date_Begin,Date_End,importBegin,importEnd,IE,IB):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if (importEnd[1] == 'none' or importBegin[1] == 'none'):
-            fileForOutput.write("\n\n<规则16>----------\n 无进口量数据\n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('进口',)]),
+            fileForOutput.write("\n\n<����16>----------\n �޽���������\n")
+            left = "\n\n<����16>----------\n �޽���������\n"
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('����',),curNodeNum]),
                             RHS='none'))
         else:
-
-            fileForOutput.write("\n\n<规则16>----------\n【{}】【{}】的进口量增加".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����16>----------\n��{}����{}���Ľ���������".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName)
+            fileForOutput.write("\n\n<����16>----------\n��{}����{}���Ľ���������".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName))
             if importBegin == importEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(importBegin[0],importBegin[1],importBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(importBegin[0],importBegin[1],importBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\n".format(importBegin[0],importBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\n".format(importBegin[0],importBegin[1],
                                 importEnd[0],importEnd[1]))
             # index = getTendency.index(supplyTend)
             if mode == "manual":
@@ -2355,21 +2395,29 @@ class reasoning_System(KnowledgeEngine):
             #     index = 4
             # if index < 0:
             #     index = 0
-            fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势增加\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���Ĺ�����������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ�����������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
-            # print('-> 预测：供给增加\n')
+            # print('-> Ԥ�⣺��������\n')
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format("plain",Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value).RHS.value))
         self.retract(IE)
         self.retract(IB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+
     #     #print(self.facts)
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -2393,7 +2441,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryImport1, CountryObject, itemImport1,ItemName,endDate,Date_End,curItem: True if countryImport1==CountryObject and itemImport1==ItemName and curItem == ItemName and Date_End == endDate else False),
           TEST(lambda countryImport2, CountryObject, itemImport2,ItemName,beginDate,Date_Begin, curItem: True if countryImport2==CountryObject and itemImport2==ItemName and curItem==ItemName and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] < 0) if (importEnd!=importBegin and (importEnd[1] != 'none' and importBegin[1] != 'none')) else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] < 0 ),        
+          TEST(lambda importBegin,importEnd: ( importEnd[1] - importBegin[1] < 0) if importEnd!=importBegin else (importEnd[1] == 'none' or importBegin[1] == 'none') or importEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2402,21 +2450,30 @@ class reasoning_System(KnowledgeEngine):
           salience=0.5) 
     def rule6(self, company1, CountryObject, ItemName,Date_Begin,Date_End,importBegin,importEnd,IE,IB):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
         if (importEnd[1] == 'none' or importBegin[1] == 'none'):
-            fileForOutput.write("\n\n<规则6>----------\n无进口量数据\n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('进口',)]),
+            fileForOutput.write("\n\n<����6>----------\n�޽���������\n")
+            left = "\n\n<����6>----------\n�޽���������\n"
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('����',),curNodeNum]),
                             RHS='none'))
         else:
-            fileForOutput.write("\n\n<规则6>----------\n【{}】【{}】的进口量减少".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����6>----------\n��{}����{}���Ľ���������".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write("\n\n<����6>----------\n��{}����{}���Ľ���������".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             if importBegin == importEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(importBegin[0],importBegin[1],importBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(importBegin[0],importBegin[1],importBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\n".format(importBegin[0],importBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\n".format(importBegin[0],importBegin[1],
                                 importEnd[0],importEnd[1]))
-            fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势下降\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���Ĺ��������½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ��������½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
 
@@ -2437,12 +2494,12 @@ class reasoning_System(KnowledgeEngine):
             
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value).RHS.value))
         self.retract(IE)
         self.retract(IB)
@@ -2470,7 +2527,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryExport1, CountryObject, itemExport1,ItemName,endDate,Date_End, curItem: True if countryExport1==CountryObject and itemExport1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryExport2, CountryObject, itemExport2,ItemName,beginDate,Date_Begin, curItem: True if countryExport2==CountryObject and itemExport2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] > 0) if exportEnd!=exportBegin and (exportEnd[1] != 'none' and exportBegin[1] != 'none') else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] > 0 ),        
+          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] > 0) if exportEnd!=exportBegin else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2478,19 +2535,26 @@ class reasoning_System(KnowledgeEngine):
         #  TEST(lambda country1, CountryObject, item1,ItemName: True if country1==CountryObject and item1==ItemName else False),     
           salience=0.5)  
     def rule22(self, company1, CountryObject, ItemName,Date_Begin,Date_End,exportBegin,exportEnd,EE,EB):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if (exportEnd[1] == 'none' or exportBegin[1] == 'none' ):
-            fileForOutput.write("\n\n<规则22>----------\n 无出口量数据\n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('出口',)]),
+            left = "\n\n<����22>----------\n �޳���������\n"
+            fileForOutput.write("\n\n<����22>----------\n �޳���������\n")
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('����',),curNodeNum]),
                             RHS='none'))
         else:
-            fileForOutput.write("\n\n<规则22>----------\n【{}】【{}】的出口量增加".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����22>----------\n��{}����{}���ĳ���������".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName)
+            fileForOutput.write("\n\n<����22>----------\n��{}����{}���ĳ���������".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value, ItemName))
             if exportBegin == exportEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(exportBegin[0],exportBegin[1],exportBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(exportBegin[0],exportBegin[1],exportBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                 exportEnd[0],exportEnd[1]))
             # index = getTendency.index(supplyTend)
             if mode == "manual":
@@ -2506,21 +2570,28 @@ class reasoning_System(KnowledgeEngine):
             #     index = 4
             # if index < 0:
             #     index = 0
-            fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势下降\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���Ĺ��������½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ��������½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
-            # print('-> 预测：供给增加\n')
+            # print('-> Ԥ�⣺��������\n')
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('出口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format("plain",Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('出口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value).RHS.value))
         self.retract(EE)
         self.retract(EB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
     #     #print(self.facts)
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -2544,7 +2615,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryExport1, CountryObject, itemExport1,ItemName,endDate,Date_End, curItem: True if countryExport1==CountryObject and itemExport1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryExport2, CountryObject, itemExport2,ItemName,beginDate,Date_Begin, curItem: True if countryExport2==CountryObject and itemExport2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName,curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] < 0) if exportEnd!=exportBegin and (exportEnd[1] != 'none' and exportBegin[1] != 'none') else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] < 0 ),        
+          TEST(lambda exportBegin,exportEnd: ( exportEnd[1] - exportBegin[1] < 0) if exportEnd!=exportBegin else (exportEnd[1] == 'none' or exportBegin[1] == 'none') or exportEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2553,21 +2624,32 @@ class reasoning_System(KnowledgeEngine):
           salience=0.5) 
     def rule26(self,company1, CountryObject, ItemName,Date_Begin,Date_End,exportBegin,exportEnd,EE,EB):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if ( exportEnd[1] == 'none' or exportBegin[1] == 'none'):
-            fileForOutput.write("\n\n<规则26>----------\n无出口量数据 \n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('出口',)]),
+            left = "\n\n<����26>----------\n�޳��������� \n"
+            fileForOutput.write("\n\n<����26>----------\n�޳��������� \n")
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('����',),curNodeNum]),
                             RHS='none'))
         else:
-            fileForOutput.write("\n\n<规则26>----------\n【{}】【{}】的出口量减少".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����26>----------\n��{}����{}���ĳ���������".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write("\n\n<����26>----------\n��{}����{}���ĳ���������".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             if exportBegin == exportEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(exportBegin[0],exportBegin[1],exportBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(exportBegin[0],exportBegin[1],exportBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\n".format(exportBegin[0],exportBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\n".format(exportBegin[0],exportBegin[1],
                                 exportEnd[0],exportEnd[1]))
-            fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势上升\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���Ĺ�����������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ�����������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
 
@@ -2588,15 +2670,19 @@ class reasoning_System(KnowledgeEngine):
             
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('出口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('出口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value).RHS.value))
         self.retract(EE)
         self.retract(EB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -2620,27 +2706,29 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryExport2, CountryObject, itemExport2,ItemName,beginDate,Date_Begin, curItem: True if countryExport2!=CountryObject and itemExport2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda countryExport2, countryExport1:  countryExport2==countryExport1 ),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda exportBegin,exportEnd: (exportEnd[1] - exportBegin[1] > 0 or exportEnd[1] - exportBegin[1] <= 0) if exportEnd!=exportBegin and (exportEnd[1] != 'none' or exportBegin[1] != 'none') else (exportEnd[1] == 'none' or exportBegin[1] == 'none')  or exportEnd[2]> 0 or exportEnd[2] <=0),        
+          TEST(lambda exportBegin,exportEnd: (exportEnd[1] - exportBegin[1] > 0 or exportEnd[1] - exportBegin[1] <= 0) if exportEnd!=exportBegin else (exportEnd[1] == 'none' or exportBegin[1] == 'none')  or exportEnd[2]> 0 or exportEnd[2] <=0),        
         
           salience=0.5)  
     def rule5_15(self, company1, CountryObject, ItemName,Date_Begin,Date_End,exportBegin,exportEnd,EE,EB,countryExport1):
         # fileForOutput.write(countryExport1.chineseName)
         # fileForOutput.write('\n')
         # fileForOutput.write(str(Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value))
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         index = 2 
         if countryExport1.chineseName in Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value:
             if exportEnd[1] == 'none' or exportBegin[1] == 'none':
-                fileForOutput.write("\n\n<规则5_15>----------\n 无{}出口量数据\n".format(countryExport1.chineseName))
+                fileForOutput.write("\n\n<����5_15>----------\n ��{}����������\n".format(countryExport1.chineseName))
                 self.retract(EE)
                 self.retract(EB)
                 return 0 
             elif (exportEnd!=exportBegin and exportEnd[1] - exportBegin[1] > 0) or exportEnd[2] > 0:
-                fileForOutput.write("\n\n<规则5_15>----------\n【{}】【{}】的出口量增加".format(countryExport1.chineseName, ItemName))
-                fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
+                left = "\n\n<����5_15>----------\n��{}����{}���ĳ���������".format(countryExport1.chineseName, ItemName)
+                fileForOutput.write("\n\n<����5_15>----------\n��{}����{}���ĳ���������".format(countryExport1.chineseName, ItemName))
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                     exportEnd[0],exportEnd[1]))
                 # index = getTendency.index(supplyTend)
-                # index = 2 
-                # index = index + 1 
                 if mode == "manual":
                     if exportEnd[1] > exportBegin[1]:
                         value = "up" + (exportEnd[1] -1)*"+"
@@ -2652,12 +2740,12 @@ class reasoning_System(KnowledgeEngine):
                     value = getTendency[index]
 
             elif (exportEnd!=exportBegin and exportEnd[1] - exportBegin[1] < 0) or exportEnd[2] < 0:
-                fileForOutput.write("\n\n<规则5_15>----------\n【{}】【{}】的出口量减少".format(countryExport1.chineseName, ItemName))
-                fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
+                
+                left = "\n\n<����5_15>----------\n��{}����{}���ĳ���������".format(countryExport1.chineseName, ItemName)
+                fileForOutput.write("\n\n<����5_15>----------\n��{}����{}���ĳ���������".format(countryExport1.chineseName, ItemName))
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                     exportEnd[0],exportEnd[1]))
                 # index = getTendency.index(supplyTend)
-                # index = 2 
-                # index = index - 1 
                 if mode == "manual":
                     if exportEnd[1] > exportBegin[1]:
                         value = "down" + (exportEnd[1] -1)*"-"
@@ -2668,37 +2756,44 @@ class reasoning_System(KnowledgeEngine):
                     index = index - 1 
                     value = getTendency[index]
             else:
-                fileForOutput.write("\n\n<规则5_15>----------\n【{}】【{}】的出口量无变化".format(countryExport1.chineseName, ItemName))
-                
+                fileForOutput.write("\n\n<����5_15>----------\n��{}����{}���ĳ������ޱ仯".format(countryExport1.chineseName, ItemName))
+                left = "\n\n<����5_15>----------\n��{}����{}���ĳ������ޱ仯".format(countryExport1.chineseName, ItemName)
                 # index = getTendency.index(supplyTend)
-                # index = 2 
                 if mode == "manual":
                     value = "plain"
                 else:
                     index = 2 
                     value = getTendency[index]
                 
-            fileForOutput.write("{} 是 {} 的 {} 进口国".format(countryExport1.chineseName,CountryObject.chineseName, ItemName))
-            
+            fileForOutput.write("{} �� {} �� {} ���ڹ�".format(countryExport1.chineseName,CountryObject.chineseName, ItemName))
+            left += "\n{} �� {} �� {} ���ڹ�".format(countryExport1.chineseName,CountryObject.chineseName, ItemName)
             # if index > 4: 
             #     index = 4
             # if index < 0:
             #     index = 0
-            fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势 --> {}\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���Ĺ������� --> {}\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName,value)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ������� --> {}\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName,value))
-            # print('-> 预测：供给增加\n')
+            # print('-> Ԥ�⣺��������\n')
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format("plain",Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value).RHS.value))
+     
         self.retract(EE)
         self.retract(EB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
     
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -2721,7 +2816,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryProduction1, CountryObject, itemProduction1,ItemName,endDate,Date_End,curItem: True if countryProduction1==CountryObject and itemProduction1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryProduction2, CountryObject, itemProduction2,ItemName,beginDate,Date_Begin, curItem: True if countryProduction2==CountryObject and itemProduction2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] < 0) if productionEnd!=productionBegin and (productionEnd[1] != 'none' and productionBegin[1] != 'none') else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] < 0 ),        
+          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] < 0) if productionEnd!=productionBegin else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2730,22 +2825,32 @@ class reasoning_System(KnowledgeEngine):
           salience=0.5) 
     def rule8(self, company1,CountryObject, ItemName,Date_Begin,Date_End,productionBegin,productionEnd,PE,PB):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if (productionEnd[1] == 'none' or productionBegin[1] == 'none'):
-            fileForOutput.write("\n\n<规则8>----------\n无产量数据 \n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('产量',)]),
+            fileForOutput.write("\n\n<����8>----------\n�޲������� \n")
+            left = "\n\n<����8>----------\n�޲������� \n"
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('����',),curNodeNum]),
                             RHS='none'))
         else:
-            fileForOutput.write("\n\n<规则8>----------\n【{}】国内【{}】的产量减少".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����8>----------\n��{}�����ڡ�{}���Ĳ�������".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write("\n\n<����8>----------\n��{}�����ڡ�{}���Ĳ�������".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             if productionBegin == productionEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(productionBegin[0],productionBegin[1],productionBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(productionBegin[0],productionBegin[1],productionBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\n".format(productionBegin[0], productionBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\n".format(productionBegin[0], productionBegin[1],
                                 productionEnd[0],productionEnd[1]))
-            #print('-> 预测：供给下降\n')
-            fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势下降\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            #print('-> Ԥ�⣺�����½�\n')
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���Ĺ��������½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ��������½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             # index = getTendency.index(supplyTend)
@@ -2758,22 +2863,26 @@ class reasoning_System(KnowledgeEngine):
                 index = 2 
                 index = index - 1 
                 value = getTendency[index]
-        # if index > 4: 
+            # if index > 4: 
             #     index = 4
             # if index < 0:
             #     index = 0
             
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('产量',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # fileForOutput.write(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('产量',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value).RHS.value))
         self.retract(PE)
         self.retract(PB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         
     #     #print(self.facts)
 
@@ -2798,7 +2907,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryProduction1, CountryObject, itemProduction1,ItemName,endDate,Date_End,curItem: True if countryProduction1==CountryObject and itemProduction1==ItemName and ItemName == curItem and Date_End == endDate else False),
           TEST(lambda countryProduction2, CountryObject, itemProduction2,ItemName,beginDate,Date_Begin, curItem: True if countryProduction2==CountryObject and itemProduction2==ItemName and ItemName == curItem and Date_Begin == beginDate else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] > 0) if productionEnd!=productionBegin and (productionEnd[1] != 'none' and productionBegin[1] != 'none') else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] > 0 ),        
+          TEST(lambda productionBegin,productionEnd: ( productionEnd[1] - productionBegin[1] > 0) if productionEnd!=productionBegin else (productionEnd[1] == 'none' or productionBegin[1] == 'none') or productionEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=GetSupplyTendency,
         #         LHS__variables__0__value=MATCH.country1,
         #         LHS__variables__1__value=MATCH.item1,
@@ -2807,23 +2916,32 @@ class reasoning_System(KnowledgeEngine):
           salience=0.5) 
     def rule17(self, company1, CountryObject, ItemName,Date_Begin,Date_End,productionBegin,productionEnd,PE,PB):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if ( productionEnd[1] == 'none' or productionBegin[1] == 'none'):
-            fileForOutput.write("\n\n<规则17>----------\n无产量数据 \n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('产量',)]),
+            left = "\n\n<����17>----------\n�޲������� \n"
+            fileForOutput.write("\n\n<����17>----------\n�޲������� \n")
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('����',),curNodeNum]),
                             RHS='none'))
         else:
-
-            fileForOutput.write("\n\n<规则17>----------\n【{}】国内【{}】的产量增加".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����17>----------\n��{}�����ڡ�{}���Ĳ�������".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write("\n\n<����17>----------\n��{}�����ڡ�{}���Ĳ�������".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             if productionBegin == productionEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(productionBegin[0],productionBegin[1],productionBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(productionBegin[0],productionBegin[1],productionBegin[2]) )
             else:
-                fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\n".format(productionBegin[0], productionBegin[1],
+                fileForOutput.write("��{}��{} ������ {}��{}\n -----------------\n".format(productionBegin[0], productionBegin[1],
                                 productionEnd[0],productionEnd[1]))
-            # fileForOutput.write('-> 预测：供给增加\n')
-            fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势增加\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            # fileForOutput.write('-> Ԥ�⣺��������\n')
+            right = '-> Ԥ�⣺��{}�����ڡ�{}���Ĺ�����������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ�����������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
 
@@ -2844,15 +2962,19 @@ class reasoning_System(KnowledgeEngine):
             
             # self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('产量',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # fileForOutput.write(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('产量',)]),
+                                            variables=[CountryObject, ItemName, ('����',),curNodeNum]),
                             RHS=value).RHS.value))
         self.retract(PE)
         self.retract(PB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         
     #     #print(self.facts)
 
@@ -2878,7 +3000,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryStockChange1, CountryObject, itemStockChange1,ItemName,endDate,Date_End,beginDate,Date_Begin, curItem: True if countryStockChange1==CountryObject and itemStockChange1==ItemName and ItemName == curItem and Date_End == endDate and Date_Begin == beginDate else False),
           TEST(lambda countryStockChange2, CountryObject, itemStockChange2,ItemName, curItem: True if countryStockChange2==CountryObject and itemStockChange2==ItemName and ItemName == curItem else False),
           TEST(lambda p1,p2, ProductName, curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] < 0) if StockChangeEnd!=StockChangeBegin and (StockChangeEnd[1] != 'none' and StockChangeBegin[1] != 'none') else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] < 0 ),        
+          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] < 0) if StockChangeEnd!=StockChangeBegin else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] < 0 ),        
         #   AS.f1 << Assertion(LHS__operator=PredictPrice,
         #         LHS__variables__0__value=MATCH.item1,
         #        RHS__value=MATCH.predPrice),     
@@ -2886,12 +3008,16 @@ class reasoning_System(KnowledgeEngine):
           salience=0.5) 
     def rule11(self, company1, CountryObject, ItemName,Date_Begin,Date_End,StockChangeEnd,SE,StockChangeBegin,SB):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if (StockChangeEnd[1] == 'none' or StockChangeBegin[1] =='none'):
-            fileForOutput.write("\n\n<规则11>----------\n无库存数据\n")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+            fileForOutput.write("\n\n<����11>----------\n�޿������\n")
+            left = "\n\n<����11>----------\n�޿������\n"
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS='none'))
         else:
             if mode == "manual":
@@ -2903,48 +3029,58 @@ class reasoning_System(KnowledgeEngine):
                 index = 2 
                 index = index + 1 
                 value = getTendency[index]
-            fileForOutput.write("\n\n<规则11>----------\n【{}】【{}】的库存减少".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����11>----------\n��{}����{}���Ŀ�����".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write("\n\n<����11>----------\n��{}����{}���Ŀ�����".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             
             if StockChangeBegin == StockChangeEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(StockChangeBegin[0],StockChangeBegin[1],StockChangeBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(StockChangeBegin[0],StockChangeBegin[1],StockChangeBegin[2]) )
             else:
-                fileForOutput.write("在{}为期初，{}为期末的 的 库存少了 {}\n -----------------\n".format(StockChangeBegin[0], StockChangeEnd[0], str(StockChangeEnd[1]-StockChangeBegin[1])))
+                fileForOutput.write("��{}Ϊ�ڳ���{}Ϊ��ĩ�� �� ������� {}\n -----------------\n".format(StockChangeBegin[0], StockChangeEnd[0], str(StockChangeEnd[1]-StockChangeBegin[1])))
             
-            if ItemName=='原油' and Term(operator=GetCountryFromEnglishToChinese,
+            if ItemName=='ԭ��' and Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value == '美国':
-                fileForOutput.write('-> 预测：国际{}的价格上涨\n'.format(ItemName))
-                fileForOutput.write("-> 预测：国际{}的价格 --> ({} -> {})".format(ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('美国库存',)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value == '����':
+                right = '-> Ԥ�⣺����{}�ļ۸�����\n'.format(ItemName)
+                fileForOutput.write('-> Ԥ�⣺����{}�ļ۸�����\n'.format(ItemName))
+                fileForOutput.write("-> Ԥ�⣺����{}�ļ۸� --> ({} -> {})".format(ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
+                                            variables=[ItemName, ('�������',),curNodeNum]),
                             RHS=value).RHS.value))
             else:
-                fileForOutput.write('-> 预测：{}国内{}的价格上涨\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                fileForOutput.write('-> Ԥ�⣺{}����{}�ļ۸�����\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
-                fileForOutput.write("-> 预测：{}国内{}的价格 --> ({} -> {})".format(Term(operator=GetCountryFromEnglishToChinese,
+                right = '-> Ԥ�⣺{}����{}�ļ۸�����\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+                fileForOutput.write("-> Ԥ�⣺{}����{}�ļ۸� --> ({} -> {})".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                            variables=[ItemName, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS=value).RHS.value))
 
                 
             
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                            variables=[ItemName, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                            variables=[ItemName, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS=value))
         
-        
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         self.retract(SE)
         self.retract(SB)
     #     # print(self.facts)
@@ -2970,7 +3106,7 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda countryStockChange1, CountryObject, itemStockChange1,ItemName,endDate,Date_End,beginDate,Date_Begin, curItem: True if countryStockChange1==CountryObject and itemStockChange1==ItemName and ItemName == curItem and Date_End == endDate and Date_Begin == beginDate else False),
           TEST(lambda countryStockChange2, CountryObject, itemStockChange2,ItemName, curItem: True if countryStockChange2==CountryObject and itemStockChange2==ItemName and ItemName == curItem else False),
           TEST(lambda p1,p2, ProductName,curItem: True if p1==p2 and p1[1] == ProductName and p1[0] == curItem else False),
-          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] > 0) if StockChangeEnd!=StockChangeBegin and (StockChangeEnd[1] != 'none' and StockChangeBegin[1] != 'none') else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] > 0 ),        
+          TEST(lambda StockChangeBegin,StockChangeEnd: ( StockChangeEnd[1] - StockChangeBegin[1] > 0) if StockChangeEnd!=StockChangeBegin else (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none') or StockChangeEnd[2] > 0 ),        
         #   AS.f1 << Assertion(LHS__operator=PredictPrice,
         #         LHS__variables__0__value=MATCH.item1,
         #        RHS__value=MATCH.predPrice),     
@@ -2978,12 +3114,17 @@ class reasoning_System(KnowledgeEngine):
           salience=0.5) 
     def rule20(self,company1, CountryObject, ItemName,Date_Begin,Date_End,StockChangeEnd,SE,SB,StockChangeBegin):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
         if (StockChangeEnd[1] == 'none' or StockChangeBegin[1] == 'none'):
-            fileForOutput.write("\n\n<规则20>----------\n 无库存数据")
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+            fileForOutput.write("\n\n<����20>----------\n �޿������")
+            left = "\n\n<����20>----------\n �޿������"
+            self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+                                            variables=[company1, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS='none'))
         else:
             if mode == "manual":
@@ -2995,48 +3136,59 @@ class reasoning_System(KnowledgeEngine):
                 index = 2 
                 index = index - 1 
                 value = getTendency[index]
-            fileForOutput.write("\n\n<规则20>----------\n【{}】【{}】的库存增加".format(Term(operator=GetCountryFromEnglishToChinese,
+            left = "\n\n<����20>----------\n��{}����{}���Ŀ������".format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write("\n\n<����20>----------\n��{}����{}���Ŀ������".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             if StockChangeBegin == StockChangeEnd:
-                fileForOutput.write("\n{}\n {} ,\n 斜率：{}\n -----------------\n".format(StockChangeBegin[0],StockChangeBegin[1],StockChangeBegin[2]) )
+                fileForOutput.write("\n{}\n {} ,\n б�ʣ�{}\n -----------------\n".format(StockChangeBegin[0],StockChangeBegin[1],StockChangeBegin[2]) )
             else:
             
-                fileForOutput.write("在{}为期初，{}为期末的 的 库存多了 {}\n -----------------\n".format(StockChangeBegin[0], StockChangeEnd[0], str(StockChangeEnd[1]-StockChangeBegin[1])))
-            # fileForOutput.write('-> 预测：国际{}的价格下降\n'.format(ItemName))
+                fileForOutput.write("��{}Ϊ�ڳ���{}Ϊ��ĩ�� �� ������ {}\n -----------------\n".format(StockChangeBegin[0], StockChangeEnd[0], str(StockChangeEnd[1]-StockChangeBegin[1])))
+            # fileForOutput.write('-> Ԥ�⣺����{}�ļ۸��½�\n'.format(ItemName))
             
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value == '美国':
-                fileForOutput.write('-> 预测：国际{}的价格下降\n'.format(ItemName))
-                fileForOutput.write("-> 预测：国际{}的价格 --> ({} -> {})\n".format(ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('美国库存',)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value == '����':
+                right = '-> Ԥ�⣺����{}�ļ۸��½�\n'.format(ItemName)
+                fileForOutput.write('-> Ԥ�⣺����{}�ļ۸��½�\n'.format(ItemName))
+                fileForOutput.write("-> Ԥ�⣺����{}�ļ۸� --> ({} -> {})\n".format(ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
+                                            variables=[ItemName, ('�������',),curNodeNum]),
                             RHS=value).RHS.value))
             else:
-                fileForOutput.write('-> 预测：{}国内{}的价格下降\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                right = '-> Ԥ�⣺{}����{}�ļ۸��½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+                fileForOutput.write('-> Ԥ�⣺{}����{}�ļ۸��½�\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
-                fileForOutput.write("-> 预测：{}国内{}的价格 --> ({} -> {})\n".format(Term(operator=GetCountryFromEnglishToChinese,
+                fileForOutput.write("-> Ԥ�⣺{}����{}�ļ۸� --> ({} -> {})\n".format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName, 'plain',Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                            variables=[ItemName, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS=value).RHS.value))
 
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                            variables=[ItemName, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[ItemName, ('{}库存'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                            variables=[ItemName, ('{}���'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),)]),
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value),),curNodeNum]),
                             RHS=value))
         
         self.retract(SE)
         self.retract(SB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
     #     # print(self.facts)
 
     @Rule(AS.e << Exist(Future = MATCH.Future,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -3045,11 +3197,11 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda curProd,ProductName: True if curProd == ProductName else False),
           AS.DE << Assertion(LHS__operator=GetFutureQuote,
                         LHS__variables__1__value=MATCH.endDate,
-                        LHS__variables__2__value='结算价',
+                        LHS__variables__2__value='�����',
                         RHS__value=MATCH.dollarFutureEnd),
           AS.DB << Assertion(LHS__operator=GetFutureQuote,
                         LHS__variables__1__value=MATCH.beginDate,
-                        LHS__variables__2__value='结算价',
+                        LHS__variables__2__value='�����',
                         RHS__value=MATCH.dollarFutureBegin),
         AS.CountryFact << Assertion(LHS__operator=CompanyInfo,
                                     LHS__variables__0__value=MATCH.company1,
@@ -3061,13 +3213,18 @@ class reasoning_System(KnowledgeEngine):
         #   AS.f1 << Assertion(LHS__operator=PredictPrice,
         #         LHS__variables__0__value=MATCH.item1,
         #        RHS__value=MATCH.predPrice),     
-          TEST(lambda ItemName, curItem: True if ItemName in ['原油'] and ItemName == curItem else False),     
+          TEST(lambda ItemName, curItem: True if ItemName in ['ԭ��'] and ItemName == curItem else False),     
           salience=0.49) 
     def rule12(self, CountryObject, ItemName,Date_Begin,Date_End,DE,DB,dollarFutureBegin,dollarFutureEnd):
         # f1.GetRHS().value
-        fileForOutput.write("\n\n<规则12>----------\n美元指数上涨")
-        fileForOutput.write("从{}的{}， 上涨至 {}的{}\n -----------------\n".format(Date_Begin,dollarFutureBegin ,Date_End,dollarFutureEnd))
-        fileForOutput.write('-> 预测：国际{}的价格下降\n'.format(ItemName))
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        left = "\n\n<����12>----------\n��Ԫָ������"
+        fileForOutput.write("\n\n<����12>----------\n��Ԫָ������")
+        fileForOutput.write("��{}��{}�� ������ {}��{}\n -----------------\n".format(Date_Begin,dollarFutureBegin ,Date_End,dollarFutureEnd))
+        right = '-> Ԥ�⣺����{}�ļ۸��½�\n'.format(ItemName)
+        fileForOutput.write('-> Ԥ�⣺����{}�ļ۸��½�\n'.format(ItemName))
         # index = getTendency.index(predPrice)
         if mode == "manual":
             if dollarFutureEnd > dollarFutureBegin:
@@ -3087,18 +3244,22 @@ class reasoning_System(KnowledgeEngine):
         # except:
         #     print('Fact not Found')
         self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                           variables=[ItemName, ('美元指数',)]),
+                                           variables=[ItemName, ('��Ԫָ��',),curNodeNum]),
                         RHS=value))
         self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                           variables=[ItemName, ('美元指数',)]),
+                                           variables=[ItemName, ('��Ԫָ��',),curNodeNum]),
                         RHS=value))
         # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
         # print(f1.RHS.value)
-        fileForOutput.write("-> 预测：国际【{}】的价格 --> ({} -> {})\n".format(ItemName,'plain' ,Assertion(LHS=Term(operator=PredictPrice,
-                                           variables=[ItemName, ('美元指数',)]),
+        fileForOutput.write("-> Ԥ�⣺���ʡ�{}���ļ۸� --> ({} -> {})\n".format(ItemName,'plain' ,Assertion(LHS=Term(operator=PredictPrice,
+                                           variables=[ItemName, ('��Ԫָ��',),curNodeNum]),
                         RHS=value).RHS.value))
         # self.retract(DE)
         # self.retract(DB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
     #     #print(self.facts)
 
     @Rule(AS.e << Exist(Future = MATCH.Future,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -3107,11 +3268,11 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda curProd,ProductName: True if curProd == ProductName else False),
           AS.DE << Assertion(LHS__operator=GetFutureQuote,
                         LHS__variables__1__value=MATCH.endDate,
-                        LHS__variables__2__value='结算价',
+                        LHS__variables__2__value='�����',
                         RHS__value=MATCH.dollarFutureEnd),
           AS.DB << Assertion(LHS__operator=GetFutureQuote,
                         LHS__variables__1__value=MATCH.beginDate,
-                        LHS__variables__2__value='结算价',
+                        LHS__variables__2__value='�����',
                         RHS__value=MATCH.dollarFutureBegin),
         AS.CountryFact << Assertion(LHS__operator=CompanyInfo,
                                     LHS__variables__0__value=MATCH.company1,
@@ -3123,13 +3284,18 @@ class reasoning_System(KnowledgeEngine):
         #   AS.f1 << Assertion(LHS__operator=PredictPrice,
         #         LHS__variables__0__value=MATCH.item1,
         #        RHS__value=MATCH.predPrice),     
-          TEST(lambda ItemName, curItem: True if ItemName in ['原油'] and ItemName == curItem else False),     
+          TEST(lambda ItemName, curItem: True if ItemName in ['ԭ��'] and ItemName == curItem else False),     
           salience=0.5) 
     def rule21(self, CountryObject, ItemName,Date_Begin,Date_End,DE,DB,dollarFutureBegin,dollarFutureEnd):
         # f1.GetRHS().value
-        fileForOutput.write("\n\n<规则21>----------\n美元指数下降")
-        fileForOutput.write("从{}的{}， 下降至 {}的{}\n -----------------\n".format(Date_Begin,dollarFutureBegin ,Date_End,dollarFutureEnd))
-        fileForOutput.write('-> 预测：国际【{}】的价格上涨\n'.format(ItemName))
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        left = "\n\n<����21>----------\n��Ԫָ���½�"
+        fileForOutput.write("\n\n<����21>----------\n��Ԫָ���½�")
+        fileForOutput.write("��{}��{}�� �½��� {}��{}\n -----------------\n".format(Date_Begin,dollarFutureBegin ,Date_End,dollarFutureEnd))
+        right = '-> Ԥ�⣺���ʡ�{}���ļ۸�����\n'.format(ItemName)
+        fileForOutput.write('-> Ԥ�⣺���ʡ�{}���ļ۸�����\n'.format(ItemName))
         # index = getTendency.index(predPrice)
         if mode == "manual":
             if dollarFutureEnd > dollarFutureBegin:
@@ -3149,19 +3315,23 @@ class reasoning_System(KnowledgeEngine):
         # except:
         #     print('Fact not Found')
         self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                           variables=[ItemName, ('美元指数',)]),
+                                           variables=[ItemName, ('��Ԫָ��',),curNodeNum]),
                         RHS=value))
         self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                           variables=[ItemName, ('美元指数',)]),
+                                           variables=[ItemName, ('��Ԫָ��',),curNodeNum]),
                         RHS=value))
         
         # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
         # print(f1.RHS.value)
-        fileForOutput.write("-> 预测：国际{}的价格 --> ({} -> {})\n".format(ItemName,'plain' ,Assertion(LHS=Term(operator=PredictPrice,
-                                           variables=[ItemName, ('美元指数',)]),
+        fileForOutput.write("-> Ԥ�⣺����{}�ļ۸� --> ({} -> {})\n".format(ItemName,'plain' ,Assertion(LHS=Term(operator=PredictPrice,
+                                           variables=[ItemName, ('��Ԫָ��',),curNodeNum]),
                         RHS=value).RHS.value))
         # self.retract(DE)
         # self.retract(DB)
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         # for i in range(len(self.facts)):
         #     try:
         #         print(self.facts[i]['LHS'].operator.name)
@@ -3177,6 +3347,7 @@ class reasoning_System(KnowledgeEngine):
                 LHS__variables__0__value=MATCH.country1,
                 LHS__variables__1__value=MATCH.item1,
                 LHS__variables__2__value=MATCH.label,
+                LHS__variables__3__value=MATCH.nodeNum1,
                 RHS__value=MATCH.supplyTend),
           AS.CountryFact << Assertion(LHS__operator=CompanyInfo,
                                     LHS__variables__0__value=MATCH.company1,
@@ -3187,31 +3358,27 @@ class reasoning_System(KnowledgeEngine):
         #        RHS__value=MATCH.predPrice),  
           TEST(lambda country1, CountryObject, item1, ItemName, curItem: True if country1==CountryObject and item1==ItemName and ItemName == curItem else False),     
           salience=0.8) 
-    def rule2_13(self, CountryObject, ItemName,Date_Begin,Date_End,f1,supplyTend,label,country2):
+    def rule2_13(self, nodeNum1, CountryObject, ItemName,Date_Begin,Date_End,f1,supplyTend,label,country2):
         # f1.GetRHS().value
-        fileForOutput.write("\n<规则2,13>----------\n由 {}预测: 【{}】国内【{}】的供给趋势 --> {}\n-----------------\n".format(label,Term(operator=GetCountryFromEnglishToChinese,
+        
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        left = "\n<����2,13>----------\n�� {}Ԥ��: ��{}�����ڡ�{}���Ĺ������� --> {}\n-----------------\n".format(label,Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName,supplyTend)
+        fileForOutput.write("\n<����2,13>----------\n�� {}Ԥ��: ��{}�����ڡ�{}���Ĺ������� --> {}\n-----------------\n".format(label,Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName,supplyTend))
         
-        # index = getTendency.index(supplyTend)
-        # newIndex = None
-        # if index == 2:
-        #     newIndex = 2
-        # elif index == 0:
-        #     newIndex = 4
-        # elif index == 1:
-        #     newIndex = 3
-        # elif index == 3:
-        #     newIndex = 1
-        # elif index == 4:
-        #     newIndex = 0
         if "up" in supplyTend:
             value = "down" + "-"*supplyTend.count('+')
         elif "down" in supplyTend:
             value = "up" + "+"*supplyTend.count('-')
         else:
             value = "plain"
-        label = label + ('供给趋势变化',)
+
+        label = label + ('�������Ʊ仯',)
         if mode != 'manual':
             self.retract(f1)
         #self.retract(f2)
@@ -3222,28 +3389,44 @@ class reasoning_System(KnowledgeEngine):
             
             country2 = allCountry.returnCountrybyFullName(countryName)
 
-        # 如果预测供给趋势的国家 是公司所在国家，则预测该产品的价格
+        # ���Ԥ�⹩�����ƵĹ��� �ǹ�˾���ڹ��ң���Ԥ��ò�Ʒ�ļ۸�
         if country2 == CountryObject:
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName,label]),
+                                            variables=[ItemName,label,curNodeNum]),
                             RHS=value))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[ItemName,label]),
+                                            variables=[ItemName,label,curNodeNum]),
                             RHS=value))
-        
-        fileForOutput.write("-> 预测：【{}】在【{}】国内的价格 --> ({} -> {})\n".format(ItemName ,Term(operator=GetCountryFromEnglishToChinese,
+        right = "-> Ԥ�⣺��{}���ڡ�{}�����ڵļ۸� --> ({} -> {})\n".format(ItemName ,Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,
                                                                 'plain' ,
                                             Assertion(LHS=Term(operator=PredictPrice,
-                                           variables=[ItemName, label]),
+                                           variables=[ItemName, label,curNodeNum]),
+                        RHS=value).RHS.value)
+        fileForOutput.write("-> Ԥ�⣺��{}���ڡ�{}�����ڵļ۸� --> ({} -> {})\n".format(ItemName ,Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,
+                                                                'plain' ,
+                                            Assertion(LHS=Term(operator=PredictPrice,
+                                           variables=[ItemName, label, curNodeNum]),
                         RHS=value).RHS.value))                        
+        
+        preNodeNum = [nodeNum1]
+        if nodeNum1 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
         # print(self.facts)
 
     @Rule(
           AS.f1 << Assertion(LHS__operator=PredictPrice,
                 LHS__variables__0__value=MATCH.item1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predictPrice),   
           OR(AS.fSon << Assertion(LHS__operator=GetSonProduct,
                                 LHS__variables__0__value=MATCH.item2,
@@ -3265,25 +3448,39 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda item1,item3,item2,productItem, curItem,commodityItem: True if item3 == item1 and item3 == productItem and curItem == item2 and commodityItem == curItem else False),
           TEST(lambda BusinessName, curBusiness, business1: True if BusinessName==curBusiness and curBusiness==business1 else False),
           salience=0.94) 
-    def rule3_7(self, item1, business1,predictPrice, f1,f2,label,fSon = None,fFather = None, fProd = None):
+    def rule3_7(self, nodeNum1, item1, business1,predictPrice, f1,f2,label,fSon = None,fFather = None, fProd = None):
         # f1.GetRHS().value
         # print(item1,commodityItem)
         # print(fSon, fFather, fProd)
-        if label[0] == '美元指数' or label[0] == '美国库存':
-                    fileForOutput.write("\n<规则3,7>----------\n由{}预测国际【{}】的价格 --> {}\n-----------------\n".format(label,item1 ,predictPrice))
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        if label[0] == '��Ԫָ��' or label[0] == '�������':
+            left = "\n<����3,7>----------\n��{}Ԥ����ʡ�{}���ļ۸� --> {}\n-----------------\n".format(label,item1 ,predictPrice)
+            fileForOutput.write("\n<����3,7>----------\n��{}Ԥ����ʡ�{}���ļ۸� --> {}\n-----------------\n".format(label,item1 ,predictPrice))
         else:
-            fileForOutput.write("\n<规则3,7>----------\n由{}预测国内【{}】的价格 --> {}\n-----------------\n".format(label,item1,predictPrice))
+            left = "\n<����3,7>----------\n��{}Ԥ����ڡ�{}���ļ۸� --> {}\n-----------------\n".format(label,item1,predictPrice)
+            fileForOutput.write("\n<����3,7>----------\n��{}Ԥ����ڡ�{}���ļ۸� --> {}\n-----------------\n".format(label,item1,predictPrice))
         
         self.retract(f1)
             #self.retract(f2)
             # self.retract(f3)
-        # index1 = getTendency.index(predictPrice)
-            
-        fileForOutput.write('-> 预测：对应业务收入 【{}】 --> ({} -> {})\n'.format(business1,"plain",predictPrice))
-        label = label + ('对应产品价格变化',)
+        #index1 = getTendency.index(predictPrice)
+
+        right = '-> Ԥ�⣺��Ӧҵ������ ��{}�� --> ({} -> {})\n'.format(business1,"plain",predictPrice)
+        fileForOutput.write('-> Ԥ�⣺��Ӧҵ������ ��{}�� --> ({} -> {})\n'.format(business1,"plain",predictPrice))
+        label = label + ('��Ӧ��Ʒ�۸�仯',)
         self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                        variables=[business1,label]),
+                                        variables=[business1,label,curNodeNum]),
                         RHS=predictPrice))
+        preNodeNum = [nodeNum1]
+        if nodeNum1 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -3298,27 +3495,19 @@ class reasoning_System(KnowledgeEngine):
           AS.f2 << Assertion(LHS__operator=PredictPrice,
                                     LHS__variables__0__value=MATCH.item3,
                                     LHS__variables__1__value=MATCH.label,
+                                    LHS__variables__2__value=MATCH.nodeNum1,
                                     RHS__value=MATCH.predPrice), 
           TEST(lambda item1, item3, item2,curItem: True if item1==item3 and curItem == item1 and item1!= item2 else False),     
           salience=0.95) 
-    def rule71_72and73_74(self, item1, item2,predPrice,CountryObject,f2,label,item3,fFather = None,fSon = None):
+    def rule71_72and73_74(self, nodeNum1, item1, item2,predPrice,CountryObject,f2,label,item3,fFather = None,fSon = None):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if fSon != None:
-            #######need to modify to new rule
-            fileForOutput.write("\n<规则71,72>----------\n由{}预测: 上游产品--【{}】 的价格 --> {}\n-----------------\n".format(label,item1,predPrice))
-            print(predPrice)
-            # index = getTendency.index(predPrice)
-            # newIndex = None
-            # if index == 2:
-            #     newIndex = 2
-            # elif index == 0:
-            #     newIndex = 4
-            # elif index == 1:
-            #     newIndex = 3
-            # elif index == 3:
-            #     newIndex = 1
-            # elif index == 4:
-            #     newIndex = 0
+            
+            left = "\n<����71,72>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� �ļ۸� --> {}\n-----------------\n".format(label,item1,predPrice)
+            fileForOutput.write("\n<����71,72>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� �ļ۸� --> {}\n-----------------\n".format(label,item1,predPrice))
             if "up" in predPrice:
                 value = "down" + "-"*predPrice.count('+')
             elif "down" in predPrice:
@@ -3326,23 +3515,38 @@ class reasoning_System(KnowledgeEngine):
             else:
                 value = "plain"
             
-            label = label + ('上游产品价格变动',)
-            fileForOutput.write('-> 预测：下游产品 【{}】 的价格 --> ({} -> {})\n'.format(item2,'plain',predPrice))
+            label = label + ('���β�Ʒ�۸�䶯',)
+            right = '-> Ԥ�⣺���β�Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item2,'plain',predPrice)
+            fileForOutput.write('-> Ԥ�⣺���β�Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item2,'plain',predPrice))
             
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[item2,label]),
+                                            variables=[item2,label,curNodeNum ]),
                             RHS=predPrice))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[item2,label]),
+                                            variables=[item2,label,curNodeNum]),
                             RHS=predPrice))
-            
-            fileForOutput.write("\n<规则73,74>----------\n由{}预测: 上游产品--【{}】 的价格 --> {}\n-----------------\n".format(label,item1,predPrice))
-            label = label + ('上游产品价格变动',)
-            fileForOutput.write('-> 预测：下游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',value))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
+
+            left = "\n<����73,74>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� �ļ۸� --> {}\n-----------------\n".format(label,item1,predPrice)
+
+            fileForOutput.write("\n<����73,74>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� �ļ۸� --> {}\n-----------------\n".format(label,item1,predPrice))
+            label = label + ('���β�Ʒ�۸�䶯',)
+            right = '-> Ԥ�⣺���β�Ʒ ��{}�� ������ --> ({} -> {})\n'.format(item2,'plain',value)
+            fileForOutput.write('-> Ԥ�⣺���β�Ʒ ��{}�� ������ --> ({} -> {})\n'.format(item2,'plain',value))
             self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject,item2,label]),
+                                            variables=[CountryObject,item2,label,curNodeNum]),
                             RHS=value))
+            
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
     
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -3358,21 +3562,35 @@ class reasoning_System(KnowledgeEngine):
           AS.f2 << Assertion(LHS__operator=PredictPrice,
                                     LHS__variables__0__value=MATCH.item3,
                                     LHS__variables__1__value=MATCH.label,
+                                    LHS__variables__2__value=MATCH.nodeNum1,
                                     RHS__value=MATCH.predPrice), 
           TEST(lambda item1, item3, item2,curItem: True if item1==item3 and curItem == item1 and item1!= item2 else False),     
           salience=0.95) 
-    def rule9_18(self, item1, item2,predPrice,CountryObject,f2,label,item3,fFather = None,fSon = None):
+    def rule9_18(self,nodeNum1, item1, item2,predPrice,CountryObject,f2,label,item3,fFather = None,fSon = None):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if fFather != None:
-            fileForOutput.write("\n<规则9,18>----------\n由{}预测: 下游产品--【{}】 的价格 --> {}\n-----------------\n".format(label,item1,predPrice))
-            # index = getTendency.index(predPrice)
+            left = "\n<����9,18>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� �ļ۸� --> {}\n-----------------\n".format(label,item1,predPrice)
+            fileForOutput.write("\n<����9,18>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� �ļ۸� --> {}\n-----------------\n".format(label,item1,predPrice))
+            #index = getTendency.index(predPrice)
             
-            label = label + ('下游产品价格变动',)
-            fileForOutput.write('-> 预测：上游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',predPrice))
+            label = label + ('���β�Ʒ�۸�䶯',)
+            right = '-> Ԥ�⣺���β�Ʒ ��{}�� ������ --> ({} -> {})\n'.format(item2,'plain',predPrice)
+            fileForOutput.write('-> Ԥ�⣺���β�Ʒ ��{}�� ������ --> ({} -> {})\n'.format(item2,'plain',predPrice))
             self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject,item2,label]),
+                                            variables=[CountryObject,item2,label,curNodeNum]),
                             RHS=predPrice))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
     
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -3387,22 +3605,36 @@ class reasoning_System(KnowledgeEngine):
           AS.f2 << Assertion(LHS__operator=GetDemandTendency,
                 LHS__variables__1__value=MATCH.item3,
                 LHS__variables__2__value=MATCH.label,
+                LHS__variables__3__value=MATCH.nodeNum1,
                 RHS__value=MATCH.demandTend),  
           TEST(lambda item1, item3, item2,curItem: True if item1==item3 and curItem == item1 else False),     
           salience=0.95) 
-    def rule25_29(self, item1, item2,demandTend,CountryObject,f2,label,item3,fFather = None,fSon = None):
+    def rule25_29(self, nodeNum1,item1, item2,demandTend,CountryObject,f2,label,item3,fFather = None,fSon = None):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if fFather != None:
-            fileForOutput.write("\n<规则25,29>----------\n由{}预测: 下游产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            # index = getTendency.index(demandTend)
+            left = "\n<����25,29>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend)
+            fileForOutput.write("\n<����25,29>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend))
+            #index = getTendency.index(demandTend)
             
-            label = label + ('下游产品价格变动',)
-            fileForOutput.write('-> 预测：上游产品 【{}】 的需求 --> ({} -> {})\n'.format(item2,'plain',demandTend))
+            label = label + ('���β�Ʒ�۸�䶯',)
+            right = '-> Ԥ�⣺���β�Ʒ ��{}�� ������ --> ({} -> {})\n'.format(item2,'plain',demandTend)
+            fileForOutput.write('-> Ԥ�⣺���β�Ʒ ��{}�� ������ --> ({} -> {})\n'.format(item2,'plain',demandTend))
             if mode != 'manual':
                 self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject,item2,label]),
+                                            variables=[CountryObject,item2,label,curNodeNum]),
                             RHS=demandTend))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
     
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
@@ -3420,51 +3652,74 @@ class reasoning_System(KnowledgeEngine):
           AS.f2 << Assertion(LHS__operator=GetDemandTendency,
                 LHS__variables__1__value=MATCH.item3,
                 LHS__variables__2__value=MATCH.label,
+                LHS__variables__3__value=MATCH.nodeNum1,
                 RHS__value=MATCH.demandTend),  
           TEST(lambda item1, item3, item2,curItem: True if item1==item3 and curItem == item1 else False),     
           salience=0.95) 
-    def rule4_14(self, item1, item2,demandTend,CountryObject,f2,label,item3,fFather = None,fSon = None, fProd = None):
+    def rule4_14(self, nodeNum1,item1, item2,demandTend,CountryObject,f2,label,item3,fFather = None,fSon = None, fProd = None):
         # f1.GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if fSon != None:
+            left = "\n<����4,14>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend)
+            fileForOutput.write("\n<����4,14>----------\n��{}Ԥ��: ���β�Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend))
+            #index = getTendency.index(demandTend)
             
-            fileForOutput.write("\n<规则4,14>----------\n由{}预测: 上游产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            # index = getTendency.index(demandTend)
-            
-            label = label + ('上游产品需求趋势变动',)
-            fileForOutput.write('-> 预测：上游产品 【{}】 的价格 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            label = label + ('���β�Ʒ�������Ʊ䶯',)
+            right = '-> Ԥ�⣺���β�Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item1,'plain',demandTend)
+            fileForOutput.write('-> Ԥ�⣺���β�Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item1,'plain',demandTend))
             if mode != 'manual':
                 self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
         elif fFather != None:
-            #"与rule10_19结合"
+            #"��rule10_19���"
             pass
             
         elif fProd != None:
+            left = "\n<����4,14>----------\n��{}Ԥ��: ��˾��Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend)
+            fileForOutput.write("\n<����4,14>----------\n��{}Ԥ��: ��˾��Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend))
+            #index = getTendency.index(demandTend)
             
-            fileForOutput.write("\n<规则4,14>----------\n由{}预测: 公司产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            # index = getTendency.index(demandTend)
-            
-            label = label + ('公司产品需求趋势变动',)
-            fileForOutput.write('-> 预测：公司产品 【{}】 的价格 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            label = label + ('��˾��Ʒ�������Ʊ䶯',)
+            right = '-> Ԥ�⣺��˾��Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item1,'plain',demandTend)
+            fileForOutput.write('-> Ԥ�⣺��˾��Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item1,'plain',demandTend))
             if mode != 'manual':
                 self.retract(f2)
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
         
         
     @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.f1 << Assertion(LHS__operator=GetDemandTendency,
                 LHS__variables__1__value=MATCH.item1,
                 LHS__variables__2__value=MATCH.label,
+                LHS__variables__3__value=MATCH.nodeNum1,
                 RHS__value=MATCH.demandTend),     
           AS.f2 << Assertion(LHS__operator=GetBusinessProduct,
                                     LHS__variables__0__value=MATCH.business1,
@@ -3482,9 +3737,12 @@ class reasoning_System(KnowledgeEngine):
                                     ),
           TEST(lambda item1,itemF,itemS, productItem, curItem,curProd,commodityItem: True if commodityItem==curItem and item1==itemS and productItem == itemS and itemF == curItem and itemS == curProd else False),       
           salience=0.95) 
-    def rule4_14and10_19(self, item1,demandTend,label,f1,itemF,business1,fSon = None, fFather = None, fProd = None):
+    def rule4_14and10_19(self, nodeNum1,item1,demandTend,label,f1,itemF,business1,fSon = None, fFather = None, fProd = None):
         # index = 2
         # index2 = 2
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         # if demandTend == 'up':
         #     index +=1
         #     index2-=1
@@ -3494,39 +3752,66 @@ class reasoning_System(KnowledgeEngine):
         # f1.GetRHS().value
         if fSon != None:
                    
-            
-            fileForOutput.write("\n<规则10,19>----------\n由{}预测: 【{}】的需求趋势 --> {}\n-----------------\n".format(label, item1,demandTend))
-            label = label + ('需求趋势变化',)
+            left = "\n<����10,19>----------\n��{}Ԥ��: ��{}������������ --> {}\n-----------------\n".format(label, item1,demandTend)
+            fileForOutput.write("\n<����10,19>----------\n��{}Ԥ��: ��{}������������ --> {}\n-----------------\n".format(label, item1,demandTend))
+            label = label + ('�������Ʊ仯',)
             self.declare(Assertion(LHS=Term(operator=PredictSales,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
             # self.declare(Assertion(LHS=Term(operator=PredictIncome,
             #                             variables=[business1,label]),
             #             RHS='plain'))
-            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            self.declare(Assertion(LHS=Term(operator=PredictIncome,
+                                        variables=[business1,label,curNodeNum]),
+                        RHS='plain'))
+            right = '-> Ԥ�⣺{} ������ --> ({} -> {})\n'.format(item1,'plain',demandTend)
+            fileForOutput.write('-> Ԥ�⣺{} ������ --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
+            
             # if mode != 'manual':
             #     self.retract(f1)
         elif fFather != None:
-
-            fileForOutput.write("\n<规则4,14>----------\n由{}预测: 公司产品--【{}】 的需求趋势 --> {}\n-----------------\n".format(label,item1,demandTend))
-            # index = getTendency.index(demandTend)
+            left = "\n<����4,14>----------\n��{}Ԥ��: ��˾��Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend)
+            fileForOutput.write("\n<����4,14>----------\n��{}Ԥ��: ��˾��Ʒ--��{}�� ���������� --> {}\n-----------------\n".format(label,item1,demandTend))
+            #index = getTendency.index(demandTend)
             
-            label = label + ('公司产品需求趋势变动',)
-            fileForOutput.write('-> 预测：公司产品 【{}】 的价格 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            label = label + ('��˾��Ʒ�������Ʊ䶯',)
+            right = '-> Ԥ�⣺��˾��Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item1,'plain',demandTend)
+            fileForOutput.write('-> Ԥ�⣺��˾��Ʒ ��{}�� �ļ۸� --> ({} -> {})\n'.format(item1,'plain',demandTend))
             
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
             
-            
-            fileForOutput.write("\n<规则10,19>----------\n由{}预测: 【{}】的需求趋势 --> {}\n-----------------\n".format(label, item1,demandTend))
+
+            left = "\n<����10,19>----------\n��{}Ԥ��: ��{}������������ --> {}\n-----------------\n".format(label, item1,demandTend)
+            fileForOutput.write("\n<����10,19>----------\n��{}Ԥ��: ��{}������������ --> {}\n-----------------\n".format(label, item1,demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictSales,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
-            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            right = '-> Ԥ�⣺{} ������ --> ({} -> {})\n'.format(item1,'plain',demandTend)
+            fileForOutput.write('-> Ԥ�⣺{} ������ --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
             # if mode != 'manual':
             #     self.retract(f1)
         elif fProd!= None:
@@ -3538,28 +3823,38 @@ class reasoning_System(KnowledgeEngine):
             #     index = 2
             #     index -=1
 
-            
-            fileForOutput.write("\n<规则10,19>----------\n由{}预测: 【{}】的需求趋势 --> {}\n-----------------\n".format(label, item1,demandTend))
+            left = "\n<����10,19>----------\n��{}Ԥ��: ��{}������������ --> {}\n-----------------\n".format(label, item1,demandTend)
+            fileForOutput.write("\n<����10,19>----------\n��{}Ԥ��: ��{}������������ --> {}\n-----------------\n".format(label, item1,demandTend))
             self.declare(Assertion(LHS=Term(operator=PredictSales,
-                                            variables=[item1,label]),
+                                            variables=[item1,label,curNodeNum]),
                             RHS=demandTend))
-            
-            self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                        variables=[business1,label]),
-                        RHS='plain'))
-            fileForOutput.write('-> 预测：{} 的销量 --> ({} -> {})\n'.format(item1,'plain',demandTend))
-            # if mode != 'manual':
+            # self.declare(Assertion(LHS=Term(operator=PredictIncome,
+            #                             variables=[business1,label]),
+            #             RHS='plain'))
+            right = '-> Ԥ�⣺{} ������ --> ({} -> {})\n'.format(item1,'plain',demandTend)
+            fileForOutput.write('-> Ԥ�⣺{} ������ --> ({} -> {})\n'.format(item1,'plain',demandTend))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
+            #if mode != 'manual':
         self.retract(f1)
 
-    # 从该处开始是新加入的
+    # �Ӹô���ʼ���¼����
     @Rule(
           AS.f1 << Assertion(LHS__operator=PredictIncome,
                 LHS__variables__0__value=MATCH.business1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predIncome),
           AS.f2 << Assertion(LHS__operator=PredictSales,
                 LHS__variables__0__value=MATCH.item1,
                 LHS__variables__1__value=MATCH.label2,
+                LHS__variables__2__value=MATCH.nodeNum2,
                 RHS__value=MATCH.predSales),
           OR(AS.fSon << Assertion(LHS__operator=GetSonProduct,
                                 LHS__variables__0__value=MATCH.item2,
@@ -3581,11 +3876,24 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda item1,item3,item2,productItem, curItem,curProd,commodityItem: True if commodityItem == curItem and item3 == item1 and item2 == curItem and productItem == curProd else False),
           TEST(lambda BusinessName, curBusiness, business1,business2: True if BusinessName==curBusiness and curBusiness==business1 and business1 == business2 else False),
           salience=0.93)
-    def inner_rule25_26(self, business1, predIncome,label,label2,f1,f2,item1,predSales):
-        fileForOutput.write("\n<内规则25,26>----------\n由{}产品【{}】的销量 --> {}\n".format(label2,item1,predSales))
+    def inner_rule25_26(self,nodeNum1,nodeNum2, business1, predIncome,label,label2,f1,f2,item1,predSales):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        left = "\n<�ڹ���25,26>----------\n��{}��Ʒ��{}�������� --> {}\n".format(label2,item1,predSales)
+        fileForOutput.write("\n<�ڹ���25,26>----------\n��{}��Ʒ��{}�������� --> {}\n".format(label2,item1,predSales))
         # index = getTendency.index(predIncome)
         # index2 = getTendency.index(predSales)
-
+        # import math
+        # if (newIndex+index2)/2 < 2:
+        #     index = math.floor((newIndex+index2)/2 )
+        # else:
+        #     index = math.ceil((newIndex+index2)/2 )
+        # index = (index+index2) - 2
+        # if index > 4: 
+        #     index = 4
+        # if index < 0:
+        #     index = 0
         if "up" in predIncome and "up" in predSales:
             value = "up" + "+" * predIncome.count("+") + "+" * predSales.count("+") + "+"
         elif "down" in predIncome and "down" in predSales:
@@ -3613,46 +3921,60 @@ class reasoning_System(KnowledgeEngine):
                     value = predIncome
                 else:
                     value = "plain"
-        # import math
-        # if (newIndex+index2)/2 < 2:
-        #     index = math.floor((newIndex+index2)/2 )
-        # else:
-        #     index = math.ceil((newIndex+index2)/2 )
-        # index = (index+index2) - 2
-        # if index > 4: 
-        #     index = 4
-        # if index < 0:
-        #     index = 0
-        
-        fileForOutput.write('-----------------\n-> 预测：对应业务 【{}】 的业务收入 --> ({} -> {})\n'.format(business1,predIncome, value))
+
+        right = '\n-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ������ --> ({} -> {})\n'.format(business1,predIncome, value)
+        fileForOutput.write('-----------------\n-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ������ --> ({} -> {})\n'.format(business1,predIncome, value))
         # print(business1)
         
         self.retract(f1)
         self.retract(f2)
-        label = label + ('产品销量',)
+        label = label + ('��Ʒ����',)
         self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                           variables=[business1,label]),
+                                           variables=[business1,label,curNodeNum]),
                         RHS=value))
+        preNodeNum = [nodeNum1,nodeNum2]
+        
+        if nodeNum1 == 0 and nodeNum2 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
     @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.f1 << Assertion(LHS__operator=PredictIncome,
                 LHS__variables__0__value=MATCH.business1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predIncome),
           TEST(lambda business1,curBusiness: business1 == curBusiness),
           salience=0.92)
-    def inner_rule5_6(self,business1, curBusiness,curProd,curItem, predIncome,label,f1):
-        fileForOutput.write("\n<内规则5,6>----------\n由{}业务 【{}】 的收入 --> {}\n".format(label,business1,predIncome))
-        fileForOutput.write('-> 预测：对应业务 【{}】 的业务净利润 --> ({} -> {})\n'.format(business1,'plain', predIncome))
+    def inner_rule5_6(self,nodeNum1,business1, curBusiness,curProd,curItem, predIncome,label,f1):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        left = "\n<�ڹ���5,6>----------\n��{}ҵ�� ��{}�� ������ --> {}\n".format(label,business1,predIncome)
+        fileForOutput.write("\n<�ڹ���5,6>----------\n��{}ҵ�� ��{}�� ������ --> {}\n".format(label,business1,predIncome))
+        right = '-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ������ --> ({} -> {})\n'.format(business1,'plain', predIncome)
+        fileForOutput.write('-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ������ --> ({} -> {})\n'.format(business1,'plain', predIncome))
         
-        result[-1].addResult(Company1,'收入', (curBusiness,curProd,curItem),predIncome)
+        result[-1].addResult(Company1,'����', (curBusiness,curProd,curItem),predIncome)
         # print(business1)
         self.retract(f1)
         
-        label = label + ('业务收入变动',)
+        label = label + ('ҵ������䶯',)
         self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
-                                           variables=[business1,label]),
+                                           variables=[business1,label,curNodeNum]),
                         RHS=predIncome))
+        preNodeNum = [nodeNum1]
+        if nodeNum1 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
 
     @Rule(
@@ -3675,6 +3997,7 @@ class reasoning_System(KnowledgeEngine):
           AS.f3 << Assertion(LHS__operator=PredictPrice_inner,
                                     LHS__variables__0__value=MATCH.item3,
                                     LHS__variables__1__value=MATCH.label,
+                                    LHS__variables__2__value=MATCH.nodeNum1,
                                     RHS__value=MATCH.predPrice),
           AS.f4 << Assertion(LHS__operator=PredictNetProfit,
                 LHS__variables__0__value=MATCH.business2,
@@ -3683,43 +4006,73 @@ class reasoning_System(KnowledgeEngine):
             TEST(lambda business1, business2, curBusiness: True if business1 == business2 and business1 == curBusiness else False),
           TEST(lambda item2, productItem, item1, item3, curItem, curProd,commodityItem: True if commodityItem == curItem and item1==curItem and productItem == curProd and item1 == item3 else False),
           salience=0.92)
-    def inner_rule1_2(self, business1, item1, item2, item3, predPrice,label,f3,fSon = None, fFather = None, fProd = None):
+    def inner_rule1_2(self, nodeNum1,business1, item1, item2, item3, predPrice,label,f3,fSon = None, fFather = None, fProd = None):
         # print(item1, item2, item3,commodityItem)
         
         # print(fSon,fFather)
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
 
         if fSon != None:
-            fileForOutput.write("\n<内规则1,2>----------\n由{}业务 【{}】 对应的商品【{}】的原料【{}】价格 --> {}\n".format(label,business1,item2,item1, predPrice))
+            left = "\n<�ڹ���1,2>----------\n��{}ҵ�� ��{}�� ��Ӧ����Ʒ��{}����ԭ�ϡ�{}���۸� --> {}\n".format(label,business1,item2,item1, predPrice)
+            fileForOutput.write("\n<�ڹ���1,2>----------\n��{}ҵ�� ��{}�� ��Ӧ����Ʒ��{}����ԭ�ϡ�{}���۸� --> {}\n".format(label,business1,item2,item1, predPrice))
             
             #print(predNetProfit)
-            # index1 = getTendency.index(predPrice)
-            fileForOutput.write('-> 预测：对应业务 【{}】 的业务成本 --> ({} -> {})\n'.format(business1,'plain',predPrice))
+            #index1 = getTendency.index(predPrice)
+            right = '-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ��ɱ� --> ({} -> {})\n'.format(business1,'plain',predPrice)
+            fileForOutput.write('-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ��ɱ� --> ({} -> {})\n'.format(business1,'plain',predPrice))
             # self.retract(f1)
             self.retract(f3)
-            label = label + ('原料价格变动',)
+            label = label + ('ԭ�ϼ۸�䶯',)
             self.declare(Assertion(LHS=Term(operator=PredictCost,
-                                            variables=[business1,label]),
+                                            variables=[business1,label,curNodeNum]),
                             RHS=predPrice))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
         elif fFather != None or fProd!= None:
             self.retract(f3)
-            label = label + ('原料价格无变动',)
+            left = "\n<�ڹ���1,2>---------- ԭ�ϼ۸��ޱ䶯\n"
+            
+            label = label + ('ԭ�ϼ۸��ޱ䶯',)
             self.declare(Assertion(LHS=Term(operator=PredictCost,
-                                            variables=[business1,label]),
+                                            variables=[business1,label,curNodeNum]),
                             RHS='plain'))
+            preNodeNum = [nodeNum1]
+            if nodeNum1 == 0:
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            else:
+                curNodeNum +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
     @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.f1 << Assertion(LHS__operator=PredictCost,
                 LHS__variables__0__value=MATCH.business1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predCost),
           AS.f2 << Assertion(LHS__operator=PredictNetProfit,
                 LHS__variables__0__value=MATCH.business1,
                 LHS__variables__1__value=MATCH.label2,
+                LHS__variables__2__value=MATCH.nodeNum2,
                 RHS__value=MATCH.predNetProfit),
           TEST(lambda curBusiness,business1: curBusiness == business1),
           salience=0.9)
-    def inner_rule3_4(self, business1,curBusiness,curProd,curItem, predCost,label,predNetProfit,f1,f2):
-        fileForOutput.write("\n<内规则3,4>----------\n由{}业务 【{}】 的业务成本 --> {}\n".format(label,business1, predCost))
+    def inner_rule3_4(self,nodeNum1,nodeNum2, business1,curBusiness,curProd,curItem, predCost,label,predNetProfit,f1,f2):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
+        left = "\n<�ڹ���3,4>----------\n��{}ҵ�� ��{}�� ��ҵ��ɱ� --> {}\n".format(label,business1, predCost)
+        fileForOutput.write("\n<�ڹ���3,4>----------\n��{}ҵ�� ��{}�� ��ҵ��ɱ� --> {}\n".format(label,business1, predCost))
         # index = getTendency.index(predCost)
         # newIndex = None
         # if index == 2:
@@ -3732,14 +4085,14 @@ class reasoning_System(KnowledgeEngine):
         #     newIndex = 1
         # elif index == 4:
         #     newIndex = 0
+        # index2 = getTendency.index(predNetProfit)
         if "up" in predCost:
             value = "down" + "-"*predCost.count('+')
         elif "down" in predCost:
             value = "up" + "+"*predCost.count('-')
         else:
             value = "plain"
-        # index2 = getTendency.index(predNetProfit)
-        print(value,predNetProfit)
+        
         if "up" in value and "up" in predNetProfit:
             value2 = "up" + "+" * value.count("+") + "+" * predNetProfit.count("+") + "+"
         elif "down" in value and "down" in predNetProfit:
@@ -3767,8 +4120,9 @@ class reasoning_System(KnowledgeEngine):
                     value2 = value
                 else:
                     value2 = "plain"
+
         
-        result[-1].addResult(Company1,'成本', (curBusiness,curProd,curItem),predCost)
+        result[-1].addResult(Company1,'�ɱ�', (curBusiness,curProd,curItem),predCost)
             
         # import math
         # if (newIndex+index2)/2 < 2:
@@ -3781,20 +4135,31 @@ class reasoning_System(KnowledgeEngine):
         # if index < 0:
         #     index = 0
         
-        label = label + ('业务成本变动',)
+        label = label + ('ҵ��ɱ��䶯',)
         self.retract(f1)
         self.retract(f2)
-        
-        fileForOutput.write("\n业务利润 --> {}\n".format(value2))
+        # getTendency[index]
+        right = '-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ������ --> ({} -> {})\n'.format(business1,predNetProfit, value2)
+        fileForOutput.write("\nҵ������ --> {}\n".format(value2))
         self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
-                                           variables=[business1,label]),
+                                           variables=[business1,label,curNodeNum]),
                         RHS=value2))
-        fileForOutput.write('-> 预测：对应业务 【{}】 的业务利润 --> ({} -> {})\n'.format(business1,predNetProfit, value2))
+        fileForOutput.write('-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ������ --> ({} -> {})\n'.format(business1,predNetProfit, value2))
+
+        preNodeNum = [nodeNum1,nodeNum2]
+        if nodeNum1 == 0 and nodeNum2 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
     @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.f1 << Assertion(LHS__operator=PredictNetProfit,
                 LHS__variables__0__value=MATCH.business1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predProfit),
           AS.f2 << Assertion(LHS__operator=GetBusiness,
                 LHS__variables__0__value=MATCH.company1,
@@ -3802,9 +4167,16 @@ class reasoning_System(KnowledgeEngine):
          TEST(lambda curBusiness,business1: curBusiness == business1),
           TEST(lambda business2, business1, label: True if business1 in business2 else False), 
           salience=0.9)
-    def inner_rule7_8(self, business1, company1, predProfit, label, f1):
-        fileForOutput.write("\n<内规则7,8>----------\n由{}公司【{}】 的业务 【{}】 的业务利润 --> {}\n".format(label, company1.name, business1, predProfit))
-        fileForOutput.write('-> 预测：该公司 【{}】 的净利润 --> ({} -> {})\n'.format(company1.name,'plain', predProfit))
+    def inner_rule7_8(self,nodeNum1, business1, company1, predProfit, label, f1):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        left = "\n<�ڹ���7,8>----------\n��{}��˾��{}�� ��ҵ�� ��{}�� ��ҵ������ --> {}\n".format(label, company1.name, business1, predProfit)
+
+        fileForOutput.write("\n<�ڹ���7,8>----------\n��{}��˾��{}�� ��ҵ�� ��{}�� ��ҵ������ --> {}\n".format(label, company1.name, business1, predProfit))
+        
+        right = '-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(company1.name,'plain', predProfit)
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(company1.name,'plain', predProfit))
         try:
             self.retract(f1)
         except:
@@ -3814,48 +4186,82 @@ class reasoning_System(KnowledgeEngine):
         #                                             variables=[business1,'none']),
         #                         RHS= 'plain')
         #                     )
-        label = label + ('业务利润变动',)
+        label = label + ('ҵ������䶯',)
         self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                           variables=[company1, label]),
+                                           variables=[company1, label,curNodeNum]),
                         RHS=predProfit))
+        preNodeNum = [nodeNum1]
+        if nodeNum1 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
     @Rule(
           AS.f1 << Assertion(LHS__operator=PredictCompanyNetProfit,
                 LHS__variables__0__value=MATCH.company1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predProfit),
           salience=0.9)
-    def inner_rule9_10(self, company1, predProfit, label, f1):
-        fileForOutput.write("\n<内规则9,10>----------\n由{}公司[{}] 的净利润 --> {}\n".format(label, company1.name, predProfit))
-        fileForOutput.write('-> 预测：该公司 [{}] 的净利率 --> ({} -> {})\n'.format(company1.name,'plain', predProfit))
+    def inner_rule9_10(self, nodeNum1,company1, predProfit, label, f1):
+        global net,ColorCount,curNodeNum
+        left = "\n<�ڹ���9,10>----------\n��{}��˾[{}] �ľ����� --> {}\n".format(label, company1.name, predProfit)
+        fileForOutput.write("\n<�ڹ���9,10>----------\n��{}��˾[{}] �ľ����� --> {}\n".format(label, company1.name, predProfit))
+        right= '-> Ԥ�⣺�ù�˾ [{}] �ľ����� --> ({} -> {})\n'.format(company1.name,'plain', predProfit)
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ [{}] �ľ����� --> ({} -> {})\n'.format(company1.name,'plain', predProfit))
         #self.retract(f1)
-        label = label + ('公司净利润变化',)
+        label = label + ('��˾������仯',)
         self.declare(Assertion(LHS=Term(operator=PredictCompanyProfitMargin,
-                                            variables=[company1,label]),
+                                            variables=[company1,label,curNodeNum]),
                         RHS=predProfit))
+
+        preNodeNum = [nodeNum1]
+        if nodeNum1 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
     @Rule(
           AS.f1 << Assertion(LHS__operator=PredictCompanyNetProfit,
                 LHS__variables__0__value=MATCH.company1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predProfit),
           salience=0.9)
-    def inner_rule11_12(self, company1, predProfit, label, f1):
-        fileForOutput.write("\n<内规则11,12>----------\n由{}公司[{}] 的净利润 --> {}\n".format(label, company1.name, predProfit))
-        fileForOutput.write('-> 预测：该公司 [{}] 的EPS --> ({} -> {})\n'.format(company1.name,'plain', predProfit))
+    def inner_rule11_12(self, nodeNum1,company1, predProfit, label, f1):
+        global net,ColorCount,curNodeNum
+        left = "\n<�ڹ���11,12>----------\n��{}��˾[{}] �ľ����� --> {}\n".format(label, company1.name, predProfit)
+        fileForOutput.write("\n<�ڹ���11,12>----------\n��{}��˾[{}] �ľ����� --> {}\n".format(label, company1.name, predProfit))
+        right ='-> Ԥ�⣺�ù�˾ [{}] ��EPS --> ({} -> {})\n'.format(company1.name,'plain', predProfit)
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ [{}] ��EPS --> ({} -> {})\n'.format(company1.name,'plain', predProfit))
         self.retract(f1)
         
-        label = label + ('公司净利润变化',)
+        label = label + ('��˾������仯',)
 
         self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[company1,label]),
+                                            variables=[company1,label,curNodeNum]),
                         RHS=predProfit))
+        preNodeNum = [nodeNum1]
+        if nodeNum1 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
 
     @Rule(
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.f1 << Assertion(LHS__operator=PredictEPS,
                 LHS__variables__0__value=MATCH.company1,
                 LHS__variables__1__value=MATCH.label,
+                LHS__variables__2__value=MATCH.nodeNum1,
                 RHS__value=MATCH.predEPS),
         #   OR(AS.fSon << Assertion(LHS__operator=GetSonProduct_inner,
         #                         LHS__variables__0__value=MATCH.item1,
@@ -3868,10 +4274,12 @@ class reasoning_System(KnowledgeEngine):
         #                         RHS__value=MATCH.item2)),
         #   TEST(lambda item2, curProd, curItem, item1: True if item2 == curProd and item1 == curItem else False),
           salience=0.9)
-    def inner_rule13_14(self, company1, predEPS, label,f1,index,a,curBusiness,curProd,curItem,item1 = None,fSon = None, fFather = None,fProd = None):
-        
+    def inner_rule13_14(self,nodeNum1, company1, predEPS, label,f1,index,a,curBusiness,curProd,curItem,item1 = None,fSon = None, fFather = None,fProd = None):
+        global net,ColorCount,curNodeNum
         if predEPS == 'none':
-            fileForOutput.write("\n<内规则13,14>----------\n由{}公司【{}】 的EPS --> {}\n".format(label, company1.name,predEPS))
+            left = "\n<�ڹ���13,14>----------\n��{}��˾��{}�� ��EPS --> {}\n".format(label, company1.name,predEPS)
+            right = "�ù�˾��PE->None"
+            fileForOutput.write("\n<�ڹ���13,14>----------\n��{}��˾��{}�� ��EPS --> {}\n".format(label, company1.name,predEPS))
             self.retract(f1)
         else:
             # index = getTendency.index(predEPS)
@@ -3892,17 +4300,39 @@ class reasoning_System(KnowledgeEngine):
                 value = "up" + "+"*predEPS.count('-')
             else:
                 value = "plain"
-            fileForOutput.write("\n<内规则13,14>----------\n由{}公司【{}】 的EPS --> {}\n".format(label, company1.name, predEPS))
-            fileForOutput.write('-> 预测：该公司 【{}】 的PE --> ({} -> {})\n'.format(company1.name,'plain', value))
+
+            left = "\n<�ڹ���13,14>----------\n��{}��˾��{}�� ��EPS --> {}\n".format(label, company1.name, predEPS)
+            fileForOutput.write("\n<�ڹ���13,14>----------\n��{}��˾��{}�� ��EPS --> {}\n".format(label, company1.name, predEPS))
+            right = '-> Ԥ�⣺�ù�˾ ��{}�� ��PE --> ({} -> {})\n'.format(company1.name,'plain', value)
+            fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��PE --> ({} -> {})\n'.format(company1.name,'plain', value))
             self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=PredictPE,
-                                                variables=[company1, label]),
+                                                variables=[company1, label,curNodeNum]),
                             RHS=value))
         # print(mode)
             if curBusiness == 'none':
                 curBusiness = label[0]
-            result[-1].addResult(company1,'利润', (curBusiness,curProd,curItem),predEPS)
+            result[-1].addResult(company1,'����', (curBusiness,curProd,curItem),predEPS)
+        preNodeNum = [nodeNum1]
+        if nodeNum1 == 0:
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        else:
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
         
+        
+        predEPSKey = 'plain'
+        if predEPS in ['down', 'down-']:
+            predEPSKey = 0
+        elif predEPS in ['up', 'up+']:
+            predEPSKey = 2
+        else:
+            predEPSKey = 1
+        global result_tmp
+        result_tmp[predEPSKey] += 1
+
         # if item1 == 'none':
         #     try:
         #         self.retract(fSon)
@@ -3922,17 +4352,24 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda curProd, curBusiness, curItem: True if curProd == 'nil' and curItem == 'nil' else False),
           salience=0.9)
     def inner_rule13_14_b(self, curBusiness,curItem,curProd, company1,a):
-        
-        fileForOutput.write("\n<内规则13,14>----------\n公司业务【{}】的产品与期货商品无法关联 或者 无数据来源， 的EPS --> {}\n".format(curBusiness, 'none'))
-        fileForOutput.write('-> 预测：该公司 【{}】 的PE --> ({} -> {})\n'.format(company1.name,'plain', 'none'))
+        global net,ColorCount,curNodeNum
+        left = "\n<�ڹ���13,14>----------\n��˾ҵ��{}���Ĳ�Ʒ���ڻ���Ʒ�޷������� ��EPS --> {}\n".format(curBusiness, 'none')
+        right = '-> Ԥ�⣺�ù�˾ ��{}�� ��PE --> ({} -> {})\n'.format(company1.name,'plain', 'none')
+        fileForOutput.write("\n<�ڹ���13,14>----------\n��˾ҵ��{}���Ĳ�Ʒ���ڻ���Ʒ�޷������� ��EPS --> {}\n".format(curBusiness, 'none'))
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��PE --> ({} -> {})\n'.format(company1.name,'plain', 'none'))
         
         self.declare(Assertion(LHS=Term(operator=PredictPE,
-                                            variables=[company1, 'none']),
+                                            variables=[company1, 'none',curNodeNum]),
                         RHS='none'))
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         
-        result[-1].addResult(company1,'利润', (curBusiness,curProd,curItem),'none')
+        result[-1].addResult(company1,'����', (curBusiness,curProd,curItem),'none')
                     
 
+    # @Rule(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
     @Rule(OR(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.e2 << Exist(manualInputs = MATCH.manualInputs)),
         # TEST(lambda index: index!='none'),
@@ -3942,26 +4379,38 @@ class reasoning_System(KnowledgeEngine):
             if index == -1:
                 self.retract(a)
             else:
-                
-                fileForOutput.write('\n业务【{}】推理结束\n'.format(curBusiness))
-                print('\n业务【{}】推理结束\n'.format(curBusiness))
-                
-                # 迭代至下一个新的业务/产品 推理链条
+
+                fileForOutput.write('\nҵ��{}����������\n'.format(curBusiness))
+                print('\nҵ��{}����������\n'.format(curBusiness))
+
+                from pyvisNodes import writeHtml
+                global net, ColorCount, curNodeNum, curCompany
+                processBusiness = curBusiness.replace("/", "")
+                processItem = curItem.replace("/", "")
+                print("########################################")
+                print(net)
+                x = writeHtml(net=net, name="/result"+ "/" + curCompany + "-" +processBusiness+ "-" +processItem+ str(index)+".html")
+                net = Network(directed=True)
+                net.add_node(0)
+                ColorCount = 1
+                curNodeNum = 1
+
+                # ��������һ���µ�ҵ��/��Ʒ ��������
                 index = index + 1
                 # while index<len(allItem) and allItem[index] == 'nil':
                 #     index = index + 1
-                
+
                 self.retract(a)
                 fileForOutput.write('\n //////// \n')
                 try:
-                    fileForOutput.write('\n业务【{}】推理开始\n'.format(allBusiness[index]))
-                    print('\n业务【{}】推理开始\n'.format(allBusiness[index]))
+                    fileForOutput.write('\nҵ��{}��������ʼ\n'.format(allBusiness[index]))
+                    print('\nҵ��{}��������ʼ\n'.format(allBusiness[index]))
                     print(allProduct[index],allBusiness[index],allItem[index])
                     self.declare(CurrentProduct(index = index, curProd = allProduct[index], curBusiness = allBusiness[index], curItem = allItem[index]))
                 except:
                     if mode == 'database':
-                        fileForOutput.write('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
-                        print('\n开始公司内独立链条的推理（行业指数，储量，子公司，总股本）：\n')
+                        fileForOutput.write('\n��ʼ��˾�ڶ�����������������ҵָ�����������ӹ�˾���ܹɱ�����\n')
+                        print('\n��ʼ��˾�ڶ�����������������ҵָ�����������ӹ�˾���ܹɱ�����\n')
         except:
             for manualInput in manualInputs:
                 if manualInput!= None:
@@ -3975,13 +4424,13 @@ class reasoning_System(KnowledgeEngine):
                         self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
                                             variables=[Company1,('手动',)]), 
                                             RHS = manualInput.trend))
-                
+            
             # if mode == 'database':
             #     event_path = "event\event_test.json"
             #     el = event.EventList(event_path)
             #     for i in range(el.GetNumber()):
             #         eventsingle = event.Event(el.eventjson[i])
-            #         if eventsingle.type == '进口' or eventsingle.type == '产量' or eventsingle.type == '制裁' or eventsingle.type == '经济' or eventsingle.type == '军事冲突':
+            #         if eventsingle.type == '����' or eventsingle.type == '����' or eventsingle.type == '�Ʋ�' or eventsingle.type == '����' or eventsingle.type == '���³�ͻ':
             #             detail = []
             #             detail.append(eventsingle.type)
             #             detail.append(eventsingle.area)
@@ -3993,7 +4442,7 @@ class reasoning_System(KnowledgeEngine):
             #             eventsingle_type = Assertion(LHS_operator=GetEventType,LHS_value=eventsingle.Gettext(), RHS_value=detail)
             #             engine.declare(eventsingle_type)
         
-    # 突发事件
+    # ͻ���¼�
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
           AS.CountryFact << Assertion(LHS__operator=CompanyInfo,
@@ -4008,62 +4457,82 @@ class reasoning_System(KnowledgeEngine):
             AS.fProd << Assertion(LHS__operator=ProductIsCommodity_inner,
                                 LHS__variables__0__value=MATCH.item1,
                                 RHS__value=MATCH.item2)),
+          # TEST(lambda country1, CountryObject,ProductName, curProd,item1,item2,ItemName, curItem: True if CountryObject == country1 and ProductName == curProd and curProd == item2 and ItemName == item1 and ItemName == curItem else False),
           TEST(lambda country1, CountryObject,ProductName, curProd,item1,item2,ItemName, curItem: True if ProductName == curProd and curProd == item2 and ItemName == item1 and ItemName == curItem else False),
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event1,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "军事冲突" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "���³�ͻ" else False), 
           salience=0.4)  
     def rule1_77(self, e,item1, EventType, event1, CountryObject, ItemName, Date_End,eventtype):
         # print('1')
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         def checkImport(eventLocation, importCountry):
             for i in eventLocation:
                 if i in importCountry:
                     return True
             return False
-        # print(item1, export_relation[CountryObject.name], eventtype['事件国家'])
-        eventLocation = eventtype['事件国家']
+        # print(item1, export_relation[CountryObject.name], eventtype['�¼�����'])
+        eventLocation = eventtype['�¼�����']
 
-        # 发生军事冲突的国家产量下降， 如果该冲突国是公司所属国家的 该产品进口国，则会导致公司所属国家的进口量下降
-        # 最终导致国家的供给趋势下降
+        # �������³�ͻ�Ĺ��Ҳ����½��� ����ó�ͻ���ǹ�˾�������ҵ� �ò�Ʒ���ڹ�����ᵼ�¹�˾�������ҵĽ������½�
+        # ���յ��¹��ҵĹ��������½�
         if checkImport(eventLocation , Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value):
             chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-            fileForOutput.write('\n\n事件抽取：{}\n<规则77>----------\n{}\n {}的{}产量下降  \n 由于 {} 是 {} 的 {} 进口国 \n导致了【{}】的【{}】进口量下降\n'.format(eventtype['事件名称'],event1,eventLocation,ItemName,eventLocation,chineseCountryName,ItemName,chineseCountryName,ItemName))
+            fileForOutput.write('\n\n�¼���ȡ��{}\n<����77>----------\n{}\n {}��{}�����½�  \n ���� {} �� {} �� {} ���ڹ� \n�����ˡ�{}���ġ�{}���������½�\n'.format(eventtype['�¼�����'],event1,eventLocation,ItemName,eventLocation,chineseCountryName,ItemName,chineseCountryName,ItemName))
+            
+            left = '\n\n�¼���ȡ��{}\n<����77>----------\n{}\n {}��{}�����½�  \n ���� {} �� {} �� {} ���ڹ� \n�����ˡ�{}���ġ�{}���������½�\n'.format(eventtype['�¼�����'],event1,eventLocation,ItemName,eventLocation,chineseCountryName,ItemName,chineseCountryName,ItemName)
+            
             index = 2 
             index = index - 1
-            fileForOutput.write('-> 预测：【{}】国内的【{}】供给趋势减少\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڵġ�{}���������Ƽ���\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
+            right = '-> Ԥ�⣺��{}�����ڵġ�{}���������Ƽ���\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],'进口')]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],'����'), curNodeNum]),
                             RHS=getTendency[index]))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],'进口')]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],'����'),curNodeNum]),
                             RHS=getTendency[index]).RHS.value)) 
         elif Term(operator=GetCountryFromEnglishToChinese, variables=[CountryObject.name]).GetRHS().value in eventLocation:
-            # 发生冲突的国家是 公司所属国家，则该国的产量会下降，导致国家的该产品供给趋势下降
+            # ������ͻ�Ĺ����� ��˾�������ң���ù��Ĳ������½������¹��ҵĸò�Ʒ���������½�
             chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-            fileForOutput.write('\n\n事件抽取：{}\n<规则1>----------\n{} \n导致了【{}】的【{}】产量下降\n'.format(eventtype['事件名称'],event1,chineseCountryName,ItemName))
+            fileForOutput.write('\n\n�¼���ȡ��{}\n<����1>----------\n{} \n�����ˡ�{}���ġ�{}�������½�\n'.format(eventtype['�¼�����'],event1,chineseCountryName,ItemName))
+            left = '\n\n�¼���ȡ��{}\n<����1>----------\n{} \n�����ˡ�{}���ġ�{}�������½�\n'.format(eventtype['�¼�����'],event1,chineseCountryName,ItemName)
             index = 2 
             index = index - 1 
-            fileForOutput.write('-> 预测：【{}】国内的【{}】供给趋势减少\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڵġ�{}���������Ƽ���\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
+            right = '-> Ԥ�⣺��{}�����ڵġ�{}���������Ƽ���\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],'进口')]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],'����'), curNodeNum]),
                             RHS=getTendency[index]))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],'进口')]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],'����'),curNodeNum]),
                             RHS=getTendency[index]).RHS.value)) 
             
         else:
-            print((eventtype['事件国家'] ,Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value))
+            print((eventtype['�¼�����'] ,Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value))
         if mode == 'database':
             self.retract(EventType)
+        
+        preNodeNum = [0]
+        curNodeNum +=1
+        ColorCount +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         # self.retract(EventArea)
 
     @Rule(AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -4081,61 +4550,85 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "制裁" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "�Ʋ�" else False), 
           salience=0.4)  
     def rule31(self,item1,EventType, event2, CountryObject, ItemName, eventtype):
-        eventItem = eventtype['产品']
-        eventSanctionist = eventtype['制裁国']
-        eventSanctioned = eventtype['被制裁国']
+        eventItem = eventtype['��Ʒ']
+        eventSanctionist = eventtype['�Ʋù�']
+        eventSanctioned = eventtype['���Ʋù�']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if ItemName in eventItem:
-            #当公司所属国家 是制裁国，则被制裁国的产品出口下降，制裁国的进口下降，导致制裁国国内供给下降
+            #����˾�������� ���Ʋù������Ʋù��Ĳ�Ʒ�����½����Ʋù��Ľ����½��������Ʋù����ڹ����½�
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventSanctionist and len(eventItem)>0:
-                fileForOutput.write('\n事件抽取：{}\n<规则31>----------\n{}\n【{}】制裁【{}】 \n'.format(eventtype['事件名称'],event2,eventtype['制裁国'],eventtype['被制裁国']))
-                
-                fileForOutput.write('\n制裁的商品：【{}】 \n\n'.format(eventItem))
-                fileForOutput.write('\n----------\n{}\n导致了{}的出口量下降\n【{}】的【{}】进口量下降'.format(event2,eventSanctioned,Term(operator=GetCountryFromEnglishToChinese,
+                fileForOutput.write('\n�¼���ȡ��{}\n<����31>----------\n{}\n��{}���Ʋá�{}�� \n'.format(eventtype['�¼�����'],event2,eventtype['�Ʋù�'],eventtype['���Ʋù�']))
+                left = '\n�¼���ȡ��{}\n<����31>----------\n{}\n��{}���Ʋá�{}�� \n'.format(eventtype['�¼�����'],event2,eventtype['�Ʋù�'],eventtype['���Ʋù�'])
+                left += '\n�Ʋõ���Ʒ����{}�� \n\n'.format(eventItem)
+                left += '\n----------\n{}\n������{}�ĳ������½�\n��{}���ġ�{}���������½�'.format(event2,eventSanctioned,Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+                fileForOutput.write('\n�Ʋõ���Ʒ����{}�� \n\n'.format(eventItem))
+                fileForOutput.write('\n----------\n{}\n������{}�ĳ������½�\n��{}���ġ�{}���������½�'.format(event2,eventSanctioned,Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
                 index = 2 
                 index = index - 1 
-                fileForOutput.write('-> 预测：【{}】国内的【{}】供给趋势减少\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                right = '-> Ԥ�⣺��{}�����ڵġ�{}���������Ƽ���\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+                fileForOutput.write('-> Ԥ�⣺��{}�����ڵġ�{}���������Ƽ���\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'], '进口')]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'], '����'),curNodeNum]),
                                 RHS=getTendency[index]))
                 fileForOutput.write("Supply Tendency: ({} -> {})\n ".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'], '进口')]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'], '����'),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventSanctioned and len(eventItem)>0:
-                # 如果公司所属国家是被制裁国，则该国的出口下降，国内的供给增加
-                
-                fileForOutput.write('\n事件抽取：{}\n<规则31>----------\n{}\n【{}】制裁【{}】 \n'.format(eventtype['事件名称'],event2,eventtype['制裁国'],eventtype['被制裁国']))
-                
-                fileForOutput.write('\n制裁的商品：【{}】 \n\n'.format(eventItem))
-                fileForOutput.write('\n----------\n{}\n导致了【{}】的【{}】出口量下降'.format(event2,Term(operator=GetCountryFromEnglishToChinese,
+                # �����˾���������Ǳ��Ʋù�����ù��ĳ����½������ڵĹ�������
+                left = '\n�¼���ȡ��{}\n<����31>----------\n{}\n��{}���Ʋá�{}�� \n'.format(eventtype['�¼�����'],event2,eventtype['�Ʋù�'],eventtype['���Ʋù�'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����31>----------\n{}\n��{}���Ʋá�{}�� \n'.format(eventtype['�¼�����'],event2,eventtype['�Ʋù�'],eventtype['���Ʋù�']))
+                left += '\n�Ʋõ���Ʒ����{}�� \n\n'.format(eventItem)
+                left += '\n----------\n{}\n�����ˡ�{}���ġ�{}���������½�'.format(event2,Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+                fileForOutput.write('\n�Ʋõ���Ʒ����{}�� \n\n'.format(eventItem))
+                fileForOutput.write('\n----------\n{}\n�����ˡ�{}���ġ�{}���������½�'.format(event2,Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
                 index = 2 
                 index = index + 1 
-                fileForOutput.write('-> 预测：【{}】国内的【{}】供给趋势增加\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                right = '-> Ԥ�⣺��{}�����ڵġ�{}��������������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+                fileForOutput.write('-> Ԥ�⣺��{}�����ڵġ�{}��������������\n'.format(Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'], '出口')]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'], '����'),curNodeNum]),
                                 RHS=getTendency[index]))
                 fileForOutput.write("Supply Tendency: ({} -> {})\n ".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'], '出口')]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'], '����'),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             else:
                 
-                fileForOutput.write('\n事件抽取：{}\n<规则31>----------\n{}\n【{}】制裁【{}】 \n\n'.format(eventtype['事件名称'],event2,eventtype['制裁国'],eventtype['被制裁国']))
-                if len(eventtype['产品'])>0:
-                    fileForOutput.write('\n制裁的商品：【{}】 \n\n'.format(eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����31>----------\n{}\n��{}���Ʋá�{}�� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�Ʋù�'],eventtype['���Ʋù�']))
+                if len(eventtype['��Ʒ'])>0:
+                    fileForOutput.write('\n�Ʋõ���Ʒ����{}�� \n\n'.format(eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)
 
@@ -4156,28 +4649,42 @@ class reasoning_System(KnowledgeEngine):
             AS.EventType << Assertion(LHS_operator=GetEventType,
                             LHS_value=MATCH.event1,
                             RHS_value=MATCH.eventtype),
-            TEST(lambda eventtype: True if eventtype['事件名称'] == "经济" else False), 
+            TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
             salience=0.4)  
     def rule41(self, item1, EventType,event1, CountryObject, ItemName,eventtype):
-        eventTrend = eventtype['事件类型']
-        eventCountry = eventtype['事件国家']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        eventTrend = eventtype['�¼�����']
+        eventCountry = eventtype['�¼�����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-        positiveTrend = ['上行']
+        positiveTrend = ['����']
 
-        # 当经济上行，该国的原油需求上升
-        if eventTrend in positiveTrend and ItemName in ['原油'] and chineseCountryName in eventCountry:
-            fileForOutput.write('\n事件抽取：{}\n<规则41>----------\n{}\n导致了【{}】的【{}】需求增加\n'.format(eventtype['事件名称'],event1,Term(operator=GetCountryFromEnglishToChinese,
+        # ���������У��ù���ԭ����������
+        if eventTrend in positiveTrend and ItemName in ['ԭ��'] and chineseCountryName in eventCountry:
+            left = '\n�¼���ȡ��{}\n<����41>----------\n{}\n�����ˡ�{}���ġ�{}����������\n'.format(eventtype['�¼�����'],event1,Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('\n�¼���ȡ��{}\n<����41>----------\n{}\n�����ˡ�{}���ġ�{}����������\n'.format(eventtype['�¼�����'],event1,Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             # fileForOutput.write(str(eventtrend))
             index = 2 
             index = index + 1 
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+            right = "Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                            RHS=getTendency[index]).RHS.value)
             fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]).RHS.value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+
         if mode == 'database':
             self.retract(EventType)
 
@@ -4198,27 +4705,40 @@ class reasoning_System(KnowledgeEngine):
             AS.EventType << Assertion(LHS_operator=GetEventType,
                             LHS_value=MATCH.event1,
                             RHS_value=MATCH.eventtype),
-            TEST(lambda eventtype: True if eventtype['事件名称'] == "经济" else False), 
+            TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
             salience=0.4)  
     def rule42(self, EventType,event1, CountryObject, ItemName, item1,eventtype):
-        eventTrend = eventtype['事件类型']
-        eventCountry = eventtype['事件国家']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        eventTrend = eventtype['�¼�����']
+        eventCountry = eventtype['�¼�����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-        negativeTrend = ['下行']
-        # 当经济下行，该国的原油需求下降
-        if eventTrend in negativeTrend and ItemName in ['原油'] and chineseCountryName in eventCountry:
-            fileForOutput.write('\n事件抽取：{}\n<规则42>----------\n{}\n导致了【{}】的【{}】需求减少\n'.format(eventtype['事件名称'],event1,Term(operator=GetCountryFromEnglishToChinese,
+        negativeTrend = ['����']
+        # ���������У��ù���ԭ�������½�
+        if eventTrend in negativeTrend and ItemName in ['ԭ��'] and chineseCountryName in eventCountry:
+            left = '\n�¼���ȡ��{}\n<����42>----------\n{}\n�����ˡ�{}���ġ�{}���������\n'.format(eventtype['�¼�����'],event1,Term(operator=GetCountryFromEnglishToChinese,
+                                    variables=[Term(operator=CountryName,
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName)
+            fileForOutput.write('\n�¼���ȡ��{}\n<����42>----------\n{}\n�����ˡ�{}���ġ�{}���������\n'.format(eventtype['�¼�����'],event1,Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value,ItemName))
             index = 2 
             index = index - 1 
             # fileForOutput.write(str(eventtrend))
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+            right = "Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                            RHS=getTendency[index]).RHS.value)
             fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]).RHS.value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         if mode == 'database':
             self.retract(EventType)
     
@@ -4240,20 +4760,24 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "产量" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
         
           salience=0.41)  
     def rule55(self,item1,EventType, event2, CountryObject, ItemName, eventtype,ProductName):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','恢复']
-        negativeTrend = ['减少','停止']
-        print(ItemName,ProductName)
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','�ָ�']
+        negativeTrend = ['����','ֹͣ']
+        # print(ItemName,ProductName)
         def checkCompany(eventCompany, companyObj):
-            csn = companyObj.info['机构简称']
+            csn = companyObj.info['�������']
             for key in companyObj.securitycode:
                 exchange = key[4:]
                 secCode = companyObj.securitycode[key]
@@ -4262,7 +4786,7 @@ class reasoning_System(KnowledgeEngine):
                     return True
             return False
             
-            # 当公司产品或上下游产品为事件中的产品
+            # ����˾��Ʒ�������β�ƷΪ�¼��еĲ�Ʒ
         if eventTrend in positiveTrend and (ItemName in eventItem or ProductName in eventItem):
             def checkProvince(eventarea):
                 for ea in eventarea:
@@ -4270,33 +4794,49 @@ class reasoning_System(KnowledgeEngine):
                                             variables=[ea,CountryObject]).GetRHS():
                         return True
                 return False
-                # 如果事件的国家为公司所属国家，或则事件所属地区为公司所属国家的省份
+                # ����¼��Ĺ���Ϊ��˾�������ң������¼���������Ϊ��˾�������ҵ�ʡ��
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventCountry or checkProvince(eventArea):
-                fileForOutput.write('\n事件抽取：{}\n<规则55>----------\n{}\n{}国家的{}产量增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����55>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����55>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����']),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'])]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����']),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
-            # 如果事件公司为推理链条的主体公司
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            # ����¼���˾Ϊ�������������幫˾
             elif checkCompany(eventCompany,Company1):
-                fileForOutput.write('\n事件抽取：{}\n<规则55>----------\n{}\n{}的{}产量增加 \n\n'.format(eventtype['事件名称'],event2,Company1.name,eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����55>----------\n{}\n{}��{}�������� \n\n'.format(eventtype['�¼�����'],event2,Company1.name,eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����55>----------\n{}\n{}��{}�������� \n\n'.format(eventtype['�¼�����'],event2,Company1.name,eventtype['��Ʒ']))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����']),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'])]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����']),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
                 
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则55>----------\n{}\n{}产量增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����55>----------\n{}\n{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['��Ʒ']))
 
         if mode == 'database':
             self.retract(EventType)
@@ -4319,20 +4859,24 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "产量" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
         
           salience=0.41)  
     def rule56(self,item1,EventType,event2, CountryObject, ItemName, eventtype, ProductName):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','恢复']
-        negativeTrend = ['减少','停止']
-        print(ItemName,ProductName)
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','�ָ�']
+        negativeTrend = ['����','ֹͣ']
+        # print(ItemName,ProductName)
         def checkCompany(eventCompany, companyObj):
-            csn = companyObj.info['机构简称']
+            csn = companyObj.info['�������']
             for key in companyObj.securitycode:
                 exchange = key[4:]
                 secCode = companyObj.securitycode[key]
@@ -4340,7 +4884,7 @@ class reasoning_System(KnowledgeEngine):
                 if csn in c or companyObj.name in c or secCode in c:
                     return True
             return False
-        # 同规则55，只是事件的trend相反
+        # ͬ����55��ֻ���¼���trend�෴
         if eventTrend in negativeTrend and (ItemName in eventItem or ProductName in eventItem):
             def checkProvince(eventarea):
                 for ea in eventarea:
@@ -4351,27 +4895,44 @@ class reasoning_System(KnowledgeEngine):
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventCountry or checkProvince(eventArea):
-                fileForOutput.write('\n事件抽取：{}\n<规则56>----------\n{}\n{}国家的{}产量减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����56>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����56>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif checkCompany(eventCompany,Company1):
-                fileForOutput.write('\n事件抽取：{}\n<规则55>----------\n{}\n{}的{}产量增加 \n\n'.format(eventtype['事件名称'],event2,Company1,eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����55>----------\n{}\n{}��{}�������� \n\n'.format(eventtype['�¼�����'],event2,Company1,eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����55>----------\n{}\n{}��{}�������� \n\n'.format(eventtype['�¼�����'],event2,Company1,eventtype['��Ʒ']))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����']),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'])]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����']),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则56>----------\n{}\n{}国家的{}产量减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����56>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)
 
@@ -4392,33 +4953,46 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "进口" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
         
           salience=0.41)  
     def rule57(self,item1, EventType, event2, CountryObject, ItemName, eventtype,ProductName):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        positiveTrend = ['增加','恢复']
-        negativeTrend = ['减少','停止']
-        # 当公司产品或上下游产品为事件中的产品
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        positiveTrend = ['����','�ָ�']
+        negativeTrend = ['����','ֹͣ']
+        # ����˾��Ʒ�������β�ƷΪ�¼��еĲ�Ʒ
         if eventTrend in positiveTrend and (ItemName in eventItem or ProductName in eventItem):
-            # 如果事件的国家为公司所属国家
+            # ����¼��Ĺ���Ϊ��˾��������
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventCountry:
-                fileForOutput.write('\n事件抽取：{}\n<规则57>----------\n{}\n{}国家的{}进口增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����57>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����57>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+                
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则57>----------\n{}\n{}国家的{}进口增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����57>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)
         
@@ -4439,33 +5013,44 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "进口" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
         
           salience=0.41)  
     def rule58(self,item1, EventType, event2, CountryObject, ItemName, eventtype):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        positiveTrend = ['增加','恢复']
-        negativeTrend = ['减少','停止']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        positiveTrend = ['����','�ָ�']
+        negativeTrend = ['����','ֹͣ']
 
-        # 同规则57，只是trend相反
+        # ͬ����57��ֻ��trend�෴
         if eventTrend in negativeTrend and ItemName in eventItem:
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventtype['事件国家']:
-                fileForOutput.write('\n事件抽取：{}\n<规则58>----------\n{}\n{}国家的{}进口减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventtype['�¼�����']:
+                left = '\n�¼���ȡ��{}\n<����58>----------\n{}\n{}���ҵ�{}���ڼ��� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����58>----------\n{}\n{}���ҵ�{}���ڼ��� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则58>----------\n{}\n{}国家的{}进口减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����58>----------\n{}\n{}���ҵ�{}���ڼ��� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)  
     
@@ -4486,16 +5071,21 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "出口" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
         
           salience=0.41)  
     def rule59(self,item1, EventType, event2, CountryObject, ItemName, eventtype):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        positiveTrend = ['增加','恢复']
-        negativeTrend = ['减少','停止']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
+        
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        positiveTrend = ['����','�ָ�']
+        negativeTrend = ['����','ֹͣ']
         def checkImport(eventLocation, importCountry):
             for i in eventLocation:
                 if i in importCountry:
@@ -4503,34 +5093,50 @@ class reasoning_System(KnowledgeEngine):
             return False
         
         if eventTrend in positiveTrend and ItemName in eventItem:
-            #如果公司所属国家为事件的国家
+            #�����˾��������Ϊ�¼��Ĺ���
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventtype['事件国家']:
-                fileForOutput.write('\n事件抽取：{}\n<规则59>----------\n{}\n{}国家的{}出口增加 \n {} 国内的供给减少\n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品'],eventtype['事件国家']))
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventtype['�¼�����']:
+                left = '\n�¼���ȡ��{}\n<����59>----------\n{}\n{}���ҵ�{}�������� \n {} ���ڵĹ�������\n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],eventtype['�¼�����'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����59>----------\n{}\n{}���ҵ�{}�������� \n {} ���ڵĹ�������\n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],eventtype['�¼�����']))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
-            #如果事件的国家 为 公司所属国家该产品的进口国，
-            # 事件国家的出口增加，作为进口国的公司所属国家进口量增加，供给趋势增加
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            #����¼��Ĺ��� Ϊ ��˾�������Ҹò�Ʒ�Ľ��ڹ���
+            # �¼����ҵĳ������ӣ���Ϊ���ڹ��Ĺ�˾�������ҽ��������ӣ�������������
             elif checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value):
                 chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-                fileForOutput.write('\n事件抽取：{}\n<规则59>----------\n{}\n{}国家的{}出口增加 \n {}是进口国，{} 国内供给增加\n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品'],chineseCountryName,chineseCountryName))
+                left = '\n�¼���ȡ��{}\n<����59>----------\n{}\n{}���ҵ�{}�������� \n {}�ǽ��ڹ���{} ���ڹ�������\n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],chineseCountryName,chineseCountryName)
+                fileForOutput.write('\n�¼���ȡ��{}\n<����59>----------\n{}\n{}���ҵ�{}�������� \n {}�ǽ��ڹ���{} ���ڹ�������\n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],chineseCountryName,chineseCountryName))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             # else:
-            #     fileForOutput.write('\n事件抽取：{}\n<规则59>----------\n{}\n{}国家的{}出口增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+            #     fileForOutput.write('\n�¼���ȡ��{}\n<����59>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)
         
@@ -4551,49 +5157,70 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "出口" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
         
           salience=0.41)  
     def rule60(self,item1, EventType, event2, CountryObject, ItemName, eventtype):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        positiveTrend = ['增加','恢复']
-        negativeTrend = ['减少','停止']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        positiveTrend = ['����','�ָ�']
+        negativeTrend = ['����','ֹͣ']
         def checkImport(eventLocation, importCountry):
             for i in eventLocation:
                 if i in importCountry:
                     return True
             return False
         
-        # 与规则59相同，只是trend相反
+        # �����59��ͬ��ֻ��trend�෴
         if eventTrend in negativeTrend and ItemName in eventItem:
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
-                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventtype['事件国家']:
-                fileForOutput.write('\n事件抽取：{}\n<规则60>----------\n{}\n{}国家的{}出口减少 \n{}国内的供给增加\n\n '.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品'],eventtype['事件国家']))
+                                    variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventtype['�¼�����']:
+                left = '\n�¼���ȡ��{}\n<����60>----------\n{}\n{}���ҵ�{}���ڼ��� \n{}���ڵĹ�������\n\n '.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],eventtype['�¼�����'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����60>----------\n{}\n{}���ҵ�{}���ڼ��� \n{}���ڵĹ�������\n\n '.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],eventtype['�¼�����']))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
+
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value):
                 chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-                fileForOutput.write('\n事件抽取：{}\n<规则60>----------\n{}\n{}国家的{}出口减少 \n {}是进口国，{} 国内的供给减少\n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品'],chineseCountryName,chineseCountryName))
+                left = '\n�¼���ȡ��{}\n<����60>----------\n{}\n{}���ҵ�{}���ڼ��� \n {}�ǽ��ڹ���{} ���ڵĹ�������\n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],chineseCountryName,chineseCountryName)
+                fileForOutput.write('\n�¼���ȡ��{}\n<����60>----------\n{}\n{}���ҵ�{}���ڼ��� \n {}�ǽ��ڹ���{} ���ڵĹ�������\n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'],chineseCountryName,chineseCountryName))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             # else:
-            #     fileForOutput.write('\n事件抽取：{}\n<规则60>----------\n{}\n{}国家的{}出口减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+            #     fileForOutput.write('\n�¼���ȡ��{}\n<����60>----------\n{}\n{}���ҵ�{}���ڼ��� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)  
     
@@ -4613,48 +5240,68 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "供应" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��Ӧ" else False), 
         
           salience=0.41)  
     def rule61_62(self,item1, EventType, event2, CountryObject, ItemName, eventtype,ProductName):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        positiveTrend = ['增加','充足']
-        negativeTrend = ['减少','紧张']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        positiveTrend = ['����','����']
+        negativeTrend = ['����','����']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         
         if eventTrend in positiveTrend and (ItemName in eventItem or ProductName in eventItem):
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventCountry:
-                fileForOutput.write('\n事件抽取：{}\n<规则61>----------\n{}\n{}国家的{}供应增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����61>----------\n{}\n{}���ҵ�{}��Ӧ���� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����61>----------\n{}\n{}���ҵ�{}��Ӧ���� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则61>----------\n{}\n{}国家的{}供应增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����61>----------\n{}\n{}���ҵ�{}��Ӧ���� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         elif eventTrend in negativeTrend and ItemName in eventItem:
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventCountry:
-                fileForOutput.write('\n事件抽取：{}\n<规则62>----------\n{}\n{}国家的{}供应减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����62>----------\n{}\n{}���ҵ�{}��Ӧ���� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����62>----------\n{}\n{}���ҵ�{}��Ӧ���� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则62>----------\n{}\n{}国家的{}供应减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����62>----------\n{}\n{}���ҵ�{}��Ӧ���� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)
     
@@ -4674,48 +5321,67 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "需求" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����" else False), 
         
           salience=0.41)  
     def rule63_64(self,item1, EventType, event2, CountryObject, ItemName, eventtype,ProductName):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        positiveTrend = ['增加','旺盛']
-        negativeTrend = ['减少','萎靡']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        positiveTrend = ['����','��ʢ']
+        negativeTrend = ['����','ή��']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         
         if eventTrend in positiveTrend and (ItemName in eventItem or ProductName in eventItem):
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventCountry:
-                fileForOutput.write('\n事件抽取：{}\n<规则63>----------\n{}\n{}国家的{}需求增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����63>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����63>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right= "Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则63>----------\n{}\n{}国家的{}需求增加 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����63>----------\n{}\n{}���ҵ�{}�������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         elif eventTrend in negativeTrend and (ItemName in eventItem or ProductName in eventItem):
             if Term(operator=GetCountryFromEnglishToChinese,
                                     variables=[Term(operator=CountryName,
                                     variables=[CountryObject]).GetRHS().value]).GetRHS().value in eventCountry:
-                fileForOutput.write('\n事件抽取：{}\n<规则64>----------\n{}\n{}国家的{}需求减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                left = '\n�¼���ȡ��{}\n<����64>----------\n{}\n{}���ҵ�{}������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ'])
+                fileForOutput.write('\n�¼���ȡ��{}\n<����64>----------\n{}\n{}���ҵ�{}������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+                right= "Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                                RHS=getTendency[index]).RHS.value)
                 fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                                variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                                variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                 RHS=getTendency[index]).RHS.value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则64>----------\n{}\n{}国家的{}需求减少 \n\n'.format(eventtype['事件名称'],event2,eventtype['事件国家'],eventtype['产品']))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����64>----------\n{}\n{}���ҵ�{}������� \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'],eventtype['��Ʒ']))
         if mode == 'database':
             self.retract(EventType)
 
@@ -4739,35 +5405,40 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "业绩" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "ҵ��" else False), 
         
           salience=0.41)  
     def rule65_66(self,item1,ProductName, EventType, event2, CountryObject, ItemName, eventtype,curBusiness,curProd,business1,fProd = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        eventIndustry = eventtype['行业']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
-        csn = Company1.info['机构简称']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        eventIndustry = eventtype['��ҵ']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
+        csn = Company1.info['�������']
+
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
         def checkIndustry(eventIndustry):
             firstClass = Term(operator=GetIndustryName,
-                        variables=['申万一级行业',Company1]).GetRHS().value[0]['行业名称']
+                        variables=['����һ����ҵ',Company1]).GetRHS().value[0]['��ҵ����']
             secondClass = Term(operator=GetIndustryName,
-                                variables=['申万二级行业',Company1]).GetRHS().value[0]['行业名称']
+                                variables=['���������ҵ',Company1]).GetRHS().value[0]['��ҵ����']
             thirdClass = Term(operator=GetIndustryName,
-                        variables=['申万三级行业',Company1]).GetRHS().value[0]['行业名称']
+                        variables=['����������ҵ',Company1]).GetRHS().value[0]['��ҵ����']
             fileForOutput.write('{} {} {}'.format(firstClass, secondClass, thirdClass))
             for i in eventIndustry:
                 if i in firstClass or i in secondClass or i in thirdClass:
-                    fileForOutput.write('\n\n事件涉及的行业为{}\n'.format(i))
-                    fileForOutput.write('\n{}的行业为（申万一级，申万二级，申万三级） ：（{}, {}, {}）\n'.format(Company1.name,firstClass,secondClass,thirdClass))
+                    fileForOutput.write('\n\n�¼��漰����ҵΪ{}\n'.format(i))
+                    fileForOutput.write('\n{}����ҵΪ������һ����������������������� ����{}, {}, {}��\n'.format(Company1.name,firstClass,secondClass,thirdClass))
                     return True
             return False
         def checkCompany(eventCompany, companyObj):
-            csn = companyObj.info['机构简称']
+            csn = companyObj.info['�������']
             for key in companyObj.securitycode:
                 exchange = key[4:]
                 secCode = companyObj.securitycode[key]
@@ -4777,57 +5448,85 @@ class reasoning_System(KnowledgeEngine):
             return False
         
             
-        # 抽取的事件不包含产品，因此不是某个业务的产品业绩增加，抽取的事件是公司或者行业的整体业绩增加
-        if curBusiness == '公司/行业相关（与产品无关）' and eventTrend in positiveTrend and (checkIndustry(eventIndustry) or checkCompany(eventCompany,Company1)):
+        # ��ȡ���¼���������Ʒ����˲���ĳ��ҵ��Ĳ�Ʒҵ�����ӣ���ȡ���¼��ǹ�˾������ҵ������ҵ������
+        if curBusiness == '��˾/��ҵ��أ����Ʒ�޹أ�' and eventTrend in positiveTrend and (checkIndustry(eventIndustry) or checkCompany(eventCompany,Company1)):
         # if (eventTrend in positiveTrend and (ProductName in eventItem)) or checkCompany(eventCompany,Company1):
-            
-            fileForOutput.write('\n事件抽取：{}\n<规则65>----------\n{}\n{} 的业绩增加 \n\n'.format(eventtype['事件名称'],event2,Company1.name))
+            left= '\n�¼���ȡ��{}\n<����65>----------\n{}\n{} ��ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name)
+            fileForOutput.write('\n�¼���ȡ��{}\n<����65>----------\n{}\n{} ��ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name))
             index = 2 
             index = index + 1 
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                           variables=[Company1, (eventtype['事件名称'],)]),
+                                           variables=[Company1, (eventtype['�¼�����'],),curNodeNum]),
                         RHS=getTendency[index]))
-            fileForOutput.write('-> 预测：该公司 【{}】 的净利润 --> ({} -> {})\n'.format(Company1.name,'plain', getTendency[index]))
-        # 抽取的事件不包含产品，因此不是某个业务的产品业绩增加，抽取的事件是公司或者行业的整体业绩减少
-        elif curBusiness == '公司/行业相关（与产品无关）' and eventTrend in negativeTrend and (checkIndustry(eventIndustry) or checkCompany(eventCompany,Company1)):
+            right = '-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(Company1.name,'plain', getTendency[index])
+            fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(Company1.name,'plain', getTendency[index]))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        # ��ȡ���¼���������Ʒ����˲���ĳ��ҵ��Ĳ�Ʒҵ�����ӣ���ȡ���¼��ǹ�˾������ҵ������ҵ������
+        elif curBusiness == '��˾/��ҵ��أ����Ʒ�޹أ�' and eventTrend in negativeTrend and (checkIndustry(eventIndustry) or checkCompany(eventCompany,Company1)):
         #elif (eventTrend in negativeTrend and (ProductName in eventItem)) or checkCompany(eventCompany,Company1):
-            fileForOutput.write('\n事件抽取：{}\n<规则66>----------\n{}\n{}的业绩减少 \n\n'.format(eventtype['事件名称'],event2,Company1.name))
+            left = '\n�¼���ȡ��{}\n<����66>----------\n{}\n{}��ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name)
+            fileForOutput.write('\n�¼���ȡ��{}\n<����66>----------\n{}\n{}��ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name))
             index = 2 
             index = index - 1 
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                           variables=[Company1, (eventtype['事件名称'],)]),
+                                           variables=[Company1, (eventtype['�¼�����'],),curNodeNum]),
                         RHS=getTendency[index]))
-            fileForOutput.write('-> 预测：该公司 【{}】 的净利润 --> ({} -> {})\n'.format(Company1.name,'plain', getTendency[index]))
-        # 事件抽取的是某个产品的业绩增加或则某个业务的业绩增加
+            right = '-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(Company1.name,'plain', getTendency[index])
+            fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(Company1.name,'plain', getTendency[index]))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        # �¼���ȡ����ĳ����Ʒ��ҵ�����ӻ���ĳ��ҵ���ҵ������
         elif ((fProd != None and curProd in eventItem) or curBusiness in eventItem) and eventTrend in positiveTrend:
             index = 2 
             index = index + 1 
             if curBusiness in eventItem:
-                fileForOutput.write('\n事件抽取：{}\n<规则65>----------\n{}\n{}的 {} 业绩增加 \n\n'.format(eventtype['事件名称'],event2,Company1.name,business1))
+                left = '\n�¼���ȡ��{}\n<����65>----------\n{}\n{}�� {} ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name,business1)
+                fileForOutput.write('\n�¼���ȡ��{}\n<����65>----------\n{}\n{}�� {} ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name,business1))
             else:
-                fileForOutput.write('\n事件抽取：{}\n<规则65>----------\n{}\n{}的产品 {} 对应的 {} 业绩增加 \n\n'.format(eventtype['事件名称'],event2,Company1.name,curProd,business1))
+                left = '\n�¼���ȡ��{}\n<����65>----------\n{}\n{}�Ĳ�Ʒ {} ��Ӧ�� {} ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name,curProd,business1)
+                fileForOutput.write('\n�¼���ȡ��{}\n<����65>----------\n{}\n{}�Ĳ�Ʒ {} ��Ӧ�� {} ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name,curProd,business1))
             
-            fileForOutput.write('-> 预测：对应业务收入 【{}】 --> ({} -> {})\n'.format(business1,"plain",getTendency[index]))
-            label = (eventtype['事件名称'],)
+            right= '-> Ԥ�⣺��Ӧҵ������ ��{}�� --> ({} -> {})\n'.format(business1,"plain",getTendency[index])
+            fileForOutput.write('-> Ԥ�⣺��Ӧҵ������ ��{}�� --> ({} -> {})\n'.format(business1,"plain",getTendency[index]))
+            label = (eventtype['�¼�����'],)
             self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                            variables=[business1,label]),
+                                            variables=[business1,label,curNodeNum]),
                             RHS=getTendency[index]))
-        # 事件抽取的是某个产品的业绩增加或则某个业务的业绩下降
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        # �¼���ȡ����ĳ����Ʒ��ҵ�����ӻ���ĳ��ҵ���ҵ���½�
         elif ((fProd != None and curProd in eventItem) or curBusiness in eventItem) and eventTrend in negativeTrend:
             index = 2 
             index = index - 1 
-            
-            fileForOutput.write('\n事件抽取：{}\n<规则66>----------\n{}\n{}的产品{}对应的{}业绩减少 \n\n'.format(eventtype['事件名称'],event2,Company1.name,curProd,business1))
-            fileForOutput.write('-> 预测：对应业务收入 【{}】 --> ({} -> {})\n'.format(business1,"plain",getTendency[index]))
-            label = (eventtype['事件名称'],)
+            left = '\n�¼���ȡ��{}\n<����66>----------\n{}\n{}�Ĳ�Ʒ{}��Ӧ��{}ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name,curProd,business1)
+            fileForOutput.write('\n�¼���ȡ��{}\n<����66>----------\n{}\n{}�Ĳ�Ʒ{}��Ӧ��{}ҵ������ \n\n'.format(eventtype['�¼�����'],event2,Company1.name,curProd,business1))
+            right = '-> Ԥ�⣺��Ӧҵ������ ��{}�� --> ({} -> {})\n'.format(business1,"plain",getTendency[index])
+            fileForOutput.write('-> Ԥ�⣺��Ӧҵ������ ��{}�� --> ({} -> {})\n'.format(business1,"plain",getTendency[index]))
+            label = (eventtype['�¼�����'],)
             self.declare(Assertion(LHS=Term(operator=PredictIncome,
-                                            variables=[business1,label]),
+                                            variables=[business1,label,curNodeNum]),
                             RHS=getTendency[index]))
-        else:
-            label = (eventtype['事件名称'],)
-            self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[Company1,label]),
-                            RHS='none'))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+        # else:
+        #     label = (eventtype['�¼�����'],)
+        #     self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
+        #                                     variables=[Company1,label,curNodeNum]),
+        #                     RHS='none'))
+
+        #     preNodeNum = [0]
+        #     curNodeNum +=1
+        #     ColorCount +=1
+        #     net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
 
         if mode == 'database':
             self.retract(EventType)
@@ -4852,20 +5551,23 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "成本" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "�ɱ�" else False), 
         
           salience=0.41)  
     def rule67_68(self,item1,business1, EventType, event2, CountryObject, ItemName,curProd, eventtype,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
-        csn = Company1.info['机构简称']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
+        csn = Company1.info['�������']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         def checkCompany(eventCompany, companyObj):
-            csn = companyObj.info['机构简称']
+            csn = companyObj.info['�������']
             for key in companyObj.securitycode:
                 exchange = key[4:]
                 secCode = companyObj.securitycode[key]
@@ -4875,32 +5577,45 @@ class reasoning_System(KnowledgeEngine):
             return False
         
         if fSon != None:
-            # 当上游产品的成本增加 或者 某个业务的成本增加    
+            # �����β�Ʒ�ĳɱ����� ���� ĳ��ҵ��ĳɱ�����    
             if eventTrend in positiveTrend and ((ItemName in eventItem) or (curProd in eventItem and checkCompany(eventCompany,Company1))):
-            
-                fileForOutput.write('\n事件抽取：{}\n<规则67>----------\n{}\n{}的成本({})增加 \n\n'.format(eventtype['事件名称'],event2,business1,eventItem))
+                left = '\n�¼���ȡ��{}\n<����67>----------\n{}\n{}�ĳɱ����� \n\n'.format(eventtype['�¼�����'],event2,business1)
+                # fileForOutput.write('\n�¼���ȡ��{}\n<����67>----------\n{}\n{}�ĳɱ����� \n\n'.format(eventtype['�¼�����'],event2,business1))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����67>----------\n{}\n{}�ĳɱ�({})���� \n\n'.format(eventtype['�¼�����'],event2,business1,eventItem))
                 index = 2 
                 index = index + 1 
                 self.declare(Assertion(LHS=Term(operator=PredictCost,
-                                            variables=[business1,(eventtype['事件名称'],'原料价格变动')]),
+                                            variables=[business1,(eventtype['�¼�����'],'ԭ�ϼ۸�䶯'),curNodeNum]),
                             RHS=getTendency[index]))
                 
                 self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
-                                            variables=[business1,()]),
+                                            variables=[business1,(),curNodeNum]),
                             RHS='plain'))
-                fileForOutput.write('-> 预测：对应业务 【{}】 的业务成本 --> ({} -> {})\n'.format(business1,'plain',getTendency[index]))
-            # 当上游产品的成本增加 或者 某个业务的成本减少
+                right = '-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ��ɱ� --> ({} -> {})\n'.format(business1,'plain',getTendency[index])
+                fileForOutput.write('-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ��ɱ� --> ({} -> {})\n'.format(business1,'plain',getTendency[index]))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
+            # �����β�Ʒ�ĳɱ����� ���� ĳ��ҵ��ĳɱ�����
             elif eventTrend in negativeTrend and ((ItemName in eventItem) or (curProd in eventItem and checkCompany(eventCompany,Company1))):
-                fileForOutput.write('\n事件抽取：{}\n<规则68>----------\n{}\n{}的成本({})减少 \n\n'.format(eventtype['事件名称'],event2,business1,eventItem))
+                left = '\n�¼���ȡ��{}\n<����68>----------\n{}\n{}�ĳɱ����� \n\n'.format(eventtype['�¼�����'],event2,business1)
+                # fileForOutput.write('\n�¼���ȡ��{}\n<����68>----------\n{}\n{}�ĳɱ����� \n\n'.format(eventtype['�¼�����'],event2,business1))
+                fileForOutput.write('\n�¼���ȡ��{}\n<����68>----------\n{}\n{}�ĳɱ�({})���� \n\n'.format(eventtype['�¼�����'],event2,business1,eventItem))
                 index = 2 
                 index = index - 1 
                 self.declare(Assertion(LHS=Term(operator=PredictCost,
-                                            variables=[business1,(eventtype['事件名称'],'原料价格变动')]),
+                                            variables=[business1,(eventtype['�¼�����'],'ԭ�ϼ۸�䶯'),curNodeNum]),
                             RHS=getTendency[index]))
                 self.declare(Assertion(LHS=Term(operator=PredictNetProfit,
-                                            variables=[business1,()]),
+                                            variables=[business1,(),curNodeNum]),
                             RHS='plain'))
-                fileForOutput.write('-> 预测：对应业务 【{}】 的业务成本 --> ({} -> {})\n'.format(business1,'plain',getTendency[index]))
+                right= '-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ��ɱ� --> ({} -> {})\n'.format(business1,'plain',getTendency[index])
+                fileForOutput.write('-> Ԥ�⣺��Ӧҵ�� ��{}�� ��ҵ��ɱ� --> ({} -> {})\n'.format(business1,'plain',getTendency[index]))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         if mode == 'database':
             self.retract(EventType)
     
@@ -4921,21 +5636,21 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "库存" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "���" else False), 
         
           salience=0.41)  
     def rule69_70(self,Date_Begin,Date_End,item1, EventType, event2, CountryObject, ItemName,curProd,curBusiness, eventtype,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','充足']
-        negativeTrend = ['减少','紧张']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','����']
+        negativeTrend = ['����','����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if (eventTrend in positiveTrend and ItemName in eventItem) and chineseCountryName in eventCountry:
         
-            fileForOutput.write('\n事件抽取：{}\n<规则69>----------\n{}\n{}国家{}的库存增加 \n\n'.format(eventtype['事件名称'],event2,chineseCountryName,ItemName))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����69>----------\n{}\n{}����{}�Ŀ������ \n\n'.format(eventtype['�¼�����'],event2,chineseCountryName,ItemName))
             startValue = 0
             endValue = 1
             self.declare(
@@ -4950,7 +5665,7 @@ class reasoning_System(KnowledgeEngine):
                 )
             
         elif (eventTrend in negativeTrend and ItemName in eventItem) and chineseCountryName in eventCountry:
-            fileForOutput.write('\n事件抽取：{}\n<规则70>----------\n{}\n{}国家{}的库存减少 \n\n'.format(eventtype['事件名称'],event2,chineseCountryName,ItemName))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����70>----------\n{}\n{}����{}�Ŀ����� \n\n'.format(eventtype['�¼�����'],event2,chineseCountryName,ItemName))
             startValue = 1
             endValue = 0
             self.declare(
@@ -4963,9 +5678,9 @@ class reasoning_System(KnowledgeEngine):
                                             variables=[CountryObject, ItemName,Date_End, (ItemName,curProd)]),
                         RHS = (Date_End,endValue))
                 )
-        elif (eventTrend in positiveTrend and ItemName in eventItem) and '美国' in eventCountry and ItemName == '原油' :
-            self.declare(Exist(CountryObject = allCountry.returnCountrybyChineseName('美国'), ItemName = ItemName,ProductName = curProd,BusinessName = curBusiness, Date_Begin = Date_Begin,Date_End = Date_End))
-            fileForOutput.write('\n事件抽取：{}\n<规则69>----------\n{}\n{}国家{}的库存增加 \n\n'.format(eventtype['事件名称'],event2,'美国',ItemName))
+        elif (eventTrend in positiveTrend and ItemName in eventItem) and '����' in eventCountry and ItemName == 'ԭ��' :
+            self.declare(Exist(CountryObject = allCountry.returnCountrybyChineseName('����'), ItemName = ItemName,ProductName = curProd,BusinessName = curBusiness, Date_Begin = Date_Begin,Date_End = Date_End))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����69>----------\n{}\n{}����{}�Ŀ������ \n\n'.format(eventtype['�¼�����'],event2,'����',ItemName))
             # index = 2 
             # index = index + 1 
             
@@ -4973,43 +5688,43 @@ class reasoning_System(KnowledgeEngine):
             endValue = 1
             self.declare(
                     Assertion(LHS=Term(operator=GetStock,
-                                            variables=[allCountry.returnCountrybyChineseName('美国'), ItemName,Date_Begin, (ItemName,curProd)]),
+                                            variables=[allCountry.returnCountrybyChineseName('����'), ItemName,Date_Begin, (ItemName,curProd)]),
                         RHS = (Date_Begin,startValue))
                 )
             self.declare(
                     Assertion(LHS=Term(operator=GetStock,
-                                            variables=[allCountry.returnCountrybyChineseName('美国'), ItemName,Date_End, (ItemName,curProd)]),
+                                            variables=[allCountry.returnCountrybyChineseName('����'), ItemName,Date_End, (ItemName,curProd)]),
                         RHS = (Date_End,endValue))
                 )
         
 
             # self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-            #                                 variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+            #                                 variables=[CountryObject, ItemName, (eventtype['�¼�����'],)]),
             #                                 RHS=getTendency[index]))
             # fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-            #                                 variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+            #                                 variables=[CountryObject, ItemName, (eventtype['�¼�����'],)]),
             #                 RHS=getTendency[index]).RHS.value))
             
-        elif (eventTrend in negativeTrend and ItemName in eventItem) and '美国' in eventCountry and ItemName == '原油' :
-            self.declare(Exist(CountryObject = allCountry.returnCountrybyChineseName('美国'), ItemName = ItemName,ProductName = curProd,BusinessName = curBusiness, Date_Begin = Date_Begin,Date_End = Date_End))
-            fileForOutput.write('\n事件抽取：{}\n<规则70>----------\n{}\n{}国家{}的库存减少 \n\n'.format(eventtype['事件名称'],event2,'美国',ItemName))
+        elif (eventTrend in negativeTrend and ItemName in eventItem) and '����' in eventCountry and ItemName == 'ԭ��' :
+            self.declare(Exist(CountryObject = allCountry.returnCountrybyChineseName('����'), ItemName = ItemName,ProductName = curProd,BusinessName = curBusiness, Date_Begin = Date_Begin,Date_End = Date_End))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����70>----------\n{}\n{}����{}�Ŀ����� \n\n'.format(eventtype['�¼�����'],event2,'����',ItemName))
             startValue = 1
             endValue = 0 
             self.declare(
                     Assertion(LHS=Term(operator=GetStock,
-                                            variables=[allCountry.returnCountrybyChineseName('美国'), ItemName,Date_Begin, (ItemName,curProd)]),
+                                            variables=[allCountry.returnCountrybyChineseName('����'), ItemName,Date_Begin, (ItemName,curProd)]),
                         RHS = (Date_Begin,startValue))
                 )
             self.declare(
                     Assertion(LHS=Term(operator=GetStock,
-                                            variables=[allCountry.returnCountrybyChineseName('美国'), ItemName,Date_End, (ItemName,curProd)]),
+                                            variables=[allCountry.returnCountrybyChineseName('����'), ItemName,Date_End, (ItemName,curProd)]),
                         RHS = (Date_End,endValue))
                 )
             # self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-            #                                 variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+            #                                 variables=[CountryObject, ItemName, (eventtype['�¼�����'],)]),
             #                                 RHS=getTendency[index]))
             # fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-            #                                 variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+            #                                 variables=[CountryObject, ItemName, (eventtype['�¼�����'],)]),
             #                 RHS=getTendency[index]).RHS.value))
         if mode == 'database':
             self.retract(EventType)
@@ -5031,21 +5746,25 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "自然灾害" else False), 
+          # TEST(lambda eventtype: True if eventtype['�¼�����'] == "��Ȼ�ֺ�" and eventtype['��Ʒ'] in ['ԭ��', '��Ȼ��'] else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��Ȼ�ֺ�" else False), 
         
           salience=0.41)  
     def rule28_46(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd, fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','充足']
-        negativeTrend = ['减少','紧张']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','����']
+        negativeTrend = ['����','����']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if ItemName in eventItem and chineseCountryName in eventCountry:
         
-            fileForOutput.write('\n事件抽取：{}\n<规则28>----------\n{}\n{}因自然灾害导致 {} 产量减少 \n\n'.format(eventtype['事件名称'],event2,eventCountry, ItemName))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����28>----------\n{}\n{}����Ȼ�ֺ����� {} �������� \n\n'.format(eventtype['�¼�����'],event2,eventCountry, ItemName))
             self.declare(
                     Assertion(LHS=Term(operator=GetProduction,
                                             variables=[CountryObject, ItemName,Date_Begin, (ItemName,curProd)]),
@@ -5057,29 +5776,34 @@ class reasoning_System(KnowledgeEngine):
                         RHS = (Date_End,0))
                 )
             
-            # fileForOutput.write('-> 预测：【{}】国内【{}】的供给趋势减少\n'.format(chineseCountryName,ItemName))
+            # fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}���Ĺ������Ƽ���\n'.format(chineseCountryName,ItemName))
             # index = 2 
             # index = index - 1 
             
             # self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-            #                                 variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+            #                                 variables=[CountryObject, ItemName, (eventtype['�¼�����'],)]),
             #                                 RHS=getTendency[index]))
             # file.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-            #                                 variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+            #                                 variables=[CountryObject, ItemName, (eventtype['�¼�����'],)]),
             #                 RHS=getTendency[index]).RHS.value))
-
-            fileForOutput.write('\n事件抽取：{}\n<规则46>----------\n{}\n{}因自然灾害 \n\n'.format(eventtype['事件名称'],event2,eventCountry))
-            fileForOutput.write('{}国家的{}需求增加 \n\n'.format(eventCountry,ItemName))
-
-            fileForOutput.write('-> 预测：【{}】国内【{}】的需求趋势增加\n'.format(chineseCountryName,ItemName))
+            left = '\n�¼���ȡ��{}\n<����46>----------\n{}\n{}����Ȼ�ֺ� \n\n'.format(eventtype['�¼�����'],event2,eventCountry)
+            fileForOutput.write('\n�¼���ȡ��{}\n<����46>----------\n{}\n{}����Ȼ�ֺ� \n\n'.format(eventtype['�¼�����'],event2,eventCountry))
+            left += '{}���ҵ�{}�������� \n\n'.format(eventCountry,ItemName)
+            fileForOutput.write('{}���ҵ�{}�������� \n\n'.format(eventCountry,ItemName))
+            right = '-> Ԥ�⣺��{}�����ڡ�{}����������������\n'.format(chineseCountryName,ItemName)
+            fileForOutput.write('-> Ԥ�⣺��{}�����ڡ�{}����������������\n'.format(chineseCountryName,ItemName))
             index = 2 
             index = index + 1 
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                        variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                        variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                         RHS=getTendency[index]))
             fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]).RHS.value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             
         
         if mode == 'database':
@@ -5102,17 +5826,17 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "生产政策" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��������" else False), 
         
           salience=0.41)  
     def rule33_34(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','促进']
-        negativeTrend = ['减少','抑制']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','�ٽ�']
+        negativeTrend = ['����','����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if eventTrend in negativeTrend:
             startValue = 1
@@ -5126,8 +5850,8 @@ class reasoning_System(KnowledgeEngine):
 
         if ItemName in eventItem and chineseCountryName in eventCountry:
         
-            fileForOutput.write('\n事件抽取：{}\n<规则33_34>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{}国家的{}产量{} \n\n'.format(eventCountry,ItemName,eventTrend))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����33_34>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            fileForOutput.write('--> Ԥ�⣺{}���ҵ�{}����{} \n\n'.format(eventCountry,ItemName,eventTrend))
             self.declare(
                     Assertion(LHS=Term(operator=GetProduction,
                                             variables=[CountryObject, ItemName,Date_Begin, (ItemName,curProd)]),
@@ -5160,34 +5884,35 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "财政压力" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����ѹ��" else False), 
         
           salience=0.41)  
     def rule23(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','上升']
-        negativeTrend = ['减少','下降']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','����']
+        negativeTrend = ['����','�½�']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if eventTrend in negativeTrend:
             startValue = 0
             endValue = 1
-            production = "增加"
+            production = "����"
         elif eventTrend in positiveTrend:
             startValue = 1
             endValue = 0
-            production = "减少"
+            production = "����"
         else:
             startValue = None
             endValue = None
 
-        if ItemName == '原油' and chineseCountryName in eventCountry:
+        if ItemName == 'ԭ��' and chineseCountryName in eventCountry:
         
-            fileForOutput.write('\n事件抽取：{}\n<规则23>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{}国家的{}产量{} \n\n'.format(eventCountry,ItemName,production))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����23>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            # fileForOutput.write('--> Ԥ�⣺{}���ҵ�{}����{} \n\n'.format(eventCountry,ItemName,eventTrend))
+            fileForOutput.write('--> Ԥ�⣺{}���ҵ�{}����{} \n\n'.format(eventCountry,ItemName,production))
             self.declare(
                     Assertion(LHS=Term(operator=GetProduction,
                                             variables=[CountryObject, ItemName,Date_Begin, (ItemName,curProd)]),
@@ -5219,17 +5944,17 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "进口政策" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��������" else False), 
         
           salience=0.41)  
     def rule35_36(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','促进']
-        negativeTrend = ['减少','抑制']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','�ٽ�']
+        negativeTrend = ['����','����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if eventTrend in negativeTrend:
             startValue = 1
@@ -5243,8 +5968,8 @@ class reasoning_System(KnowledgeEngine):
 
         if ItemName in eventItem and chineseCountryName in eventCountry:
         
-            fileForOutput.write('\n事件抽取：{}\n<规则35_36>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 国家的 {} 进口 {} \n\n'.format(eventCountry,ItemName,eventTrend))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����35_36>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            fileForOutput.write('--> Ԥ�⣺{} ���ҵ� {} ���� {} \n\n'.format(eventCountry,ItemName,eventTrend))
             self.declare(
                     Assertion(LHS=Term(operator=GetImport,
                                             variables=[CountryObject, ItemName,Date_Begin, (ItemName,curProd)]),
@@ -5276,17 +6001,19 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "出口政策" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��������" else False), 
         
           salience=0.41)  
     def rule37_38_51(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','促进']
-        negativeTrend = ['减少','抑制']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','�ٽ�']
+        negativeTrend = ['����','����']
+
+
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if eventTrend in negativeTrend:
             startValue = 1
@@ -5303,9 +6030,9 @@ class reasoning_System(KnowledgeEngine):
                     return True
             return False
         if ItemName in eventItem and chineseCountryName in eventCountry:
-        
-            fileForOutput.write('\n事件抽取：{}\n<规则37_38>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 国家的 {} 出口 {} \n\n'.format(eventCountry,ItemName,eventTrend))
+            
+            fileForOutput.write('\n�¼���ȡ��{}\n<����37_38>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            fileForOutput.write('--> Ԥ�⣺{} ���ҵ� {} ���� {} \n\n'.format(eventCountry,ItemName,eventTrend))
             self.declare(
                     Assertion(LHS=Term(operator=GetExport,
                                             variables=[CountryObject, ItemName,Date_Begin, (ItemName,curProd)]),
@@ -5317,9 +6044,9 @@ class reasoning_System(KnowledgeEngine):
                         RHS = (Date_End,endValue))
                 )
         elif ItemName in eventItem and checkImport(eventCountry , Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value):
-            fileForOutput.write('\n事件抽取：{}\n<规则37_38>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('{} 国家的 {} 出口 {} \n\n'.format(eventCountry,ItemName,eventTrend))
-            fileForOutput.write('{} 是 {} 的 {} 进口国\n\n'.format(eventCountry,chineseCountryName,ItemName))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����37_38>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            fileForOutput.write('{} ���ҵ� {} ���� {} \n\n'.format(eventCountry,ItemName,eventTrend))
+            fileForOutput.write('{} �� {} �� {} ���ڹ�\n\n'.format(eventCountry,chineseCountryName,ItemName))
             for i in eventCountry:
                 c0 = allCountry.returnCountrybyChineseName(i)
                 self.declare(
@@ -5332,17 +6059,17 @@ class reasoning_System(KnowledgeEngine):
                                                 variables=[c0, ItemName,Date_End, (ItemName,curProd)]),
                             RHS = (Date_End,endValue))
                     )
-        if eventTrend in negativeTrend and '原油' in eventItem and chineseCountryName in eventCountry:
-            fileForOutput.write('\n事件抽取：{}\n<规则51>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 国家的 经济下行 \n\n'.format(eventCountry))
+        if eventTrend in negativeTrend and 'ԭ��' in eventItem and chineseCountryName in eventCountry:
+            fileForOutput.write('\n�¼���ȡ��{}\n<����51>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            fileForOutput.write('--> Ԥ�⣺{} ���ҵ� �������� \n\n'.format(eventCountry))
             detail = {}
-            detail['事件名称'] = '经济'
-            detail['事件类型'] = '下行'
-            detail['事件国家'] = [chineseCountryName]            
-            detail['产品'] = [ItemName]
+            detail['�¼�����'] = '����'
+            detail['�¼�����'] = '����'
+            detail['�¼�����'] = [chineseCountryName]            
+            detail['��Ʒ'] = [ItemName]
             
             self.declare(
-                Assertion(LHS_operator=GetEventType,LHS_value= str(detail['事件名称']) + str(detail['事件类型']) + str(event2) , RHS_value=detail)
+                Assertion(LHS_operator=GetEventType,LHS_value= str(detail['�¼�����']) + str(detail['�¼�����']) + str(event2) , RHS_value=detail)
             )
         
              
@@ -5366,17 +6093,22 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "消费政策" and '原油' in eventtype['产品'] else False), 
+          # TEST(lambda eventtype: True if eventtype['�¼�����'] == "��������" and eventtype['��Ʒ'] == 'ԭ��' else False),
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��������" and 'ԭ��' in eventtype['��Ʒ'] else False),  
         
           salience=0.41)  
     def rule39_40(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','促进']
-        negativeTrend = ['减少','抑制']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','�ٽ�']
+        negativeTrend = ['����','����']
+
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if eventTrend in negativeTrend:
             index = 2 
@@ -5388,15 +6120,21 @@ class reasoning_System(KnowledgeEngine):
             index = 2
 
         if ItemName in eventItem and chineseCountryName in eventCountry:
-        
-            fileForOutput.write('\n事件抽取：{}\n<规则39_40>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 国家的 {} 需求 {} \n\n'.format(eventCountry,ItemName,eventTrend))
+            left = '\n�¼���ȡ��{}\n<����39_40>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����'])
+            fileForOutput.write('\n�¼���ȡ��{}\n<����39_40>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            right = '--> Ԥ�⣺{} ���ҵ� {} ���� {} \n\n'.format(eventCountry,ItemName,eventTrend)
+            fileForOutput.write('--> Ԥ�⣺{} ���ҵ� {} ���� {} \n\n'.format(eventCountry,ItemName,eventTrend))
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                        variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                        variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                         RHS=getTendency[index]))
             fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]).RHS.value))
+            
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
                      
         if mode == 'database':
             self.retract(EventType)
@@ -5418,18 +6156,21 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "运输成本" else False), 
+          # TEST(lambda eventtype: True if eventtype['�¼�����'] == "����ɱ�" and eventtype['��Ʒ'] == 'ԭ��' else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����ɱ�" else False), 
         
           salience=0.41)  
     def rule44(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
-        # print(eventtype)
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        #eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        #eventCompany = eventtype['公司']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        # eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        # eventCompany = eventtype['��˾']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if eventTrend in negativeTrend:
             index = 2 
@@ -5441,51 +6182,48 @@ class reasoning_System(KnowledgeEngine):
             index = 2
 
         if ItemName in eventItem and chineseCountryName in eventCountry:
-        
-            fileForOutput.write('\n事件抽取：{}\n<规则44>----------\n{}\n{}因{} {} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称'],eventTrend))
-            fileForOutput.write('--> 预测：{} 国家的 {} 价格 {} \n\n'.format(eventCountry,ItemName,eventTrend))
+            left = '\n�¼���ȡ��{}\n<����44>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����'])
+            # fileForOutput.write('\n�¼���ȡ��{}\n<����44>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����44>----------\n{}\n{}��{} {} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����'],eventTrend))
+            right = '--> Ԥ�⣺{} ���ҵ� {} �۸� {} \n\n'.format(eventCountry,ItemName,eventTrend)
+            fileForOutput.write('--> Ԥ�⣺{} ���ҵ� {} �۸� {} \n\n'.format(eventCountry,ItemName,eventTrend))
             self.declare(Assertion(LHS=Term(operator=PredictPrice,
-                                            variables=[ItemName, (eventtype['事件名称'],)]),
+                                            variables=[ItemName, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]))
             self.declare(Assertion(LHS=Term(operator=PredictPrice_inner,
-                                            variables=[ItemName, (eventtype['事件名称'],)]),
+                                            variables=[ItemName, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
                      
         if mode == 'database':
             self.retract(EventType)
     
-    @Rule(
-        #   AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
-        #   AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),
-        #   OR(AS.fSon << Assertion(LHS__operator=GetSonProduct_inner,
-        #                         LHS__variables__0__value=MATCH.item1,
-        #                         RHS__value=MATCH.item2),
-        #     AS.fFather << Assertion(LHS__operator=GetFatherProduct_inner,
-        #                         LHS__variables__0__value=MATCH.item1,
-        #                         RHS__value=MATCH.item2),
-        #     AS.fProd << Assertion(LHS__operator=ProductIsCommodity_inner,
-        #                         LHS__variables__0__value=MATCH.item1,
-        #                         RHS__value=MATCH.item2)),
-        #   TEST(lambda ProductName, curProd,item1,item2,ItemName, curItem: True if ProductName == curProd and curProd == item2 and ItemName == item1 and ItemName == curItem else False),
-          
+    @Rule(          
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "资本开支" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "�ʱ���֧" else False), 
         
           salience=0.41)  
+    # def rule45(self,item1, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fSon = None):
     def rule45(self,EventType, event2, eventtype):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
-        #chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
+        # chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         def checkCompany(eventCompany, companyObj):
-            
-            csn = companyObj.info['机构简称']
+            csn = companyObj.info['�������']
             for key in companyObj.securitycode:
                 exchange = key[4:]
                 secCode = companyObj.securitycode[key]
@@ -5504,12 +6242,18 @@ class reasoning_System(KnowledgeEngine):
             index = 2
 
         if checkCompany(eventCompany, Company1):
-        
-            fileForOutput.write('\n事件抽取：{}\n<规则45>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCompany,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 公司的 资本开支 {} \n\n'.format(eventCompany,eventTrend))
+            left = '\n�¼���ȡ��{}\n<����45>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCompany,eventtype['�¼�����'])
+            fileForOutput.write('\n�¼���ȡ��{}\n<����45>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCompany,eventtype['�¼�����']))
+            right = '--> Ԥ�⣺{} ��˾�� {} �ʱ���֧ {} \n\n'.format(eventCompany,ItemName,eventTrend)
+            # fileForOutput.write('--> Ԥ�⣺{} ��˾�� {} �ʱ���֧ {} \n\n'.format(eventCompany,ItemName,eventTrend))
+            fileForOutput.write('--> Ԥ�⣺{} ��˾�� �ʱ���֧ {} \n\n'.format(eventCompany,eventTrend))
             self.declare(Assertion(LHS=Term(operator=PredictCompanyCAPEX,
-                                                variables=[Company1,(eventtype['事件名称'],)]),
+                                                variables=[Company1,(eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
                      
         if mode == 'database':
             self.retract(EventType)
@@ -5533,18 +6277,23 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "工厂开工率" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "����������" else False), 
         
           salience=0.41)  
     def rule47_48(self, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fFather = None):
         fileForOutput.write('rule47_48')
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
+
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if eventTrend in negativeTrend:
             index = 2 
@@ -5556,16 +6305,22 @@ class reasoning_System(KnowledgeEngine):
             index = 2
 
         if ItemName in eventItem and chineseCountryName in eventCountry:
-        
-            fileForOutput.write('\n事件抽取：{}\n<规则44>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('{} 国家的 下游产品 {} 工厂开工率 {} \n\n'.format(eventCountry,ItemName,eventTrend))
-            fileForOutput.write('预测 -- > {} 国家的 上游产品 {} 需求 {} \n\n'.format(eventCountry,curProd,getTendency[index]))
+            left = '\n�¼���ȡ��{}\n<����44>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����'])
+            fileForOutput.write('\n�¼���ȡ��{}\n<����44>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            left += '{} ���ҵ� ���β�Ʒ {} ���������� {} \n\n'.format(eventCountry,ItemName,eventTrend)
+            fileForOutput.write('{} ���ҵ� ���β�Ʒ {} ���������� {} \n\n'.format(eventCountry,ItemName,eventTrend))
+            right = 'Ԥ�� -- > {} ���ҵ� ���β�Ʒ {} ���� {} \n\n'.format(eventCountry,curProd,getTendency[index])
+            fileForOutput.write('Ԥ�� -- > {} ���ҵ� ���β�Ʒ {} ���� {} \n\n'.format(eventCountry,curProd,getTendency[index]))
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                        variables=[CountryObject, curProd, (eventtype['事件名称'],)]),
+                                        variables=[CountryObject, curProd, (eventtype['�¼�����'],),curNodeNum]),
                                         RHS=getTendency[index]))
             fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, curProd, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, curProd, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]).RHS.value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
                      
         if mode == 'database':
             self.retract(EventType)
@@ -5587,30 +6342,41 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "释放战略原油储备" and  '原油' in eventtype['产品'] else False), 
+          # TEST(lambda eventtype: True if eventtype['�¼�����'] == "�ͷ�ս��ԭ�ʹ���" and eventtype['��Ʒ'] == 'ԭ��' else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "�ͷ�ս��ԭ�ʹ���" and  'ԭ��' in eventtype['��Ʒ'] else False), 
         
           salience=0.41)  
     def rule49(self,item1, EventType, event2, CountryObject, ItemName, eventtype,fSon = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加','充足']
-        negativeTrend = ['减少','紧张']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����','����']
+        negativeTrend = ['����','����']
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
         if (ItemName in eventItem) and chineseCountryName in eventCountry:
-        
-            fileForOutput.write('\n事件抽取：{}\n<规则49>----------\n{}\n --> 预测：{}国家的 {} 供给增加 \n\n'.format(eventtype['事件名称'],event2,chineseCountryName,ItemName))
+            left = '\n�¼���ȡ��{}\n<����49>----------\n{}\n --> Ԥ�⣺{}���ҵ� {} �������� \n\n'.format(eventtype['�¼�����'],event2,chineseCountryName,ItemName)
+            fileForOutput.write('\n�¼���ȡ��{}\n<����49>----------\n{}\n --> Ԥ�⣺{}���ҵ� {} �������� \n\n'.format(eventtype['�¼�����'],event2,chineseCountryName,ItemName))
             index = 2 
             index = index + 1 
             
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
+            right = "Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
+                            RHS=getTendency[index]).RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]).RHS.value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
     
     @Rule(
           AS.e << Exist(CountryObject = MATCH.CountryObject, ItemName = MATCH.ItemName,ProductName = MATCH.ProductName,BusinessName = MATCH.BusinessName,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -5629,33 +6395,41 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "能源短缺" and  '原油' in eventtype['产品'] else False), 
+          # TEST(lambda eventtype: True if eventtype['�¼�����'] == "��Դ��ȱ" and eventtype['��Ʒ'] == 'ԭ��' else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��Դ��ȱ" and  'ԭ��' in eventtype['��Ʒ'] else False), 
         
           salience=0.41)  
     def rule50(self, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fFather = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-        
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
 
         if ItemName in eventItem and chineseCountryName in eventCountry:
             index = 2
             index = index + 1
-        
-            fileForOutput.write('\n事件抽取：{}\n<规则50>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 国家的  {} 需求 {} \n\n'.format(eventCountry,ItemName,getTendency[index]))
+            left = '\n�¼���ȡ��{}\n<����50>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����'])
+            fileForOutput.write('\n�¼���ȡ��{}\n<����50>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            right = '--> Ԥ�⣺{} ���ҵ�  {} ���� {} \n\n'.format(eventCountry,ItemName,getTendency[index])
+            fileForOutput.write('--> Ԥ�⣺{} ���ҵ�  {} ���� {} \n\n'.format(eventCountry,ItemName,getTendency[index]))
             
             self.declare(Assertion(LHS=Term(operator=GetDemandTendency,
-                                        variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                        variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                         RHS=getTendency[index]))
             fileForOutput.write("Demand Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetDemandTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]).RHS.value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
                      
         if mode == 'database':
             self.retract(EventType)
@@ -5677,44 +6451,53 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "传染性疾病" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "��Ⱦ�Լ���" else False), 
         
           salience=0.41)  
     def rule52and54(self, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fFather = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-        
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
 
         if chineseCountryName in eventCountry:
-            fileForOutput.write('\n事件抽取：{}\n<规则52>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('{} 国家的 经济下行 \n\n'.format(eventCountry))
+            fileForOutput.write('\n�¼���ȡ��{}\n<����52>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            fileForOutput.write('{} ���ҵ� �������� \n\n'.format(eventCountry))
             detail = {}
-            detail['事件名称'] = '经济'
-            detail['事件类型'] = '下行'
-            detail['事件国家'] = [chineseCountryName]            
-            detail['产品'] = [ItemName]
+            detail['�¼�����'] = '����'
+            detail['�¼�����'] = '����'
+            detail['�¼�����'] = [chineseCountryName]            
+            detail['��Ʒ'] = [ItemName]
             
             self.declare(
-                Assertion(LHS_operator=GetEventType,LHS_value= str(detail['事件名称']) + str(detail['事件类型']) + str(event2) , RHS_value=detail)
+                Assertion(LHS_operator=GetEventType,LHS_value= str(detail['�¼�����']) + str(detail['�¼�����']) + str(event2) , RHS_value=detail)
             )
         
-        if chineseCountryName in eventCountry and '原油' == ItemName:
+        if chineseCountryName in eventCountry and 'ԭ��' == ItemName:
             index = 2
             index = index - 1
-            fileForOutput.write('\n事件抽取：{}\n<规则54>----------\n{}\n{}因{} \n\n'.format(eventtype['事件名称'],event2,eventCountry,eventtype['事件名称']))
-            fileForOutput.write('--> 预测：{} 国家的 {} 的供给 {} \n\n'.format(eventCountry,ItemName,getTendency[index]))
+            left = '\n�¼���ȡ��{}\n<����54>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����'])
+            fileForOutput.write('\n�¼���ȡ��{}\n<����54>----------\n{}\n{}��{} \n\n'.format(eventtype['�¼�����'],event2,eventCountry,eventtype['�¼�����']))
+            right = '--> Ԥ�⣺{} ���ҵ� {} �Ĺ��� {} \n\n'.format(eventCountry,ItemName,getTendency[index])
+            fileForOutput.write('--> Ԥ�⣺{} ���ҵ� {} �Ĺ��� {} \n\n'.format(eventCountry,ItemName,getTendency[index]))
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                                             RHS=getTendency[index]))
             fileForOutput.write("Supply Tendency: ({} -> {})\n".format('plain',Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, (eventtype['事件名称'],)]),
+                                            variables=[CountryObject, ItemName, (eventtype['�¼�����'],),curNodeNum]),
                             RHS=getTendency[index]).RHS.value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
 
         if mode == 'database':
             self.retract(EventType)
@@ -5736,31 +6519,36 @@ class reasoning_System(KnowledgeEngine):
           AS.EventType << Assertion(LHS_operator=GetEventType,
                         LHS_value=MATCH.event2,
                         RHS_value=MATCH.eventtype),   
-          TEST(lambda eventtype: True if eventtype['事件名称'] == "运河阻塞" else False), 
+          TEST(lambda eventtype: True if eventtype['�¼�����'] == "�˺�����" else False), 
         
           salience=0.41)  
     def rule53(self, EventType, event2, CountryObject, ItemName, eventtype,Date_Begin,Date_End,curProd,fFather = None):
-        eventCountry = eventtype['事件国家']
-        eventTrend = eventtype['事件类型']
-        eventArea = eventtype['事件地区']
-        eventItem = eventtype['产品']
-        eventCompany = eventtype['公司']
-        positiveTrend = ['增加']
-        negativeTrend = ['减少']
+        eventCountry = eventtype['�¼�����']
+        eventTrend = eventtype['�¼�����']
+        eventArea = eventtype['�¼�����']
+        eventItem = eventtype['��Ʒ']
+        eventCompany = eventtype['��˾']
+        positiveTrend = ['����']
+        negativeTrend = ['����']
         chineseCountryName = Term(operator=GetCountryFromEnglishToChinese, variables=[Term(operator=CountryName, variables=[CountryObject]).GetRHS().value]).GetRHS().value
-        
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
 
-        
-        fileForOutput.write('\n事件抽取：{}\n<规则53>----------\n{}\n因{} \n\n'.format(eventtype['事件名称'],event2,eventtype['事件名称']))
-        fileForOutput.write('--> 预测: 运输成本 增加 \n\n')
+
+        left = '\n�¼���ȡ��{}\n<����53>----------\n{}\n��{} \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����'])
+        fileForOutput.write('\n�¼���ȡ��{}\n<����53>----------\n{}\n��{} \n\n'.format(eventtype['�¼�����'],event2,eventtype['�¼�����']))
+        right= '--> Ԥ��: ����ɱ� ���� \n\n'
+        fileForOutput.write('--> Ԥ��: ����ɱ� ���� \n\n')
         detail = {}
-        detail['事件名称'] = '运输成本'
-        detail['事件类型'] = '增加'
-        detail['事件国家'] = chineseCountryName       
-        detail['产品'] = ItemName
+        detail['�¼�����'] = '����ɱ�'
+        detail['�¼�����'] = '����'
+        detail['�¼�����'] = chineseCountryName           
+        detail['��Ʒ'] = ItemName
         
         self.declare(
-            Assertion(LHS_operator=GetEventType,LHS_value= str(detail['事件名称']) + '_' + str(detail['事件类型']) + '_' +str(event2) , RHS_value=detail)
+            # Assertion(LHS_operator=GetEventType,LHS_value= str(detail['�¼�����']) + str(detail['�¼�����']) + str(event2) , RHS_value=detail)
+            Assertion(LHS_operator=GetEventType,LHS_value= str(detail['�¼�����']) + '_' + str(detail['�¼�����']) + '_' +str(event2) , RHS_value=detail)
         )
     
 ###################################################
@@ -5779,8 +6567,10 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda endDate,beginDate,Date_Begin,Date_End,: True if endDate == Date_End and beginDate==Date_Begin else False), 
           salience=0.3)  
     def rule30_32(self, IndexObj,  beginDate, beginData, endDate,endData,TradeDataBegin,TradeDataEnd,CompanyObject):
-        
-        # 与产品无关的推理链条，因此currentProduct内的值皆为'none'
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        # ���Ʒ�޹ص��������������currentProduct�ڵ�ֵ��Ϊ'none'
         self.declare(
                 CurrentProduct(index = -1, curProd = 'none', curBusiness = 'none', curItem = 'none')
             )
@@ -5794,27 +6584,32 @@ class reasoning_System(KnowledgeEngine):
             else:
                 value = 'up'
             
-            fileForOutput.write('\n\n<规则30,32>----------\n【{}】的行业指数上升'.format(IndexObj))
-            fileForOutput.write('从{}的{} 上升至{}的{}'.format(beginDate, beginData, endDate,endData))
+            left = '\n\n<����30,32>----------\n��{}������ҵָ������'.format(IndexObj)
+            fileForOutput.write('\n\n<����30,32>----------\n��{}������ҵָ������'.format(IndexObj))
+            fileForOutput.write('��{}��{} ������{}��{}'.format(beginDate, beginData, endDate,endData))
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                           variables=[CompanyObject, ('行业指数',)]),
+                                           variables=[CompanyObject, ('��ҵָ��',),curNodeNum]),
                         RHS=value))
+            right = '\n-> 预测公司的净利润 --> {}\n'.format(value)
+            # fileForOutput.write('\n-> Ԥ�⹫˾�ľ����� --> up\n')
             fileForOutput.write('\n-> 预测公司的净利润 --> {}\n'.format(value))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         else:
-            if mode == "manual":
-                if endData > beginData:
-                    value = "up" + (endData -1)*"+"
-                elif endData < beginData:
-                    value = "down" + (beginData -1)*"-"
-            else:
-                value = 'down'
-            
-            fileForOutput.write('\n\n<规则30,32>----------\n【{}】的行业指数下降'.format(IndexObj))
-            fileForOutput.write('从{}的{} 下降至{}的{}'.format(beginDate, beginData, endDate,endData))
+            left = '\n\n<����30,32>----------\n��{}������ҵָ���½�'.format(IndexObj)
+            fileForOutput.write('\n\n<����30,32>----------\n��{}������ҵָ���½�'.format(IndexObj))
+            fileForOutput.write('��{}��{} �½���{}��{}'.format(beginDate, beginData, endDate,endData))
+            right = '\n-> Ԥ�⹫˾�ľ����� --> down\n'
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                           variables=[CompanyObject, ('行业指数',)]),
-                        RHS=value))
-            fileForOutput.write('\n-> 预测公司的净利润 --> {}\n'.format(value))
+                                           variables=[CompanyObject, ('��ҵָ��',),curNodeNum]),
+                        RHS='down'))
+            fileForOutput.write('\n-> Ԥ�⹫˾�ľ����� --> down\n')
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         
         # self.declare(
         #     CurrentProduct(index = 'none', curProd = 'none', curBusiness = 'none')
@@ -5835,19 +6630,31 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda endDate,beginDate,Date_Begin,Date_End,: True if endDate == Date_End and beginDate==Date_Begin else False), 
           salience=0.2)  
     def inner_rule15_16(self, beginDate, beginData, endDate,endData,SharesDataBegin,SharesDataEnd,CompanyObject,c1):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if beginData !='none' and endData !='none':
             self.declare(
                 CurrentProduct(index = -1, curProd = 'none', curBusiness = 'none', curItem = 'none')
             )
+
             
             if beginData[0] == endData[0]:
-                fileForOutput.write("\n\n<内规则15,16>----------\n公司的总股本截止日期相同: 截止日期={}, 总股本={}\n".format(beginData[0],beginData[1]))
+                left = "\n\n<�ڹ���15,16>----------\n��˾���ܹɱ���ֹ������ͬ: ��ֹ����={}, �ܹɱ�={}\n".format(beginData[0],beginData[1])
+                fileForOutput.write("\n\n<�ڹ���15,16>----------\n��˾���ܹɱ���ֹ������ͬ: ��ֹ����={}, �ܹɱ�={}\n".format(beginData[0],beginData[1]))
                 self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                                variables=[c1,('总股本',)]),
+                                                variables=[c1,('�ܹɱ�',),curNodeNum]),
                             RHS='plain'))
-                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
+                right = '-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', 'plain')
+                fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif float(endData[1]) - float(beginData[1]) > 0:
-                fileForOutput.write("\n\n<内规则15,16>----------\n公司的总股本增加:\n 期初截止日期={}, 期初总股本={}; 期末截止日期={}, 期末总股本={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                left = "\n\n<�ڹ���15,16>----------\n��˾���ܹɱ�����:\n �ڳ���ֹ����={}, �ڳ��ܹɱ�={}; ��ĩ��ֹ����={}, ��ĩ�ܹɱ�={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1])
+                fileForOutput.write("\n\n<�ڹ���15,16>----------\n��˾���ܹɱ�����:\n �ڳ���ֹ����={}, �ڳ��ܹɱ�={}; ��ĩ��ֹ����={}, ��ĩ�ܹɱ�={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                
                 if mode == "manual":
                     if endData[1] > beginData[1]:
                         value = "down" + (endData[1] -1)*"-"
@@ -5857,11 +6664,18 @@ class reasoning_System(KnowledgeEngine):
                     value = 'down'
                 
                 self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                                variables=[c1,('总股本',)]),
+                                                variables=[c1,('�ܹɱ�',),curNodeNum]),
                             RHS=value))
-                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', value))
+                right = '-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', value)
+                fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif float(endData[1]) - float(beginData[1]) < 0:
-                fileForOutput.write("\n\n<内规则15,16>----------\n公司的总股本减少:\n 期初截止日期={}, 期初总股本={}; 期末截止日期={}, 期末总股本={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                left = "\n\n<�ڹ���15,16>----------\n��˾���ܹɱ�����:\n �ڳ���ֹ����={}, �ڳ��ܹɱ�={}; ��ĩ��ֹ����={}, ��ĩ�ܹɱ�={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1])
+                fileForOutput.write("\n\n<�ڹ���15,16>----------\n��˾���ܹɱ�����:\n �ڳ���ֹ����={}, �ڳ��ܹɱ�={}; ��ĩ��ֹ����={}, ��ĩ�ܹɱ�={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                
                 if mode == "manual":
                     if endData[1] > beginData[1]:
                         value = "down" + (endData[1] -1)*"-"
@@ -5869,24 +6683,38 @@ class reasoning_System(KnowledgeEngine):
                         value = "up" + (beginData[1] -1)*"+"
                 else:
                     value = 'up'
-                
+
                 self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                                variables=[c1,('总股本',)]),
+                                                variables=[c1,('�ܹɱ�',),curNodeNum]),
                             RHS=value))
-                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', value))
+                right = '-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', value)
+                fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', value))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif float(endData[1]) - float(beginData[1]) == 0:
-                fileForOutput.write("\n\n<内规则15,16>----------\n公司的总股本不变:\n 期初截止日期={}, 期初总股本={}; 期末截止日期={}, 期末总股本={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                left = "\n\n<�ڹ���15,16>----------\n��˾���ܹɱ�����:\n �ڳ���ֹ����={}, �ڳ��ܹɱ�={}; ��ĩ��ֹ����={}, ��ĩ�ܹɱ�={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1])
+                fileForOutput.write("\n\n<�ڹ���15,16>----------\n��˾���ܹɱ�����:\n �ڳ���ֹ����={}, �ڳ��ܹɱ�={}; ��ĩ��ֹ����={}, ��ĩ�ܹɱ�={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
                 self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                                variables=[c1,('总股本',)]),
+                                                variables=[c1,('�ܹɱ�',),curNodeNum]),
                             RHS='plain'))
-                fileForOutput.write('-> 预测：该公司 【{}】 的EPS --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
+                right = '-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', 'plain')
+                fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��EPS --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         else:
-            fileForOutput.write("\n\n<内规则15,16>----------\n无公司总股本数据")
+            left = "\n\n<�ڹ���15,16>----------\n�޹�˾�ܹɱ�����"
+            fileForOutput.write("\n\n<�ڹ���15,16>----------\n�޹�˾�ܹɱ�����")
             self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                                            variables=[c1,('总股本',)]),
+                                            variables=[c1,('�ܹɱ�',),curNodeNum]),
                         RHS='none'))
-        self.retract(SharesDataBegin)
-        self.retract(SharesDataEnd)
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
 
     @Rule(AS.e << Exist(CompanyObject = MATCH.CompanyObject,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.ReserveDataBegin << Assertion(LHS__operator=GetCompanyReserve,
@@ -5901,13 +6729,16 @@ class reasoning_System(KnowledgeEngine):
           TEST(lambda endDate,beginDate,Date_Begin,Date_End,: True if endDate == Date_End and beginDate==Date_Begin else False), 
           salience=0.2)  
     def inner_rule22(self, beginDate, beginData, endDate,endData,ReserveDataBegin,ReserveDataEnd,CompanyObject,c1):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if beginData !='none' and endData !='none':
             if beginData[0] == endData[0]:
-                # print("\n<内规则22>----------\n公司的储量（油气净资产）截止日期相同: 截止日期={}, 油气净资产={}\n".format(beginData[0],beginData[1]))
+                # print("\n<�ڹ���22>----------\n��˾�Ĵ������������ʲ�����ֹ������ͬ: ��ֹ����={}, �������ʲ�={}\n".format(beginData[0],beginData[1]))
                 # self.declare(Assertion(LHS=Term(operator=PredictEPS,
-                #                                 variables=[c1,('储量',)]),
+                #                                 variables=[c1,('����',)]),
                 #             RHS='plain'))
-                # print('-> 预测：该公司 【{}】 的资本开支 --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
+                # print('-> Ԥ�⣺�ù�˾ ��{}�� ���ʱ���֧ --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
                 # print(endData[0])
                 newDate = endData[0]- timedelta(days=1)
                 # print(beginData,endData)
@@ -5917,30 +6748,53 @@ class reasoning_System(KnowledgeEngine):
             
             
             if float(endData[1]) - float(beginData[1]) > 0:
-                fileForOutput.write("\n\n<内规则22>----------\n公司的储量（油气净资产）增加:\n 期初截止日期={}, 期初油气资产净变化={}; 期末截止日期={}, 期末油气资产净变化={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                left = "\n\n<�ڹ���22>----------\n��˾�Ĵ������������ʲ�������:\n �ڳ���ֹ����={}, �ڳ������ʲ����仯={}; ��ĩ��ֹ����={}, ��ĩ�����ʲ����仯={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1])
+                fileForOutput.write("\n\n<�ڹ���22>----------\n��˾�Ĵ������������ʲ�������:\n �ڳ���ֹ����={}, �ڳ������ʲ����仯={}; ��ĩ��ֹ����={}, ��ĩ�����ʲ����仯={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
                 self.declare(Assertion(LHS=Term(operator=PredictCompanyCAPEX,
-                                                variables=[c1,('储量',)]),
+                                                variables=[c1,('����',),curNodeNum]),
                             RHS='down'))
-                fileForOutput.write('-> 预测：该公司 【{}】 的资本开支 --> ({} -> {})\n'.format(c1.name,'plain', 'down'))
+                right = '-> Ԥ�⣺�ù�˾ ��{}�� ���ʱ���֧ --> ({} -> {})\n'.format(c1.name,'plain', 'down')
+                fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ���ʱ���֧ --> ({} -> {})\n'.format(c1.name,'plain', 'down'))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif float(endData[1]) - float(beginData[1]) < 0:
-                fileForOutput.write("\n\n<内规则22>----------\n公司的储量（油气净资产）减少:\n 期初截止日期={}, 期初油气资产净变化={}; 期末截止日期={}, 期末油气资产净变化={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                left = "\n\n<�ڹ���22>----------\n��˾�Ĵ������������ʲ�������:\n �ڳ���ֹ����={}, �ڳ������ʲ����仯={}; ��ĩ��ֹ����={}, ��ĩ�����ʲ����仯={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1])
+                fileForOutput.write("\n\n<�ڹ���22>----------\n��˾�Ĵ������������ʲ�������:\n �ڳ���ֹ����={}, �ڳ������ʲ����仯={}; ��ĩ��ֹ����={}, ��ĩ�����ʲ����仯={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
                 self.declare(Assertion(LHS=Term(operator=PredictCompanyCAPEX,
-                                                variables=[c1,('储量',)]),
+                                                variables=[c1,('����',),curNodeNum]),
                             RHS='up'))
-                fileForOutput.write('-> 预测：该公司 【{}】 的资本开支 --> ({} -> {})\n'.format(c1.name,'plain', 'up'))
+                right = '-> Ԥ�⣺�ù�˾ ��{}�� ���ʱ���֧ --> ({} -> {})\n'.format(c1.name,'plain', 'up')
+                fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ���ʱ���֧ --> ({} -> {})\n'.format(c1.name,'plain', 'up'))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             elif float(endData[1]) - float(beginData[1]) == 0:
-                fileForOutput.write("\n\n<内规则22>----------\n公司的储量（油气净资产）不变:\n 期初截止日期={}, 期初油气资产净变化={}; 期末截止日期={}, 期末油气资产净变化={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
+                left = "\n\n<�ڹ���22>----------\n��˾�Ĵ������������ʲ�������:\n �ڳ���ֹ����={}, �ڳ������ʲ����仯={}; ��ĩ��ֹ����={}, ��ĩ�����ʲ����仯={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1])
+                fileForOutput.write("\n\n<�ڹ���22>----------\n��˾�Ĵ������������ʲ�������:\n �ڳ���ֹ����={}, �ڳ������ʲ����仯={}; ��ĩ��ֹ����={}, ��ĩ�����ʲ����仯={}; \n \n".format(beginData[0],beginData[1],endData[0],endData[1]))
                 self.declare(Assertion(LHS=Term(operator=PredictCompanyCAPEX,
-                                                variables=[c1,('储量',)]),
+                                                variables=[c1,('����',),curNodeNum]),
                             RHS='plain'))
-                fileForOutput.write('-> 预测：该公司 【{}】 的资本开支 --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
+                right = '-> Ԥ�⣺�ù�˾ ��{}�� ���ʱ���֧ --> ({} -> {})\n'.format(c1.name,'plain', 'plain')
+                fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ���ʱ���֧ --> ({} -> {})\n'.format(c1.name,'plain', 'plain'))
+                preNodeNum = [0]
+                curNodeNum +=1
+                ColorCount +=1
+                net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
             
 
         else:
-            fileForOutput.write("\n\n<内规则22>----------\n 无资本开支数据")
+            left = "\n\n<�ڹ���22>----------\n ���ʱ���֧����"
+            fileForOutput.write("\n\n<�ڹ���22>----------\n ���ʱ���֧����")
             self.declare(Assertion(LHS=Term(operator=PredictCompanyCAPEX,
-                                                variables=[c1,('储量',)]),
+                                                variables=[c1,('����',),curNodeNum]),
                             RHS='none'))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
 
         self.retract(ReserveDataBegin)
         self.retract(ReserveDataEnd)
@@ -5949,43 +6803,60 @@ class reasoning_System(KnowledgeEngine):
           AS.PredictCapex << Assertion(LHS__operator=PredictCompanyCAPEX,
                         LHS__variables__0__value=MATCH.c1,
                         LHS__variables__1__value=MATCH.label,
+                        LHS__variables__2__value=MATCH.nodeNum1,
                         RHS__value = MATCH.capex),    
           TEST(lambda c1,CompanyObject: True if c1 == CompanyObject else False), 
           salience=0.9)  
-    def inner_rule23(self, c1,label,capex,PredictCapex):
+    def inner_rule23(self,nodeNum1, c1,label,capex,PredictCapex):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
         if capex == 'none':
             self.declare(
                 CurrentProduct(index = -1, curProd = 'none', curBusiness = 'none', curItem = 'none')
             )
             
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                                    variables=[c1,label]),
+                                                    variables=[c1,label,curNodeNum]),
                                 RHS='none'))
+            preNodeNum = [nodeNum1]
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
         else:
-            fileForOutput.write("\n\n<内规则23>----------\n由{}公司的资本开支 -> {}\n".format(label,capex))
-            # index = getTendency.index(capex)
+            left = "\n\n<�ڹ���23>----------\n��{}��˾���ʱ���֧ -> {}\n".format(label,capex)
+            fileForOutput.write("\n\n<�ڹ���23>----------\n��{}��˾���ʱ���֧ -> {}\n".format(label,capex))
+            #index = getTendency.index(capex)
             
             label = list(label)
-            label.append('资本开支')
+            label.append('�ʱ���֧')
             label = tuple(label)
             self.declare(Assertion(LHS=Term(operator=PredictWorkingTime,
-                                                    variables=[c1,label]),
+                                                    variables=[c1,label,curNodeNum]),
                                 RHS=capex))
-            fileForOutput.write('-> 预测：该公司 【{}】 的业务作业量 --> ({} -> {})\n'.format(c1.name,'plain', capex))
+            right = '-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ����ҵ�� --> ({} -> {})\n'.format(c1.name,'plain', capex)
+            fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ����ҵ�� --> ({} -> {})\n'.format(c1.name,'plain', capex))
+            preNodeNum = [nodeNum1]
+            curNodeNum +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
         self.retract(PredictCapex)
 
     @Rule(AS.e << Exist(CompanyObject = MATCH.CompanyObject,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.PredictWorkTime << Assertion(LHS__operator=PredictWorkingTime,
                         LHS__variables__0__value=MATCH.c1,
                         LHS__variables__1__value=MATCH.label,
+                        LHS__variables__2__value=MATCH.nodeNum1,
                         RHS__value = MATCH.workingtime),    
           TEST(lambda c1,CompanyObject: True if c1 == CompanyObject else False), 
           salience=0.9)  
-    def inner_rule24(self, c1,label,workingtime,PredictWorkTime):
-        fileForOutput.write("\n<内规则24>----------\n由{}公司的业务作业量-> {}\n".format(label,workingtime))
-        # index = getTendency.index(workingtime)
+    def inner_rule24(self,nodeNum1, c1,label,workingtime,PredictWorkTime):
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+        left = "\n<�ڹ���24>----------\n��{}��˾��ҵ����ҵ��-> {}\n".format(label,workingtime)
+        fileForOutput.write("\n<�ڹ���24>----------\n��{}��˾��ҵ����ҵ��-> {}\n".format(label,workingtime))
+        index = getTendency.index(workingtime)
         label = list(label)
-        label.append('业务作业量')
+        label.append('ҵ����ҵ��')
         label = tuple(label)
 
         self.declare(
@@ -5993,14 +6864,19 @@ class reasoning_System(KnowledgeEngine):
             )
         
         self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                                variables=[c1,label]),
-                            RHS=workingtime))
-        fileForOutput.write('-> 预测：该公司 【{}】 的业务收入 --> ({} -> {})\n'.format(c1.name,'plain', workingtime))
-
-        fileForOutput.write("\n<内规则5_6>----------\n由{}公司的业务收入 -> {}\n".format(label,workingtime))
-
-        fileForOutput.write('-> 预测：该公司 【{}】 的净利润 --> ({} -> {})\n'.format(c1.name,'plain', workingtime))
+                                                variables=[c1,label,curNodeNum]),
+                            RHS=getTendency[index]))
+        right = '-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ������ --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index])
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ������ --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index]))
+        
+        
+        fileForOutput.write("\n<�ڹ���5_6>----------\n��{}��˾��ҵ������ -> {}\n".format(label,getTendency[index]))
+        right += '\n-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index])
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index]))
         self.retract(PredictWorkTime)
+        preNodeNum = [nodeNum1]
+        curNodeNum +=1
+        net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = False)
     
     @Rule(AS.e << Exist(CompanyObject = MATCH.CompanyObject,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.ChildCompany << Assertion(LHS__operator=GetChildCompany,
@@ -6010,7 +6886,7 @@ class reasoning_System(KnowledgeEngine):
           salience=0.2)  
     def inner_rule17(self, c1,ChildCompany,cCompany,Date_Begin,Date_End):
         if len(cCompany) > 0:
-            fileForOutput.write("\n\n<内规则17>----------\n公司存在以下子公司: \n")
+            fileForOutput.write("\n\n<�ڹ���17>----------\n��˾���������ӹ�˾: \n")
             for c in cCompany:
                 fileForOutput.write("{}\n".format(c.name))
                 self.declare(
@@ -6032,7 +6908,7 @@ class reasoning_System(KnowledgeEngine):
                 except:
                     pass
         else:
-            fileForOutput.write("\n\n<内规则17>----------\n公司不存在子公司: \n")
+            fileForOutput.write("\n\n<�ڹ���17>----------\n��˾�������ӹ�˾: \n")
         self.retract(ChildCompany)
     
     @Rule(AS.e1 << Exist(childCompany = MATCH.childCompany,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -6050,18 +6926,19 @@ class reasoning_System(KnowledgeEngine):
           salience=0.21)  
     def inner_rule18_19(self, c1,childCompany,Date_Begin,Date_End,npBegin,npEnd,CompanyObject):
         # print(Date_Begin,Date_End)
+        
         if float(npEnd[1]) - float(npBegin[1]) > 0:
-            fileForOutput.write("\n<内规则18_19>----------\n子公司【{}】的净利润增加: \n 从{}的{} 增加至 {}的{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
+            fileForOutput.write("\n<�ڹ���18_19>----------\n�ӹ�˾��{}���ľ���������: \n ��{}��{} ������ {}��{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
             # self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-            #                                     variables=[c1,('子公司净利润',)]),
+            #                                     variables=[c1,('�ӹ�˾������',)]),
             #                 RHS='up'))
-            fileForOutput.write('-> 预测：该母公司 【{}】 的归母净利润 --> ({} -> {})\n'.format(CompanyObject.name,'plain', 'up'))
+            fileForOutput.write('-> Ԥ�⣺��ĸ��˾ ��{}�� �Ĺ�ĸ������ --> ({} -> {})\n'.format(CompanyObject.name,'plain', 'up'))
         elif float(npEnd[1]) - float(npBegin[1]) < 0:
-            fileForOutput.write("\n<内规则18_19>----------\n子公司【{}】的净利润减少: \n 从{}的{} 减少至 {}的{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
+            fileForOutput.write("\n<�ڹ���18_19>----------\n�ӹ�˾��{}���ľ��������: \n ��{}��{} ������ {}��{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
             # self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-            #                                     variables=[c1,('子公司净利润',)]),
+            #                                     variables=[c1,('�ӹ�˾������',)]),
             #                 RHS='down'))
-            fileForOutput.write('-> 预测：该母公司 【{}】 的归母净利润 --> ({} -> {})\n'.format(CompanyObject.name,'plain', 'down'))
+            fileForOutput.write('-> Ԥ�⣺��ĸ��˾ ��{}�� �Ĺ�ĸ������ --> ({} -> {})\n'.format(CompanyObject.name,'plain', 'down'))
 
     @Rule(AS.e1 << Exist(childCompany = MATCH.childCompany,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
           AS.e2 << Exist(CompanyObject = MATCH.CompanyObject,Date_Begin = MATCH.Date_Begin, Date_End = MATCH.Date_End),
@@ -6078,22 +6955,38 @@ class reasoning_System(KnowledgeEngine):
           salience=0.21)  
     def inner_rule20_21(self, c1,childCompany,Date_Begin,Date_End,npBegin,npEnd,CompanyObject):
         # print(Date_Begin,Date_End)
+        global net,ColorCount,curNodeNum
+        left = ""
+        right = ""
+
         self.declare(
                 CurrentProduct(index = -1, curProd = 'none', curBusiness = 'none', curItem = 'none')
             )
         
         if float(npEnd[1]) - float(npBegin[1]) > 0:
-            fileForOutput.write("\n<内规则20_21>----------\n子公司【{}】的净利润增加: \n 从{}的{} 增加至 {}的{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
+            left = "\n<�ڹ���20_21>----------\n�ӹ�˾��{}���ľ���������: \n ��{}��{} ������ {}��{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1])
+            fileForOutput.write("\n<�ڹ���20_21>----------\n�ӹ�˾��{}���ľ���������: \n ��{}��{} ������ {}��{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                                variables=[CompanyObject,('子公司净利润',)]),
+                                                variables=[CompanyObject,('�ӹ�˾������',),curNodeNum]),
                             RHS='up'))
-            fileForOutput.write('-> 预测：该母公司 【{}】 的净利润 --> ({} -> {})\n'.format(CompanyObject.name,'plain', 'up'))
+            right = '-> Ԥ�⣺��ĸ��˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(CompanyObject.name,'plain', 'up')
+            fileForOutput.write('-> Ԥ�⣺��ĸ��˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(CompanyObject.name,'plain', 'up'))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
         elif float(npEnd[1]) - float(npBegin[1]) < 0:
-            fileForOutput.write("\n<内规则20_21>----------\n子公司【{}】的净利润减少: \n 从{}的{} 减少至 {}的{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
+            left = "\n<�ڹ���20_21>----------\n�ӹ�˾��{}���ľ��������: \n ��{}��{} ������ {}��{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1])
+            fileForOutput.write("\n<�ڹ���20_21>----------\n�ӹ�˾��{}���ľ��������: \n ��{}��{} ������ {}��{} \n".format(childCompany.name,npBegin[0],npBegin[1],npEnd[0],npEnd[1]))
             self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
-                                                variables=[CompanyObject,('子公司净利润',)]),
+                                                variables=[CompanyObject,('�ӹ�˾������',),curNodeNum]),
                             RHS='down'))
-            fileForOutput.write('-> 预测：该母公司 【{}】 的净利润--> ({} -> {})\n'.format(CompanyObject.name,'plain', 'down'))
+            right = '-> Ԥ�⣺��ĸ��˾ ��{}�� �ľ�����--> ({} -> {})\n'.format(CompanyObject.name,'plain', 'down')
+            fileForOutput.write('-> Ԥ�⣺��ĸ��˾ ��{}�� �ľ�����--> ({} -> {})\n'.format(CompanyObject.name,'plain', 'down'))
+            preNodeNum = [0]
+            curNodeNum +=1
+            ColorCount +=1
+            net = addEdge(net = net, left = left, right = right, ColorCount = ColorCount, preNodeNum = preNodeNum, addRoot = True)
 
 
 

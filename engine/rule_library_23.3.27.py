@@ -6854,7 +6854,7 @@ class reasoning_System(KnowledgeEngine):
         right = ""
         left = "\n<�ڹ���24>----------\n��{}��˾��ҵ����ҵ��-> {}\n".format(label,workingtime)
         fileForOutput.write("\n<�ڹ���24>----------\n��{}��˾��ҵ����ҵ��-> {}\n".format(label,workingtime))
-        index = getTendency.index(workingtime)
+        #index = getTendency.index(workingtime)
         label = list(label)
         label.append('ҵ����ҵ��')
         label = tuple(label)
@@ -6865,14 +6865,14 @@ class reasoning_System(KnowledgeEngine):
         
         self.declare(Assertion(LHS=Term(operator=PredictCompanyNetProfit,
                                                 variables=[c1,label,curNodeNum]),
-                            RHS=getTendency[index]))
-        right = '-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ������ --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index])
-        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ������ --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index]))
+                            RHS=workingtime))
+        right = '-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ������ --> ({} -> {})\n'.format(c1.name,'plain', workingtime)
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� ��ҵ������ --> ({} -> {})\n'.format(c1.name,'plain', workingtime))
         
         
-        fileForOutput.write("\n<�ڹ���5_6>----------\n��{}��˾��ҵ������ -> {}\n".format(label,getTendency[index]))
-        right += '\n-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index])
-        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(c1.name,'plain', getTendency[index]))
+        fileForOutput.write("\n<�ڹ���5_6>----------\n��{}��˾��ҵ������ -> {}\n".format(label,workingtime))
+        right += '\n-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(c1.name,'plain', workingtime)
+        fileForOutput.write('-> Ԥ�⣺�ù�˾ ��{}�� �ľ����� --> ({} -> {})\n'.format(c1.name,'plain',workingtime))
         self.retract(PredictWorkTime)
         preNodeNum = [nodeNum1]
         curNodeNum +=1

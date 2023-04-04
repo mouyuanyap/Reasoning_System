@@ -6,7 +6,7 @@ from datetime import datetime
 # startDate = datetime(2016, 12, 31, 0, 0)
 # endDate =  datetime(2017, 12, 31, 0, 0)
 # r1 = runDatabase(startDate,endDate)
-r1,n1 = runEventExtract()
+c1,r1,n1 = runEventExtract()
 #select enddate,PROJECT,MAINOPERPROFIT from lc_mainoperincome where companycode = '23394' and enddate = to_date('20210630','YYYYMMDD') AND PROJECT = 'ú̿ҵ��' order by enddate desc;
 
 tp = 0 

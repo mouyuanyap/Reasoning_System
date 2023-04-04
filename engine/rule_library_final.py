@@ -130,6 +130,9 @@ class reasoning_System(KnowledgeEngine):
             elif 'down' in manualInput.trend:
                 startValue = 1 + 1*manualInput.trend.count("-")
                 endValue = 0
+            else:
+                endValue = 0
+                startValue = 0
             # if manualInput.detail == '公司净利润':
             #     self.declare(Assertion(LHS = Term(operator=PredictCompanyNetProfit,
             #                            variables=[company1,('手动',)]), 

@@ -1,7 +1,8 @@
 import csv,codecs,os
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta,date
 # from db.connection import conn,conn_jy
 from scipy import stats
+import pandas as pd
 
 dataPath = "./data/"
 
@@ -345,47 +346,57 @@ class Energy:
                 print(key,code)
                 print(Date)
                 result = None
+                df = pd.read_csv("./data/commodity/relatedData.csv", parse_dates=['ENDDATE'])
+                
+                df1 = df[df["ENDDATE"].dt.date <= Date.date()]
+                
+                df2 = df1[df1["INDICATORCODE"] == code]
+                # print(df2.head)
+                datetime.combine(df2.iloc[-1]["ENDDATE"].date().today(), datetime.min.time())
+                result = (datetime.combine(df2.iloc[-1]["ENDDATE"].date(), datetime.min.time()),float(df2.iloc[-1]["DATAVALUE"]))
+
+                print(result)
                 # sql = """select ENDDATE,DATAVALUE from C_IN_IndicatorDataV 
                 # where INDICATORCODE in ('{}') AND enddate <= to_date('{}','YYYYMMDD') 
                 # ORDER BY ENDDATE DESC
                 # """.format(code,date_string)
-                file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
-                rows = csv.reader(file)
-                for num,row in enumerate(rows):
-                    if num > 0 :
-                        # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
-                        # print( row[1], code)
-                        try:
-                            if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date and row[1] == code:
-                                result = (row[0],float(row[2]))
-                                print(result)
-                                break
-                        except:
-                            file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
-                            rows = csv.reader(file)
-                            for num,row in enumerate(rows):
-                                if num > 0 :
-                                    # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
-                                    # print( row[1], code)
-                                    try:
-                                        if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date - timedelta(days=2) and row[1] == code:
-                                            result = (row[0],float(row[2]))
-                                            print(result)
-                                            break
-                                    except:
-                                        file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
-                                        rows = csv.reader(file)
-                                        for num,row in enumerate(rows):
-                                            if num > 0 :
-                                                # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
-                                                # print( row[1], code)
-                                                try:
-                                                    if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date - timedelta(days=1) and row[1] == code:
-                                                        result = (row[0],float(row[2]))
-                                                        print(result)
-                                                        break
-                                                except:
-                                                    print('Error: No Data!')
+                # file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
+                # rows = csv.reader(file)
+                # for num,row in enumerate(rows):
+                #     if num > 0 :
+                #         # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
+                #         # print( row[1], code)
+                #         try:
+                #             if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date and row[1] == code:
+                #                 result = (row[0],float(row[2]))
+                #                 print(result)
+                #                 break
+                #         except:
+                #             file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
+                #             rows = csv.reader(file)
+                #             for num,row in enumerate(rows):
+                #                 if num > 0 :
+                #                     # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
+                #                     # print( row[1], code)
+                #                     try:
+                #                         if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date - timedelta(days=2) and row[1] == code:
+                #                             result = (row[0],float(row[2]))
+                #                             print(result)
+                #                             break
+                #                     except:
+                #                         file = codecs.open(os.path.join(dataPath + 'commodity/', 'relatedData.csv'), encoding = 'utf-8')
+                #                         rows = csv.reader(file)
+                #                         for num,row in enumerate(rows):
+                #                             if num > 0 :
+                #                                 # print(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'), Date)
+                #                                 # print( row[1], code)
+                #                                 try:
+                #                                     if datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S') == Date - timedelta(days=1) and row[1] == code:
+                #                                         result = (row[0],float(row[2]))
+                #                                         print(result)
+                #                                         break
+                #                                 except:
+                #                                     print('Error: No Data!')
                 if result != None:
                     if key[-3:] == '期货价':
                         self.futurePrice[Date] = result[1]

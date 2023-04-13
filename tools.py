@@ -18,7 +18,7 @@ class Results:
         self.resultsIncome = ([],[],[])
         self.resultsProfit = ([],[],[])
 
-    def addResult(self,c1,rtype,b1 = None,r1= None):
+    def addResult(self,c1,rtype,b1 = None,r1= None, ptype = None,initNode = None):
         firstClass = Term(operator=GetIndustryName,
                                     variables=['申万一级行业',c1]).GetRHS().value[0]['行业名称']
         secondClass = Term(operator=GetIndustryName,
@@ -34,33 +34,39 @@ class Results:
         if rtype == '收入':
             for i in range(3):
                 if len(self.resultsIncome[i][-1][classes[i]]) == 0 or self.resultsIncome[i][-1][classes[i]][-1][0] != scode + '_' + c1.name :
-                    self.resultsIncome[i][-1][classes[i]].append((scode + '_' + c1.name, [b1], [r1]))
+                    self.resultsIncome[i][-1][classes[i]].append((scode + '_' + c1.name, [b1], [r1],[ptype],[initNode]))
                 else:
                     self.resultsIncome[i][-1][classes[i]][-1][1].append(b1)
                     self.resultsIncome[i][-1][classes[i]][-1][2].append(r1)
+                    self.resultsIncome[i][-1][classes[i]][-1][3].append(ptype)
+                    self.resultsIncome[i][-1][classes[i]][-1][4].append(initNode)
 
         elif rtype == '成本':
             for i in range(3):
                 if len(self.resultsCost[i][-1][classes[i]]) == 0 or self.resultsCost[i][-1][classes[i]][-1][0] != scode + '_' + c1.name :
-                    self.resultsCost[i][-1][classes[i]].append((scode + '_' + c1.name, [b1], [r1]))
+                    self.resultsCost[i][-1][classes[i]].append((scode + '_' + c1.name, [b1], [r1],[ptype],[initNode]))
                 else:
                     self.resultsCost[i][-1][classes[i]][-1][1].append(b1)
                     self.resultsCost[i][-1][classes[i]][-1][2].append(r1)
+                    self.resultsCost[i][-1][classes[i]][-1][3].append(ptype)
+                    self.resultsCost[i][-1][classes[i]][-1][4].append(initNode)
         elif rtype == '利润':
             for i in range(3):
                 if len(self.resultsProfit[i][-1][classes[i]]) == 0 or self.resultsProfit[i][-1][classes[i]][-1][0] != scode + '_' + c1.name :
-                    self.resultsProfit[i][-1][classes[i]].append((scode + '_' + c1.name, [b1], [r1]))
+                    self.resultsProfit[i][-1][classes[i]].append((scode + '_' + c1.name, [b1], [r1],[ptype],[initNode]))
                 else:
                     self.resultsProfit[i][-1][classes[i]][-1][1].append(b1)
                     self.resultsProfit[i][-1][classes[i]][-1][2].append(r1)
+                    self.resultsProfit[i][-1][classes[i]][-1][3].append(ptype)
+                    self.resultsProfit[i][-1][classes[i]][-1][4].append(initNode)
         elif rtype == '结束':
             for i in range(3):
                 if len(self.resultsProfit[i][-1][classes[i]]) == 0 or self.resultsProfit[i][-1][classes[i]][-1][0] != scode + '_' + c1.name:
-                    self.resultsProfit[i][-1][classes[i]].append((scode + '_' + c1.name, '-', 'none'))
+                    self.resultsProfit[i][-1][classes[i]].append((scode + '_' + c1.name, '-', 'none','none','none'))
                 if len(self.resultsIncome[i][-1][classes[i]]) == 0 or self.resultsIncome[i][-1][classes[i]][-1][0] != scode + '_' + c1.name:
-                    self.resultsIncome[i][-1][classes[i]].append((scode + '_' + c1.name, '-', 'none'))
+                    self.resultsIncome[i][-1][classes[i]].append((scode + '_' + c1.name, '-', 'none','none','none'))
                 if len(self.resultsCost[i][-1][classes[i]]) == 0 or self.resultsCost[i][-1][classes[i]][-1][0] != scode + '_' + c1.name:
-                    self.resultsCost[i][-1][classes[i]].append((scode + '_' + c1.name, '-', 'none'))
+                    self.resultsCost[i][-1][classes[i]].append((scode + '_' + c1.name, '-', 'none','none','none'))
                 
 
     def addIndustry(self,c1):

@@ -130,6 +130,7 @@ code = [i[1] for i in securitycode[0:]]
 def getAllCompanyObject(getFromDB = getFromDB,code = code, c_customer_supplier = c_customer_supplier,c_business=c_business):
     
     allCompany = company.Companies(fromDB = getFromDB,SECURITYCODE=code, supplier_customer = c_customer_supplier, business_product=c_business)
+    
     return allCompany
 
 # def getFatherSonProduct(productName):
@@ -305,39 +306,41 @@ def getIndexTradingData(secCode,end):
         ) and tradingday >= to_date('{}','YYYY/MM/DD') and tradingday <= to_date('{}','YYYY/MM/DD')""".format(secCode,start_date_string,end_date_string)
     # print(sql)
     result = None
-    file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
-    rows = csv.reader(file)
-    
-    for row in rows:
-        # print(row)
-        try:
-            if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end:
-                result = (row[0],row[2],row[3])
-                break
-        except:
-            file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
-            rows = csv.reader(file)
-            
-            for row in rows:
+    try:
+        file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
+        rows = csv.reader(file)
+        
+        for row in rows:
+            # print(row)
+            try:
+                if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end:
+                    result = (row[0],row[2],row[3])
+                    break
+            except:
+                file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
+                rows = csv.reader(file)
                 
-                try:
-                    if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end - timedelta(days=2):
-                        result = (row[0],row[2],row[3])
-                        break
-                except:
-                    file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
-                    rows = csv.reader(file)
+                for row in rows:
                     
-                    for row in rows:
+                    try:
+                        if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end - timedelta(days=2):
+                            result = (row[0],row[2],row[3])
+                            break
+                    except:
+                        file = codecs.open(os.path.join(dataPath + 'index/', secCode + '_tradingData.csv'), encoding = 'utf-8')
+                        rows = csv.reader(file)
                         
-                        try:
-                            if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end - timedelta(days=1):
-                                result = (row[0],row[2],row[3])
-                                break
-                        except:
-                            print("Error: No Data!")
-                            pass
-
+                        for row in rows:
+                            
+                            try:
+                                if datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S') == end - timedelta(days=1):
+                                    result = (row[0],row[2],row[3])
+                                    break
+                            except:
+                                print("Error: No Data!")
+                                pass
+    except:
+        print("Error: No Data!")
     return result
 
 

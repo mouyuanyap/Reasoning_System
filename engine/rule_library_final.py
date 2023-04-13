@@ -1228,28 +1228,30 @@ class reasoning_System(KnowledgeEngine):
                                         ).GetRHS().value]
                             ).GetRHS().value
 
-
-        self.declare(
-            Assertion(
-                LHS = Term(operator = GetIndexTradeData,
-                    variables = [indexCode, Date_Begin]),
-                RHS = Term(operator = GetIndexTradeData,
-                    variables = [indexCode, Date_Begin]).GetRHS().value
+        try:
+            self.declare(
+                Assertion(
+                    LHS = Term(operator = GetIndexTradeData,
+                        variables = [indexCode, Date_Begin]),
+                    RHS = Term(operator = GetIndexTradeData,
+                        variables = [indexCode, Date_Begin]).GetRHS().value
+                )
             )
-        )
 
-        self.declare(
-            Assertion(
-                LHS = Term(operator = GetIndexTradeData,
-                    variables = [indexCode, Date_End]),
-                RHS = Term(operator = GetIndexTradeData,
-                    variables = [indexCode, Date_End]).GetRHS().value
+            self.declare(
+                Assertion(
+                    LHS = Term(operator = GetIndexTradeData,
+                        variables = [indexCode, Date_End]),
+                    RHS = Term(operator = GetIndexTradeData,
+                        variables = [indexCode, Date_End]).GetRHS().value
+                )
             )
-        )
-        self.declare(Exist(
-            CompanyObject = company1,
-            IndexObj = indexName
-            ,  Date_Begin = Date_Begin ,Date_End = Date_End))
+            self.declare(Exist(
+                CompanyObject = company1,
+                IndexObj = indexName
+                ,  Date_Begin = Date_Begin ,Date_End = Date_End))
+        except:
+            pass
         ##############
 
         ##############
@@ -2631,13 +2633,16 @@ class reasoning_System(KnowledgeEngine):
         # fileForOutput.write('\n')
         # fileForOutput.write(str(Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value))
         index = 2 
+        print(exportBegin,exportEnd)
+        if exportEnd!=exportBegin:
+            print(type(exportBegin[1]),type(exportEnd[1]))
         if countryExport1.chineseName in Term(operator=GetItemImportCountry, variables=[CountryObject.name,ItemName]).GetRHS().value:
             if exportEnd[1] == 'none' or exportBegin[1] == 'none':
                 fileForOutput.write("\n\n<规则5_15>----------\n 无{}出口量数据\n".format(countryExport1.chineseName))
                 self.retract(EE)
                 self.retract(EB)
                 return 0 
-            elif (exportEnd!=exportBegin and exportEnd[1] - exportBegin[1] > 0) or exportEnd[2] > 0:
+            elif (exportEnd!=exportBegin and exportEnd[1] - exportBegin[1] > 0) or (exportEnd==exportBegin and exportEnd[2] > 0):
                 fileForOutput.write("\n\n<规则5_15>----------\n【{}】【{}】的出口量增加".format(countryExport1.chineseName, ItemName))
                 fileForOutput.write("从{}的{} 增加至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                     exportEnd[0],exportEnd[1]))
@@ -2654,7 +2659,7 @@ class reasoning_System(KnowledgeEngine):
                     index = index + 1 
                     value = getTendency[index]
 
-            elif (exportEnd!=exportBegin and exportEnd[1] - exportBegin[1] < 0) or exportEnd[2] < 0:
+            elif (exportEnd!=exportBegin and exportEnd[1] - exportBegin[1] < 0) or (exportEnd==exportBegin and exportEnd[2] < 0):
                 fileForOutput.write("\n\n<规则5_15>----------\n【{}】【{}】的出口量减少".format(countryExport1.chineseName, ItemName))
                 fileForOutput.write("从{}的{} 减少至 {}的{}\n -----------------\ns".format(exportBegin[0],exportBegin[1],
                                     exportEnd[0],exportEnd[1]))
@@ -2693,12 +2698,12 @@ class reasoning_System(KnowledgeEngine):
             # print('-> 预测：供给增加\n')
             #self.retract(f1)
             self.declare(Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('外国出口_进口',)]),
                             RHS=value))
             # self.modify(self.facts[f1.__factid__], RHS=getTendency[index])
             # print(f1.RHS.value)
             fileForOutput.write("Supply Tendency: ({} -> {})".format("plain",Assertion(LHS=Term(operator=GetSupplyTendency,
-                                            variables=[CountryObject, ItemName, ('进口',)]),
+                                            variables=[CountryObject, ItemName, ('外国出口_进口',)]),
                             RHS=value).RHS.value))
         self.retract(EE)
         self.retract(EB)
@@ -3642,13 +3647,30 @@ class reasoning_System(KnowledgeEngine):
                 LHS__variables__0__value=MATCH.business1,
                 LHS__variables__1__value=MATCH.label,
                 RHS__value=MATCH.predIncome),
+          OR(AS.fSon << Assertion(LHS__operator=GetSonProduct,
+                                LHS__variables__0__value=MATCH.item2,
+                                RHS__value=MATCH.item3),
+            AS.fFather << Assertion(LHS__operator=GetFatherProduct,
+                                LHS__variables__0__value=MATCH.item2,
+                                RHS__value=MATCH.item3),
+            AS.fProd << Assertion(LHS__operator=ProductIsCommodity,
+                                LHS__variables__0__value=MATCH.item2,
+                                RHS__value=MATCH.item3)),
           TEST(lambda business1,curBusiness: business1 == curBusiness),
+          TEST(lambda item2,curItem,item3, curProd: item2 == curItem and curProd == item3),
           salience=0.92)
-    def inner_rule5_6(self,business1, curBusiness,curProd,curItem, predIncome,label,f1):
+    def inner_rule5_6(self,business1, curBusiness,curProd,curItem, predIncome,label,f1,fSon = None, fFather = None, fProd = None):
         fileForOutput.write("\n<内规则5,6>----------\n由{}业务 【{}】 的收入 --> {}\n".format(label,business1,predIncome))
         fileForOutput.write('-> 预测：对应业务 【{}】 的业务净利润 --> ({} -> {})\n'.format(business1,'plain', predIncome))
         
-        result[-1].addResult(Company1,'收入', (curBusiness,curProd,curItem),predIncome)
+        if fSon!=None:
+            ptype = 'F'
+        elif fFather!=None:
+            ptype = 'S'
+        elif fProd!=None:
+            ptype = 'P'
+
+        result[-1].addResult(Company1,'收入', (curBusiness,curProd,curItem),predIncome,ptype)
         # print(business1)
         self.retract(f1)
         
@@ -3719,9 +3741,19 @@ class reasoning_System(KnowledgeEngine):
                 LHS__variables__0__value=MATCH.business1,
                 LHS__variables__1__value=MATCH.label2,
                 RHS__value=MATCH.predNetProfit),
+          OR(AS.fSon << Assertion(LHS__operator=GetSonProduct,
+                                LHS__variables__0__value=MATCH.item2,
+                                RHS__value=MATCH.item3),
+            AS.fFather << Assertion(LHS__operator=GetFatherProduct,
+                                LHS__variables__0__value=MATCH.item2,
+                                RHS__value=MATCH.item3),
+            AS.fProd << Assertion(LHS__operator=ProductIsCommodity,
+                                LHS__variables__0__value=MATCH.item2,
+                                RHS__value=MATCH.item3)),
           TEST(lambda curBusiness,business1: curBusiness == business1),
+          TEST(lambda item2,curItem,item3,curProd: item2 == curItem and curProd == item3),
           salience=0.9)
-    def inner_rule3_4(self, business1,curBusiness,curProd,curItem, predCost,label,predNetProfit,f1,f2):
+    def inner_rule3_4(self, business1,curBusiness,curProd,curItem, predCost,label,predNetProfit,f1,f2,fSon = None, fProd = None, fFather = None):
         fileForOutput.write("\n<内规则3,4>----------\n由{}业务 【{}】 的业务成本 --> {}\n".format(label,business1, predCost))
         # index = getTendency.index(predCost)
         # newIndex = None
@@ -3771,7 +3803,14 @@ class reasoning_System(KnowledgeEngine):
                 else:
                     value2 = "plain"
         
-        result[-1].addResult(Company1,'成本', (curBusiness,curProd,curItem),predCost)
+        
+        if fSon!=None:
+            ptype = 'F'
+        elif fFather!=None:
+            ptype = 'S'
+        elif fProd!=None:
+            ptype = 'P'
+        result[-1].addResult(Company1,'成本', (curBusiness,curProd,curItem),predCost,ptype)
             
         # import math
         # if (newIndex+index2)/2 < 2:
@@ -3860,19 +3899,27 @@ class reasoning_System(KnowledgeEngine):
                 LHS__variables__0__value=MATCH.company1,
                 LHS__variables__1__value=MATCH.label,
                 RHS__value=MATCH.predEPS),
-        #   OR(AS.fSon << Assertion(LHS__operator=GetSonProduct_inner,
-        #                         LHS__variables__0__value=MATCH.item1,
-        #                         RHS__value=MATCH.item2),
-        #     AS.fFather << Assertion(LHS__operator=GetFatherProduct_inner,
-        #                         LHS__variables__0__value=MATCH.item1,
-        #                         RHS__value=MATCH.item2),
-        #     AS.fProd << Assertion(LHS__operator=ProductIsCommodity_inner,
-        #                         LHS__variables__0__value=MATCH.item1,
-        #                         RHS__value=MATCH.item2)),
+          OR(AS.fSon << Assertion(LHS__operator=GetSonProduct_inner,
+                                LHS__variables__0__value=MATCH.item1,
+                                RHS__value=MATCH.item2),
+            AS.fFather << Assertion(LHS__operator=GetFatherProduct_inner,
+                                LHS__variables__0__value=MATCH.item1,
+                                RHS__value=MATCH.item2),
+            AS.fProd << Assertion(LHS__operator=ProductIsCommodity_inner,
+                                LHS__variables__0__value=MATCH.item1,
+                                RHS__value=MATCH.item2)),
+        TEST(lambda item1,curItem,item2,curProd: (item1 == curItem and item2 == curProd) or item1 == "none"),
         #   TEST(lambda item2, curProd, curItem, item1: True if item2 == curProd and item1 == curItem else False),
           salience=0.9)
     def inner_rule13_14(self, company1, predEPS, label,f1,index,a,curBusiness,curProd,curItem,item1 = None,fSon = None, fFather = None,fProd = None):
-        
+        if fSon!=None:
+            ptype = 'F'
+        elif fFather!=None:
+            ptype = 'S'
+        elif fProd!=None:
+            ptype = 'P'
+        else:
+            ptype = 'N'
         if predEPS == 'none':
             fileForOutput.write("\n<内规则13,14>----------\n由{}公司【{}】 的EPS --> {}\n".format(label, company1.name,predEPS))
             self.retract(f1)
@@ -3904,7 +3951,7 @@ class reasoning_System(KnowledgeEngine):
         # print(mode)
             if curBusiness == 'none':
                 curBusiness = label[0]
-            result[-1].addResult(company1,'利润', (curBusiness,curProd,curItem),predEPS)
+            result[-1].addResult(company1,'利润', (curBusiness,curProd,curItem),predEPS,ptype,label[0])
         
         # if item1 == 'none':
         #     try:
@@ -3933,7 +3980,7 @@ class reasoning_System(KnowledgeEngine):
                                             variables=[company1, 'none']),
                         RHS='none'))
         
-        result[-1].addResult(company1,'利润', (curBusiness,curProd,curItem),'none')
+        result[-1].addResult(company1,'利润', (curBusiness,curProd,curItem),'none','none')
                     
 
     @Rule(OR(AS.a << CurrentProduct(index = MATCH.index, curProd = MATCH.curProd, curBusiness = MATCH.curBusiness, curItem = MATCH.curItem),

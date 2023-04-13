@@ -3,11 +3,11 @@ from db.getData import allCompany
 import codecs
 
 from datetime import datetime
-startDate = datetime(2016, 12, 31, 0, 0)
-endDate =  datetime(2017, 12, 31, 0, 0)
+startDate = datetime(2019, 12, 31, 0, 0)
+endDate =  datetime(2020, 3, 31, 0, 0)
 r1 = runDatabase(startDate,endDate)
 
-#select enddate,PROJECT,MAINOPERPROFIT from lc_mainoperincome where companycode = '23394' and enddate = to_date('20210630','YYYYMMDD') AND PROJECT = '煤炭业务' order by enddate desc;
+#select enddate,PROJECT,MAINOPERPROFIT from lc_mainoperincome where companycode = '23394' and enddate = to_date('20210630','YYYYMMDD') AND PROJECT = '煤炭业锟斤拷' order by enddate desc;
 
 tp = 0 
 tn = 0
@@ -15,10 +15,10 @@ fp = 0
 fn = 0
 #change to w!!
 file = codecs.open('./{},{}.txt'.format(str(startDate.year) + str(startDate.month), str(endDate.year) + str(endDate.month)),'a', 'utf-8')
-file.write("行业,公司,业务,tp,fp,tn,fn,result\n")
+file.write("锟斤拷业,锟斤拷司,业锟斤拷,tp,fp,tn,fn,result\n")
 
-startDate = datetime(2017, 12, 31, 0, 0)
-endDate = datetime(2018, 12, 31, 0, 0)
+startDate = datetime(2020, 3, 31, 0, 0)
+endDate =  datetime(2020, 6, 30, 0, 0)
 for ind in r1.resultsProfit[0][0]:
 
     for cnum in range(len(r1.resultsProfit[0][0][ind])):
@@ -53,9 +53,9 @@ for ind in r1.resultsProfit[0][0]:
                     except:
                         print("NoData")
                     
-                    # if curBusiness == "行业指数"
+                    # if curBusiness == "锟斤拷业指锟斤拷"
                     # #if (up == 0 and down == 0):
-                    # # if curBusiness == "行业指数" or (up == 0 and down == 0):
+                    # # if curBusiness == "锟斤拷业指锟斤拷" or (up == 0 and down == 0):
                     #     up = up + 2
                     # else:
                     #     up+=1
@@ -72,9 +72,9 @@ for ind in r1.resultsProfit[0][0]:
                             file.write("{},{},{},0,0,1,0,down\n".format(ind,r1.resultsProfit[0][0][ind][cnum][0][0:6],curBusiness))
                     except:
                         print("NoData")
-                    # if curBusiness == "行业指数" or (up == 0 and down == 0):
+                    # if curBusiness == "锟斤拷业指锟斤拷" or (up == 0 and down == 0):
                     # if (up == 0 and down == 0):
-                    # if curBusiness == "行业指数"
+                    # if curBusiness == "锟斤拷业指锟斤拷"
                     #     down = down + 2
                     # else:
                     #     down+=1
@@ -122,8 +122,8 @@ for ind in r1.resultsProfit[0][0]:
         #                 file.write("{},{},{},{},0,0,0,1,down\n".format(ind,r1.resultsProfit[0][0][ind][cnum][0][0:6],up,down))
         #         else:
         #             for i,b in enumerate(r1.resultsProfit[0][0][ind][cnum][1]):
-        #                 if b[0] == "行业指数":
-        #                     print('行业指数')
+        #                 if b[0] == "锟斤拷业指锟斤拷":
+        #                     print('锟斤拷业指锟斤拷')
         #                     if r1.resultsProfit[0][0][ind][cnum][2][i] in downString:
         #                         down+=1
                                 

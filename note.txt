@@ -1,0 +1,18 @@
+fatherProduct:                      stockDown  -> 
+productionDown ->                 history_priceUp  ->               -> costUp -> profitDown -> companyprofitDown -> epsDown
+importDown         -> supplyDown ->        fProdpriceUp -> priceUp ->
+exportUp   ->                                              -> incomePlain  -> 
+                        demeandDown -> SalesDown -> 
+                                                
+
+sonProduct:                            stockDown  -> 
+productionDown ->                 history_priceUp  ->                              -> costPlain -> profitUp-> companyprofitUp -> epsUp
+importDown         -> supplyDown ->     sProdpriceUp -> demeandUp -> SalesUp  -> incomeUp -> 
+exportUp   ->                                                    -> priceUp ->
+
+Product:                            stockDown  -> 
+productionDown ->                 history_priceUp  ->   costPlain -> profitUp-> companyprofitUp -> epsUp
+importDown         -> supplyDown ->    -> priceUp  -> incomeUp -> 
+exportUp   ->                                                    
+
+                        

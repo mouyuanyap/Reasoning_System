@@ -197,13 +197,15 @@ def runEventExtract(text = None):
 def runDatabase(d1, d2,c1 = None):
 
     ####################
-
+    # c1 = "601857SH"
     beginDate = d1
     endDate = d2
     s = time.time()
     engine.rule_library_final.result.append(Results())
     engine.rule_library_final.result[-1].addEvents()
     # 遍历数据库建模的 公司实体；关于公司的数据已经从数据库获取并保存在该实体，可被推理引擎调用
+
+    
     for number, comp in enumerate(allCompany.companyList[0:]):
         # print(number)
         startTime = time.time()
@@ -391,7 +393,7 @@ if __name__ == "__main__":
     m1 = ManualInput(detail= '行业指数', trend = 'up', degree='++++' , index='申万石油石化指数')
     m2 = ManualInput(detail= '供给', trend = 'down', degree= "--", item='聚乙烯')
     m3 = ManualInput(detail= '需求', trend = 'down', degree= "--", item='汽油')
-    m4 = ManualInput(detail= '价格', trend = 'down', degree= "--", item='汽油')
+    m4 = ManualInput(detail= '价格', trend = 'down', degree= "--", item='成品油')
     m5 = ManualInput(detail= '销售', trend = 'up', degree= "+", item='汽油')
     m6 = ManualInput(detail= '成本', trend = 'up',degree= "++", business='炼油与化工')
     m7 = ManualInput(detail= '收入', trend = 'down',degree= "--", business='炼油与化工')
@@ -401,7 +403,8 @@ if __name__ == "__main__":
     m11 = ManualInput(detail= '美元指数', trend = 'up',degree= "++++")
     m12 = ManualInput(detail= '公司股票数', trend = 'up', degree = '++')
     m13 = ManualInput(detail= '公司储量', trend = 'up', degree = '++')
-    runManualInput(manInput=[m4,m5,m6,m7,m11,m12,m13],companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
+    # runManualInput(manInput=[m4,m5,m6,m7,m11,m12,m13],companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
+    runManualInput(manInput=[m4],companyInput='601857SH', d1 = datetime(2019, 3, 31, 0, 0), d2 = datetime(2019, 6, 30, 0, 0) )
 
 
 #以下是手动事件触发 参数不是 detail，是event
